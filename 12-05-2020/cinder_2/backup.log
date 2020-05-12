@@ -1,0 +1,367 @@
+2020-05-12 08:16:05.408 16928 INFO cinder.cmd.backup [-] Backup running with 1 processes.
+2020-05-12 08:16:05.777 16928 INFO cinder.rpc [req-f5d26c4c-0922-4ade-86f6-0322c75507e8 - - - - -] Automatically selected cinder-backup objects version 1.38 as minimum service version.
+2020-05-12 08:16:05.783 16928 INFO cinder.rpc [req-f5d26c4c-0922-4ade-86f6-0322c75507e8 - - - - -] Automatically selected cinder-backup RPC version 2.1 as minimum service version.
+2020-05-12 08:16:05.789 16928 INFO cinder.rpc [req-f5d26c4c-0922-4ade-86f6-0322c75507e8 - - - - -] Automatically selected cinder-volume objects version 1.38 as minimum service version.
+2020-05-12 08:16:05.795 16928 INFO cinder.rpc [req-f5d26c4c-0922-4ade-86f6-0322c75507e8 - - - - -] Automatically selected cinder-volume RPC version 3.16 as minimum service version.
+2020-05-12 08:16:05.822 16928 INFO oslo_service.service [req-f5d26c4c-0922-4ade-86f6-0322c75507e8 - - - - -] Starting 1 workers
+2020-05-12 08:16:05.832 17116 INFO cinder.service [-] Starting cinder-backup node (version 14.0.4)
+2020-05-12 08:16:05.854 17116 INFO cinder.backup.manager [req-9d681282-54fe-4d5b-97ce-7c110be2094f - - - - -] Cleaning up incomplete backup operations.
+2020-05-12 08:16:05.855 16928 WARNING oslo_config.cfg [req-f5d26c4c-0922-4ade-86f6-0322c75507e8 - - - - -] Deprecated: Option "auth_uri" from group "keystone_authtoken" is deprecated for removal (The auth_uri option is deprecated in favor of www_authenticate_uri and will be removed in the S  release.).  Its value may be silently ignored in the future.
+2020-05-12 08:16:05.876 17116 ERROR cinder.backup.drivers.swift [-] Can not get Swift capabilities during backup driver initialization.: ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f04405c7c90>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:16:05.876 17116 ERROR cinder.backup.drivers.swift Traceback (most recent call last):
+2020-05-12 08:16:05.876 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/cinder/backup/drivers/swift.py", line 393, in check_for_setup_error
+2020-05-12 08:16:05.876 17116 ERROR cinder.backup.drivers.swift     conn.get_capabilities()
+2020-05-12 08:16:05.876 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1924, in get_capabilities
+2020-05-12 08:16:05.876 17116 ERROR cinder.backup.drivers.swift     return get_capabilities((parsed, self.http_conn[1]))
+2020-05-12 08:16:05.876 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1557, in get_capabilities
+2020-05-12 08:16:05.876 17116 ERROR cinder.backup.drivers.swift     conn.request('GET', parsed.path, '', headers)
+2020-05-12 08:16:05.876 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 458, in request
+2020-05-12 08:16:05.876 17116 ERROR cinder.backup.drivers.swift     files=files, **self.requests_args)
+2020-05-12 08:16:05.876 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 441, in _request
+2020-05-12 08:16:05.876 17116 ERROR cinder.backup.drivers.swift     return self.request_session.request(*arg, **kwarg)
+2020-05-12 08:16:05.876 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 533, in request
+2020-05-12 08:16:05.876 17116 ERROR cinder.backup.drivers.swift     resp = self.send(prep, **send_kwargs)
+2020-05-12 08:16:05.876 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 646, in send
+2020-05-12 08:16:05.876 17116 ERROR cinder.backup.drivers.swift     r = adapter.send(request, **kwargs)
+2020-05-12 08:16:05.876 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/requests/adapters.py", line 516, in send
+2020-05-12 08:16:05.876 17116 ERROR cinder.backup.drivers.swift     raise ConnectionError(e, request=request)
+2020-05-12 08:16:05.876 17116 ERROR cinder.backup.drivers.swift ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f04405c7c90>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:16:05.876 17116 ERROR cinder.backup.drivers.swift 
+2020-05-12 08:16:05.879 17116 ERROR oslo.service.loopingcall [-] Fixed interval looping call 'cinder.backup.manager.BackupManager._setup_backup_driver' failed: ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f04405c7c90>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:16:05.879 17116 ERROR oslo.service.loopingcall Traceback (most recent call last):
+2020-05-12 08:16:05.879 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/oslo_service/loopingcall.py", line 150, in _run_loop
+2020-05-12 08:16:05.879 17116 ERROR oslo.service.loopingcall     result = func(*self.args, **self.kw)
+2020-05-12 08:16:05.879 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/cinder/backup/manager.py", line 152, in _setup_backup_driver
+2020-05-12 08:16:05.879 17116 ERROR oslo.service.loopingcall     backup_service.check_for_setup_error()
+2020-05-12 08:16:05.879 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/cinder/backup/drivers/swift.py", line 393, in check_for_setup_error
+2020-05-12 08:16:05.879 17116 ERROR oslo.service.loopingcall     conn.get_capabilities()
+2020-05-12 08:16:05.879 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1924, in get_capabilities
+2020-05-12 08:16:05.879 17116 ERROR oslo.service.loopingcall     return get_capabilities((parsed, self.http_conn[1]))
+2020-05-12 08:16:05.879 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1557, in get_capabilities
+2020-05-12 08:16:05.879 17116 ERROR oslo.service.loopingcall     conn.request('GET', parsed.path, '', headers)
+2020-05-12 08:16:05.879 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 458, in request
+2020-05-12 08:16:05.879 17116 ERROR oslo.service.loopingcall     files=files, **self.requests_args)
+2020-05-12 08:16:05.879 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 441, in _request
+2020-05-12 08:16:05.879 17116 ERROR oslo.service.loopingcall     return self.request_session.request(*arg, **kwarg)
+2020-05-12 08:16:05.879 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 533, in request
+2020-05-12 08:16:05.879 17116 ERROR oslo.service.loopingcall     resp = self.send(prep, **send_kwargs)
+2020-05-12 08:16:05.879 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 646, in send
+2020-05-12 08:16:05.879 17116 ERROR oslo.service.loopingcall     r = adapter.send(request, **kwargs)
+2020-05-12 08:16:05.879 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/requests/adapters.py", line 516, in send
+2020-05-12 08:16:05.879 17116 ERROR oslo.service.loopingcall     raise ConnectionError(e, request=request)
+2020-05-12 08:16:05.879 17116 ERROR oslo.service.loopingcall ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f04405c7c90>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:16:05.879 17116 ERROR oslo.service.loopingcall 
+2020-05-12 08:16:05.915 17116 INFO cinder.keymgr.migration [req-94909f92-ac63-4ae2-b19e-1e8ab9ed62e0 - - - - -] Not migrating encryption keys because the ConfKeyManager is still in use.
+2020-05-12 08:16:15.976 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:16:25.979 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:16:35.981 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:16:45.983 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:16:55.985 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:17:05.987 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:17:15.989 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:17:25.992 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:17:35.994 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:17:45.996 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:17:55.998 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:17:59.985 17116 ERROR cinder.backup.drivers.swift [-] Can not get Swift capabilities during backup driver initialization.: ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0440523b10>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:17:59.985 17116 ERROR cinder.backup.drivers.swift Traceback (most recent call last):
+2020-05-12 08:17:59.985 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/cinder/backup/drivers/swift.py", line 393, in check_for_setup_error
+2020-05-12 08:17:59.985 17116 ERROR cinder.backup.drivers.swift     conn.get_capabilities()
+2020-05-12 08:17:59.985 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1924, in get_capabilities
+2020-05-12 08:17:59.985 17116 ERROR cinder.backup.drivers.swift     return get_capabilities((parsed, self.http_conn[1]))
+2020-05-12 08:17:59.985 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1557, in get_capabilities
+2020-05-12 08:17:59.985 17116 ERROR cinder.backup.drivers.swift     conn.request('GET', parsed.path, '', headers)
+2020-05-12 08:17:59.985 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 458, in request
+2020-05-12 08:17:59.985 17116 ERROR cinder.backup.drivers.swift     files=files, **self.requests_args)
+2020-05-12 08:17:59.985 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 441, in _request
+2020-05-12 08:17:59.985 17116 ERROR cinder.backup.drivers.swift     return self.request_session.request(*arg, **kwarg)
+2020-05-12 08:17:59.985 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 533, in request
+2020-05-12 08:17:59.985 17116 ERROR cinder.backup.drivers.swift     resp = self.send(prep, **send_kwargs)
+2020-05-12 08:17:59.985 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 646, in send
+2020-05-12 08:17:59.985 17116 ERROR cinder.backup.drivers.swift     r = adapter.send(request, **kwargs)
+2020-05-12 08:17:59.985 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/requests/adapters.py", line 516, in send
+2020-05-12 08:17:59.985 17116 ERROR cinder.backup.drivers.swift     raise ConnectionError(e, request=request)
+2020-05-12 08:17:59.985 17116 ERROR cinder.backup.drivers.swift ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0440523b10>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:17:59.985 17116 ERROR cinder.backup.drivers.swift 
+2020-05-12 08:17:59.988 17116 ERROR oslo.service.loopingcall [-] Fixed interval looping call 'cinder.backup.manager.BackupManager._setup_backup_driver' failed: ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0440523b10>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:17:59.988 17116 ERROR oslo.service.loopingcall Traceback (most recent call last):
+2020-05-12 08:17:59.988 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/oslo_service/loopingcall.py", line 150, in _run_loop
+2020-05-12 08:17:59.988 17116 ERROR oslo.service.loopingcall     result = func(*self.args, **self.kw)
+2020-05-12 08:17:59.988 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/cinder/backup/manager.py", line 152, in _setup_backup_driver
+2020-05-12 08:17:59.988 17116 ERROR oslo.service.loopingcall     backup_service.check_for_setup_error()
+2020-05-12 08:17:59.988 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/cinder/backup/drivers/swift.py", line 393, in check_for_setup_error
+2020-05-12 08:17:59.988 17116 ERROR oslo.service.loopingcall     conn.get_capabilities()
+2020-05-12 08:17:59.988 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1924, in get_capabilities
+2020-05-12 08:17:59.988 17116 ERROR oslo.service.loopingcall     return get_capabilities((parsed, self.http_conn[1]))
+2020-05-12 08:17:59.988 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1557, in get_capabilities
+2020-05-12 08:17:59.988 17116 ERROR oslo.service.loopingcall     conn.request('GET', parsed.path, '', headers)
+2020-05-12 08:17:59.988 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 458, in request
+2020-05-12 08:17:59.988 17116 ERROR oslo.service.loopingcall     files=files, **self.requests_args)
+2020-05-12 08:17:59.988 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 441, in _request
+2020-05-12 08:17:59.988 17116 ERROR oslo.service.loopingcall     return self.request_session.request(*arg, **kwarg)
+2020-05-12 08:17:59.988 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 533, in request
+2020-05-12 08:17:59.988 17116 ERROR oslo.service.loopingcall     resp = self.send(prep, **send_kwargs)
+2020-05-12 08:17:59.988 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 646, in send
+2020-05-12 08:17:59.988 17116 ERROR oslo.service.loopingcall     r = adapter.send(request, **kwargs)
+2020-05-12 08:17:59.988 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/requests/adapters.py", line 516, in send
+2020-05-12 08:17:59.988 17116 ERROR oslo.service.loopingcall     raise ConnectionError(e, request=request)
+2020-05-12 08:17:59.988 17116 ERROR oslo.service.loopingcall ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0440523b10>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:17:59.988 17116 ERROR oslo.service.loopingcall 
+2020-05-12 08:18:06.000 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:18:16.000 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:18:26.002 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:18:36.004 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:18:46.006 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:18:56.008 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:18:59.980 17116 ERROR cinder.backup.drivers.swift [-] Can not get Swift capabilities during backup driver initialization.: ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0440541410>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:18:59.980 17116 ERROR cinder.backup.drivers.swift Traceback (most recent call last):
+2020-05-12 08:18:59.980 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/cinder/backup/drivers/swift.py", line 393, in check_for_setup_error
+2020-05-12 08:18:59.980 17116 ERROR cinder.backup.drivers.swift     conn.get_capabilities()
+2020-05-12 08:18:59.980 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1924, in get_capabilities
+2020-05-12 08:18:59.980 17116 ERROR cinder.backup.drivers.swift     return get_capabilities((parsed, self.http_conn[1]))
+2020-05-12 08:18:59.980 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1557, in get_capabilities
+2020-05-12 08:18:59.980 17116 ERROR cinder.backup.drivers.swift     conn.request('GET', parsed.path, '', headers)
+2020-05-12 08:18:59.980 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 458, in request
+2020-05-12 08:18:59.980 17116 ERROR cinder.backup.drivers.swift     files=files, **self.requests_args)
+2020-05-12 08:18:59.980 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 441, in _request
+2020-05-12 08:18:59.980 17116 ERROR cinder.backup.drivers.swift     return self.request_session.request(*arg, **kwarg)
+2020-05-12 08:18:59.980 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 533, in request
+2020-05-12 08:18:59.980 17116 ERROR cinder.backup.drivers.swift     resp = self.send(prep, **send_kwargs)
+2020-05-12 08:18:59.980 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 646, in send
+2020-05-12 08:18:59.980 17116 ERROR cinder.backup.drivers.swift     r = adapter.send(request, **kwargs)
+2020-05-12 08:18:59.980 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/requests/adapters.py", line 516, in send
+2020-05-12 08:18:59.980 17116 ERROR cinder.backup.drivers.swift     raise ConnectionError(e, request=request)
+2020-05-12 08:18:59.980 17116 ERROR cinder.backup.drivers.swift ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0440541410>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:18:59.980 17116 ERROR cinder.backup.drivers.swift 
+2020-05-12 08:18:59.983 17116 ERROR oslo.service.loopingcall [-] Fixed interval looping call 'cinder.backup.manager.BackupManager._setup_backup_driver' failed: ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0440541410>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:18:59.983 17116 ERROR oslo.service.loopingcall Traceback (most recent call last):
+2020-05-12 08:18:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/oslo_service/loopingcall.py", line 150, in _run_loop
+2020-05-12 08:18:59.983 17116 ERROR oslo.service.loopingcall     result = func(*self.args, **self.kw)
+2020-05-12 08:18:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/cinder/backup/manager.py", line 152, in _setup_backup_driver
+2020-05-12 08:18:59.983 17116 ERROR oslo.service.loopingcall     backup_service.check_for_setup_error()
+2020-05-12 08:18:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/cinder/backup/drivers/swift.py", line 393, in check_for_setup_error
+2020-05-12 08:18:59.983 17116 ERROR oslo.service.loopingcall     conn.get_capabilities()
+2020-05-12 08:18:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1924, in get_capabilities
+2020-05-12 08:18:59.983 17116 ERROR oslo.service.loopingcall     return get_capabilities((parsed, self.http_conn[1]))
+2020-05-12 08:18:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1557, in get_capabilities
+2020-05-12 08:18:59.983 17116 ERROR oslo.service.loopingcall     conn.request('GET', parsed.path, '', headers)
+2020-05-12 08:18:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 458, in request
+2020-05-12 08:18:59.983 17116 ERROR oslo.service.loopingcall     files=files, **self.requests_args)
+2020-05-12 08:18:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 441, in _request
+2020-05-12 08:18:59.983 17116 ERROR oslo.service.loopingcall     return self.request_session.request(*arg, **kwarg)
+2020-05-12 08:18:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 533, in request
+2020-05-12 08:18:59.983 17116 ERROR oslo.service.loopingcall     resp = self.send(prep, **send_kwargs)
+2020-05-12 08:18:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 646, in send
+2020-05-12 08:18:59.983 17116 ERROR oslo.service.loopingcall     r = adapter.send(request, **kwargs)
+2020-05-12 08:18:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/requests/adapters.py", line 516, in send
+2020-05-12 08:18:59.983 17116 ERROR oslo.service.loopingcall     raise ConnectionError(e, request=request)
+2020-05-12 08:18:59.983 17116 ERROR oslo.service.loopingcall ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0440541410>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:18:59.983 17116 ERROR oslo.service.loopingcall 
+2020-05-12 08:19:06.010 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:19:16.012 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:19:26.014 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:19:36.016 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:19:46.018 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:19:56.020 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:19:59.975 17116 ERROR cinder.backup.drivers.swift [-] Can not get Swift capabilities during backup driver initialization.: ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0440541e90>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:19:59.975 17116 ERROR cinder.backup.drivers.swift Traceback (most recent call last):
+2020-05-12 08:19:59.975 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/cinder/backup/drivers/swift.py", line 393, in check_for_setup_error
+2020-05-12 08:19:59.975 17116 ERROR cinder.backup.drivers.swift     conn.get_capabilities()
+2020-05-12 08:19:59.975 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1924, in get_capabilities
+2020-05-12 08:19:59.975 17116 ERROR cinder.backup.drivers.swift     return get_capabilities((parsed, self.http_conn[1]))
+2020-05-12 08:19:59.975 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1557, in get_capabilities
+2020-05-12 08:19:59.975 17116 ERROR cinder.backup.drivers.swift     conn.request('GET', parsed.path, '', headers)
+2020-05-12 08:19:59.975 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 458, in request
+2020-05-12 08:19:59.975 17116 ERROR cinder.backup.drivers.swift     files=files, **self.requests_args)
+2020-05-12 08:19:59.975 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 441, in _request
+2020-05-12 08:19:59.975 17116 ERROR cinder.backup.drivers.swift     return self.request_session.request(*arg, **kwarg)
+2020-05-12 08:19:59.975 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 533, in request
+2020-05-12 08:19:59.975 17116 ERROR cinder.backup.drivers.swift     resp = self.send(prep, **send_kwargs)
+2020-05-12 08:19:59.975 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 646, in send
+2020-05-12 08:19:59.975 17116 ERROR cinder.backup.drivers.swift     r = adapter.send(request, **kwargs)
+2020-05-12 08:19:59.975 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/requests/adapters.py", line 516, in send
+2020-05-12 08:19:59.975 17116 ERROR cinder.backup.drivers.swift     raise ConnectionError(e, request=request)
+2020-05-12 08:19:59.975 17116 ERROR cinder.backup.drivers.swift ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0440541e90>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:19:59.975 17116 ERROR cinder.backup.drivers.swift 
+2020-05-12 08:19:59.978 17116 ERROR oslo.service.loopingcall [-] Fixed interval looping call 'cinder.backup.manager.BackupManager._setup_backup_driver' failed: ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0440541e90>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:19:59.978 17116 ERROR oslo.service.loopingcall Traceback (most recent call last):
+2020-05-12 08:19:59.978 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/oslo_service/loopingcall.py", line 150, in _run_loop
+2020-05-12 08:19:59.978 17116 ERROR oslo.service.loopingcall     result = func(*self.args, **self.kw)
+2020-05-12 08:19:59.978 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/cinder/backup/manager.py", line 152, in _setup_backup_driver
+2020-05-12 08:19:59.978 17116 ERROR oslo.service.loopingcall     backup_service.check_for_setup_error()
+2020-05-12 08:19:59.978 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/cinder/backup/drivers/swift.py", line 393, in check_for_setup_error
+2020-05-12 08:19:59.978 17116 ERROR oslo.service.loopingcall     conn.get_capabilities()
+2020-05-12 08:19:59.978 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1924, in get_capabilities
+2020-05-12 08:19:59.978 17116 ERROR oslo.service.loopingcall     return get_capabilities((parsed, self.http_conn[1]))
+2020-05-12 08:19:59.978 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1557, in get_capabilities
+2020-05-12 08:19:59.978 17116 ERROR oslo.service.loopingcall     conn.request('GET', parsed.path, '', headers)
+2020-05-12 08:19:59.978 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 458, in request
+2020-05-12 08:19:59.978 17116 ERROR oslo.service.loopingcall     files=files, **self.requests_args)
+2020-05-12 08:19:59.978 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 441, in _request
+2020-05-12 08:19:59.978 17116 ERROR oslo.service.loopingcall     return self.request_session.request(*arg, **kwarg)
+2020-05-12 08:19:59.978 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 533, in request
+2020-05-12 08:19:59.978 17116 ERROR oslo.service.loopingcall     resp = self.send(prep, **send_kwargs)
+2020-05-12 08:19:59.978 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 646, in send
+2020-05-12 08:19:59.978 17116 ERROR oslo.service.loopingcall     r = adapter.send(request, **kwargs)
+2020-05-12 08:19:59.978 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/requests/adapters.py", line 516, in send
+2020-05-12 08:19:59.978 17116 ERROR oslo.service.loopingcall     raise ConnectionError(e, request=request)
+2020-05-12 08:19:59.978 17116 ERROR oslo.service.loopingcall ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0440541e90>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:19:59.978 17116 ERROR oslo.service.loopingcall 
+2020-05-12 08:20:06.022 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:20:16.024 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:20:26.026 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:20:36.028 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:20:46.030 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:20:56.032 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:20:59.981 17116 ERROR cinder.backup.drivers.swift [-] Can not get Swift capabilities during backup driver initialization.: ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0440516110>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:20:59.981 17116 ERROR cinder.backup.drivers.swift Traceback (most recent call last):
+2020-05-12 08:20:59.981 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/cinder/backup/drivers/swift.py", line 393, in check_for_setup_error
+2020-05-12 08:20:59.981 17116 ERROR cinder.backup.drivers.swift     conn.get_capabilities()
+2020-05-12 08:20:59.981 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1924, in get_capabilities
+2020-05-12 08:20:59.981 17116 ERROR cinder.backup.drivers.swift     return get_capabilities((parsed, self.http_conn[1]))
+2020-05-12 08:20:59.981 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1557, in get_capabilities
+2020-05-12 08:20:59.981 17116 ERROR cinder.backup.drivers.swift     conn.request('GET', parsed.path, '', headers)
+2020-05-12 08:20:59.981 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 458, in request
+2020-05-12 08:20:59.981 17116 ERROR cinder.backup.drivers.swift     files=files, **self.requests_args)
+2020-05-12 08:20:59.981 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 441, in _request
+2020-05-12 08:20:59.981 17116 ERROR cinder.backup.drivers.swift     return self.request_session.request(*arg, **kwarg)
+2020-05-12 08:20:59.981 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 533, in request
+2020-05-12 08:20:59.981 17116 ERROR cinder.backup.drivers.swift     resp = self.send(prep, **send_kwargs)
+2020-05-12 08:20:59.981 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 646, in send
+2020-05-12 08:20:59.981 17116 ERROR cinder.backup.drivers.swift     r = adapter.send(request, **kwargs)
+2020-05-12 08:20:59.981 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/requests/adapters.py", line 516, in send
+2020-05-12 08:20:59.981 17116 ERROR cinder.backup.drivers.swift     raise ConnectionError(e, request=request)
+2020-05-12 08:20:59.981 17116 ERROR cinder.backup.drivers.swift ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0440516110>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:20:59.981 17116 ERROR cinder.backup.drivers.swift 
+2020-05-12 08:20:59.983 17116 ERROR oslo.service.loopingcall [-] Fixed interval looping call 'cinder.backup.manager.BackupManager._setup_backup_driver' failed: ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0440516110>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:20:59.983 17116 ERROR oslo.service.loopingcall Traceback (most recent call last):
+2020-05-12 08:20:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/oslo_service/loopingcall.py", line 150, in _run_loop
+2020-05-12 08:20:59.983 17116 ERROR oslo.service.loopingcall     result = func(*self.args, **self.kw)
+2020-05-12 08:20:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/cinder/backup/manager.py", line 152, in _setup_backup_driver
+2020-05-12 08:20:59.983 17116 ERROR oslo.service.loopingcall     backup_service.check_for_setup_error()
+2020-05-12 08:20:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/cinder/backup/drivers/swift.py", line 393, in check_for_setup_error
+2020-05-12 08:20:59.983 17116 ERROR oslo.service.loopingcall     conn.get_capabilities()
+2020-05-12 08:20:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1924, in get_capabilities
+2020-05-12 08:20:59.983 17116 ERROR oslo.service.loopingcall     return get_capabilities((parsed, self.http_conn[1]))
+2020-05-12 08:20:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1557, in get_capabilities
+2020-05-12 08:20:59.983 17116 ERROR oslo.service.loopingcall     conn.request('GET', parsed.path, '', headers)
+2020-05-12 08:20:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 458, in request
+2020-05-12 08:20:59.983 17116 ERROR oslo.service.loopingcall     files=files, **self.requests_args)
+2020-05-12 08:20:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 441, in _request
+2020-05-12 08:20:59.983 17116 ERROR oslo.service.loopingcall     return self.request_session.request(*arg, **kwarg)
+2020-05-12 08:20:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 533, in request
+2020-05-12 08:20:59.983 17116 ERROR oslo.service.loopingcall     resp = self.send(prep, **send_kwargs)
+2020-05-12 08:20:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 646, in send
+2020-05-12 08:20:59.983 17116 ERROR oslo.service.loopingcall     r = adapter.send(request, **kwargs)
+2020-05-12 08:20:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/requests/adapters.py", line 516, in send
+2020-05-12 08:20:59.983 17116 ERROR oslo.service.loopingcall     raise ConnectionError(e, request=request)
+2020-05-12 08:20:59.983 17116 ERROR oslo.service.loopingcall ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0440516110>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:20:59.983 17116 ERROR oslo.service.loopingcall 
+2020-05-12 08:21:06.034 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:21:16.035 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:21:26.038 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:21:36.040 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:21:46.041 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:21:56.043 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:21:59.976 17116 ERROR cinder.backup.drivers.swift [-] Can not get Swift capabilities during backup driver initialization.: ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0440541290>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:21:59.976 17116 ERROR cinder.backup.drivers.swift Traceback (most recent call last):
+2020-05-12 08:21:59.976 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/cinder/backup/drivers/swift.py", line 393, in check_for_setup_error
+2020-05-12 08:21:59.976 17116 ERROR cinder.backup.drivers.swift     conn.get_capabilities()
+2020-05-12 08:21:59.976 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1924, in get_capabilities
+2020-05-12 08:21:59.976 17116 ERROR cinder.backup.drivers.swift     return get_capabilities((parsed, self.http_conn[1]))
+2020-05-12 08:21:59.976 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1557, in get_capabilities
+2020-05-12 08:21:59.976 17116 ERROR cinder.backup.drivers.swift     conn.request('GET', parsed.path, '', headers)
+2020-05-12 08:21:59.976 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 458, in request
+2020-05-12 08:21:59.976 17116 ERROR cinder.backup.drivers.swift     files=files, **self.requests_args)
+2020-05-12 08:21:59.976 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 441, in _request
+2020-05-12 08:21:59.976 17116 ERROR cinder.backup.drivers.swift     return self.request_session.request(*arg, **kwarg)
+2020-05-12 08:21:59.976 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 533, in request
+2020-05-12 08:21:59.976 17116 ERROR cinder.backup.drivers.swift     resp = self.send(prep, **send_kwargs)
+2020-05-12 08:21:59.976 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 646, in send
+2020-05-12 08:21:59.976 17116 ERROR cinder.backup.drivers.swift     r = adapter.send(request, **kwargs)
+2020-05-12 08:21:59.976 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/requests/adapters.py", line 516, in send
+2020-05-12 08:21:59.976 17116 ERROR cinder.backup.drivers.swift     raise ConnectionError(e, request=request)
+2020-05-12 08:21:59.976 17116 ERROR cinder.backup.drivers.swift ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0440541290>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:21:59.976 17116 ERROR cinder.backup.drivers.swift 
+2020-05-12 08:21:59.978 17116 ERROR oslo.service.loopingcall [-] Fixed interval looping call 'cinder.backup.manager.BackupManager._setup_backup_driver' failed: ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0440541290>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:21:59.978 17116 ERROR oslo.service.loopingcall Traceback (most recent call last):
+2020-05-12 08:21:59.978 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/oslo_service/loopingcall.py", line 150, in _run_loop
+2020-05-12 08:21:59.978 17116 ERROR oslo.service.loopingcall     result = func(*self.args, **self.kw)
+2020-05-12 08:21:59.978 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/cinder/backup/manager.py", line 152, in _setup_backup_driver
+2020-05-12 08:21:59.978 17116 ERROR oslo.service.loopingcall     backup_service.check_for_setup_error()
+2020-05-12 08:21:59.978 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/cinder/backup/drivers/swift.py", line 393, in check_for_setup_error
+2020-05-12 08:21:59.978 17116 ERROR oslo.service.loopingcall     conn.get_capabilities()
+2020-05-12 08:21:59.978 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1924, in get_capabilities
+2020-05-12 08:21:59.978 17116 ERROR oslo.service.loopingcall     return get_capabilities((parsed, self.http_conn[1]))
+2020-05-12 08:21:59.978 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1557, in get_capabilities
+2020-05-12 08:21:59.978 17116 ERROR oslo.service.loopingcall     conn.request('GET', parsed.path, '', headers)
+2020-05-12 08:21:59.978 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 458, in request
+2020-05-12 08:21:59.978 17116 ERROR oslo.service.loopingcall     files=files, **self.requests_args)
+2020-05-12 08:21:59.978 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 441, in _request
+2020-05-12 08:21:59.978 17116 ERROR oslo.service.loopingcall     return self.request_session.request(*arg, **kwarg)
+2020-05-12 08:21:59.978 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 533, in request
+2020-05-12 08:21:59.978 17116 ERROR oslo.service.loopingcall     resp = self.send(prep, **send_kwargs)
+2020-05-12 08:21:59.978 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 646, in send
+2020-05-12 08:21:59.978 17116 ERROR oslo.service.loopingcall     r = adapter.send(request, **kwargs)
+2020-05-12 08:21:59.978 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/requests/adapters.py", line 516, in send
+2020-05-12 08:21:59.978 17116 ERROR oslo.service.loopingcall     raise ConnectionError(e, request=request)
+2020-05-12 08:21:59.978 17116 ERROR oslo.service.loopingcall ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0440541290>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:21:59.978 17116 ERROR oslo.service.loopingcall 
+2020-05-12 08:22:06.045 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:22:16.047 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:22:26.049 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:22:36.051 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:22:46.053 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:22:56.056 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:22:59.981 17116 ERROR cinder.backup.drivers.swift [-] Can not get Swift capabilities during backup driver initialization.: ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f04404d2b50>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:22:59.981 17116 ERROR cinder.backup.drivers.swift Traceback (most recent call last):
+2020-05-12 08:22:59.981 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/cinder/backup/drivers/swift.py", line 393, in check_for_setup_error
+2020-05-12 08:22:59.981 17116 ERROR cinder.backup.drivers.swift     conn.get_capabilities()
+2020-05-12 08:22:59.981 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1924, in get_capabilities
+2020-05-12 08:22:59.981 17116 ERROR cinder.backup.drivers.swift     return get_capabilities((parsed, self.http_conn[1]))
+2020-05-12 08:22:59.981 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1557, in get_capabilities
+2020-05-12 08:22:59.981 17116 ERROR cinder.backup.drivers.swift     conn.request('GET', parsed.path, '', headers)
+2020-05-12 08:22:59.981 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 458, in request
+2020-05-12 08:22:59.981 17116 ERROR cinder.backup.drivers.swift     files=files, **self.requests_args)
+2020-05-12 08:22:59.981 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 441, in _request
+2020-05-12 08:22:59.981 17116 ERROR cinder.backup.drivers.swift     return self.request_session.request(*arg, **kwarg)
+2020-05-12 08:22:59.981 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 533, in request
+2020-05-12 08:22:59.981 17116 ERROR cinder.backup.drivers.swift     resp = self.send(prep, **send_kwargs)
+2020-05-12 08:22:59.981 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 646, in send
+2020-05-12 08:22:59.981 17116 ERROR cinder.backup.drivers.swift     r = adapter.send(request, **kwargs)
+2020-05-12 08:22:59.981 17116 ERROR cinder.backup.drivers.swift   File "/usr/lib/python2.7/site-packages/requests/adapters.py", line 516, in send
+2020-05-12 08:22:59.981 17116 ERROR cinder.backup.drivers.swift     raise ConnectionError(e, request=request)
+2020-05-12 08:22:59.981 17116 ERROR cinder.backup.drivers.swift ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f04404d2b50>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:22:59.981 17116 ERROR cinder.backup.drivers.swift 
+2020-05-12 08:22:59.983 17116 ERROR oslo.service.loopingcall [-] Fixed interval looping call 'cinder.backup.manager.BackupManager._setup_backup_driver' failed: ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f04404d2b50>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:22:59.983 17116 ERROR oslo.service.loopingcall Traceback (most recent call last):
+2020-05-12 08:22:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/oslo_service/loopingcall.py", line 150, in _run_loop
+2020-05-12 08:22:59.983 17116 ERROR oslo.service.loopingcall     result = func(*self.args, **self.kw)
+2020-05-12 08:22:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/cinder/backup/manager.py", line 152, in _setup_backup_driver
+2020-05-12 08:22:59.983 17116 ERROR oslo.service.loopingcall     backup_service.check_for_setup_error()
+2020-05-12 08:22:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/cinder/backup/drivers/swift.py", line 393, in check_for_setup_error
+2020-05-12 08:22:59.983 17116 ERROR oslo.service.loopingcall     conn.get_capabilities()
+2020-05-12 08:22:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1924, in get_capabilities
+2020-05-12 08:22:59.983 17116 ERROR oslo.service.loopingcall     return get_capabilities((parsed, self.http_conn[1]))
+2020-05-12 08:22:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 1557, in get_capabilities
+2020-05-12 08:22:59.983 17116 ERROR oslo.service.loopingcall     conn.request('GET', parsed.path, '', headers)
+2020-05-12 08:22:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 458, in request
+2020-05-12 08:22:59.983 17116 ERROR oslo.service.loopingcall     files=files, **self.requests_args)
+2020-05-12 08:22:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/swiftclient/client.py", line 441, in _request
+2020-05-12 08:22:59.983 17116 ERROR oslo.service.loopingcall     return self.request_session.request(*arg, **kwarg)
+2020-05-12 08:22:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 533, in request
+2020-05-12 08:22:59.983 17116 ERROR oslo.service.loopingcall     resp = self.send(prep, **send_kwargs)
+2020-05-12 08:22:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/requests/sessions.py", line 646, in send
+2020-05-12 08:22:59.983 17116 ERROR oslo.service.loopingcall     r = adapter.send(request, **kwargs)
+2020-05-12 08:22:59.983 17116 ERROR oslo.service.loopingcall   File "/usr/lib/python2.7/site-packages/requests/adapters.py", line 516, in send
+2020-05-12 08:22:59.983 17116 ERROR oslo.service.loopingcall     raise ConnectionError(e, request=request)
+2020-05-12 08:22:59.983 17116 ERROR oslo.service.loopingcall ConnectionError: HTTPConnectionPool(host='10.1.85.241', port=8080): Max retries exceeded with url: /info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f04404d2b50>: Failed to establish a new connection: [Errno 111] ECONNREFUSED',))
+2020-05-12 08:22:59.983 17116 ERROR oslo.service.loopingcall 
+2020-05-12 08:23:06.058 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:23:16.060 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:23:26.061 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:23:36.063 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:23:46.065 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 08:23:56.068 17116 ERROR cinder.service [-] Manager for service cinder-backup centos7 is reporting problems, not sending heartbeat. Service will appear "down".
+2020-05-12 09:52:09.960 17116 WARNING oslo.service.loopingcall [req-b61e32ae-5984-4282-b8b2-1a68fdec94b8 - - - - -] Function 'cinder.service.Service.report_state' run outlasted interval by 3.69 sec
+2020-05-12 10:37:41.993 17116 WARNING oslo.service.loopingcall [req-b61e32ae-5984-4282-b8b2-1a68fdec94b8 - - - - -] Function 'cinder.service.Service.report_state' run outlasted interval by 1.93 sec

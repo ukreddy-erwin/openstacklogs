@@ -1,0 +1,11 @@
+2020-05-12 08:16:05.167 16790 INFO cinder.rpc [req-2f4e784e-55f8-4346-8184-705c855ded81 - - - - -] Automatically selected cinder-volume objects version 1.38 as minimum service version.
+2020-05-12 08:16:05.175 16790 INFO cinder.rpc [req-2f4e784e-55f8-4346-8184-705c855ded81 - - - - -] Automatically selected cinder-volume RPC version 3.16 as minimum service version.
+2020-05-12 08:16:05.189 16790 INFO cinder.rpc [req-2f4e784e-55f8-4346-8184-705c855ded81 - - - - -] Automatically selected cinder-scheduler objects version 1.38 as minimum service version.
+2020-05-12 08:16:05.196 16790 INFO cinder.rpc [req-2f4e784e-55f8-4346-8184-705c855ded81 - - - - -] Automatically selected cinder-scheduler RPC version 3.11 as minimum service version.
+2020-05-12 08:16:05.243 16790 WARNING oslo_config.cfg [req-2f4e784e-55f8-4346-8184-705c855ded81 - - - - -] Deprecated: Option "auth_uri" from group "keystone_authtoken" is deprecated for removal (The auth_uri option is deprecated in favor of www_authenticate_uri and will be removed in the S  release.).  Its value may be silently ignored in the future.
+2020-05-12 08:16:05.266 16790 INFO cinder.service [-] Starting cinder-scheduler node (version 14.0.4)
+2020-05-12 08:16:05.274 16790 INFO cinder.manager [req-31437343-c379-4704-a1fd-1313ddb0bc9d - - - - -] Initiating service 1 cleanup
+2020-05-12 08:16:05.280 16790 INFO cinder.manager [req-31437343-c379-4704-a1fd-1313ddb0bc9d - - - - -] Service 1 cleanup completed.
+2020-05-12 08:16:22.444 16790 INFO cinder.message.api [req-f9a7d125-f229-45fe-97ef-3acfdc8baab3 - - - - -] Deleted 0 expired messages.
+2020-05-12 09:52:09.953 16790 WARNING oslo.service.loopingcall [req-f899942b-1fbe-4874-beec-342fb72f6033 - - - - -] Function 'cinder.service.Service.report_state' run outlasted interval by 4.07 sec
+2020-05-12 10:37:41.977 16790 WARNING oslo.service.loopingcall [req-f899942b-1fbe-4874-beec-342fb72f6033 - - - - -] Function 'cinder.service.Service.report_state' run outlasted interval by 1.44 sec
