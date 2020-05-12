@@ -1,0 +1,944 @@
+2020-05-12 08:16:03.325 16721 WARNING cinder.api [-] The v2 API is deprecated and is not under active development. You should set enable_v2_api=false and enable_v3_api=true in your cinder.conf file.
+2020-05-12 08:16:03.328 16721 WARNING py.warnings [-] /usr/lib/python2.7/site-packages/paste/deploy/loadwsgi.py:22: PkgResourcesDeprecationWarning: Parameters to load are deprecated.  Call .resolve and .require separately.
+  return pkg_resources.EntryPoint.parse("x=" + s).load(False)
+
+2020-05-12 08:16:04.225 16721 INFO cinder.rpc [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Automatically selected cinder-scheduler objects version 1.38 as minimum service version.
+2020-05-12 08:16:04.233 16721 INFO cinder.rpc [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Automatically selected cinder-scheduler RPC version 3.11 as minimum service version.
+2020-05-12 08:16:04.241 16721 INFO cinder.rpc [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Automatically selected cinder-volume objects version 1.38 as minimum service version.
+2020-05-12 08:16:04.248 16721 INFO cinder.rpc [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Automatically selected cinder-volume RPC version 3.16 as minimum service version.
+2020-05-12 08:16:04.250 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.251 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.263 16721 WARNING cinder.keymgr.conf_key_mgr [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] This key manager is insecure and is not recommended for production deployments: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.268 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.268 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.278 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.281 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.287 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.288 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.291 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.293 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.297 16721 WARNING cinder.api.contrib.hosts [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecated: The Host API is deprecated and will be be removed in a future version.
+2020-05-12 08:16:04.321 16721 INFO cinder.rpc [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Automatically selected cinder-backup objects version 1.38 as minimum service version.
+2020-05-12 08:16:04.336 16721 INFO cinder.rpc [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Automatically selected cinder-backup RPC version 2.1 as minimum service version.
+2020-05-12 08:16:04.337 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.338 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.340 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.341 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.343 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.343 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.346 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.346 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.348 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.348 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.350 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.351 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.353 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.353 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.357 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.358 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.360 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.361 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.399 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.400 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.402 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.402 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.404 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.405 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.407 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.407 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.409 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.410 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.411 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.412 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.414 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.415 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.416 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.417 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.419 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.420 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.422 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.423 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.440 16721 WARNING keystonemiddleware.auth_token [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] AuthToken middleware is set with keystone_authtoken.service_token_roles_required set to False. This is backwards compatible but deprecated behaviour. Please set this to True.
+2020-05-12 08:16:04.484 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.485 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.487 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.488 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.490 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.490 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.492 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.493 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.505 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.505 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.509 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.510 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.514 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.515 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.520 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.521 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.525 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.525 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.529 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.530 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.534 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.535 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.538 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.539 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.543 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.543 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.545 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.546 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.549 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.550 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.557 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.558 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.563 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.564 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.566 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.566 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.568 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.569 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.571 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.571 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.573 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.574 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.576 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.577 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.578 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.579 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.581 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.581 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.583 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.584 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.628 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.629 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.631 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.631 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.633 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.634 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.636 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.636 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.638 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.639 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.641 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.642 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.644 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.644 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.646 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.647 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.648 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.649 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.651 16721 WARNING stevedore.named [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Could not load cinder.keymgr.conf_key_mgr.ConfKeyManager
+2020-05-12 08:16:04.651 16721 WARNING castellan.key_manager [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecation Warning : cinder.keymgr.conf_key_mgr.ConfKeyManager is not a stevedore based driver, trying to load it as a class: NoMatches: No 'castellan.drivers' driver found, looking for 'cinder.keymgr.conf_key_mgr.ConfKeyManager'
+2020-05-12 08:16:04.659 16721 WARNING keystonemiddleware.auth_token [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] AuthToken middleware is set with keystone_authtoken.service_token_roles_required set to False. This is backwards compatible but deprecated behaviour. Please set this to True.
+2020-05-12 08:16:04.696 16721 INFO oslo.service.wsgi [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] osapi_volume listening on 0.0.0.0:8776
+2020-05-12 08:16:04.697 16721 INFO oslo_service.service [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Starting 4 workers
+2020-05-12 08:16:04.727 17071 INFO eventlet.wsgi.server [-] (17071) wsgi starting up on http://0.0.0.0:8776
+2020-05-12 08:16:04.727 17069 INFO eventlet.wsgi.server [-] (17069) wsgi starting up on http://0.0.0.0:8776
+2020-05-12 08:16:04.718 17070 INFO eventlet.wsgi.server [-] (17070) wsgi starting up on http://0.0.0.0:8776
+2020-05-12 08:16:04.737 17072 INFO eventlet.wsgi.server [-] (17072) wsgi starting up on http://0.0.0.0:8776
+2020-05-12 08:16:04.747 16721 WARNING oslo_config.cfg [req-4513ea3f-1805-47b8-8617-90689c3d07a2 - - - - -] Deprecated: Option "auth_uri" from group "keystone_authtoken" is deprecated for removal (The auth_uri option is deprecated in favor of www_authenticate_uri and will be removed in the S  release.).  Its value may be silently ignored in the future.
+2020-05-12 08:20:45.530 17069 WARNING keystonemiddleware.auth_token [-] Using the in-process token cache is deprecated as of the 4.2.0 release and may be removed in the 5.0.0 release or the 'O' development cycle. The in-process cache causes inconsistent results and high memory usage. When the feature is removed the auth_token middleware will not cache tokens by default which may result in performance issues. It is recommended to use  memcache for the auth_token token cache by setting the memcached_servers option.
+2020-05-12 08:20:46.620 17069 INFO cinder.api.openstack.wsgi [req-87383771-9054-491f-985b-50eb3fc42e1a 8fba37d50a484df8817260d80b5e7a06 fe075815291f47ad953af62fa77bc900 - default default] GET http://10.1.85.241:8776/v2/fe075815291f47ad953af62fa77bc900/types?is_public=None
+2020-05-12 08:20:46.645 17069 INFO cinder.api.openstack.wsgi [req-87383771-9054-491f-985b-50eb3fc42e1a 8fba37d50a484df8817260d80b5e7a06 fe075815291f47ad953af62fa77bc900 - default default] http://10.1.85.241:8776/v2/fe075815291f47ad953af62fa77bc900/types?is_public=None returned with HTTP 200
+2020-05-12 08:20:46.646 17069 INFO eventlet.wsgi.server [req-87383771-9054-491f-985b-50eb3fc42e1a 8fba37d50a484df8817260d80b5e7a06 fe075815291f47ad953af62fa77bc900 - default default] 10.1.85.241 "GET /v2/fe075815291f47ad953af62fa77bc900/types?is_public=None HTTP/1.1" status: 200  len: 282 time: 1.1185629
+2020-05-12 08:20:49.045 17070 WARNING keystonemiddleware.auth_token [-] Using the in-process token cache is deprecated as of the 4.2.0 release and may be removed in the 5.0.0 release or the 'O' development cycle. The in-process cache causes inconsistent results and high memory usage. When the feature is removed the auth_token middleware will not cache tokens by default which may result in performance issues. It is recommended to use  memcache for the auth_token token cache by setting the memcached_servers option.
+2020-05-12 08:20:50.163 17070 INFO cinder.api.openstack.wsgi [req-301ab568-083e-40d4-9526-5f4c190920ce 8fba37d50a484df8817260d80b5e7a06 fe075815291f47ad953af62fa77bc900 - default default] POST http://10.1.85.241:8776/v2/fe075815291f47ad953af62fa77bc900/types
+2020-05-12 08:20:50.268 17070 INFO cinder.api.openstack.wsgi [req-301ab568-083e-40d4-9526-5f4c190920ce 8fba37d50a484df8817260d80b5e7a06 fe075815291f47ad953af62fa77bc900 - default default] http://10.1.85.241:8776/v2/fe075815291f47ad953af62fa77bc900/types returned with HTTP 200
+2020-05-12 08:20:50.270 17070 INFO eventlet.wsgi.server [req-301ab568-083e-40d4-9526-5f4c190920ce 8fba37d50a484df8817260d80b5e7a06 fe075815291f47ad953af62fa77bc900 - default default] 10.1.85.241 "POST /v2/fe075815291f47ad953af62fa77bc900/types HTTP/1.1" status: 200  len: 443 time: 1.2272601
+2020-05-12 08:20:50.278 17070 INFO cinder.api.openstack.wsgi [req-e017970d-e150-4efc-94c0-2570cd4ce598 8fba37d50a484df8817260d80b5e7a06 fe075815291f47ad953af62fa77bc900 - default default] POST http://10.1.85.241:8776/v2/fe075815291f47ad953af62fa77bc900/types/44cf1e15-4648-4db9-ab86-e0f80c62840f/extra_specs
+2020-05-12 08:20:50.375 17070 INFO cinder.api.openstack.wsgi [req-e017970d-e150-4efc-94c0-2570cd4ce598 8fba37d50a484df8817260d80b5e7a06 fe075815291f47ad953af62fa77bc900 - default default] http://10.1.85.241:8776/v2/fe075815291f47ad953af62fa77bc900/types/44cf1e15-4648-4db9-ab86-e0f80c62840f/extra_specs returned with HTTP 200
+2020-05-12 08:20:50.377 17070 INFO eventlet.wsgi.server [req-e017970d-e150-4efc-94c0-2570cd4ce598 8fba37d50a484df8817260d80b5e7a06 fe075815291f47ad953af62fa77bc900 - default default] 10.1.85.241 "POST /v2/fe075815291f47ad953af62fa77bc900/types/44cf1e15-4648-4db9-ab86-e0f80c62840f/extra_specs HTTP/1.1" status: 200  len: 309 time: 0.1024890
+2020-05-12 09:00:04.115 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:04.122 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:04.124 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0118880
+2020-05-12 09:00:04.141 17072 WARNING keystonemiddleware.auth_token [-] Using the in-process token cache is deprecated as of the 4.2.0 release and may be removed in the 5.0.0 release or the 'O' development cycle. The in-process cache causes inconsistent results and high memory usage. When the feature is removed the auth_token middleware will not cache tokens by default which may result in performance issues. It is recommended to use  memcache for the auth_token token cache by setting the memcached_servers option.
+2020-05-12 09:00:05.538 17072 INFO cinder.api.openstack.wsgi [req-88a7ef1f-f34c-47be-aa1a-27842b5fbf02 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/limits?tenant_id=973168b02ba046ec8ad7a56a4b28fb35
+2020-05-12 09:00:05.569 17072 WARNING cinder.quota [req-88a7ef1f-f34c-47be-aa1a-27842b5fbf02 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Deprecated: Default quota for resource: snapshots_iscsi is set by the default quota flag: quota_snapshots_iscsi, it is now deprecated. Please use the default quota class for default quota.
+2020-05-12 09:00:05.569 17072 WARNING cinder.quota [req-88a7ef1f-f34c-47be-aa1a-27842b5fbf02 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Deprecated: Default quota for resource: backup_gigabytes is set by the default quota flag: quota_backup_gigabytes, it is now deprecated. Please use the default quota class for default quota.
+2020-05-12 09:00:05.570 17072 WARNING cinder.quota [req-88a7ef1f-f34c-47be-aa1a-27842b5fbf02 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Deprecated: Default quota for resource: volumes_iscsi is set by the default quota flag: quota_volumes_iscsi, it is now deprecated. Please use the default quota class for default quota.
+2020-05-12 09:00:05.571 17072 WARNING cinder.quota [req-88a7ef1f-f34c-47be-aa1a-27842b5fbf02 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Deprecated: Default quota for resource: backups is set by the default quota flag: quota_backups, it is now deprecated. Please use the default quota class for default quota.
+2020-05-12 09:00:05.572 17072 WARNING cinder.quota [req-88a7ef1f-f34c-47be-aa1a-27842b5fbf02 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Deprecated: Default quota for resource: gigabytes_iscsi is set by the default quota flag: quota_gigabytes_iscsi, it is now deprecated. Please use the default quota class for default quota.
+2020-05-12 09:00:05.599 17072 INFO cinder.api.openstack.wsgi [req-88a7ef1f-f34c-47be-aa1a-27842b5fbf02 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/limits?tenant_id=973168b02ba046ec8ad7a56a4b28fb35 returned with HTTP 200
+2020-05-12 09:00:05.600 17072 INFO eventlet.wsgi.server [req-88a7ef1f-f34c-47be-aa1a-27842b5fbf02 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/limits?tenant_id=973168b02ba046ec8ad7a56a4b28fb35 HTTP/1.1" status: 200  len: 630 time: 1.4660480
+2020-05-12 09:00:05.890 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:05.891 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:05.892 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022621
+2020-05-12 09:00:05.898 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:05.900 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:05.901 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0036471
+2020-05-12 09:00:05.905 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:05.906 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:05.907 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0026062
+2020-05-12 09:00:05.917 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:05.921 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:05.922 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0101271
+2020-05-12 09:00:05.927 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:05.929 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:05.929 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0021679
+2020-05-12 09:00:05.934 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:05.935 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:05.935 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0021269
+2020-05-12 09:00:05.945 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:05.946 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:05.946 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0021880
+2020-05-12 09:00:05.951 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:05.952 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:05.952 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0021248
+2020-05-12 09:00:11.786 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:11.787 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:11.788 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0026450
+2020-05-12 09:00:11.801 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:11.807 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:11.808 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0132840
+2020-05-12 09:00:11.812 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:11.813 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:11.814 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0021491
+2020-05-12 09:00:11.819 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:11.820 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:11.821 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0026100
+2020-05-12 09:00:11.826 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:11.827 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:11.827 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0021441
+2020-05-12 09:00:11.832 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:11.833 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:11.834 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023541
+2020-05-12 09:00:12.542 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:12.544 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:12.545 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0032780
+2020-05-12 09:00:12.551 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:12.552 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:12.553 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0025980
+2020-05-12 09:00:18.419 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:18.421 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:18.422 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0030909
+2020-05-12 09:00:18.437 17071 WARNING keystonemiddleware.auth_token [-] Using the in-process token cache is deprecated as of the 4.2.0 release and may be removed in the 5.0.0 release or the 'O' development cycle. The in-process cache causes inconsistent results and high memory usage. When the feature is removed the auth_token middleware will not cache tokens by default which may result in performance issues. It is recommended to use  memcache for the auth_token token cache by setting the memcached_servers option.
+2020-05-12 09:00:19.877 17071 INFO cinder.api.openstack.wsgi [req-6d4dfe93-5960-446d-aff4-d300e4884362 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail
+2020-05-12 09:00:19.893 17071 INFO cinder.api.openstack.wsgi [req-6d4dfe93-5960-446d-aff4-d300e4884362 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail returned with HTTP 200
+2020-05-12 09:00:19.894 17071 INFO eventlet.wsgi.server [req-6d4dfe93-5960-446d-aff4-d300e4884362 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail HTTP/1.1" status: 200  len: 343 time: 1.4602661
+2020-05-12 09:00:19.902 17071 INFO cinder.api.openstack.wsgi [req-d6673769-fab1-45cc-88b0-6770a2882f10 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail
+2020-05-12 09:00:19.966 17071 INFO cinder.volume.api [req-d6673769-fab1-45cc-88b0-6770a2882f10 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Get all volumes completed successfully.
+2020-05-12 09:00:19.969 17071 INFO cinder.api.openstack.wsgi [req-d6673769-fab1-45cc-88b0-6770a2882f10 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail returned with HTTP 200
+2020-05-12 09:00:19.970 17071 INFO eventlet.wsgi.server [req-d6673769-fab1-45cc-88b0-6770a2882f10 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail HTTP/1.1" status: 200  len: 342 time: 0.0719960
+2020-05-12 09:00:21.211 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:21.213 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:21.213 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023580
+2020-05-12 09:00:21.217 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:21.219 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:21.219 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0027230
+2020-05-12 09:00:21.224 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:21.225 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:21.226 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023310
+2020-05-12 09:00:21.230 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:21.231 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:21.231 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022368
+2020-05-12 09:00:21.236 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:21.237 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:21.238 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022092
+2020-05-12 09:00:21.243 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:21.244 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:21.245 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023029
+2020-05-12 09:00:22.454 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:22.455 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:22.456 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022349
+2020-05-12 09:00:22.461 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:22.462 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:22.462 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022678
+2020-05-12 09:00:39.708 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:39.710 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:39.710 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0027530
+2020-05-12 09:00:39.714 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:39.715 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:39.716 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022759
+2020-05-12 09:00:39.721 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:39.722 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:39.723 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022709
+2020-05-12 09:00:39.726 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:39.727 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:39.728 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022469
+2020-05-12 09:00:39.732 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:39.733 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:39.734 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022209
+2020-05-12 09:00:39.739 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:39.740 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:39.741 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022390
+2020-05-12 09:00:39.768 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:39.769 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:39.770 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022819
+2020-05-12 09:00:39.774 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:00:39.775 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:00:39.776 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022740
+2020-05-12 09:05:15.010 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:05:15.013 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:05:15.014 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0044711
+2020-05-12 09:05:15.019 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:05:15.020 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:05:15.020 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023320
+2020-05-12 09:05:15.026 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:05:15.028 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:05:15.029 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0033312
+2020-05-12 09:05:15.034 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:05:15.035 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:05:15.035 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022709
+2020-05-12 09:05:15.042 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:05:15.044 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:05:15.046 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0041740
+2020-05-12 09:05:15.053 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:05:15.054 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:05:15.055 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0024481
+2020-05-12 09:05:15.088 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:05:15.089 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:05:15.090 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0025320
+2020-05-12 09:05:15.096 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:05:15.097 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:05:15.098 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0024290
+2020-05-12 09:05:22.164 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:05:22.167 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:05:22.168 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0037191
+2020-05-12 09:05:22.180 17070 WARNING keystonemiddleware.auth_token [-] Using the in-process token cache is deprecated as of the 4.2.0 release and may be removed in the 5.0.0 release or the 'O' development cycle. The in-process cache causes inconsistent results and high memory usage. When the feature is removed the auth_token middleware will not cache tokens by default which may result in performance issues. It is recommended to use  memcache for the auth_token token cache by setting the memcached_servers option.
+2020-05-12 09:05:23.391 17070 INFO cinder.api.openstack.wsgi [req-c3a89fb9-9475-4d46-86fd-489c1a733e41 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail
+2020-05-12 09:05:23.408 17070 INFO cinder.api.openstack.wsgi [req-c3a89fb9-9475-4d46-86fd-489c1a733e41 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail returned with HTTP 200
+2020-05-12 09:05:23.409 17070 INFO eventlet.wsgi.server [req-c3a89fb9-9475-4d46-86fd-489c1a733e41 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail HTTP/1.1" status: 200  len: 343 time: 1.2315660
+2020-05-12 09:05:23.759 17072 INFO cinder.api.openstack.wsgi [req-1e096d17-a176-4c3b-9699-702fc2188d5d 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail
+2020-05-12 09:05:23.823 17072 INFO cinder.volume.api [req-1e096d17-a176-4c3b-9699-702fc2188d5d 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Get all volumes completed successfully.
+2020-05-12 09:05:23.826 17072 INFO cinder.api.openstack.wsgi [req-1e096d17-a176-4c3b-9699-702fc2188d5d 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail returned with HTTP 200
+2020-05-12 09:05:23.827 17072 INFO eventlet.wsgi.server [req-1e096d17-a176-4c3b-9699-702fc2188d5d 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail HTTP/1.1" status: 200  len: 342 time: 0.4145141
+2020-05-12 09:05:24.629 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:05:24.631 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:05:24.631 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0028951
+2020-05-12 09:05:24.636 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:05:24.637 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:05:24.638 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023630
+2020-05-12 09:05:24.643 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:05:24.645 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:05:24.645 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0025098
+2020-05-12 09:05:24.649 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:05:24.650 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:05:24.651 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022359
+2020-05-12 09:05:24.656 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:05:24.657 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:05:24.658 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0021920
+2020-05-12 09:05:24.662 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:05:24.663 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:05:24.664 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0021420
+2020-05-12 09:05:25.125 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:05:25.127 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:05:25.127 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023119
+2020-05-12 09:05:25.134 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:05:25.135 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:05:25.135 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023191
+2020-05-12 09:05:31.493 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:05:31.494 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:05:31.495 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0026751
+2020-05-12 09:05:31.507 17072 INFO cinder.api.openstack.wsgi [req-1c999911-3ae7-4298-a6c0-56eed31a264c 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail?bootable=1&status=available
+2020-05-12 09:05:31.509 17072 INFO cinder.api.openstack.wsgi [req-1c999911-3ae7-4298-a6c0-56eed31a264c 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail?bootable=1&status=available returned with HTTP 200
+2020-05-12 09:05:31.510 17072 INFO eventlet.wsgi.server [req-1c999911-3ae7-4298-a6c0-56eed31a264c 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail?bootable=1&status=available HTTP/1.1" status: 200  len: 343 time: 0.0082800
+2020-05-12 09:05:31.517 17072 INFO cinder.api.openstack.wsgi [req-1d03aec5-139c-439c-a225-5704fafcc01b 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail?bootable=1&status=available
+2020-05-12 09:05:31.559 17072 INFO cinder.volume.api [req-1d03aec5-139c-439c-a225-5704fafcc01b 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Get all volumes completed successfully.
+2020-05-12 09:05:31.562 17072 INFO cinder.api.openstack.wsgi [req-1d03aec5-139c-439c-a225-5704fafcc01b 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail?bootable=1&status=available returned with HTTP 200
+2020-05-12 09:05:31.563 17072 INFO eventlet.wsgi.server [req-1d03aec5-139c-439c-a225-5704fafcc01b 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail?bootable=1&status=available HTTP/1.1" status: 200  len: 342 time: 0.0490599
+2020-05-12 09:05:31.572 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:05:31.573 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:05:31.574 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023921
+2020-05-12 09:05:31.583 17070 INFO cinder.api.openstack.wsgi [req-73c92782-12c4-4f4f-852c-df191c892ee7 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/limits
+2020-05-12 09:05:31.608 17070 WARNING cinder.quota [req-73c92782-12c4-4f4f-852c-df191c892ee7 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Deprecated: Default quota for resource: snapshots_iscsi is set by the default quota flag: quota_snapshots_iscsi, it is now deprecated. Please use the default quota class for default quota.
+2020-05-12 09:05:31.609 17070 WARNING cinder.quota [req-73c92782-12c4-4f4f-852c-df191c892ee7 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Deprecated: Default quota for resource: backup_gigabytes is set by the default quota flag: quota_backup_gigabytes, it is now deprecated. Please use the default quota class for default quota.
+2020-05-12 09:05:31.610 17070 WARNING cinder.quota [req-73c92782-12c4-4f4f-852c-df191c892ee7 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Deprecated: Default quota for resource: volumes_iscsi is set by the default quota flag: quota_volumes_iscsi, it is now deprecated. Please use the default quota class for default quota.
+2020-05-12 09:05:31.610 17070 WARNING cinder.quota [req-73c92782-12c4-4f4f-852c-df191c892ee7 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Deprecated: Default quota for resource: backups is set by the default quota flag: quota_backups, it is now deprecated. Please use the default quota class for default quota.
+2020-05-12 09:05:31.611 17070 WARNING cinder.quota [req-73c92782-12c4-4f4f-852c-df191c892ee7 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Deprecated: Default quota for resource: gigabytes_iscsi is set by the default quota flag: quota_gigabytes_iscsi, it is now deprecated. Please use the default quota class for default quota.
+2020-05-12 09:05:31.639 17070 INFO cinder.api.openstack.wsgi [req-73c92782-12c4-4f4f-852c-df191c892ee7 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/limits returned with HTTP 200
+2020-05-12 09:05:31.640 17070 INFO eventlet.wsgi.server [req-73c92782-12c4-4f4f-852c-df191c892ee7 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/limits HTTP/1.1" status: 200  len: 630 time: 0.0608280
+2020-05-12 09:05:31.655 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:05:31.656 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:05:31.657 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0025020
+2020-05-12 09:05:31.666 17070 INFO cinder.api.openstack.wsgi [req-a5194522-1470-4648-8db1-00cee25b28c7 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/snapshots/detail?status=available
+2020-05-12 09:05:31.691 17070 INFO cinder.volume.api [req-a5194522-1470-4648-8db1-00cee25b28c7 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Get all snapshots completed successfully.
+2020-05-12 09:05:31.692 17070 INFO cinder.api.openstack.wsgi [req-a5194522-1470-4648-8db1-00cee25b28c7 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/snapshots/detail?status=available returned with HTTP 200
+2020-05-12 09:05:31.693 17070 INFO eventlet.wsgi.server [req-a5194522-1470-4648-8db1-00cee25b28c7 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/snapshots/detail?status=available HTTP/1.1" status: 200  len: 344 time: 0.0309670
+2020-05-12 09:05:32.483 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:05:32.484 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:05:32.485 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0024011
+2020-05-12 09:05:32.497 17070 INFO cinder.api.openstack.wsgi [req-da67dcee-fe5f-456b-961d-68bdeea139f3 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail?bootable=1
+2020-05-12 09:05:32.500 17070 INFO cinder.api.openstack.wsgi [req-da67dcee-fe5f-456b-961d-68bdeea139f3 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail?bootable=1 returned with HTTP 200
+2020-05-12 09:05:32.501 17070 INFO eventlet.wsgi.server [req-da67dcee-fe5f-456b-961d-68bdeea139f3 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail?bootable=1 HTTP/1.1" status: 200  len: 343 time: 0.0082531
+2020-05-12 09:05:32.508 17070 INFO cinder.api.openstack.wsgi [req-292d8c0d-0b7e-4936-abad-21e5556a0eb7 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail?bootable=1
+2020-05-12 09:05:32.556 17070 INFO cinder.volume.api [req-292d8c0d-0b7e-4936-abad-21e5556a0eb7 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Get all volumes completed successfully.
+2020-05-12 09:05:32.559 17070 INFO cinder.api.openstack.wsgi [req-292d8c0d-0b7e-4936-abad-21e5556a0eb7 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail?bootable=1 returned with HTTP 200
+2020-05-12 09:05:32.560 17070 INFO eventlet.wsgi.server [req-292d8c0d-0b7e-4936-abad-21e5556a0eb7 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail?bootable=1 HTTP/1.1" status: 200  len: 342 time: 0.0556021
+2020-05-12 09:08:10.613 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:08:10.617 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:08:10.618 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0056269
+2020-05-12 09:08:10.633 17072 INFO cinder.api.openstack.wsgi [req-5a7231ef-826a-492d-b9ed-d6a4d222a303 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail
+2020-05-12 09:08:10.645 17072 INFO cinder.api.openstack.wsgi [req-5a7231ef-826a-492d-b9ed-d6a4d222a303 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail returned with HTTP 200
+2020-05-12 09:08:10.649 17072 INFO eventlet.wsgi.server [req-5a7231ef-826a-492d-b9ed-d6a4d222a303 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail HTTP/1.1" status: 200  len: 343 time: 0.0194631
+2020-05-12 09:08:10.658 17070 INFO cinder.api.openstack.wsgi [req-33690904-b898-44cc-b768-9d5064028726 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail
+2020-05-12 09:08:10.705 17070 INFO cinder.volume.api [req-33690904-b898-44cc-b768-9d5064028726 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Get all volumes completed successfully.
+2020-05-12 09:08:10.708 17070 INFO cinder.api.openstack.wsgi [req-33690904-b898-44cc-b768-9d5064028726 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail returned with HTTP 200
+2020-05-12 09:08:10.709 17070 INFO eventlet.wsgi.server [req-33690904-b898-44cc-b768-9d5064028726 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail HTTP/1.1" status: 200  len: 342 time: 0.0547559
+2020-05-12 09:08:13.971 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:08:13.973 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:08:13.974 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0042410
+2020-05-12 09:08:13.984 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:08:13.985 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:08:13.986 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0024190
+2020-05-12 09:08:13.996 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:08:13.998 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:08:13.998 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023859
+2020-05-12 09:08:14.005 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:08:14.006 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:08:14.007 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0025439
+2020-05-12 09:08:14.012 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:08:14.013 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:08:14.014 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0025461
+2020-05-12 09:08:14.019 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:08:14.020 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:08:14.021 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0025339
+2020-05-12 09:08:14.049 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:08:14.050 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:08:14.051 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0025151
+2020-05-12 09:08:14.055 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:08:14.057 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:08:14.057 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0025671
+2020-05-12 09:08:15.137 17070 INFO cinder.api.openstack.wsgi [req-53a0e621-5faa-440e-9d4d-55560a68c432 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] POST http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes
+2020-05-12 09:08:15.277 17070 INFO cinder.api.v3.volumes [req-53a0e621-5faa-440e-9d4d-55560a68c432 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Create volume of 20 GB
+2020-05-12 09:08:15.295 17070 INFO cinder.volume.api [req-53a0e621-5faa-440e-9d4d-55560a68c432 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Availability Zones retrieved successfully.
+2020-05-12 09:08:15.959 17070 INFO cinder.volume.api [req-53a0e621-5faa-440e-9d4d-55560a68c432 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Create volume request issued successfully.
+2020-05-12 09:08:15.996 17070 INFO cinder.api.openstack.wsgi [req-53a0e621-5faa-440e-9d4d-55560a68c432 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes returned with HTTP 202
+2020-05-12 09:08:15.997 17070 INFO eventlet.wsgi.server [req-53a0e621-5faa-440e-9d4d-55560a68c432 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "POST /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes HTTP/1.1" status: 202  len: 1122 time: 1.4140809
+2020-05-12 09:08:16.006 17070 INFO cinder.api.openstack.wsgi [req-0feaf1d5-f69f-40ea-b21e-20b1d79c1f5c 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/ff682d50-2f29-45bd-a9ae-41a933ca5bd7
+2020-05-12 09:08:16.358 17070 INFO cinder.volume.api [req-0feaf1d5-f69f-40ea-b21e-20b1d79c1f5c 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Volume info retrieved successfully.
+2020-05-12 09:08:16.391 17070 INFO cinder.api.openstack.wsgi [req-0feaf1d5-f69f-40ea-b21e-20b1d79c1f5c 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/ff682d50-2f29-45bd-a9ae-41a933ca5bd7 returned with HTTP 200
+2020-05-12 09:08:16.392 17070 INFO eventlet.wsgi.server [req-0feaf1d5-f69f-40ea-b21e-20b1d79c1f5c 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/ff682d50-2f29-45bd-a9ae-41a933ca5bd7 HTTP/1.1" status: 200  len: 1295 time: 0.3901999
+2020-05-12 09:08:16.404 17070 INFO cinder.api.openstack.wsgi [req-2a9f232f-702f-45de-b733-099a7bcb6ee3 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/ff682d50-2f29-45bd-a9ae-41a933ca5bd7
+2020-05-12 09:08:16.485 17070 INFO cinder.volume.api [req-2a9f232f-702f-45de-b733-099a7bcb6ee3 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Volume info retrieved successfully.
+2020-05-12 09:08:16.541 17070 INFO cinder.api.openstack.wsgi [req-2a9f232f-702f-45de-b733-099a7bcb6ee3 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/ff682d50-2f29-45bd-a9ae-41a933ca5bd7 returned with HTTP 200
+2020-05-12 09:08:16.542 17070 INFO eventlet.wsgi.server [req-2a9f232f-702f-45de-b733-099a7bcb6ee3 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/ff682d50-2f29-45bd-a9ae-41a933ca5bd7 HTTP/1.1" status: 200  len: 1333 time: 0.1412699
+2020-05-12 09:08:19.553 17070 INFO cinder.api.openstack.wsgi [req-b1affdc4-efca-4f39-98c1-ac9ac40a505c 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/ff682d50-2f29-45bd-a9ae-41a933ca5bd7
+2020-05-12 09:08:19.619 17070 INFO cinder.volume.api [req-b1affdc4-efca-4f39-98c1-ac9ac40a505c 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Volume info retrieved successfully.
+2020-05-12 09:08:19.641 17070 INFO cinder.api.openstack.wsgi [req-b1affdc4-efca-4f39-98c1-ac9ac40a505c 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/ff682d50-2f29-45bd-a9ae-41a933ca5bd7 returned with HTTP 200
+2020-05-12 09:08:19.642 17070 INFO eventlet.wsgi.server [req-b1affdc4-efca-4f39-98c1-ac9ac40a505c 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/ff682d50-2f29-45bd-a9ae-41a933ca5bd7 HTTP/1.1" status: 200  len: 1394 time: 0.0928400
+2020-05-12 09:08:22.652 17070 INFO cinder.api.openstack.wsgi [req-193c2361-766f-433e-97f9-8e33d04e6d94 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/ff682d50-2f29-45bd-a9ae-41a933ca5bd7
+2020-05-12 09:08:22.704 17070 INFO cinder.volume.api [req-193c2361-766f-433e-97f9-8e33d04e6d94 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Volume info retrieved successfully.
+2020-05-12 09:08:22.725 17070 INFO cinder.api.openstack.wsgi [req-193c2361-766f-433e-97f9-8e33d04e6d94 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/ff682d50-2f29-45bd-a9ae-41a933ca5bd7 returned with HTTP 200
+2020-05-12 09:08:22.726 17070 INFO eventlet.wsgi.server [req-193c2361-766f-433e-97f9-8e33d04e6d94 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/ff682d50-2f29-45bd-a9ae-41a933ca5bd7 HTTP/1.1" status: 200  len: 1388 time: 0.0764148
+2020-05-12 09:08:22.736 17070 INFO cinder.api.openstack.wsgi [req-0d9f13ab-b320-4303-bed6-b3ac3c50e1a4 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] DELETE http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/ff682d50-2f29-45bd-a9ae-41a933ca5bd7
+2020-05-12 09:08:22.737 17070 INFO cinder.api.v3.volumes [req-0d9f13ab-b320-4303-bed6-b3ac3c50e1a4 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Delete volume with id: ff682d50-2f29-45bd-a9ae-41a933ca5bd7 
+2020-05-12 09:08:22.782 17070 INFO cinder.volume.api [req-0d9f13ab-b320-4303-bed6-b3ac3c50e1a4 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Volume info retrieved successfully.
+2020-05-12 09:08:22.816 17070 INFO cinder.volume.api [req-0d9f13ab-b320-4303-bed6-b3ac3c50e1a4 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Delete volume request issued successfully.
+2020-05-12 09:08:22.816 17070 INFO cinder.api.openstack.wsgi [req-0d9f13ab-b320-4303-bed6-b3ac3c50e1a4 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/ff682d50-2f29-45bd-a9ae-41a933ca5bd7 returned with HTTP 202
+2020-05-12 09:08:22.817 17070 INFO eventlet.wsgi.server [req-0d9f13ab-b320-4303-bed6-b3ac3c50e1a4 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "DELETE /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/ff682d50-2f29-45bd-a9ae-41a933ca5bd7 HTTP/1.1" status: 202  len: 275 time: 0.0842102
+2020-05-12 09:08:27.629 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:08:27.632 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:08:27.633 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0056021
+2020-05-12 09:08:27.637 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:08:27.638 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:08:27.639 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0025949
+2020-05-12 09:08:27.643 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:08:27.644 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:08:27.645 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022502
+2020-05-12 09:08:27.649 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:08:27.651 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:08:27.651 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023010
+2020-05-12 09:08:27.656 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:08:27.657 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:08:27.658 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023050
+2020-05-12 09:08:27.663 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:08:27.665 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:08:27.666 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0030341
+2020-05-12 09:08:27.674 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:08:27.675 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:08:27.676 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023110
+2020-05-12 09:08:27.681 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:08:27.682 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:08:27.683 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022531
+2020-05-12 09:08:55.807 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:08:55.808 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:08:55.809 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0028360
+2020-05-12 09:08:55.827 17072 INFO cinder.api.openstack.wsgi [req-ef3c96fe-c66b-42ba-a285-48e2343d5ef3 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail
+2020-05-12 09:08:55.836 17072 INFO cinder.api.openstack.wsgi [req-ef3c96fe-c66b-42ba-a285-48e2343d5ef3 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail returned with HTTP 200
+2020-05-12 09:08:55.837 17072 INFO eventlet.wsgi.server [req-ef3c96fe-c66b-42ba-a285-48e2343d5ef3 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail HTTP/1.1" status: 200  len: 343 time: 0.0158310
+2020-05-12 09:08:55.844 17069 WARNING keystonemiddleware.auth_token [-] Using the in-process token cache is deprecated as of the 4.2.0 release and may be removed in the 5.0.0 release or the 'O' development cycle. The in-process cache causes inconsistent results and high memory usage. When the feature is removed the auth_token middleware will not cache tokens by default which may result in performance issues. It is recommended to use  memcache for the auth_token token cache by setting the memcached_servers option.
+2020-05-12 09:08:57.072 17069 INFO cinder.api.openstack.wsgi [req-a0f9592d-b524-4e0f-ba43-dfb037f7b039 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail
+2020-05-12 09:08:57.149 17069 INFO cinder.volume.api [req-a0f9592d-b524-4e0f-ba43-dfb037f7b039 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Get all volumes completed successfully.
+2020-05-12 09:08:57.152 17069 INFO cinder.api.openstack.wsgi [req-a0f9592d-b524-4e0f-ba43-dfb037f7b039 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail returned with HTTP 200
+2020-05-12 09:08:57.153 17069 INFO eventlet.wsgi.server [req-a0f9592d-b524-4e0f-ba43-dfb037f7b039 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail HTTP/1.1" status: 200  len: 342 time: 1.3115098
+2020-05-12 09:08:58.931 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:08:58.933 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:08:58.934 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0027101
+2020-05-12 09:08:58.938 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:08:58.939 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:08:58.940 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0026100
+2020-05-12 09:08:58.944 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:08:58.945 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:08:58.946 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023050
+2020-05-12 09:08:58.950 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:08:58.951 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:08:58.951 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0021951
+2020-05-12 09:08:58.956 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:08:58.957 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:08:58.958 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022221
+2020-05-12 09:08:58.963 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:08:58.964 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:08:58.965 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0024090
+2020-05-12 09:08:58.991 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:08:58.992 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:08:58.992 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022919
+2020-05-12 09:08:58.997 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:08:58.998 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:08:58.999 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023060
+2020-05-12 09:09:12.582 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:09:12.583 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:09:12.584 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0027790
+2020-05-12 09:09:12.588 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:09:12.589 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:09:12.590 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023658
+2020-05-12 09:09:12.595 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:09:12.596 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:09:12.597 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0024819
+2020-05-12 09:09:12.601 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:09:12.602 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:09:12.603 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0025630
+2020-05-12 09:09:12.608 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:09:12.609 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:09:12.610 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022829
+2020-05-12 09:09:12.615 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:09:12.616 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:09:12.616 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0021980
+2020-05-12 09:09:12.624 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:09:12.626 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:09:12.626 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022380
+2020-05-12 09:09:12.631 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:09:12.632 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:09:12.633 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0024140
+2020-05-12 09:10:03.350 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:03.352 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:03.352 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0032482
+2020-05-12 09:10:03.354 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:03.355 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:03.355 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022409
+2020-05-12 09:10:03.376 17070 INFO cinder.api.openstack.wsgi [req-49c365d4-3791-4a6e-ac57-e7acd33249b5 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail
+2020-05-12 09:10:03.384 17070 INFO cinder.api.openstack.wsgi [req-49c365d4-3791-4a6e-ac57-e7acd33249b5 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail returned with HTTP 200
+2020-05-12 09:10:03.385 17070 INFO eventlet.wsgi.server [req-49c365d4-3791-4a6e-ac57-e7acd33249b5 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail HTTP/1.1" status: 200  len: 343 time: 0.0144291
+2020-05-12 09:10:03.392 17070 INFO cinder.api.openstack.wsgi [req-ef7629f6-8267-4680-9140-91ca39438faf 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail?limit=21&sort=created_at%3Adesc
+2020-05-12 09:10:03.436 17070 INFO cinder.volume.api [req-ef7629f6-8267-4680-9140-91ca39438faf 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Get all volumes completed successfully.
+2020-05-12 09:10:03.439 17070 INFO cinder.api.openstack.wsgi [req-ef7629f6-8267-4680-9140-91ca39438faf 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail?limit=21&sort=created_at%3Adesc returned with HTTP 200
+2020-05-12 09:10:03.440 17070 INFO eventlet.wsgi.server [req-ef7629f6-8267-4680-9140-91ca39438faf 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail?limit=21&sort=created_at%3Adesc HTTP/1.1" status: 200  len: 342 time: 0.0511370
+2020-05-12 09:10:03.776 17071 INFO cinder.api.openstack.wsgi [req-200e77bd-844b-44ff-b46d-ad217cff1dd2 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/snapshots/detail
+2020-05-12 09:10:03.802 17071 INFO cinder.volume.api [req-200e77bd-844b-44ff-b46d-ad217cff1dd2 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Get all snapshots completed successfully.
+2020-05-12 09:10:03.804 17071 INFO cinder.api.openstack.wsgi [req-200e77bd-844b-44ff-b46d-ad217cff1dd2 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/snapshots/detail returned with HTTP 200
+2020-05-12 09:10:03.805 17071 INFO eventlet.wsgi.server [req-200e77bd-844b-44ff-b46d-ad217cff1dd2 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/snapshots/detail HTTP/1.1" status: 200  len: 344 time: 0.4377069
+2020-05-12 09:10:05.256 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:05.258 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:05.258 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0027699
+2020-05-12 09:10:05.262 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:05.263 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:05.264 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022562
+2020-05-12 09:10:05.268 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:05.270 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:05.270 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022981
+2020-05-12 09:10:05.274 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:05.275 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:05.276 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022671
+2020-05-12 09:10:05.280 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:05.281 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:05.282 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0021441
+2020-05-12 09:10:05.287 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:05.288 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:05.289 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023069
+2020-05-12 09:10:05.317 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:05.318 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:05.319 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023491
+2020-05-12 09:10:05.324 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:05.325 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:05.326 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023320
+2020-05-12 09:10:05.373 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:05.374 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:05.375 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023170
+2020-05-12 09:10:05.383 17071 INFO cinder.api.openstack.wsgi [req-38991de3-b195-4c0c-a37f-9bc0f9614166 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/limits
+2020-05-12 09:10:05.407 17071 WARNING cinder.quota [req-38991de3-b195-4c0c-a37f-9bc0f9614166 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Deprecated: Default quota for resource: snapshots_iscsi is set by the default quota flag: quota_snapshots_iscsi, it is now deprecated. Please use the default quota class for default quota.
+2020-05-12 09:10:05.408 17071 WARNING cinder.quota [req-38991de3-b195-4c0c-a37f-9bc0f9614166 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Deprecated: Default quota for resource: backup_gigabytes is set by the default quota flag: quota_backup_gigabytes, it is now deprecated. Please use the default quota class for default quota.
+2020-05-12 09:10:05.409 17071 WARNING cinder.quota [req-38991de3-b195-4c0c-a37f-9bc0f9614166 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Deprecated: Default quota for resource: volumes_iscsi is set by the default quota flag: quota_volumes_iscsi, it is now deprecated. Please use the default quota class for default quota.
+2020-05-12 09:10:05.410 17071 WARNING cinder.quota [req-38991de3-b195-4c0c-a37f-9bc0f9614166 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Deprecated: Default quota for resource: backups is set by the default quota flag: quota_backups, it is now deprecated. Please use the default quota class for default quota.
+2020-05-12 09:10:05.411 17071 WARNING cinder.quota [req-38991de3-b195-4c0c-a37f-9bc0f9614166 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Deprecated: Default quota for resource: gigabytes_iscsi is set by the default quota flag: quota_gigabytes_iscsi, it is now deprecated. Please use the default quota class for default quota.
+2020-05-12 09:10:05.438 17071 INFO cinder.api.openstack.wsgi [req-38991de3-b195-4c0c-a37f-9bc0f9614166 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/limits returned with HTTP 200
+2020-05-12 09:10:05.439 17071 INFO eventlet.wsgi.server [req-38991de3-b195-4c0c-a37f-9bc0f9614166 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/limits HTTP/1.1" status: 200  len: 630 time: 0.0594130
+2020-05-12 09:10:08.704 17071 INFO cinder.api.openstack.wsgi [req-0d0c254b-7782-4643-956c-0d3100f269f3 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/types/default
+2020-05-12 09:10:08.717 17071 INFO cinder.api.openstack.wsgi [req-0d0c254b-7782-4643-956c-0d3100f269f3 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/types/default returned with HTTP 200
+2020-05-12 09:10:08.718 17071 INFO eventlet.wsgi.server [req-0d0c254b-7782-4643-956c-0d3100f269f3 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/types/default HTTP/1.1" status: 200  len: 516 time: 0.0185781
+2020-05-12 09:10:08.726 17071 INFO cinder.api.openstack.wsgi [req-711b7294-307e-49b8-b9f1-e269a907f504 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/types?is_public=None
+2020-05-12 09:10:08.740 17071 INFO cinder.api.openstack.wsgi [req-711b7294-307e-49b8-b9f1-e269a907f504 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/types?is_public=None returned with HTTP 200
+2020-05-12 09:10:08.741 17071 INFO eventlet.wsgi.server [req-711b7294-307e-49b8-b9f1-e269a907f504 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/types?is_public=None HTTP/1.1" status: 200  len: 560 time: 0.0181680
+2020-05-12 09:10:08.748 17071 INFO cinder.api.openstack.wsgi [req-afcf0ad0-88a8-4c49-9d0b-98bcac57d6cf 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/extensions
+2020-05-12 09:10:08.749 17071 INFO cinder.api.openstack.wsgi [req-afcf0ad0-88a8-4c49-9d0b-98bcac57d6cf 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/extensions returned with HTTP 200
+2020-05-12 09:10:08.750 17071 INFO eventlet.wsgi.server [req-afcf0ad0-88a8-4c49-9d0b-98bcac57d6cf 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/extensions HTTP/1.1" status: 200  len: 5573 time: 0.0060740
+2020-05-12 09:10:08.759 17071 INFO cinder.api.openstack.wsgi [req-bd5d2ecb-a741-4f92-9091-ae7dc212d73f 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-availability-zone
+2020-05-12 09:10:08.766 17071 INFO cinder.volume.api [req-bd5d2ecb-a741-4f92-9091-ae7dc212d73f 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Availability Zones retrieved successfully.
+2020-05-12 09:10:08.766 17071 INFO cinder.api.openstack.wsgi [req-bd5d2ecb-a741-4f92-9091-ae7dc212d73f 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-availability-zone returned with HTTP 200
+2020-05-12 09:10:08.767 17071 INFO eventlet.wsgi.server [req-bd5d2ecb-a741-4f92-9091-ae7dc212d73f 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/os-availability-zone HTTP/1.1" status: 200  len: 408 time: 0.0129771
+2020-05-12 09:10:08.771 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:08.773 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:08.773 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0025342
+2020-05-12 09:10:08.783 17070 INFO cinder.api.openstack.wsgi [req-027d6980-caf3-435f-b3d0-0baf18137c38 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/snapshots/detail?status=available
+2020-05-12 09:10:08.799 17070 INFO cinder.volume.api [req-027d6980-caf3-435f-b3d0-0baf18137c38 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Get all snapshots completed successfully.
+2020-05-12 09:10:08.800 17070 INFO cinder.api.openstack.wsgi [req-027d6980-caf3-435f-b3d0-0baf18137c38 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/snapshots/detail?status=available returned with HTTP 200
+2020-05-12 09:10:08.801 17070 INFO eventlet.wsgi.server [req-027d6980-caf3-435f-b3d0-0baf18137c38 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/snapshots/detail?status=available HTTP/1.1" status: 200  len: 344 time: 0.0218270
+2020-05-12 09:10:08.920 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:08.921 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:08.922 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022919
+2020-05-12 09:10:08.930 17071 INFO cinder.api.openstack.wsgi [req-10845308-24e3-4a28-a531-f82f1989adb1 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail?status=available
+2020-05-12 09:10:08.933 17071 INFO cinder.api.openstack.wsgi [req-10845308-24e3-4a28-a531-f82f1989adb1 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail?status=available returned with HTTP 200
+2020-05-12 09:10:08.934 17071 INFO eventlet.wsgi.server [req-10845308-24e3-4a28-a531-f82f1989adb1 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail?status=available HTTP/1.1" status: 200  len: 343 time: 0.0084009
+2020-05-12 09:10:08.940 17071 INFO cinder.api.openstack.wsgi [req-a5126125-da86-4f24-8446-eabbc6cbc030 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail?status=available
+2020-05-12 09:10:08.981 17071 INFO cinder.volume.api [req-a5126125-da86-4f24-8446-eabbc6cbc030 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Get all volumes completed successfully.
+2020-05-12 09:10:08.983 17071 INFO cinder.api.openstack.wsgi [req-a5126125-da86-4f24-8446-eabbc6cbc030 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail?status=available returned with HTTP 200
+2020-05-12 09:10:08.984 17071 INFO eventlet.wsgi.server [req-a5126125-da86-4f24-8446-eabbc6cbc030 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail?status=available HTTP/1.1" status: 200  len: 342 time: 0.0466230
+2020-05-12 09:10:08.988 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:08.989 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:08.990 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0021951
+2020-05-12 09:10:08.996 17071 INFO cinder.api.openstack.wsgi [req-254ce1aa-bed8-4f75-9470-c7d4a992af24 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/groups/detail
+2020-05-12 09:10:09.004 17071 INFO cinder.api.openstack.wsgi [req-254ce1aa-bed8-4f75-9470-c7d4a992af24 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/groups/detail returned with HTTP 200
+2020-05-12 09:10:09.005 17071 INFO eventlet.wsgi.server [req-254ce1aa-bed8-4f75-9470-c7d4a992af24 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/groups/detail HTTP/1.1" status: 200  len: 341 time: 0.0120409
+2020-05-12 09:10:09.011 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:09.012 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:09.013 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022459
+2020-05-12 09:10:09.021 17071 INFO cinder.api.openstack.wsgi [req-41d5527d-864e-4336-bbf2-5025398fd975 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/limits?tenant_id=973168b02ba046ec8ad7a56a4b28fb35
+2020-05-12 09:10:09.063 17071 INFO cinder.api.openstack.wsgi [req-41d5527d-864e-4336-bbf2-5025398fd975 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/limits?tenant_id=973168b02ba046ec8ad7a56a4b28fb35 returned with HTTP 200
+2020-05-12 09:10:09.065 17071 INFO eventlet.wsgi.server [req-41d5527d-864e-4336-bbf2-5025398fd975 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/limits?tenant_id=973168b02ba046ec8ad7a56a4b28fb35 HTTP/1.1" status: 200  len: 630 time: 0.0469100
+2020-05-12 09:10:09.078 17071 INFO cinder.api.openstack.wsgi [req-95b8cc13-f1c7-4ee0-8453-22be041f5839 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/types?is_public=None
+2020-05-12 09:10:09.091 17071 INFO cinder.api.openstack.wsgi [req-95b8cc13-f1c7-4ee0-8453-22be041f5839 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/types?is_public=None returned with HTTP 200
+2020-05-12 09:10:09.092 17071 INFO eventlet.wsgi.server [req-95b8cc13-f1c7-4ee0-8453-22be041f5839 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/types?is_public=None HTTP/1.1" status: 200  len: 560 time: 0.0176530
+2020-05-12 09:10:19.487 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:19.489 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:19.490 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0029790
+2020-05-12 09:10:19.505 17071 INFO cinder.api.openstack.wsgi [req-c5d400f1-f9f2-4b84-ab76-c3ef54fcbaa0 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail
+2020-05-12 09:10:19.513 17071 INFO cinder.api.openstack.wsgi [req-c5d400f1-f9f2-4b84-ab76-c3ef54fcbaa0 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail returned with HTTP 200
+2020-05-12 09:10:19.514 17071 INFO eventlet.wsgi.server [req-c5d400f1-f9f2-4b84-ab76-c3ef54fcbaa0 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail HTTP/1.1" status: 200  len: 343 time: 0.0136199
+2020-05-12 09:10:19.524 17071 INFO cinder.api.openstack.wsgi [req-458fbd04-ffac-42ce-a613-ec8254097422 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail
+2020-05-12 09:10:19.566 17071 INFO cinder.volume.api [req-458fbd04-ffac-42ce-a613-ec8254097422 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Get all volumes completed successfully.
+2020-05-12 09:10:19.569 17071 INFO cinder.api.openstack.wsgi [req-458fbd04-ffac-42ce-a613-ec8254097422 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail returned with HTTP 200
+2020-05-12 09:10:19.570 17071 INFO eventlet.wsgi.server [req-458fbd04-ffac-42ce-a613-ec8254097422 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail HTTP/1.1" status: 200  len: 342 time: 0.0487449
+2020-05-12 09:10:22.023 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:22.024 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:22.025 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023229
+2020-05-12 09:10:22.029 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:22.030 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:22.030 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0021880
+2020-05-12 09:10:22.035 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:22.036 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:22.037 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0024409
+2020-05-12 09:10:22.041 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:22.042 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:22.043 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022058
+2020-05-12 09:10:22.048 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:22.049 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:22.050 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022650
+2020-05-12 09:10:22.055 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:22.056 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:22.057 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023448
+2020-05-12 09:10:22.083 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:22.084 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:22.085 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023048
+2020-05-12 09:10:22.089 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:22.090 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:22.091 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022609
+2020-05-12 09:10:29.607 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:29.609 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:29.609 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0031910
+2020-05-12 09:10:30.071 17070 INFO cinder.api.openstack.wsgi [req-6ba88536-b021-4f09-a37b-26391508418e 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail
+2020-05-12 09:10:30.080 17070 INFO cinder.api.openstack.wsgi [req-6ba88536-b021-4f09-a37b-26391508418e 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail returned with HTTP 200
+2020-05-12 09:10:30.081 17070 INFO eventlet.wsgi.server [req-6ba88536-b021-4f09-a37b-26391508418e 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail HTTP/1.1" status: 200  len: 343 time: 0.4586952
+2020-05-12 09:10:30.089 17069 INFO cinder.api.openstack.wsgi [req-ecf8dc37-5abb-4e0c-bcfb-6e72895ec585 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail
+2020-05-12 09:10:30.137 17069 INFO cinder.volume.api [req-ecf8dc37-5abb-4e0c-bcfb-6e72895ec585 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Get all volumes completed successfully.
+2020-05-12 09:10:30.141 17069 INFO cinder.api.openstack.wsgi [req-ecf8dc37-5abb-4e0c-bcfb-6e72895ec585 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail returned with HTTP 200
+2020-05-12 09:10:30.142 17069 INFO eventlet.wsgi.server [req-ecf8dc37-5abb-4e0c-bcfb-6e72895ec585 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail HTTP/1.1" status: 200  len: 342 time: 0.0571339
+2020-05-12 09:10:34.408 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:34.410 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:34.411 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0025771
+2020-05-12 09:10:34.424 17071 INFO cinder.api.openstack.wsgi [req-584a2a95-79d5-421c-b5d7-6702a0526185 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail
+2020-05-12 09:10:34.434 17071 INFO cinder.api.openstack.wsgi [req-584a2a95-79d5-421c-b5d7-6702a0526185 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail returned with HTTP 200
+2020-05-12 09:10:34.435 17071 INFO eventlet.wsgi.server [req-584a2a95-79d5-421c-b5d7-6702a0526185 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail HTTP/1.1" status: 200  len: 343 time: 0.0157990
+2020-05-12 09:10:34.446 17071 INFO cinder.api.openstack.wsgi [req-ff884865-c6d1-454f-87b4-4a5009a4d962 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail
+2020-05-12 09:10:34.499 17071 INFO cinder.volume.api [req-ff884865-c6d1-454f-87b4-4a5009a4d962 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Get all volumes completed successfully.
+2020-05-12 09:10:34.502 17071 INFO cinder.api.openstack.wsgi [req-ff884865-c6d1-454f-87b4-4a5009a4d962 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail returned with HTTP 200
+2020-05-12 09:10:34.503 17071 INFO eventlet.wsgi.server [req-ff884865-c6d1-454f-87b4-4a5009a4d962 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail HTTP/1.1" status: 200  len: 342 time: 0.0599861
+2020-05-12 09:10:36.108 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:36.109 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:36.110 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0024090
+2020-05-12 09:10:36.114 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:36.116 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:36.116 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023501
+2020-05-12 09:10:36.121 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:36.122 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:36.123 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022171
+2020-05-12 09:10:36.127 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:36.128 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:36.129 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0025780
+2020-05-12 09:10:36.133 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:36.134 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:36.135 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023410
+2020-05-12 09:10:36.140 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:36.141 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:36.142 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0021219
+2020-05-12 09:10:36.169 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:36.170 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:36.170 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022619
+2020-05-12 09:10:36.175 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:10:36.176 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:10:36.177 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022600
+2020-05-12 09:12:00.241 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:12:00.243 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:12:00.244 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0035212
+2020-05-12 09:12:00.259 17071 INFO cinder.api.openstack.wsgi [req-4991ab3f-133c-4c0a-a541-924c01ce9fb2 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail?bootable=1&status=available
+2020-05-12 09:12:00.263 17071 INFO cinder.api.openstack.wsgi [req-4991ab3f-133c-4c0a-a541-924c01ce9fb2 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail?bootable=1&status=available returned with HTTP 200
+2020-05-12 09:12:00.265 17071 INFO eventlet.wsgi.server [req-4991ab3f-133c-4c0a-a541-924c01ce9fb2 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail?bootable=1&status=available HTTP/1.1" status: 200  len: 343 time: 0.0125351
+2020-05-12 09:12:00.271 17071 INFO cinder.api.openstack.wsgi [req-11a4ecca-78b3-4c25-b7cb-ad9a4d75000c 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail?bootable=1&status=available
+2020-05-12 09:12:00.321 17071 INFO cinder.volume.api [req-11a4ecca-78b3-4c25-b7cb-ad9a4d75000c 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Get all volumes completed successfully.
+2020-05-12 09:12:00.324 17071 INFO cinder.api.openstack.wsgi [req-11a4ecca-78b3-4c25-b7cb-ad9a4d75000c 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail?bootable=1&status=available returned with HTTP 200
+2020-05-12 09:12:00.325 17071 INFO eventlet.wsgi.server [req-11a4ecca-78b3-4c25-b7cb-ad9a4d75000c 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail?bootable=1&status=available HTTP/1.1" status: 200  len: 342 time: 0.0567579
+2020-05-12 09:12:00.334 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:12:00.335 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:12:00.336 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0024199
+2020-05-12 09:12:00.345 17071 INFO cinder.api.openstack.wsgi [req-f978d5d2-39c6-451b-94d7-0ef23a571dee 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/limits
+2020-05-12 09:12:00.393 17071 INFO cinder.api.openstack.wsgi [req-f978d5d2-39c6-451b-94d7-0ef23a571dee 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/limits returned with HTTP 200
+2020-05-12 09:12:00.394 17071 INFO eventlet.wsgi.server [req-f978d5d2-39c6-451b-94d7-0ef23a571dee 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/limits HTTP/1.1" status: 200  len: 630 time: 0.0527940
+2020-05-12 09:12:00.403 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:12:00.405 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:12:00.405 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0029149
+2020-05-12 09:12:00.783 17072 INFO cinder.api.openstack.wsgi [req-f852db10-05ae-46e1-9717-21ed4b0318ce 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/snapshots/detail?status=available
+2020-05-12 09:12:00.805 17072 INFO cinder.volume.api [req-f852db10-05ae-46e1-9717-21ed4b0318ce 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Get all snapshots completed successfully.
+2020-05-12 09:12:00.806 17072 INFO cinder.api.openstack.wsgi [req-f852db10-05ae-46e1-9717-21ed4b0318ce 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/snapshots/detail?status=available returned with HTTP 200
+2020-05-12 09:12:00.807 17072 INFO eventlet.wsgi.server [req-f852db10-05ae-46e1-9717-21ed4b0318ce 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/snapshots/detail?status=available HTTP/1.1" status: 200  len: 344 time: 0.3959730
+2020-05-12 09:12:00.826 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:12:00.828 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:12:00.829 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0025728
+2020-05-12 09:12:00.840 17071 INFO cinder.api.openstack.wsgi [req-627c715c-512e-46d0-ad8a-ecf3ad1f0b5f 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail?bootable=1
+2020-05-12 09:12:00.843 17071 INFO cinder.api.openstack.wsgi [req-627c715c-512e-46d0-ad8a-ecf3ad1f0b5f 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail?bootable=1 returned with HTTP 200
+2020-05-12 09:12:00.844 17071 INFO eventlet.wsgi.server [req-627c715c-512e-46d0-ad8a-ecf3ad1f0b5f 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail?bootable=1 HTTP/1.1" status: 200  len: 343 time: 0.0084178
+2020-05-12 09:12:00.851 17071 INFO cinder.api.openstack.wsgi [req-6bffa6df-5d05-4dce-bd71-7a67a06b2aeb 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail?bootable=1
+2020-05-12 09:12:00.891 17071 INFO cinder.volume.api [req-6bffa6df-5d05-4dce-bd71-7a67a06b2aeb 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Get all volumes completed successfully.
+2020-05-12 09:12:00.894 17071 INFO cinder.api.openstack.wsgi [req-6bffa6df-5d05-4dce-bd71-7a67a06b2aeb 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail?bootable=1 returned with HTTP 200
+2020-05-12 09:12:00.895 17071 INFO eventlet.wsgi.server [req-6bffa6df-5d05-4dce-bd71-7a67a06b2aeb 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail?bootable=1 HTTP/1.1" status: 200  len: 342 time: 0.0479102
+2020-05-12 09:12:46.577 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:12:46.579 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:12:46.580 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0032210
+2020-05-12 09:12:46.595 17069 INFO cinder.api.openstack.wsgi [req-ac2450a6-22f8-473f-ad24-6d6beb3261c9 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail
+2020-05-12 09:12:46.610 17069 INFO cinder.api.openstack.wsgi [req-ac2450a6-22f8-473f-ad24-6d6beb3261c9 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail returned with HTTP 200
+2020-05-12 09:12:46.611 17069 INFO eventlet.wsgi.server [req-ac2450a6-22f8-473f-ad24-6d6beb3261c9 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail HTTP/1.1" status: 200  len: 343 time: 0.0220840
+2020-05-12 09:12:46.618 17069 INFO cinder.api.openstack.wsgi [req-163021e0-43d4-4cf4-9c52-5eba31254938 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail
+2020-05-12 09:12:46.661 17069 INFO cinder.volume.api [req-163021e0-43d4-4cf4-9c52-5eba31254938 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Get all volumes completed successfully.
+2020-05-12 09:12:46.663 17069 INFO cinder.api.openstack.wsgi [req-163021e0-43d4-4cf4-9c52-5eba31254938 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail returned with HTTP 200
+2020-05-12 09:12:46.664 17069 INFO eventlet.wsgi.server [req-163021e0-43d4-4cf4-9c52-5eba31254938 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail HTTP/1.1" status: 200  len: 342 time: 0.0490901
+2020-05-12 09:12:49.002 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:12:49.003 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:12:49.004 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0024409
+2020-05-12 09:12:49.008 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:12:49.009 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:12:49.010 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0024898
+2020-05-12 09:12:49.015 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:12:49.016 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:12:49.017 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0024869
+2020-05-12 09:12:49.021 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:12:49.023 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:12:49.023 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023761
+2020-05-12 09:12:49.029 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:12:49.030 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:12:49.031 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0025620
+2020-05-12 09:12:49.038 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:12:49.039 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:12:49.040 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0024171
+2020-05-12 09:12:49.066 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:12:49.067 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:12:49.068 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0024121
+2020-05-12 09:12:49.072 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:12:49.073 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:12:49.074 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0021989
+2020-05-12 09:12:50.546 17070 INFO cinder.api.openstack.wsgi [req-b126e6a6-19db-48f7-9c6e-ae73c137f61c 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] POST http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes
+2020-05-12 09:12:50.652 17070 INFO cinder.api.v3.volumes [req-b126e6a6-19db-48f7-9c6e-ae73c137f61c 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Create volume of 1 GB
+2020-05-12 09:12:50.653 17070 INFO cinder.volume.api [req-b126e6a6-19db-48f7-9c6e-ae73c137f61c 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Availability Zones retrieved successfully.
+2020-05-12 09:12:50.993 17070 INFO cinder.volume.api [req-b126e6a6-19db-48f7-9c6e-ae73c137f61c 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Create volume request issued successfully.
+2020-05-12 09:12:51.006 17070 INFO cinder.api.openstack.wsgi [req-b126e6a6-19db-48f7-9c6e-ae73c137f61c 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes returned with HTTP 202
+2020-05-12 09:12:51.007 17070 INFO eventlet.wsgi.server [req-b126e6a6-19db-48f7-9c6e-ae73c137f61c 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "POST /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes HTTP/1.1" status: 202  len: 1121 time: 0.8991740
+2020-05-12 09:12:51.017 17070 INFO cinder.api.openstack.wsgi [req-5482cb52-d75d-4c17-953b-16965b7fa550 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/b7f52705-416e-4dd2-9827-f7ca71aa53d7
+2020-05-12 09:12:51.079 17070 INFO cinder.volume.api [req-5482cb52-d75d-4c17-953b-16965b7fa550 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Volume info retrieved successfully.
+2020-05-12 09:12:51.107 17070 INFO cinder.api.openstack.wsgi [req-5482cb52-d75d-4c17-953b-16965b7fa550 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/b7f52705-416e-4dd2-9827-f7ca71aa53d7 returned with HTTP 200
+2020-05-12 09:12:51.108 17070 INFO eventlet.wsgi.server [req-5482cb52-d75d-4c17-953b-16965b7fa550 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/b7f52705-416e-4dd2-9827-f7ca71aa53d7 HTTP/1.1" status: 200  len: 1294 time: 0.0948000
+2020-05-12 09:12:51.118 17070 INFO cinder.api.openstack.wsgi [req-b70015a0-f747-4a60-a962-11a0803b2b1a 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/b7f52705-416e-4dd2-9827-f7ca71aa53d7
+2020-05-12 09:12:51.171 17070 INFO cinder.volume.api [req-b70015a0-f747-4a60-a962-11a0803b2b1a 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Volume info retrieved successfully.
+2020-05-12 09:12:51.192 17070 INFO cinder.api.openstack.wsgi [req-b70015a0-f747-4a60-a962-11a0803b2b1a 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/b7f52705-416e-4dd2-9827-f7ca71aa53d7 returned with HTTP 200
+2020-05-12 09:12:51.193 17070 INFO eventlet.wsgi.server [req-b70015a0-f747-4a60-a962-11a0803b2b1a 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/b7f52705-416e-4dd2-9827-f7ca71aa53d7 HTTP/1.1" status: 200  len: 1332 time: 0.0785799
+2020-05-12 09:12:54.205 17070 INFO cinder.api.openstack.wsgi [req-135a5915-ee6b-4ac6-857a-00c0ec02baf3 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/b7f52705-416e-4dd2-9827-f7ca71aa53d7
+2020-05-12 09:12:54.266 17070 INFO cinder.volume.api [req-135a5915-ee6b-4ac6-857a-00c0ec02baf3 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Volume info retrieved successfully.
+2020-05-12 09:12:54.311 17070 INFO cinder.api.openstack.wsgi [req-135a5915-ee6b-4ac6-857a-00c0ec02baf3 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/b7f52705-416e-4dd2-9827-f7ca71aa53d7 returned with HTTP 200
+2020-05-12 09:12:54.313 17070 INFO eventlet.wsgi.server [req-135a5915-ee6b-4ac6-857a-00c0ec02baf3 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/b7f52705-416e-4dd2-9827-f7ca71aa53d7 HTTP/1.1" status: 200  len: 1393 time: 0.1110709
+2020-05-12 09:12:57.323 17070 INFO cinder.api.openstack.wsgi [req-5948f31e-6933-42a0-90eb-65503c243d47 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/b7f52705-416e-4dd2-9827-f7ca71aa53d7
+2020-05-12 09:12:57.391 17070 INFO cinder.volume.api [req-5948f31e-6933-42a0-90eb-65503c243d47 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Volume info retrieved successfully.
+2020-05-12 09:12:57.410 17070 INFO cinder.api.openstack.wsgi [req-5948f31e-6933-42a0-90eb-65503c243d47 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/b7f52705-416e-4dd2-9827-f7ca71aa53d7 returned with HTTP 200
+2020-05-12 09:12:57.411 17070 INFO eventlet.wsgi.server [req-5948f31e-6933-42a0-90eb-65503c243d47 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/b7f52705-416e-4dd2-9827-f7ca71aa53d7 HTTP/1.1" status: 200  len: 1387 time: 0.0911889
+2020-05-12 09:12:57.422 17070 INFO cinder.api.openstack.wsgi [req-a4f47868-df45-4853-b5a5-761f3fe44e52 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] DELETE http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/b7f52705-416e-4dd2-9827-f7ca71aa53d7
+2020-05-12 09:12:57.423 17070 INFO cinder.api.v3.volumes [req-a4f47868-df45-4853-b5a5-761f3fe44e52 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Delete volume with id: b7f52705-416e-4dd2-9827-f7ca71aa53d7 
+2020-05-12 09:12:57.477 17070 INFO cinder.volume.api [req-a4f47868-df45-4853-b5a5-761f3fe44e52 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Volume info retrieved successfully.
+2020-05-12 09:12:57.512 17070 INFO cinder.volume.api [req-a4f47868-df45-4853-b5a5-761f3fe44e52 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Delete volume request issued successfully.
+2020-05-12 09:12:57.513 17070 INFO cinder.api.openstack.wsgi [req-a4f47868-df45-4853-b5a5-761f3fe44e52 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/b7f52705-416e-4dd2-9827-f7ca71aa53d7 returned with HTTP 202
+2020-05-12 09:12:57.514 17070 INFO eventlet.wsgi.server [req-a4f47868-df45-4853-b5a5-761f3fe44e52 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "DELETE /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/b7f52705-416e-4dd2-9827-f7ca71aa53d7 HTTP/1.1" status: 202  len: 275 time: 0.0948200
+2020-05-12 09:13:29.579 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:13:29.582 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:13:29.582 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0041189
+2020-05-12 09:13:29.585 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:13:29.586 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:13:29.587 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0024610
+2020-05-12 09:13:29.608 17071 INFO cinder.api.openstack.wsgi [req-b57f368d-e0ea-4a7b-a242-82c0c582cee1 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/snapshots/detail
+2020-05-12 09:13:29.608 17069 INFO cinder.api.openstack.wsgi [req-1abf80c2-f05d-4678-bd94-6bc6639b13d5 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail
+2020-05-12 09:13:29.621 17069 INFO cinder.api.openstack.wsgi [req-1abf80c2-f05d-4678-bd94-6bc6639b13d5 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail returned with HTTP 200
+2020-05-12 09:13:29.622 17069 INFO eventlet.wsgi.server [req-1abf80c2-f05d-4678-bd94-6bc6639b13d5 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail HTTP/1.1" status: 200  len: 343 time: 0.0200369
+2020-05-12 09:13:29.626 17071 INFO cinder.volume.api [req-b57f368d-e0ea-4a7b-a242-82c0c582cee1 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Get all snapshots completed successfully.
+2020-05-12 09:13:29.627 17071 INFO cinder.api.openstack.wsgi [req-b57f368d-e0ea-4a7b-a242-82c0c582cee1 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/snapshots/detail returned with HTTP 200
+2020-05-12 09:13:29.628 17071 INFO eventlet.wsgi.server [req-b57f368d-e0ea-4a7b-a242-82c0c582cee1 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/snapshots/detail HTTP/1.1" status: 200  len: 344 time: 0.0263019
+2020-05-12 09:13:29.630 17072 INFO cinder.api.openstack.wsgi [req-017b2f7c-5e4a-48b8-8b5b-a681f9fa8924 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail?limit=21&sort=created_at%3Adesc
+2020-05-12 09:13:29.676 17072 INFO cinder.volume.api [req-017b2f7c-5e4a-48b8-8b5b-a681f9fa8924 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Get all volumes completed successfully.
+2020-05-12 09:13:29.679 17072 INFO cinder.api.openstack.wsgi [req-017b2f7c-5e4a-48b8-8b5b-a681f9fa8924 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail?limit=21&sort=created_at%3Adesc returned with HTTP 200
+2020-05-12 09:13:29.680 17072 INFO eventlet.wsgi.server [req-017b2f7c-5e4a-48b8-8b5b-a681f9fa8924 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail?limit=21&sort=created_at%3Adesc HTTP/1.1" status: 200  len: 342 time: 0.0527020
+2020-05-12 09:13:31.625 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:13:31.626 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:13:31.627 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0024571
+2020-05-12 09:13:31.631 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:13:31.632 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:13:31.632 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022750
+2020-05-12 09:13:31.637 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:13:31.638 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:13:31.639 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0021691
+2020-05-12 09:13:31.642 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:13:31.643 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:13:31.644 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022349
+2020-05-12 09:13:31.649 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:13:31.650 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:13:31.650 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0021861
+2020-05-12 09:13:31.655 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:13:31.656 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:13:31.657 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0021288
+2020-05-12 09:13:31.683 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:13:31.684 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:13:31.685 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022349
+2020-05-12 09:13:31.690 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:13:31.691 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:13:31.692 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0025470
+2020-05-12 09:13:31.738 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:13:31.739 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:13:31.740 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022321
+2020-05-12 09:13:31.748 17071 INFO cinder.api.openstack.wsgi [req-97662934-75d5-412e-ba57-92d70ac7c079 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/limits
+2020-05-12 09:13:31.793 17071 INFO cinder.api.openstack.wsgi [req-97662934-75d5-412e-ba57-92d70ac7c079 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/limits returned with HTTP 200
+2020-05-12 09:13:31.794 17071 INFO eventlet.wsgi.server [req-97662934-75d5-412e-ba57-92d70ac7c079 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/limits HTTP/1.1" status: 200  len: 630 time: 0.0497251
+2020-05-12 09:13:38.203 17069 INFO cinder.api.openstack.wsgi [req-2f604f79-db50-48a9-811d-5e1199b03f18 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-services
+2020-05-12 09:13:38.213 17069 INFO cinder.api.openstack.wsgi [req-2f604f79-db50-48a9-811d-5e1199b03f18 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-services returned with HTTP 200
+2020-05-12 09:13:38.214 17069 INFO eventlet.wsgi.server [req-2f604f79-db50-48a9-811d-5e1199b03f18 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/os-services HTTP/1.1" status: 200  len: 933 time: 0.0165761
+2020-05-12 09:13:38.433 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:13:38.434 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:13:38.435 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0028811
+2020-05-12 09:13:38.440 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:13:38.442 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:13:38.442 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023510
+2020-05-12 09:13:38.448 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:13:38.449 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:13:38.450 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0025342
+2020-05-12 09:13:38.454 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:13:38.455 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:13:38.456 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023580
+2020-05-12 09:13:38.461 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:13:38.462 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:13:38.463 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023651
+2020-05-12 09:13:38.470 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:13:38.471 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:13:38.472 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022881
+2020-05-12 09:13:38.492 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:13:38.493 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:13:38.494 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022738
+2020-05-12 09:13:38.499 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:13:38.500 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:13:38.501 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022891
+2020-05-12 09:15:23.435 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:15:23.437 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:15:23.438 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:15:23.438 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0039148
+2020-05-12 09:15:23.438 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:15:23.439 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0026720
+2020-05-12 09:15:23.463 17072 INFO cinder.api.openstack.wsgi [req-c8ce8e0d-63fa-416d-98b8-69b05f41c7c1 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail?all_tenants=True
+2020-05-12 09:15:23.476 17072 INFO cinder.api.openstack.wsgi [req-c8ce8e0d-63fa-416d-98b8-69b05f41c7c1 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail?all_tenants=True returned with HTTP 200
+2020-05-12 09:15:23.477 17072 INFO eventlet.wsgi.server [req-c8ce8e0d-63fa-416d-98b8-69b05f41c7c1 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/os-volume-transfer/detail?all_tenants=True HTTP/1.1" status: 200  len: 343 time: 0.0195310
+2020-05-12 09:15:24.001 17069 INFO cinder.api.openstack.wsgi [req-a190829e-57a9-4e3c-bc4b-1f8002e34f9e 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/snapshots/detail?all_tenants=True
+2020-05-12 09:15:24.031 17069 INFO cinder.volume.api [req-a190829e-57a9-4e3c-bc4b-1f8002e34f9e 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Get all snapshots completed successfully.
+2020-05-12 09:15:24.033 17069 INFO cinder.api.openstack.wsgi [req-a190829e-57a9-4e3c-bc4b-1f8002e34f9e 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/snapshots/detail?all_tenants=True returned with HTTP 200
+2020-05-12 09:15:24.034 17069 INFO eventlet.wsgi.server [req-a190829e-57a9-4e3c-bc4b-1f8002e34f9e 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/snapshots/detail?all_tenants=True HTTP/1.1" status: 200  len: 344 time: 0.5749211
+2020-05-12 09:15:24.081 17069 INFO cinder.api.openstack.wsgi [req-a86615db-772f-46f4-9c64-391e300364b0 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] GET http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail?all_tenants=True&limit=21&sort=created_at%3Adesc
+2020-05-12 09:15:24.125 17069 INFO cinder.volume.api [req-a86615db-772f-46f4-9c64-391e300364b0 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] Get all volumes completed successfully.
+2020-05-12 09:15:24.128 17069 INFO cinder.api.openstack.wsgi [req-a86615db-772f-46f4-9c64-391e300364b0 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] http://10.1.85.241:8776/v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail?all_tenants=True&limit=21&sort=created_at%3Adesc returned with HTTP 200
+2020-05-12 09:15:24.129 17069 INFO eventlet.wsgi.server [req-a86615db-772f-46f4-9c64-391e300364b0 775220a4ac234a878bdce88c2e3678b5 973168b02ba046ec8ad7a56a4b28fb35 - default default] 10.1.85.241 "GET /v3/973168b02ba046ec8ad7a56a4b28fb35/volumes/detail?all_tenants=True&limit=21&sort=created_at%3Adesc HTTP/1.1" status: 200  len: 342 time: 0.6475661
+2020-05-12 09:15:25.900 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:15:25.901 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:15:25.902 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0029631
+2020-05-12 09:15:25.906 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:15:25.907 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:15:25.908 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023210
+2020-05-12 09:15:25.913 17070 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:15:25.914 17070 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:15:25.915 17070 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022380
+2020-05-12 09:15:25.919 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:15:25.920 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:15:25.921 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0024421
+2020-05-12 09:15:25.926 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:15:25.927 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:15:25.928 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022888
+2020-05-12 09:15:25.933 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:15:25.934 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:15:25.935 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023031
+2020-05-12 09:15:25.963 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:15:25.964 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:15:25.964 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022249
+2020-05-12 09:15:25.970 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:15:25.971 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:15:25.971 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023279
+2020-05-12 09:15:35.834 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:15:35.835 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:15:35.836 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0025861
+2020-05-12 09:15:35.841 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:15:35.842 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:15:35.842 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022640
+2020-05-12 09:15:35.848 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:15:35.849 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:15:35.849 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023880
+2020-05-12 09:15:35.853 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:15:35.855 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:15:35.855 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023410
+2020-05-12 09:15:35.860 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:15:35.861 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:15:35.862 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022440
+2020-05-12 09:15:35.867 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:15:35.868 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:15:35.869 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022800
+2020-05-12 09:15:35.895 17072 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:15:35.896 17072 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:15:35.897 17072 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0024028
+2020-05-12 09:15:35.902 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:15:35.903 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:15:35.903 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022609
+2020-05-12 09:15:42.057 17069 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:15:42.059 17069 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:15:42.059 17069 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0025499
+2020-05-12 09:15:42.063 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:15:42.064 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:15:42.065 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022070
+2020-05-12 09:15:42.070 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:15:42.071 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:15:42.071 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0021570
+2020-05-12 09:15:42.075 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:15:42.076 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:15:42.077 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0021780
+2020-05-12 09:15:42.082 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:15:42.083 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:15:42.084 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022941
+2020-05-12 09:15:42.088 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:15:42.089 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:15:42.090 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0022690
+2020-05-12 09:15:42.107 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:15:42.108 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:15:42.109 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0023019
+2020-05-12 09:15:42.113 17071 INFO cinder.api.openstack.wsgi [-] GET http://10.1.85.241:8776/
+2020-05-12 09:15:42.114 17071 INFO cinder.api.openstack.wsgi [-] http://10.1.85.241:8776/ returned with HTTP 300
+2020-05-12 09:15:42.115 17071 INFO eventlet.wsgi.server [-] 10.1.85.241 "GET / HTTP/1.1" status: 300  len: 961 time: 0.0021050
