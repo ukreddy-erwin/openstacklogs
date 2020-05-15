@@ -1,0 +1,1196 @@
+[vagrant@packstack ~]$ sudo -i
+[root@packstack ~]# yum install -y centos-release-openstack-pike
+No package centos-release-openstack-pike available.
+Error: Nothing to do
+[root@packstack ~]# sudo yum install -y centos-release-openstack-stein
+Resolving Dependencies
+--> Running transaction check
+---> Package centos-release-openstack-stein.noarch 0:1-1.el7.centos will be installed
+--> Processing Dependency: centos-release-qemu-ev for package: centos-release-openstack-stein-1-1.el7.centos.noarch
+--> Processing Dependency: centos-release-ceph-nautilus for package: centos-release-openstack-stein-1-1.el7.centos.noarch
+--> Running transaction check
+---> Package centos-release-ceph-nautilus.noarch 0:1.2-2.el7.centos will be installed
+--> Processing Dependency: centos-release-storage-common for package: centos-release-ceph-nautilus-1.2-2.el7.centos.noarch
+--> Processing Dependency: centos-release-nfs-ganesha28 for package: centos-release-ceph-nautilus-1.2-2.el7.centos.noarch
+---> Package centos-release-qemu-ev.noarch 0:1.0-4.el7.centos will be installed
+--> Processing Dependency: centos-release-virt-common for package: centos-release-qemu-ev-1.0-4.el7.centos.noarch
+--> Running transaction check
+---> Package centos-release-nfs-ganesha28.noarch 0:1.0-3.el7.centos will be installed
+---> Package centos-release-storage-common.noarch 0:2-2.el7.centos will be installed
+---> Package centos-release-virt-common.noarch 0:1-1.el7.centos will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+========================================================================================================================
+ Package                                    Arch               Version                         Repository          Size
+========================================================================================================================
+Installing:
+ centos-release-openstack-stein             noarch             1-1.el7.centos                  extras             5.3 k
+Installing for dependencies:
+ centos-release-ceph-nautilus               noarch             1.2-2.el7.centos                extras             5.1 k
+ centos-release-nfs-ganesha28               noarch             1.0-3.el7.centos                extras             4.3 k
+ centos-release-qemu-ev                     noarch             1.0-4.el7.centos                extras              11 k
+ centos-release-storage-common              noarch             2-2.el7.centos                  extras             5.1 k
+ centos-release-virt-common                 noarch             1-1.el7.centos                  extras             4.5 k
+
+Transaction Summary
+========================================================================================================================
+Install  1 Package (+5 Dependent packages)
+
+Total download size: 35 k
+Installed size: 25 k
+Downloading packages:
+(1/6): centos-release-ceph-nautilus-1.2-2.el7.centos.noarch.rpm                                  | 5.1 kB  00:00:00
+(2/6): centos-release-virt-common-1-1.el7.centos.noarch.rpm                                      | 4.5 kB  00:00:00
+(3/6): centos-release-nfs-ganesha28-1.0-3.el7.centos.noarch.rpm                                  | 4.3 kB  00:00:00
+(4/6): centos-release-openstack-stein-1-1.el7.centos.noarch.rpm                                  | 5.3 kB  00:00:00
+(5/6): centos-release-qemu-ev-1.0-4.el7.centos.noarch.rpm                                        |  11 kB  00:00:00
+(6/6): centos-release-storage-common-2-2.el7.centos.noarch.rpm                                   | 5.1 kB  00:00:01
+------------------------------------------------------------------------------------------------------------------------
+Total                                                                                    17 kB/s |  35 kB  00:00:02
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : centos-release-storage-common-2-2.el7.centos.noarch                                                  1/6
+  Installing : centos-release-nfs-ganesha28-1.0-3.el7.centos.noarch                                                 2/6
+  Installing : centos-release-ceph-nautilus-1.2-2.el7.centos.noarch                                                 3/6
+  Installing : centos-release-virt-common-1-1.el7.centos.noarch                                                     4/6
+  Installing : centos-release-qemu-ev-1.0-4.el7.centos.noarch                                                       5/6
+  Installing : centos-release-openstack-stein-1-1.el7.centos.noarch                                                 6/6
+  Verifying  : centos-release-openstack-stein-1-1.el7.centos.noarch                                                 1/6
+  Verifying  : centos-release-virt-common-1-1.el7.centos.noarch                                                     2/6
+  Verifying  : centos-release-ceph-nautilus-1.2-2.el7.centos.noarch                                                 3/6
+  Verifying  : centos-release-nfs-ganesha28-1.0-3.el7.centos.noarch                                                 4/6
+  Verifying  : centos-release-storage-common-2-2.el7.centos.noarch                                                  5/6
+  Verifying  : centos-release-qemu-ev-1.0-4.el7.centos.noarch                                                       6/6
+
+Installed:
+  centos-release-openstack-stein.noarch 0:1-1.el7.centos
+
+Dependency Installed:
+  centos-release-ceph-nautilus.noarch 0:1.2-2.el7.centos     centos-release-nfs-ganesha28.noarch 0:1.0-3.el7.centos
+  centos-release-qemu-ev.noarch 0:1.0-4.el7.centos           centos-release-storage-common.noarch 0:2-2.el7.centos
+  centos-release-virt-common.noarch 0:1-1.el7.centos
+
+Complete!
+[root@packstack ~]# sudo yum update -y
+http://mirror.tino.org/centos/7.8.2003/storage/x86_64/ceph-nautilus/repodata/repomd.xml: [Errno 12] Timeout on http://mirror.tino.org/centos/7.8.2003/storage/x86_64/ceph-nautilus/repodata/repomd.xml: (28, 'Operation too slow. Less than 1000 bytes/sec transferred the last 30 seconds')
+Trying other mirror.
+centos-ceph-nautilus                                                                             | 3.0 kB  00:00:00
+centos-nfs-ganesha28                                                                             | 3.0 kB  00:00:00
+centos-openstack-stein                                                                           | 3.0 kB  00:00:00
+centos-qemu-ev                                                                                   | 3.0 kB  00:00:00
+(1/4): centos-nfs-ganesha28/7/x86_64/primary_db                                                  |  89 kB  00:00:00
+(2/4): centos-qemu-ev/7/x86_64/primary_db                                                        |  57 kB  00:00:00
+(3/4): centos-ceph-nautilus/7/x86_64/primary_db                                                  | 128 kB  00:00:00
+(4/4): centos-openstack-stein/7/x86_64/primary_db                                                | 977 kB  00:00:00
+Resolving Dependencies
+--> Running transaction check
+---> Package mariadb-libs.x86_64 1:5.5.65-1.el7 will be updated
+---> Package mariadb-libs.x86_64 3:10.3.10-1.el7.0.0.rdo2 will be an update
+--> Processing Dependency: mariadb-common(x86-64) = 3:10.3.10-1.el7.0.0.rdo2 for package: 3:mariadb-libs-10.3.10-1.el7.0.0.rdo2.x86_64
+---> Package python-chardet.noarch 0:2.2.1-3.el7 will be obsoleted
+---> Package python2-chardet.noarch 0:3.0.4-7.el7 will be obsoleting
+--> Running transaction check
+---> Package mariadb-common.x86_64 3:10.3.10-1.el7.0.0.rdo2 will be installed
+--> Processing Dependency: /etc/my.cnf for package: 3:mariadb-common-10.3.10-1.el7.0.0.rdo2.x86_64
+--> Running transaction check
+---> Package mariadb-config.x86_64 3:10.3.10-1.el7.0.0.rdo2 will be installed
+---> Package mariadb-libs.x86_64 1:5.5.65-1.el7 will be updated
+---> Package mariadb-libs.x86_64 1:5.5.65-1.el7 will be updated
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+========================================================================================================================
+ Package                   Arch             Version                              Repository                        Size
+========================================================================================================================
+Installing:
+ python2-chardet           noarch           3.0.4-7.el7                          centos-openstack-stein           186 k
+     replacing  python-chardet.noarch 2.2.1-3.el7
+Updating:
+ mariadb-libs              x86_64           3:10.3.10-1.el7.0.0.rdo2             centos-openstack-stein           155 k
+Installing for dependencies:
+ mariadb-common            x86_64           3:10.3.10-1.el7.0.0.rdo2             centos-openstack-stein            62 k
+ mariadb-config            x86_64           3:10.3.10-1.el7.0.0.rdo2             centos-openstack-stein            37 k
+
+Transaction Summary
+========================================================================================================================
+Install  1 Package (+2 Dependent packages)
+Upgrade  1 Package
+
+Total download size: 439 k
+Downloading packages:
+No Presto metadata available for centos-openstack-stein
+warning: /var/cache/yum/x86_64/7/centos-openstack-stein/packages/mariadb-common-10.3.10-1.el7.0.0.rdo2.x86_64.rpm: Header V4 RSA/SHA1 Signature, key ID 764429e6: NOKEY
+Public key for mariadb-common-10.3.10-1.el7.0.0.rdo2.x86_64.rpm is not installed
+(1/4): mariadb-common-10.3.10-1.el7.0.0.rdo2.x86_64.rpm                                          |  62 kB  00:00:00
+(2/4): mariadb-config-10.3.10-1.el7.0.0.rdo2.x86_64.rpm                                          |  37 kB  00:00:00
+(3/4): python2-chardet-3.0.4-7.el7.noarch.rpm                                                    | 186 kB  00:00:00
+(4/4): mariadb-libs-10.3.10-1.el7.0.0.rdo2.x86_64.rpm                                            | 155 kB  00:00:01
+------------------------------------------------------------------------------------------------------------------------
+Total                                                                                   316 kB/s | 439 kB  00:00:01
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Cloud
+Importing GPG key 0x764429E6:
+ Userid     : "CentOS Cloud SIG (http://wiki.centos.org/SpecialInterestGroup/Cloud) <security@centos.org>"
+ Fingerprint: 736a f511 6d9c 40e2 af6b 074b f9b9 fee7 7644 29e6
+ Package    : centos-release-openstack-stein-1-1.el7.centos.noarch (@extras)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Cloud
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : 3:mariadb-config-10.3.10-1.el7.0.0.rdo2.x86_64                                                       1/6
+  Installing : 3:mariadb-common-10.3.10-1.el7.0.0.rdo2.x86_64                                                       2/6
+  Updating   : 3:mariadb-libs-10.3.10-1.el7.0.0.rdo2.x86_64                                                         3/6
+  Installing : python2-chardet-3.0.4-7.el7.noarch                                                                   4/6
+  Erasing    : python-chardet-2.2.1-3.el7.noarch                                                                    5/6
+  Cleanup    : 1:mariadb-libs-5.5.65-1.el7.x86_64                                                                   6/6
+  Verifying  : 3:mariadb-libs-10.3.10-1.el7.0.0.rdo2.x86_64                                                         1/6
+  Verifying  : 3:mariadb-common-10.3.10-1.el7.0.0.rdo2.x86_64                                                       2/6
+  Verifying  : python2-chardet-3.0.4-7.el7.noarch                                                                   3/6
+  Verifying  : 3:mariadb-config-10.3.10-1.el7.0.0.rdo2.x86_64                                                       4/6
+  Verifying  : python-chardet-2.2.1-3.el7.noarch                                                                    5/6
+  Verifying  : 1:mariadb-libs-5.5.65-1.el7.x86_64                                                                   6/6
+
+Installed:
+  python2-chardet.noarch 0:3.0.4-7.el7
+
+Dependency Installed:
+  mariadb-common.x86_64 3:10.3.10-1.el7.0.0.rdo2             mariadb-config.x86_64 3:10.3.10-1.el7.0.0.rdo2
+
+Updated:
+  mariadb-libs.x86_64 3:10.3.10-1.el7.0.0.rdo2
+
+Replaced:
+  python-chardet.noarch 0:2.2.1-3.el7
+
+Complete!
+[root@packstack ~]# sudo yum install -y openstack-packstack
+Resolving Dependencies
+--> Running transaction check
+---> Package openstack-packstack.noarch 1:14.0.0-1.el7 will be installed
+--> Processing Dependency: openstack-packstack-puppet = 1:14.0.0-1.el7 for package: 1:openstack-packstack-14.0.0-1.el7.noarch
+--> Processing Dependency: python2-pyOpenSSL >= 16.2.0 for package: 1:openstack-packstack-14.0.0-1.el7.noarch
+--> Processing Dependency: PyYAML for package: 1:openstack-packstack-14.0.0-1.el7.noarch
+--> Processing Dependency: python-docutils for package: 1:openstack-packstack-14.0.0-1.el7.noarch
+--> Processing Dependency: python-netifaces for package: 1:openstack-packstack-14.0.0-1.el7.noarch
+--> Processing Dependency: python2-netaddr for package: 1:openstack-packstack-14.0.0-1.el7.noarch
+--> Processing Dependency: python2-pbr for package: 1:openstack-packstack-14.0.0-1.el7.noarch
+--> Processing Dependency: python2-setuptools for package: 1:openstack-packstack-14.0.0-1.el7.noarch
+--> Running transaction check
+---> Package PyYAML.x86_64 0:3.10-11.el7 will be installed
+--> Processing Dependency: libyaml-0.so.2()(64bit) for package: PyYAML-3.10-11.el7.x86_64
+---> Package openstack-packstack-puppet.noarch 1:14.0.0-1.el7 will be installed
+--> Processing Dependency: puppet-aodh for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-apache for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-ceilometer for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-certmonger for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-cinder for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-concat for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-firewall for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-glance for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-gnocchi for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-heat for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-horizon for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-inifile for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-ironic for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-keystone for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-magnum for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-manila for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-memcached for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-mysql for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-neutron for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-nova for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-nssdb for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-openstack_extras for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-openstacklib for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-oslo for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-ovn for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-panko for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-rabbitmq for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-redis for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-remote for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-rsync for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-sahara for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-ssh for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-stdlib for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-swift for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-sysctl for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-tempest for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-trove for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-vcsrepo for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-vswitch for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+--> Processing Dependency: puppet-xinetd for package: 1:openstack-packstack-puppet-14.0.0-1.el7.noarch
+---> Package python-docutils.noarch 0:0.11-0.3.20130715svn7687.el7 will be installed
+--> Processing Dependency: python-imaging for package: python-docutils-0.11-0.3.20130715svn7687.el7.noarch
+---> Package python-netifaces.x86_64 0:0.10.4-3.el7 will be installed
+---> Package python2-netaddr.noarch 0:0.7.19-5.el7 will be installed
+---> Package python2-pbr.noarch 0:5.1.2-2.el7 will be installed
+--> Processing Dependency: git-core for package: python2-pbr-5.1.2-2.el7.noarch
+---> Package python2-pyOpenSSL.noarch 0:19.0.0-1.el7 will be installed
+--> Processing Dependency: python2-cryptography >= 2.2.1 for package: python2-pyOpenSSL-19.0.0-1.el7.noarch
+--> Processing Dependency: python2-six >= 1.5.2 for package: python2-pyOpenSSL-19.0.0-1.el7.noarch
+---> Package python2-setuptools.noarch 0:40.8.0-1.el7 will be installed
+--> Running transaction check
+---> Package git.x86_64 0:1.8.3.1-22.el7_8 will be installed
+--> Processing Dependency: perl-Git = 1.8.3.1-22.el7_8 for package: git-1.8.3.1-22.el7_8.x86_64
+--> Processing Dependency: perl >= 5.008 for package: git-1.8.3.1-22.el7_8.x86_64
+--> Processing Dependency: perl(warnings) for package: git-1.8.3.1-22.el7_8.x86_64
+--> Processing Dependency: perl(vars) for package: git-1.8.3.1-22.el7_8.x86_64
+--> Processing Dependency: perl(strict) for package: git-1.8.3.1-22.el7_8.x86_64
+--> Processing Dependency: perl(lib) for package: git-1.8.3.1-22.el7_8.x86_64
+--> Processing Dependency: perl(Term::ReadKey) for package: git-1.8.3.1-22.el7_8.x86_64
+--> Processing Dependency: perl(Git) for package: git-1.8.3.1-22.el7_8.x86_64
+--> Processing Dependency: perl(Getopt::Long) for package: git-1.8.3.1-22.el7_8.x86_64
+--> Processing Dependency: perl(File::stat) for package: git-1.8.3.1-22.el7_8.x86_64
+--> Processing Dependency: perl(File::Temp) for package: git-1.8.3.1-22.el7_8.x86_64
+--> Processing Dependency: perl(File::Spec) for package: git-1.8.3.1-22.el7_8.x86_64
+--> Processing Dependency: perl(File::Path) for package: git-1.8.3.1-22.el7_8.x86_64
+--> Processing Dependency: perl(File::Find) for package: git-1.8.3.1-22.el7_8.x86_64
+--> Processing Dependency: perl(File::Copy) for package: git-1.8.3.1-22.el7_8.x86_64
+--> Processing Dependency: perl(File::Basename) for package: git-1.8.3.1-22.el7_8.x86_64
+--> Processing Dependency: perl(Exporter) for package: git-1.8.3.1-22.el7_8.x86_64
+--> Processing Dependency: perl(Error) for package: git-1.8.3.1-22.el7_8.x86_64
+--> Processing Dependency: /usr/bin/perl for package: git-1.8.3.1-22.el7_8.x86_64
+---> Package libyaml.x86_64 0:0.1.4-11.el7_0 will be installed
+---> Package puppet-aodh.noarch 0:14.4.0-1.el7 will be installed
+--> Processing Dependency: puppet >= 2.7.0 for package: puppet-aodh-14.4.0-1.el7.noarch
+---> Package puppet-apache.noarch 0:4.0.0-1.7a33327git.el7 will be installed
+---> Package puppet-ceilometer.noarch 0:14.4.0-1.el7 will be installed
+---> Package puppet-certmonger.noarch 0:2.4.0-1.a198870git.el7 will be installed
+---> Package puppet-cinder.noarch 0:14.4.0-1.el7 will be installed
+---> Package puppet-concat.noarch 0:5.3.0-1.912d2ccgit.el7 will be installed
+---> Package puppet-firewall.noarch 0:1.15.1-1.50f0196git.el7 will be installed
+---> Package puppet-glance.noarch 0:14.4.0-1.el7 will be installed
+---> Package puppet-gnocchi.noarch 0:14.4.0-1.el7 will be installed
+---> Package puppet-heat.noarch 0:14.4.0-1.el7 will be installed
+---> Package puppet-horizon.noarch 0:14.4.0-1.el7 will be installed
+---> Package puppet-inifile.noarch 0:2.5.0-1.6b16db6git.el7 will be installed
+---> Package puppet-ironic.noarch 0:14.4.0-1.el7 will be installed
+---> Package puppet-keystone.noarch 0:14.4.0-1.el7 will be installed
+---> Package puppet-magnum.noarch 0:14.4.0-1.el7 will be installed
+---> Package puppet-manila.noarch 0:14.4.1-1.el7 will be installed
+---> Package puppet-memcached.noarch 0:3.4.0-1.66d3a66git.el7 will be installed
+---> Package puppet-mysql.noarch 0:6.2.0-1.el7 will be installed
+--> Processing Dependency: puppet-staging for package: puppet-mysql-6.2.0-1.el7.noarch
+---> Package puppet-neutron.noarch 0:14.4.0-1.el7 will be installed
+---> Package puppet-nova.noarch 0:14.4.0-1.el7 will be installed
+---> Package puppet-nssdb.noarch 0:1.0.1-1.2ed2a2dgit.el7 will be installed
+---> Package puppet-openstack_extras.noarch 0:14.4.0-1.el7 will be installed
+--> Processing Dependency: puppet-corosync for package: puppet-openstack_extras-14.4.0-1.el7.noarch
+---> Package puppet-openstacklib.noarch 0:14.4.0-1.el7 will be installed
+---> Package puppet-oslo.noarch 0:14.4.0-1.el7 will be installed
+---> Package puppet-ovn.noarch 0:14.4.0-1.el7 will be installed
+---> Package puppet-panko.noarch 0:14.4.0-1.el7 will be installed
+---> Package puppet-rabbitmq.noarch 0:9.0.1-0.2.7613f08git.el7 will be installed
+--> Processing Dependency: puppet-archive for package: puppet-rabbitmq-9.0.1-0.2.7613f08git.el7.noarch
+---> Package puppet-redis.noarch 0:4.0.1-0.1.0rc0.5464b33git.el7 will be installed
+---> Package puppet-remote.noarch 0:10.0.0-1.7420908git.el7 will be installed
+---> Package puppet-rsync.noarch 0:1.1.1-1.a7d4f84git.el7 will be installed
+---> Package puppet-sahara.noarch 0:14.4.0-1.el7 will be installed
+---> Package puppet-ssh.noarch 0:5.0.0-1.fc0d31cgit.el7 will be installed
+---> Package puppet-stdlib.noarch 0:5.2.0-1.b0dd4c1git.el7 will be installed
+---> Package puppet-swift.noarch 0:14.4.0-1.el7 will be installed
+---> Package puppet-sysctl.noarch 0:0.0.12-2.a3d160dgit.el7 will be installed
+---> Package puppet-tempest.noarch 0:14.4.0-1.el7 will be installed
+---> Package puppet-trove.noarch 0:14.4.0-1.el7 will be installed
+---> Package puppet-vcsrepo.noarch 0:2.4.0-1.a2ea398git.el7 will be installed
+---> Package puppet-vswitch.noarch 0:10.4.0-1.el7 will be installed
+---> Package puppet-xinetd.noarch 0:3.2.0-1.98b4231git.el7 will be installed
+---> Package python2-cryptography.x86_64 0:2.5-1.el7 will be installed
+--> Processing Dependency: python2-asn1crypto >= 0.21 for package: python2-cryptography-2.5-1.el7.x86_64
+--> Processing Dependency: python2-cffi >= 1.7 for package: python2-cryptography-2.5-1.el7.x86_64
+--> Processing Dependency: python2-idna >= 2.1 for package: python2-cryptography-2.5-1.el7.x86_64
+--> Processing Dependency: python-enum34 for package: python2-cryptography-2.5-1.el7.x86_64
+--> Processing Dependency: python2-ipaddress for package: python2-cryptography-2.5-1.el7.x86_64
+---> Package python2-pillow.x86_64 0:5.4.1-3.el7 will be installed
+--> Processing Dependency: libjpeg.so.62(LIBJPEG_6.2)(64bit) for package: python2-pillow-5.4.1-3.el7.x86_64
+--> Processing Dependency: libtiff.so.5(LIBTIFF_4.0)(64bit) for package: python2-pillow-5.4.1-3.el7.x86_64
+--> Processing Dependency: python2-olefile for package: python2-pillow-5.4.1-3.el7.x86_64
+--> Processing Dependency: libimagequant.so.0()(64bit) for package: python2-pillow-5.4.1-3.el7.x86_64
+--> Processing Dependency: libjpeg.so.62()(64bit) for package: python2-pillow-5.4.1-3.el7.x86_64
+--> Processing Dependency: liblcms2.so.2()(64bit) for package: python2-pillow-5.4.1-3.el7.x86_64
+--> Processing Dependency: libopenjp2.so.7()(64bit) for package: python2-pillow-5.4.1-3.el7.x86_64
+--> Processing Dependency: libtiff.so.5()(64bit) for package: python2-pillow-5.4.1-3.el7.x86_64
+--> Processing Dependency: libwebp.so.4()(64bit) for package: python2-pillow-5.4.1-3.el7.x86_64
+---> Package python2-six.noarch 0:1.12.0-1.el7 will be installed
+--> Running transaction check
+---> Package lcms2.x86_64 0:2.6-3.el7 will be installed
+---> Package libimagequant.x86_64 0:2.8.2-2.el7 will be installed
+---> Package libjpeg-turbo.x86_64 0:1.2.90-8.el7 will be installed
+---> Package libtiff.x86_64 0:4.0.3-32.el7 will be installed
+--> Processing Dependency: libjbig.so.2.0()(64bit) for package: libtiff-4.0.3-32.el7.x86_64
+---> Package libwebp.x86_64 0:0.3.0-7.el7 will be installed
+---> Package openjpeg2.x86_64 0:2.3.1-3.el7_7 will be installed
+---> Package perl.x86_64 4:5.16.3-295.el7 will be installed
+--> Processing Dependency: perl-libs = 4:5.16.3-295.el7 for package: 4:perl-5.16.3-295.el7.x86_64
+--> Processing Dependency: perl(Socket) >= 1.3 for package: 4:perl-5.16.3-295.el7.x86_64
+--> Processing Dependency: perl(Scalar::Util) >= 1.10 for package: 4:perl-5.16.3-295.el7.x86_64
+--> Processing Dependency: perl-macros for package: 4:perl-5.16.3-295.el7.x86_64
+--> Processing Dependency: perl-libs for package: 4:perl-5.16.3-295.el7.x86_64
+--> Processing Dependency: perl(threads::shared) for package: 4:perl-5.16.3-295.el7.x86_64
+--> Processing Dependency: perl(threads) for package: 4:perl-5.16.3-295.el7.x86_64
+--> Processing Dependency: perl(constant) for package: 4:perl-5.16.3-295.el7.x86_64
+--> Processing Dependency: perl(Time::Local) for package: 4:perl-5.16.3-295.el7.x86_64
+--> Processing Dependency: perl(Time::HiRes) for package: 4:perl-5.16.3-295.el7.x86_64
+--> Processing Dependency: perl(Storable) for package: 4:perl-5.16.3-295.el7.x86_64
+--> Processing Dependency: perl(Socket) for package: 4:perl-5.16.3-295.el7.x86_64
+--> Processing Dependency: perl(Scalar::Util) for package: 4:perl-5.16.3-295.el7.x86_64
+--> Processing Dependency: perl(Pod::Simple::XHTML) for package: 4:perl-5.16.3-295.el7.x86_64
+--> Processing Dependency: perl(Pod::Simple::Search) for package: 4:perl-5.16.3-295.el7.x86_64
+--> Processing Dependency: perl(Filter::Util::Call) for package: 4:perl-5.16.3-295.el7.x86_64
+--> Processing Dependency: perl(Carp) for package: 4:perl-5.16.3-295.el7.x86_64
+--> Processing Dependency: libperl.so()(64bit) for package: 4:perl-5.16.3-295.el7.x86_64
+---> Package perl-Error.noarch 1:0.17020-2.el7 will be installed
+---> Package perl-Exporter.noarch 0:5.68-3.el7 will be installed
+---> Package perl-File-Path.noarch 0:2.09-2.el7 will be installed
+---> Package perl-File-Temp.noarch 0:0.23.01-3.el7 will be installed
+---> Package perl-Getopt-Long.noarch 0:2.40-3.el7 will be installed
+--> Processing Dependency: perl(Pod::Usage) >= 1.14 for package: perl-Getopt-Long-2.40-3.el7.noarch
+--> Processing Dependency: perl(Text::ParseWords) for package: perl-Getopt-Long-2.40-3.el7.noarch
+---> Package perl-Git.noarch 0:1.8.3.1-22.el7_8 will be installed
+---> Package perl-PathTools.x86_64 0:3.40-5.el7 will be installed
+---> Package perl-TermReadKey.x86_64 0:2.30-20.el7 will be installed
+---> Package puppet.noarch 0:5.5.10-5.el7 will be installed
+--> Processing Dependency: puppet-headless = 5.5.10-5.el7 for package: puppet-5.5.10-5.el7.noarch
+---> Package puppet-archive.noarch 0:3.2.2-0.1.0rc0.56eedafgit.el7 will be installed
+---> Package puppet-corosync.noarch 0:6.0.2-0.1.0rc0.fe3b8a8git.el7 will be installed
+---> Package puppet-staging.noarch 0:1.0.4-1.b466d93git.el7 will be installed
+---> Package python-enum34.noarch 0:1.0.4-1.el7 will be installed
+---> Package python2-asn1crypto.noarch 0:0.23.0-2.el7 will be installed
+---> Package python2-cffi.x86_64 0:1.11.2-1.el7 will be installed
+--> Processing Dependency: python-pycparser for package: python2-cffi-1.11.2-1.el7.x86_64
+---> Package python2-idna.noarch 0:2.5-1.el7 will be installed
+---> Package python2-ipaddress.noarch 0:1.0.18-5.el7 will be installed
+---> Package python2-olefile.noarch 0:0.44-1.el7 will be installed
+--> Running transaction check
+---> Package jbigkit-libs.x86_64 0:2.0-11.el7 will be installed
+---> Package perl-Carp.noarch 0:1.26-244.el7 will be installed
+---> Package perl-Filter.x86_64 0:1.49-3.el7 will be installed
+---> Package perl-Pod-Simple.noarch 1:3.28-4.el7 will be installed
+--> Processing Dependency: perl(Pod::Escapes) >= 1.04 for package: 1:perl-Pod-Simple-3.28-4.el7.noarch
+--> Processing Dependency: perl(Encode) for package: 1:perl-Pod-Simple-3.28-4.el7.noarch
+---> Package perl-Pod-Usage.noarch 0:1.63-3.el7 will be installed
+--> Processing Dependency: perl(Pod::Text) >= 3.15 for package: perl-Pod-Usage-1.63-3.el7.noarch
+--> Processing Dependency: perl-Pod-Perldoc for package: perl-Pod-Usage-1.63-3.el7.noarch
+---> Package perl-Scalar-List-Utils.x86_64 0:1.27-248.el7 will be installed
+---> Package perl-Socket.x86_64 0:2.010-5.el7 will be installed
+---> Package perl-Storable.x86_64 0:2.45-3.el7 will be installed
+---> Package perl-Text-ParseWords.noarch 0:3.29-4.el7 will be installed
+---> Package perl-Time-HiRes.x86_64 4:1.9725-3.el7 will be installed
+---> Package perl-Time-Local.noarch 0:1.2300-2.el7 will be installed
+---> Package perl-constant.noarch 0:1.27-2.el7 will be installed
+---> Package perl-libs.x86_64 4:5.16.3-295.el7 will be installed
+---> Package perl-macros.x86_64 4:5.16.3-295.el7 will be installed
+---> Package perl-threads.x86_64 0:1.87-4.el7 will be installed
+---> Package perl-threads-shared.x86_64 0:1.43-6.el7 will be installed
+---> Package puppet-headless.noarch 0:5.5.10-5.el7 will be installed
+--> Processing Dependency: hiera < 1:4 for package: puppet-headless-5.5.10-5.el7.noarch
+--> Processing Dependency: ruby-facter < 1:4 for package: puppet-headless-5.5.10-5.el7.noarch
+--> Processing Dependency: hiera >= 2.0 for package: puppet-headless-5.5.10-5.el7.noarch
+--> Processing Dependency: ruby-facter >= 1:3.0 for package: puppet-headless-5.5.10-5.el7.noarch
+--> Processing Dependency: /usr/bin/ruby for package: puppet-headless-5.5.10-5.el7.noarch
+--> Processing Dependency: ruby for package: puppet-headless-5.5.10-5.el7.noarch
+--> Processing Dependency: ruby(augeas) for package: puppet-headless-5.5.10-5.el7.noarch
+--> Processing Dependency: ruby(release) for package: puppet-headless-5.5.10-5.el7.noarch
+--> Processing Dependency: ruby(selinux) for package: puppet-headless-5.5.10-5.el7.noarch
+--> Processing Dependency: ruby(shadow) for package: puppet-headless-5.5.10-5.el7.noarch
+--> Processing Dependency: rubygem(json) for package: puppet-headless-5.5.10-5.el7.noarch
+--> Processing Dependency: rubygem(pathspec) for package: puppet-headless-5.5.10-5.el7.noarch
+--> Processing Dependency: rubygem(rgen) for package: puppet-headless-5.5.10-5.el7.noarch
+---> Package python-pycparser.noarch 0:2.14-1.el7 will be installed
+--> Processing Dependency: python-ply for package: python-pycparser-2.14-1.el7.noarch
+--> Running transaction check
+---> Package hiera.noarch 1:1.3.4-5.el7 will be installed
+---> Package libselinux-ruby.x86_64 0:2.5-15.el7 will be installed
+---> Package perl-Encode.x86_64 0:2.51-7.el7 will be installed
+---> Package perl-Pod-Escapes.noarch 1:1.04-295.el7 will be installed
+---> Package perl-Pod-Perldoc.noarch 0:3.20-4.el7 will be installed
+--> Processing Dependency: perl(parent) for package: perl-Pod-Perldoc-3.20-4.el7.noarch
+--> Processing Dependency: perl(HTTP::Tiny) for package: perl-Pod-Perldoc-3.20-4.el7.noarch
+---> Package perl-podlators.noarch 0:2.5.1-3.el7 will be installed
+---> Package python-ply.noarch 0:3.4-11.el7 will be installed
+---> Package ruby.x86_64 0:2.0.0.648-36.el7 will be installed
+--> Processing Dependency: rubygem(bigdecimal) >= 1.2.0 for package: ruby-2.0.0.648-36.el7.x86_64
+--> Processing Dependency: ruby(rubygems) >= 2.0.14.1 for package: ruby-2.0.0.648-36.el7.x86_64
+---> Package ruby-augeas.x86_64 0:0.5.0-1.el7 will be installed
+--> Processing Dependency: augeas-libs >= 1.0.0 for package: ruby-augeas-0.5.0-1.el7.x86_64
+--> Processing Dependency: libaugeas.so.0(AUGEAS_0.1.0)(64bit) for package: ruby-augeas-0.5.0-1.el7.x86_64
+--> Processing Dependency: libaugeas.so.0(AUGEAS_0.10.0)(64bit) for package: ruby-augeas-0.5.0-1.el7.x86_64
+--> Processing Dependency: libaugeas.so.0(AUGEAS_0.11.0)(64bit) for package: ruby-augeas-0.5.0-1.el7.x86_64
+--> Processing Dependency: libaugeas.so.0(AUGEAS_0.12.0)(64bit) for package: ruby-augeas-0.5.0-1.el7.x86_64
+--> Processing Dependency: libaugeas.so.0(AUGEAS_0.14.0)(64bit) for package: ruby-augeas-0.5.0-1.el7.x86_64
+--> Processing Dependency: libaugeas.so.0(AUGEAS_0.16.0)(64bit) for package: ruby-augeas-0.5.0-1.el7.x86_64
+--> Processing Dependency: libaugeas.so.0(AUGEAS_0.8.0)(64bit) for package: ruby-augeas-0.5.0-1.el7.x86_64
+--> Processing Dependency: libaugeas.so.0()(64bit) for package: ruby-augeas-0.5.0-1.el7.x86_64
+---> Package ruby-facter.x86_64 1:3.9.3-7.el7 will be installed
+--> Processing Dependency: facter(x86-64) = 1:3.9.3-7.el7 for package: 1:ruby-facter-3.9.3-7.el7.x86_64
+---> Package ruby-libs.x86_64 0:2.0.0.648-36.el7 will be installed
+---> Package ruby-shadow.x86_64 0:1.4.1-23.el7 will be installed
+---> Package rubygem-json.x86_64 0:1.7.7-36.el7 will be installed
+---> Package rubygem-pathspec.noarch 0:0.2.1-3.el7 will be installed
+---> Package rubygem-rgen.noarch 0:0.6.6-2.el7 will be installed
+--> Running transaction check
+---> Package augeas-libs.x86_64 0:1.4.0-9.el7_8.1 will be installed
+---> Package facter.x86_64 1:3.9.3-7.el7 will be installed
+--> Processing Dependency: leatherman for package: 1:facter-3.9.3-7.el7.x86_64
+--> Processing Dependency: libboost_atomic.so.1.59.0()(64bit) for package: 1:facter-3.9.3-7.el7.x86_64
+--> Processing Dependency: libboost_chrono.so.1.59.0()(64bit) for package: 1:facter-3.9.3-7.el7.x86_64
+--> Processing Dependency: libboost_date_time.so.1.59.0()(64bit) for package: 1:facter-3.9.3-7.el7.x86_64
+--> Processing Dependency: libboost_filesystem.so.1.59.0()(64bit) for package: 1:facter-3.9.3-7.el7.x86_64
+--> Processing Dependency: libboost_locale.so.1.59.0()(64bit) for package: 1:facter-3.9.3-7.el7.x86_64
+--> Processing Dependency: libboost_program_options.so.1.59.0()(64bit) for package: 1:facter-3.9.3-7.el7.x86_64
+--> Processing Dependency: libboost_regex.so.1.59.0()(64bit) for package: 1:facter-3.9.3-7.el7.x86_64
+--> Processing Dependency: libboost_system.so.1.59.0()(64bit) for package: 1:facter-3.9.3-7.el7.x86_64
+--> Processing Dependency: libboost_thread.so.1.59.0()(64bit) for package: 1:facter-3.9.3-7.el7.x86_64
+--> Processing Dependency: libcpp-hocon.so.0.1.6()(64bit) for package: 1:facter-3.9.3-7.el7.x86_64
+--> Processing Dependency: libyaml-cpp.so.0.5()(64bit) for package: 1:facter-3.9.3-7.el7.x86_64
+---> Package perl-HTTP-Tiny.noarch 0:0.033-3.el7 will be installed
+---> Package perl-parent.noarch 1:0.225-244.el7 will be installed
+---> Package rubygem-bigdecimal.x86_64 0:1.2.0-36.el7 will be installed
+---> Package rubygems.noarch 0:2.0.14.1-36.el7 will be installed
+--> Processing Dependency: rubygem(rdoc) >= 4.0.0 for package: rubygems-2.0.14.1-36.el7.noarch
+--> Processing Dependency: rubygem(psych) >= 2.0.0 for package: rubygems-2.0.14.1-36.el7.noarch
+--> Processing Dependency: rubygem(io-console) >= 0.4.2 for package: rubygems-2.0.14.1-36.el7.noarch
+--> Running transaction check
+---> Package boost159-atomic.x86_64 0:1.59.0-2.el7.1 will be installed
+---> Package boost159-chrono.x86_64 0:1.59.0-2.el7.1 will be installed
+---> Package boost159-date-time.x86_64 0:1.59.0-2.el7.1 will be installed
+---> Package boost159-filesystem.x86_64 0:1.59.0-2.el7.1 will be installed
+---> Package boost159-locale.x86_64 0:1.59.0-2.el7.1 will be installed
+---> Package boost159-program-options.x86_64 0:1.59.0-2.el7.1 will be installed
+---> Package boost159-regex.x86_64 0:1.59.0-2.el7.1 will be installed
+---> Package boost159-system.x86_64 0:1.59.0-2.el7.1 will be installed
+---> Package boost159-thread.x86_64 0:1.59.0-2.el7.1 will be installed
+---> Package cpp-hocon.x86_64 0:0.1.6-9.el7 will be installed
+---> Package leatherman.x86_64 0:1.3.0-9.el7 will be installed
+--> Processing Dependency: libboost_log.so.1.59.0()(64bit) for package: leatherman-1.3.0-9.el7.x86_64
+--> Processing Dependency: libboost_log_setup.so.1.59.0()(64bit) for package: leatherman-1.3.0-9.el7.x86_64
+---> Package rubygem-io-console.x86_64 0:0.4.2-36.el7 will be installed
+---> Package rubygem-psych.x86_64 0:2.0.0-36.el7 will be installed
+---> Package rubygem-rdoc.noarch 0:4.0.0-36.el7 will be installed
+--> Processing Dependency: ruby(irb) = 2.0.0.648 for package: rubygem-rdoc-4.0.0-36.el7.noarch
+---> Package yaml-cpp.x86_64 0:0.5.1-6.el7 will be installed
+--> Running transaction check
+---> Package boost159-log.x86_64 0:1.59.0-2.el7.1 will be installed
+---> Package ruby-irb.noarch 0:2.0.0.648-36.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+========================================================================================================================
+ Package                          Arch         Version                               Repository                    Size
+========================================================================================================================
+Installing:
+ openstack-packstack              noarch       1:14.0.0-1.el7                        centos-openstack-stein       191 k
+Installing for dependencies:
+ PyYAML                           x86_64       3.10-11.el7                           base                         153 k
+ augeas-libs                      x86_64       1.4.0-9.el7_8.1                       updates                      357 k
+ boost159-atomic                  x86_64       1.59.0-2.el7.1                        centos-openstack-stein       7.2 k
+ boost159-chrono                  x86_64       1.59.0-2.el7.1                        centos-openstack-stein        14 k
+ boost159-date-time               x86_64       1.59.0-2.el7.1                        centos-openstack-stein        21 k
+ boost159-filesystem              x86_64       1.59.0-2.el7.1                        centos-openstack-stein        36 k
+ boost159-locale                  x86_64       1.59.0-2.el7.1                        centos-openstack-stein       222 k
+ boost159-log                     x86_64       1.59.0-2.el7.1                        centos-openstack-stein       380 k
+ boost159-program-options         x86_64       1.59.0-2.el7.1                        centos-openstack-stein       121 k
+ boost159-regex                   x86_64       1.59.0-2.el7.1                        centos-openstack-stein       258 k
+ boost159-system                  x86_64       1.59.0-2.el7.1                        centos-openstack-stein       9.6 k
+ boost159-thread                  x86_64       1.59.0-2.el7.1                        centos-openstack-stein        41 k
+ cpp-hocon                        x86_64       0.1.6-9.el7                           centos-openstack-stein       358 k
+ facter                           x86_64       1:3.9.3-7.el7                         centos-openstack-stein       553 k
+ git                              x86_64       1.8.3.1-22.el7_8                      updates                      4.4 M
+ hiera                            noarch       1:1.3.4-5.el7                         centos-openstack-stein        25 k
+ jbigkit-libs                     x86_64       2.0-11.el7                            base                          46 k
+ lcms2                            x86_64       2.6-3.el7                             base                         150 k
+ leatherman                       x86_64       1.3.0-9.el7                           centos-openstack-stein       347 k
+ libimagequant                    x86_64       2.8.2-2.el7                           centos-openstack-stein        52 k
+ libjpeg-turbo                    x86_64       1.2.90-8.el7                          base                         135 k
+ libselinux-ruby                  x86_64       2.5-15.el7                            base                         121 k
+ libtiff                          x86_64       4.0.3-32.el7                          base                         171 k
+ libwebp                          x86_64       0.3.0-7.el7                           base                         170 k
+ libyaml                          x86_64       0.1.4-11.el7_0                        base                          55 k
+ openjpeg2                        x86_64       2.3.1-3.el7_7                         base                         153 k
+ openstack-packstack-puppet       noarch       1:14.0.0-1.el7                        centos-openstack-stein        60 k
+ perl                             x86_64       4:5.16.3-295.el7                      base                         8.0 M
+ perl-Carp                        noarch       1.26-244.el7                          base                          19 k
+ perl-Encode                      x86_64       2.51-7.el7                            base                         1.5 M
+ perl-Error                       noarch       1:0.17020-2.el7                       base                          32 k
+ perl-Exporter                    noarch       5.68-3.el7                            base                          28 k
+ perl-File-Path                   noarch       2.09-2.el7                            base                          26 k
+ perl-File-Temp                   noarch       0.23.01-3.el7                         base                          56 k
+ perl-Filter                      x86_64       1.49-3.el7                            base                          76 k
+ perl-Getopt-Long                 noarch       2.40-3.el7                            base                          56 k
+ perl-Git                         noarch       1.8.3.1-22.el7_8                      updates                       56 k
+ perl-HTTP-Tiny                   noarch       0.033-3.el7                           base                          38 k
+ perl-PathTools                   x86_64       3.40-5.el7                            base                          82 k
+ perl-Pod-Escapes                 noarch       1:1.04-295.el7                        base                          51 k
+ perl-Pod-Perldoc                 noarch       3.20-4.el7                            base                          87 k
+ perl-Pod-Simple                  noarch       1:3.28-4.el7                          base                         216 k
+ perl-Pod-Usage                   noarch       1.63-3.el7                            base                          27 k
+ perl-Scalar-List-Utils           x86_64       1.27-248.el7                          base                          36 k
+ perl-Socket                      x86_64       2.010-5.el7                           base                          49 k
+ perl-Storable                    x86_64       2.45-3.el7                            base                          77 k
+ perl-TermReadKey                 x86_64       2.30-20.el7                           base                          31 k
+ perl-Text-ParseWords             noarch       3.29-4.el7                            base                          14 k
+ perl-Time-HiRes                  x86_64       4:1.9725-3.el7                        base                          45 k
+ perl-Time-Local                  noarch       1.2300-2.el7                          base                          24 k
+ perl-constant                    noarch       1.27-2.el7                            base                          19 k
+ perl-libs                        x86_64       4:5.16.3-295.el7                      base                         689 k
+ perl-macros                      x86_64       4:5.16.3-295.el7                      base                          44 k
+ perl-parent                      noarch       1:0.225-244.el7                       base                          12 k
+ perl-podlators                   noarch       2.5.1-3.el7                           base                         112 k
+ perl-threads                     x86_64       1.87-4.el7                            base                          49 k
+ perl-threads-shared              x86_64       1.43-6.el7                            base                          39 k
+ puppet                           noarch       5.5.10-5.el7                          centos-openstack-stein        23 k
+ puppet-aodh                      noarch       14.4.0-1.el7                          centos-openstack-stein        51 k
+ puppet-apache                    noarch       4.0.0-1.7a33327git.el7                centos-openstack-stein       220 k
+ puppet-archive                   noarch       3.2.2-0.1.0rc0.56eedafgit.el7         centos-openstack-stein        40 k
+ puppet-ceilometer                noarch       14.4.0-1.el7                          centos-openstack-stein        64 k
+ puppet-certmonger                noarch       2.4.0-1.a198870git.el7                centos-openstack-stein        21 k
+ puppet-cinder                    noarch       14.4.0-1.el7                          centos-openstack-stein       112 k
+ puppet-concat                    noarch       5.3.0-1.912d2ccgit.el7                centos-openstack-stein        35 k
+ puppet-corosync                  noarch       6.0.2-0.1.0rc0.fe3b8a8git.el7         centos-openstack-stein        60 k
+ puppet-firewall                  noarch       1.15.1-1.50f0196git.el7               centos-openstack-stein        68 k
+ puppet-glance                    noarch       14.4.0-1.el7                          centos-openstack-stein        77 k
+ puppet-gnocchi                   noarch       14.4.0-1.el7                          centos-openstack-stein        53 k
+ puppet-headless                  noarch       5.5.10-5.el7                          centos-openstack-stein       1.6 M
+ puppet-heat                      noarch       14.4.0-1.el7                          centos-openstack-stein        63 k
+ puppet-horizon                   noarch       14.4.0-1.el7                          centos-openstack-stein        53 k
+ puppet-inifile                   noarch       2.5.0-1.6b16db6git.el7                centos-openstack-stein        37 k
+ puppet-ironic                    noarch       14.4.0-1.el7                          centos-openstack-stein       106 k
+ puppet-keystone                  noarch       14.4.0-1.el7                          centos-openstack-stein       124 k
+ puppet-magnum                    noarch       14.4.0-1.el7                          centos-openstack-stein        48 k
+ puppet-manila                    noarch       14.4.1-1.el7                          centos-openstack-stein        73 k
+ puppet-memcached                 noarch       3.4.0-1.66d3a66git.el7                centos-openstack-stein        13 k
+ puppet-mysql                     noarch       6.2.0-1.el7                           centos-openstack-stein        83 k
+ puppet-neutron                   noarch       14.4.0-1.el7                          centos-openstack-stein       192 k
+ puppet-nova                      noarch       14.4.0-1.el7                          centos-openstack-stein       177 k
+ puppet-nssdb                     noarch       1.0.1-1.2ed2a2dgit.el7                centos-openstack-stein       6.9 k
+ puppet-openstack_extras          noarch       14.4.0-1.el7                          centos-openstack-stein        43 k
+ puppet-openstacklib              noarch       14.4.0-1.el7                          centos-openstack-stein        55 k
+ puppet-oslo                      noarch       14.4.0-1.el7                          centos-openstack-stein        42 k
+ puppet-ovn                       noarch       14.4.0-1.el7                          centos-openstack-stein        22 k
+ puppet-panko                     noarch       14.4.0-1.el7                          centos-openstack-stein        41 k
+ puppet-rabbitmq                  noarch       9.0.1-0.2.7613f08git.el7              centos-openstack-stein       263 k
+ puppet-redis                     noarch       4.0.1-0.1.0rc0.5464b33git.el7         centos-openstack-stein        49 k
+ puppet-remote                    noarch       10.0.0-1.7420908git.el7               centos-openstack-stein        11 k
+ puppet-rsync                     noarch       1.1.1-1.a7d4f84git.el7                centos-openstack-stein        21 k
+ puppet-sahara                    noarch       14.4.0-1.el7                          centos-openstack-stein        54 k
+ puppet-ssh                       noarch       5.0.0-1.fc0d31cgit.el7                centos-openstack-stein        22 k
+ puppet-staging                   noarch       1.0.4-1.b466d93git.el7                centos-openstack-stein        78 k
+ puppet-stdlib                    noarch       5.2.0-1.b0dd4c1git.el7                centos-openstack-stein       152 k
+ puppet-swift                     noarch       14.4.0-1.el7                          centos-openstack-stein       102 k
+ puppet-sysctl                    noarch       0.0.12-2.a3d160dgit.el7               centos-openstack-stein        11 k
+ puppet-tempest                   noarch       14.4.0-1.el7                          centos-openstack-stein        38 k
+ puppet-trove                     noarch       14.4.0-1.el7                          centos-openstack-stein        62 k
+ puppet-vcsrepo                   noarch       2.4.0-1.a2ea398git.el7                centos-openstack-stein        45 k
+ puppet-vswitch                   noarch       10.4.0-1.el7                          centos-openstack-stein        36 k
+ puppet-xinetd                    noarch       3.2.0-1.98b4231git.el7                centos-openstack-stein        21 k
+ python-docutils                  noarch       0.11-0.3.20130715svn7687.el7          base                         1.5 M
+ python-enum34                    noarch       1.0.4-1.el7                           base                          52 k
+ python-netifaces                 x86_64       0.10.4-3.el7                          base                          17 k
+ python-ply                       noarch       3.4-11.el7                            base                         123 k
+ python-pycparser                 noarch       2.14-1.el7                            base                         104 k
+ python2-asn1crypto               noarch       0.23.0-2.el7                          centos-ceph-nautilus         172 k
+ python2-cffi                     x86_64       1.11.2-1.el7                          centos-ceph-nautilus         229 k
+ python2-cryptography             x86_64       2.5-1.el7                             centos-ceph-nautilus         544 k
+ python2-idna                     noarch       2.5-1.el7                             centos-ceph-nautilus          94 k
+ python2-ipaddress                noarch       1.0.18-5.el7                          centos-ceph-nautilus          35 k
+ python2-netaddr                  noarch       0.7.19-5.el7                          centos-ceph-nautilus         1.5 M
+ python2-olefile                  noarch       0.44-1.el7                            centos-openstack-stein       773 k
+ python2-pbr                      noarch       5.1.2-2.el7                           centos-ceph-nautilus         1.1 M
+ python2-pillow                   x86_64       5.4.1-3.el7                           centos-openstack-stein       639 k
+ python2-pyOpenSSL                noarch       19.0.0-1.el7                          centos-openstack-stein        98 k
+ python2-setuptools               noarch       40.8.0-1.el7                          centos-openstack-stein       652 k
+ python2-six                      noarch       1.12.0-1.el7                          centos-ceph-nautilus          33 k
+ ruby                             x86_64       2.0.0.648-36.el7                      base                          73 k
+ ruby-augeas                      x86_64       0.5.0-1.el7                           centos-openstack-stein        23 k
+ ruby-facter                      x86_64       1:3.9.3-7.el7                         centos-openstack-stein        12 k
+ ruby-irb                         noarch       2.0.0.648-36.el7                      base                          94 k
+ ruby-libs                        x86_64       2.0.0.648-36.el7                      base                         2.8 M
+ ruby-shadow                      x86_64       1.4.1-23.el7                          centos-openstack-stein        13 k
+ rubygem-bigdecimal               x86_64       1.2.0-36.el7                          base                          85 k
+ rubygem-io-console               x86_64       0.4.2-36.el7                          base                          56 k
+ rubygem-json                     x86_64       1.7.7-36.el7                          base                          81 k
+ rubygem-pathspec                 noarch       0.2.1-3.el7                           centos-openstack-stein        16 k
+ rubygem-psych                    x86_64       2.0.0-36.el7                          base                          84 k
+ rubygem-rdoc                     noarch       4.0.0-36.el7                          base                         324 k
+ rubygem-rgen                     noarch       0.6.6-2.el7                           centos-openstack-stein        84 k
+ rubygems                         noarch       2.0.14.1-36.el7                       base                         215 k
+ yaml-cpp                         x86_64       0.5.1-6.el7                           centos-openstack-stein       176 k
+
+Transaction Summary
+========================================================================================================================
+Install  1 Package (+134 Dependent packages)
+
+Total download size: 36 M
+Installed size: 134 M
+Downloading packages:
+(1/135): boost159-atomic-1.59.0-2.el7.1.x86_64.rpm                                               | 7.2 kB  00:00:00
+(2/135): augeas-libs-1.4.0-9.el7_8.1.x86_64.rpm                                                  | 357 kB  00:00:00
+(3/135): boost159-chrono-1.59.0-2.el7.1.x86_64.rpm                                               |  14 kB  00:00:00
+(4/135): boost159-filesystem-1.59.0-2.el7.1.x86_64.rpm                                           |  36 kB  00:00:00
+(5/135): PyYAML-3.10-11.el7.x86_64.rpm                                                           | 153 kB  00:00:00
+(6/135): boost159-date-time-1.59.0-2.el7.1.x86_64.rpm                                            |  21 kB  00:00:00
+(7/135): boost159-program-options-1.59.0-2.el7.1.x86_64.rpm                                      | 121 kB  00:00:00
+(8/135): boost159-system-1.59.0-2.el7.1.x86_64.rpm                                               | 9.6 kB  00:00:00
+(9/135): boost159-thread-1.59.0-2.el7.1.x86_64.rpm                                               |  41 kB  00:00:00
+(10/135): boost159-regex-1.59.0-2.el7.1.x86_64.rpm                                               | 258 kB  00:00:00
+(11/135): boost159-log-1.59.0-2.el7.1.x86_64.rpm                                                 | 380 kB  00:00:00
+(12/135): cpp-hocon-0.1.6-9.el7.x86_64.rpm                                                       | 358 kB  00:00:00
+(13/135): hiera-1.3.4-5.el7.noarch.rpm                                                           |  25 kB  00:00:00
+(14/135): jbigkit-libs-2.0-11.el7.x86_64.rpm                                                     |  46 kB  00:00:00
+(15/135): facter-3.9.3-7.el7.x86_64.rpm                                                          | 553 kB  00:00:00
+(16/135): lcms2-2.6-3.el7.x86_64.rpm                                                             | 150 kB  00:00:00
+(17/135): libimagequant-2.8.2-2.el7.x86_64.rpm                                                   |  52 kB  00:00:00
+(18/135): libselinux-ruby-2.5-15.el7.x86_64.rpm                                                  | 121 kB  00:00:00
+(19/135): libjpeg-turbo-1.2.90-8.el7.x86_64.rpm                                                  | 135 kB  00:00:00
+(20/135): leatherman-1.3.0-9.el7.x86_64.rpm                                                      | 347 kB  00:00:00
+(21/135): libtiff-4.0.3-32.el7.x86_64.rpm                                                        | 171 kB  00:00:00
+(22/135): openjpeg2-2.3.1-3.el7_7.x86_64.rpm                                                     | 153 kB  00:00:00
+(23/135): libyaml-0.1.4-11.el7_0.x86_64.rpm                                                      |  55 kB  00:00:00
+(24/135): libwebp-0.3.0-7.el7.x86_64.rpm                                                         | 170 kB  00:00:00
+(25/135): openstack-packstack-puppet-14.0.0-1.el7.noarch.rpm                                     |  60 kB  00:00:00
+(26/135): perl-Carp-1.26-244.el7.noarch.rpm                                                      |  19 kB  00:00:00
+(27/135): openstack-packstack-14.0.0-1.el7.noarch.rpm                                            | 191 kB  00:00:00
+(28/135): boost159-locale-1.59.0-2.el7.1.x86_64.rpm                                              | 222 kB  00:00:03
+(29/135): perl-Error-0.17020-2.el7.noarch.rpm                                                    |  32 kB  00:00:00
+(30/135): perl-Exporter-5.68-3.el7.noarch.rpm                                                    |  28 kB  00:00:00
+(31/135): perl-File-Path-2.09-2.el7.noarch.rpm                                                   |  26 kB  00:00:00
+(32/135): perl-File-Temp-0.23.01-3.el7.noarch.rpm                                                |  56 kB  00:00:00
+(33/135): perl-Filter-1.49-3.el7.x86_64.rpm                                                      |  76 kB  00:00:00
+(34/135): perl-Getopt-Long-2.40-3.el7.noarch.rpm                                                 |  56 kB  00:00:00
+(35/135): perl-HTTP-Tiny-0.033-3.el7.noarch.rpm                                                  |  38 kB  00:00:00
+(36/135): perl-PathTools-3.40-5.el7.x86_64.rpm                                                   |  82 kB  00:00:00
+(37/135): perl-Encode-2.51-7.el7.x86_64.rpm                                                      | 1.5 MB  00:00:02
+(38/135): perl-Pod-Escapes-1.04-295.el7.noarch.rpm                                               |  51 kB  00:00:00
+(39/135): perl-Pod-Perldoc-3.20-4.el7.noarch.rpm                                                 |  87 kB  00:00:00
+(40/135): perl-Pod-Usage-1.63-3.el7.noarch.rpm                                                   |  27 kB  00:00:00
+(41/135): perl-Git-1.8.3.1-22.el7_8.noarch.rpm                                                   |  56 kB  00:00:02
+(42/135): perl-Pod-Simple-3.28-4.el7.noarch.rpm                                                  | 216 kB  00:00:00
+(43/135): perl-Scalar-List-Utils-1.27-248.el7.x86_64.rpm                                         |  36 kB  00:00:00
+(44/135): perl-Storable-2.45-3.el7.x86_64.rpm                                                    |  77 kB  00:00:00
+(45/135): perl-Socket-2.010-5.el7.x86_64.rpm                                                     |  49 kB  00:00:00
+(46/135): perl-TermReadKey-2.30-20.el7.x86_64.rpm                                                |  31 kB  00:00:00
+(47/135): perl-Text-ParseWords-3.29-4.el7.noarch.rpm                                             |  14 kB  00:00:00
+(48/135): perl-Time-Local-1.2300-2.el7.noarch.rpm                                                |  24 kB  00:00:00
+(49/135): perl-Time-HiRes-1.9725-3.el7.x86_64.rpm                                                |  45 kB  00:00:00
+(50/135): perl-constant-1.27-2.el7.noarch.rpm                                                    |  19 kB  00:00:00
+(51/135): perl-parent-0.225-244.el7.noarch.rpm                                                   |  12 kB  00:00:00
+(52/135): perl-podlators-2.5.1-3.el7.noarch.rpm                                                  | 112 kB  00:00:00
+(53/135): perl-threads-1.87-4.el7.x86_64.rpm                                                     |  49 kB  00:00:00
+(54/135): perl-threads-shared-1.43-6.el7.x86_64.rpm                                              |  39 kB  00:00:00
+(55/135): git-1.8.3.1-22.el7_8.x86_64.rpm                                                        | 4.4 MB  00:00:06
+(56/135): perl-libs-5.16.3-295.el7.x86_64.rpm                                                    | 689 kB  00:00:00
+(57/135): puppet-5.5.10-5.el7.noarch.rpm                                                         |  23 kB  00:00:00
+(58/135): puppet-archive-3.2.2-0.1.0rc0.56eedafgit.el7.noarch.rpm                                |  40 kB  00:00:00
+(59/135): puppet-aodh-14.4.0-1.el7.noarch.rpm                                                    |  51 kB  00:00:00
+(60/135): puppet-certmonger-2.4.0-1.a198870git.el7.noarch.rpm                                    |  21 kB  00:00:00
+(61/135): puppet-ceilometer-14.4.0-1.el7.noarch.rpm                                              |  64 kB  00:00:00
+(62/135): puppet-concat-5.3.0-1.912d2ccgit.el7.noarch.rpm                                        |  35 kB  00:00:00
+(63/135): puppet-cinder-14.4.0-1.el7.noarch.rpm                                                  | 112 kB  00:00:00
+(64/135): puppet-corosync-6.0.2-0.1.0rc0.fe3b8a8git.el7.noarch.rpm                               |  60 kB  00:00:00
+(65/135): puppet-firewall-1.15.1-1.50f0196git.el7.noarch.rpm                                     |  68 kB  00:00:00
+(66/135): puppet-glance-14.4.0-1.el7.noarch.rpm                                                  |  77 kB  00:00:00
+(67/135): puppet-gnocchi-14.4.0-1.el7.noarch.rpm                                                 |  53 kB  00:00:00
+(68/135): puppet-heat-14.4.0-1.el7.noarch.rpm                                                    |  63 kB  00:00:00
+(69/135): puppet-horizon-14.4.0-1.el7.noarch.rpm                                                 |  53 kB  00:00:00
+(70/135): perl-macros-5.16.3-295.el7.x86_64.rpm                                                  |  44 kB  00:00:02
+(71/135): puppet-inifile-2.5.0-1.6b16db6git.el7.noarch.rpm                                       |  37 kB  00:00:00
+(72/135): puppet-keystone-14.4.0-1.el7.noarch.rpm                                                | 124 kB  00:00:00
+(73/135): puppet-magnum-14.4.0-1.el7.noarch.rpm                                                  |  48 kB  00:00:00
+(74/135): puppet-headless-5.5.10-5.el7.noarch.rpm                                                | 1.6 MB  00:00:01
+(75/135): puppet-ironic-14.4.0-1.el7.noarch.rpm                                                  | 106 kB  00:00:00
+(76/135): puppet-manila-14.4.1-1.el7.noarch.rpm                                                  |  73 kB  00:00:00
+(77/135): puppet-memcached-3.4.0-1.66d3a66git.el7.noarch.rpm                                     |  13 kB  00:00:00
+(78/135): puppet-mysql-6.2.0-1.el7.noarch.rpm                                                    |  83 kB  00:00:00
+(79/135): puppet-nova-14.4.0-1.el7.noarch.rpm                                                    | 177 kB  00:00:00
+(80/135): puppet-nssdb-1.0.1-1.2ed2a2dgit.el7.noarch.rpm                                         | 6.9 kB  00:00:00
+(81/135): puppet-openstack_extras-14.4.0-1.el7.noarch.rpm                                        |  43 kB  00:00:00
+(82/135): puppet-neutron-14.4.0-1.el7.noarch.rpm                                                 | 192 kB  00:00:00
+(83/135): puppet-oslo-14.4.0-1.el7.noarch.rpm                                                    |  42 kB  00:00:00
+(84/135): puppet-openstacklib-14.4.0-1.el7.noarch.rpm                                            |  55 kB  00:00:00
+(85/135): puppet-ovn-14.4.0-1.el7.noarch.rpm                                                     |  22 kB  00:00:00
+(86/135): puppet-panko-14.4.0-1.el7.noarch.rpm                                                   |  41 kB  00:00:00
+(87/135): puppet-remote-10.0.0-1.7420908git.el7.noarch.rpm                                       |  11 kB  00:00:00
+(88/135): puppet-redis-4.0.1-0.1.0rc0.5464b33git.el7.noarch.rpm                                  |  49 kB  00:00:00
+(89/135): puppet-rsync-1.1.1-1.a7d4f84git.el7.noarch.rpm                                         |  21 kB  00:00:00
+(90/135): perl-5.16.3-295.el7.x86_64.rpm                                                         | 8.0 MB  00:00:08
+(91/135): puppet-ssh-5.0.0-1.fc0d31cgit.el7.noarch.rpm                                           |  22 kB  00:00:00
+(92/135): puppet-sahara-14.4.0-1.el7.noarch.rpm                                                  |  54 kB  00:00:00
+(93/135): puppet-rabbitmq-9.0.1-0.2.7613f08git.el7.noarch.rpm                                    | 263 kB  00:00:00
+(94/135): puppet-sysctl-0.0.12-2.a3d160dgit.el7.noarch.rpm                                       |  11 kB  00:00:00
+(95/135): puppet-stdlib-5.2.0-1.b0dd4c1git.el7.noarch.rpm                                        | 152 kB  00:00:00
+(96/135): puppet-swift-14.4.0-1.el7.noarch.rpm                                                   | 102 kB  00:00:00
+(97/135): puppet-staging-1.0.4-1.b466d93git.el7.noarch.rpm                                       |  78 kB  00:00:00
+(98/135): puppet-tempest-14.4.0-1.el7.noarch.rpm                                                 |  38 kB  00:00:00
+(99/135): puppet-vcsrepo-2.4.0-1.a2ea398git.el7.noarch.rpm                                       |  45 kB  00:00:00
+(100/135): puppet-vswitch-10.4.0-1.el7.noarch.rpm                                                |  36 kB  00:00:00
+(101/135): puppet-xinetd-3.2.0-1.98b4231git.el7.noarch.rpm                                       |  21 kB  00:00:00
+(102/135): puppet-trove-14.4.0-1.el7.noarch.rpm                                                  |  62 kB  00:00:00
+(103/135): python-enum34-1.0.4-1.el7.noarch.rpm                                                  |  52 kB  00:00:00
+(104/135): puppet-apache-4.0.0-1.7a33327git.el7.noarch.rpm                                       | 220 kB  00:00:04
+(105/135): python-ply-3.4-11.el7.noarch.rpm                                                      | 123 kB  00:00:00
+(106/135): python-netifaces-0.10.4-3.el7.x86_64.rpm                                              |  17 kB  00:00:00
+(107/135): python-pycparser-2.14-1.el7.noarch.rpm                                                | 104 kB  00:00:00
+warning: /var/cache/yum/x86_64/7/centos-ceph-nautilus/packages/python2-asn1crypto-0.23.0-2.el7.noarch.rpm: Header V4 RSA/SHA1 Signature, key ID e451e5b5: NOKEY
+Public key for python2-asn1crypto-0.23.0-2.el7.noarch.rpm is not installed
+(108/135): python2-asn1crypto-0.23.0-2.el7.noarch.rpm                                            | 172 kB  00:00:00
+(109/135): python2-idna-2.5-1.el7.noarch.rpm                                                     |  94 kB  00:00:00
+(110/135): python2-ipaddress-1.0.18-5.el7.noarch.rpm                                             |  35 kB  00:00:00
+(111/135): python2-cryptography-2.5-1.el7.x86_64.rpm                                             | 544 kB  00:00:00
+(112/135): python-docutils-0.11-0.3.20130715svn7687.el7.noarch.rpm                               | 1.5 MB  00:00:01
+(113/135): python2-olefile-0.44-1.el7.noarch.rpm                                                 | 773 kB  00:00:00
+(114/135): python2-pyOpenSSL-19.0.0-1.el7.noarch.rpm                                             |  98 kB  00:00:00
+(115/135): python2-netaddr-0.7.19-5.el7.noarch.rpm                                               | 1.5 MB  00:00:01
+(116/135): python2-pillow-5.4.1-3.el7.x86_64.rpm                                                 | 639 kB  00:00:01
+(117/135): python2-setuptools-40.8.0-1.el7.noarch.rpm                                            | 652 kB  00:00:00
+(118/135): python2-pbr-5.1.2-2.el7.noarch.rpm                                                    | 1.1 MB  00:00:01
+(119/135): python2-six-1.12.0-1.el7.noarch.rpm                                                   |  33 kB  00:00:00
+(120/135): ruby-facter-3.9.3-7.el7.x86_64.rpm                                                    |  12 kB  00:00:00
+(121/135): python2-cffi-1.11.2-1.el7.x86_64.rpm                                                  | 229 kB  00:00:02
+(122/135): ruby-shadow-1.4.1-23.el7.x86_64.rpm                                                   |  13 kB  00:00:00
+(123/135): ruby-2.0.0.648-36.el7.x86_64.rpm                                                      |  73 kB  00:00:00
+(124/135): ruby-augeas-0.5.0-1.el7.x86_64.rpm                                                    |  23 kB  00:00:00
+(125/135): ruby-irb-2.0.0.648-36.el7.noarch.rpm                                                  |  94 kB  00:00:00
+(126/135): rubygem-pathspec-0.2.1-3.el7.noarch.rpm                                               |  16 kB  00:00:00
+(127/135): rubygem-io-console-0.4.2-36.el7.x86_64.rpm                                            |  56 kB  00:00:00
+(128/135): rubygem-bigdecimal-1.2.0-36.el7.x86_64.rpm                                            |  85 kB  00:00:00
+(129/135): rubygem-rdoc-4.0.0-36.el7.noarch.rpm                                                  | 324 kB  00:00:00
+(130/135): rubygem-psych-2.0.0-36.el7.x86_64.rpm                                                 |  84 kB  00:00:00
+(131/135): rubygems-2.0.14.1-36.el7.noarch.rpm                                                   | 215 kB  00:00:00
+(132/135): rubygem-rgen-0.6.6-2.el7.noarch.rpm                                                   |  84 kB  00:00:00
+(133/135): yaml-cpp-0.5.1-6.el7.x86_64.rpm                                                       | 176 kB  00:00:00
+(134/135): rubygem-json-1.7.7-36.el7.x86_64.rpm                                                  |  81 kB  00:00:00
+(135/135): ruby-libs-2.0.0.648-36.el7.x86_64.rpm                                                 | 2.8 MB  00:00:03
+------------------------------------------------------------------------------------------------------------------------
+Total                                                                                   2.0 MB/s |  36 MB  00:00:18
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Storage
+Importing GPG key 0xE451E5B5:
+ Userid     : "CentOS Storage SIG (http://wiki.centos.org/SpecialInterestGroup/Storage) <security@centos.org>"
+ Fingerprint: 7412 9c0b 173b 071a 3775 951a d4a2 e50b e451 e5b5
+ Package    : centos-release-storage-common-2-2.el7.centos.noarch (@extras)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Storage
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : ruby-libs-2.0.0.648-36.el7.x86_64                                                                  1/135
+  Installing : boost159-system-1.59.0-2.el7.1.x86_64                                                              2/135
+  Installing : boost159-chrono-1.59.0-2.el7.1.x86_64                                                              3/135
+  Installing : boost159-thread-1.59.0-2.el7.1.x86_64                                                              4/135
+  Installing : boost159-date-time-1.59.0-2.el7.1.x86_64                                                           5/135
+  Installing : boost159-locale-1.59.0-2.el7.1.x86_64                                                              6/135
+  Installing : boost159-filesystem-1.59.0-2.el7.1.x86_64                                                          7/135
+  Installing : boost159-regex-1.59.0-2.el7.1.x86_64                                                               8/135
+  Installing : boost159-atomic-1.59.0-2.el7.1.x86_64                                                              9/135
+  Installing : boost159-program-options-1.59.0-2.el7.1.x86_64                                                    10/135
+  Installing : libyaml-0.1.4-11.el7_0.x86_64                                                                     11/135
+  Installing : libjpeg-turbo-1.2.90-8.el7.x86_64                                                                 12/135
+  Installing : python2-six-1.12.0-1.el7.noarch                                                                   13/135
+  Installing : python2-setuptools-40.8.0-1.el7.noarch                                                            14/135
+  Installing : PyYAML-3.10-11.el7.x86_64                                                                         15/135
+  Installing : ruby-irb-2.0.0.648-36.el7.noarch                                                                  16/135
+  Installing : rubygem-psych-2.0.0-36.el7.x86_64                                                                 17/135
+  Installing : rubygem-json-1.7.7-36.el7.x86_64                                                                  18/135
+  Installing : rubygem-bigdecimal-1.2.0-36.el7.x86_64                                                            19/135
+  Installing : rubygem-io-console-0.4.2-36.el7.x86_64                                                            20/135
+  Installing : rubygems-2.0.14.1-36.el7.noarch                                                                   21/135
+  Installing : ruby-2.0.0.648-36.el7.x86_64                                                                      22/135
+  Installing : rubygem-rdoc-4.0.0-36.el7.noarch                                                                  23/135
+  Installing : rubygem-rgen-0.6.6-2.el7.noarch                                                                   24/135
+  Installing : cpp-hocon-0.1.6-9.el7.x86_64                                                                      25/135
+  Installing : boost159-log-1.59.0-2.el7.1.x86_64                                                                26/135
+  Installing : leatherman-1.3.0-9.el7.x86_64                                                                     27/135
+  Installing : ruby-shadow-1.4.1-23.el7.x86_64                                                                   28/135
+  Installing : 1:hiera-1.3.4-5.el7.noarch                                                                        29/135
+  Installing : 1:perl-parent-0.225-244.el7.noarch                                                                30/135
+  Installing : perl-HTTP-Tiny-0.033-3.el7.noarch                                                                 31/135
+  Installing : perl-podlators-2.5.1-3.el7.noarch                                                                 32/135
+  Installing : perl-Pod-Perldoc-3.20-4.el7.noarch                                                                33/135
+  Installing : 1:perl-Pod-Escapes-1.04-295.el7.noarch                                                            34/135
+  Installing : perl-Text-ParseWords-3.29-4.el7.noarch                                                            35/135
+  Installing : perl-Encode-2.51-7.el7.x86_64                                                                     36/135
+  Installing : perl-Pod-Usage-1.63-3.el7.noarch                                                                  37/135
+  Installing : 4:perl-libs-5.16.3-295.el7.x86_64                                                                 38/135
+  Installing : 4:perl-macros-5.16.3-295.el7.x86_64                                                               39/135
+  Installing : perl-threads-1.87-4.el7.x86_64                                                                    40/135
+  Installing : perl-Storable-2.45-3.el7.x86_64                                                                   41/135
+  Installing : perl-constant-1.27-2.el7.noarch                                                                   42/135
+  Installing : perl-Carp-1.26-244.el7.noarch                                                                     43/135
+  Installing : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                                                             44/135
+  Installing : perl-Filter-1.49-3.el7.x86_64                                                                     45/135
+  Installing : perl-Exporter-5.68-3.el7.noarch                                                                   46/135
+  Installing : perl-Socket-2.010-5.el7.x86_64                                                                    47/135
+  Installing : perl-Time-Local-1.2300-2.el7.noarch                                                               48/135
+  Installing : perl-threads-shared-1.43-6.el7.x86_64                                                             49/135
+  Installing : perl-File-Path-2.09-2.el7.noarch                                                                  50/135
+  Installing : perl-File-Temp-0.23.01-3.el7.noarch                                                               51/135
+  Installing : perl-PathTools-3.40-5.el7.x86_64                                                                  52/135
+  Installing : perl-Scalar-List-Utils-1.27-248.el7.x86_64                                                        53/135
+  Installing : 1:perl-Pod-Simple-3.28-4.el7.noarch                                                               54/135
+  Installing : perl-Getopt-Long-2.40-3.el7.noarch                                                                55/135
+  Installing : 4:perl-5.16.3-295.el7.x86_64                                                                      56/135
+  Installing : 1:perl-Error-0.17020-2.el7.noarch                                                                 57/135
+  Installing : perl-TermReadKey-2.30-20.el7.x86_64                                                               58/135
+  Installing : perl-Git-1.8.3.1-22.el7_8.noarch                                                                  59/135
+  Installing : git-1.8.3.1-22.el7_8.x86_64                                                                       60/135
+  Installing : python2-pbr-5.1.2-2.el7.noarch                                                                    61/135
+  Installing : python2-idna-2.5-1.el7.noarch                                                                     62/135
+  Installing : lcms2-2.6-3.el7.x86_64                                                                            63/135
+  Installing : jbigkit-libs-2.0-11.el7.x86_64                                                                    64/135
+  Installing : libtiff-4.0.3-32.el7.x86_64                                                                       65/135
+  Installing : openjpeg2-2.3.1-3.el7_7.x86_64                                                                    66/135
+  Installing : libwebp-0.3.0-7.el7.x86_64                                                                        67/135
+  Installing : python-enum34-1.0.4-1.el7.noarch                                                                  68/135
+  Installing : python-netifaces-0.10.4-3.el7.x86_64                                                              69/135
+  Installing : python2-netaddr-0.7.19-5.el7.noarch                                                               70/135
+  Installing : libimagequant-2.8.2-2.el7.x86_64                                                                  71/135
+  Installing : python2-ipaddress-1.0.18-5.el7.noarch                                                             72/135
+  Installing : python2-asn1crypto-0.23.0-2.el7.noarch                                                            73/135
+  Installing : python-ply-3.4-11.el7.noarch                                                                      74/135
+  Installing : python-pycparser-2.14-1.el7.noarch                                                                75/135
+  Installing : python2-cffi-1.11.2-1.el7.x86_64                                                                  76/135
+  Installing : python2-cryptography-2.5-1.el7.x86_64                                                             77/135
+  Installing : python2-pyOpenSSL-19.0.0-1.el7.noarch                                                             78/135
+  Installing : yaml-cpp-0.5.1-6.el7.x86_64                                                                       79/135
+  Installing : 1:facter-3.9.3-7.el7.x86_64                                                                       80/135
+  Installing : 1:ruby-facter-3.9.3-7.el7.x86_64                                                                  81/135
+  Installing : libselinux-ruby-2.5-15.el7.x86_64                                                                 82/135
+  Installing : python2-olefile-0.44-1.el7.noarch                                                                 83/135
+  Installing : python2-pillow-5.4.1-3.el7.x86_64                                                                 84/135
+  Installing : python-docutils-0.11-0.3.20130715svn7687.el7.noarch                                               85/135
+  Installing : augeas-libs-1.4.0-9.el7_8.1.x86_64                                                                86/135
+  Installing : ruby-augeas-0.5.0-1.el7.x86_64                                                                    87/135
+  Installing : rubygem-pathspec-0.2.1-3.el7.noarch                                                               88/135
+  Installing : puppet-headless-5.5.10-5.el7.noarch                                                               89/135
+  Installing : puppet-5.5.10-5.el7.noarch                                                                        90/135
+  Installing : puppet-stdlib-5.2.0-1.b0dd4c1git.el7.noarch                                                       91/135
+  Installing : puppet-inifile-2.5.0-1.6b16db6git.el7.noarch                                                      92/135
+  Installing : puppet-concat-5.3.0-1.912d2ccgit.el7.noarch                                                       93/135
+  Installing : puppet-apache-4.0.0-1.7a33327git.el7.noarch                                                       94/135
+  Installing : puppet-sysctl-0.0.12-2.a3d160dgit.el7.noarch                                                      95/135
+  Installing : puppet-xinetd-3.2.0-1.98b4231git.el7.noarch                                                       96/135
+  Installing : puppet-vcsrepo-2.4.0-1.a2ea398git.el7.noarch                                                      97/135
+  Installing : puppet-rsync-1.1.1-1.a7d4f84git.el7.noarch                                                        98/135
+  Installing : puppet-firewall-1.15.1-1.50f0196git.el7.noarch                                                    99/135
+  Installing : puppet-memcached-3.4.0-1.66d3a66git.el7.noarch                                                   100/135
+  Installing : puppet-vswitch-10.4.0-1.el7.noarch                                                               101/135
+  Installing : puppet-horizon-14.4.0-1.el7.noarch                                                               102/135
+  Installing : puppet-ssh-5.0.0-1.fc0d31cgit.el7.noarch                                                         103/135
+  Installing : puppet-corosync-6.0.2-0.1.0rc0.fe3b8a8git.el7.noarch                                             104/135
+  Installing : puppet-openstack_extras-14.4.0-1.el7.noarch                                                      105/135
+  Installing : puppet-redis-4.0.1-0.1.0rc0.5464b33git.el7.noarch                                                106/135
+  Installing : puppet-nssdb-1.0.1-1.2ed2a2dgit.el7.noarch                                                       107/135
+  Installing : puppet-ovn-14.4.0-1.el7.noarch                                                                   108/135
+  Installing : puppet-certmonger-2.4.0-1.a198870git.el7.noarch                                                  109/135
+  Installing : puppet-archive-3.2.2-0.1.0rc0.56eedafgit.el7.noarch                                              110/135
+  Installing : puppet-rabbitmq-9.0.1-0.2.7613f08git.el7.noarch                                                  111/135
+  Installing : puppet-remote-10.0.0-1.7420908git.el7.noarch                                                     112/135
+  Installing : puppet-staging-1.0.4-1.b466d93git.el7.noarch                                                     113/135
+  Installing : puppet-mysql-6.2.0-1.el7.noarch                                                                  114/135
+  Installing : puppet-openstacklib-14.4.0-1.el7.noarch                                                          115/135
+  Installing : puppet-oslo-14.4.0-1.el7.noarch                                                                  116/135
+  Installing : puppet-keystone-14.4.0-1.el7.noarch                                                              117/135
+  Installing : puppet-glance-14.4.0-1.el7.noarch                                                                118/135
+  Installing : puppet-cinder-14.4.0-1.el7.noarch                                                                119/135
+  Installing : puppet-nova-14.4.0-1.el7.noarch                                                                  120/135
+  Installing : puppet-neutron-14.4.0-1.el7.noarch                                                               121/135
+  Installing : puppet-manila-14.4.1-1.el7.noarch                                                                122/135
+  Installing : puppet-gnocchi-14.4.0-1.el7.noarch                                                               123/135
+  Installing : puppet-heat-14.4.0-1.el7.noarch                                                                  124/135
+  Installing : puppet-trove-14.4.0-1.el7.noarch                                                                 125/135
+  Installing : puppet-sahara-14.4.0-1.el7.noarch                                                                126/135
+  Installing : puppet-ceilometer-14.4.0-1.el7.noarch                                                            127/135
+  Installing : puppet-panko-14.4.0-1.el7.noarch                                                                 128/135
+  Installing : puppet-magnum-14.4.0-1.el7.noarch                                                                129/135
+  Installing : puppet-swift-14.4.0-1.el7.noarch                                                                 130/135
+  Installing : puppet-ironic-14.4.0-1.el7.noarch                                                                131/135
+  Installing : puppet-aodh-14.4.0-1.el7.noarch                                                                  132/135
+  Installing : puppet-tempest-14.4.0-1.el7.noarch                                                               133/135
+  Installing : 1:openstack-packstack-puppet-14.0.0-1.el7.noarch                                                 134/135
+  Installing : 1:openstack-packstack-14.0.0-1.el7.noarch                                                        135/135
+  Verifying  : perl-HTTP-Tiny-0.033-3.el7.noarch                                                                  1/135
+  Verifying  : puppet-corosync-6.0.2-0.1.0rc0.fe3b8a8git.el7.noarch                                               2/135
+  Verifying  : rubygem-pathspec-0.2.1-3.el7.noarch                                                                3/135
+  Verifying  : 1:openstack-packstack-puppet-14.0.0-1.el7.noarch                                                   4/135
+  Verifying  : puppet-redis-4.0.1-0.1.0rc0.5464b33git.el7.noarch                                                  5/135
+  Verifying  : puppet-nova-14.4.0-1.el7.noarch                                                                    6/135
+  Verifying  : augeas-libs-1.4.0-9.el7_8.1.x86_64                                                                 7/135
+  Verifying  : puppet-remote-10.0.0-1.7420908git.el7.noarch                                                       8/135
+  Verifying  : python-docutils-0.11-0.3.20130715svn7687.el7.noarch                                                9/135
+  Verifying  : python2-olefile-0.44-1.el7.noarch                                                                 10/135
+  Verifying  : boost159-date-time-1.59.0-2.el7.1.x86_64                                                          11/135
+  Verifying  : perl-TermReadKey-2.30-20.el7.x86_64                                                               12/135
+  Verifying  : puppet-aodh-14.4.0-1.el7.noarch                                                                   13/135
+  Verifying  : 4:perl-libs-5.16.3-295.el7.x86_64                                                                 14/135
+  Verifying  : puppet-cinder-14.4.0-1.el7.noarch                                                                 15/135
+  Verifying  : boost159-atomic-1.59.0-2.el7.1.x86_64                                                             16/135
+  Verifying  : ruby-2.0.0.648-36.el7.x86_64                                                                      17/135
+  Verifying  : 4:perl-macros-5.16.3-295.el7.x86_64                                                               18/135
+  Verifying  : puppet-nssdb-1.0.1-1.2ed2a2dgit.el7.noarch                                                        19/135
+  Verifying  : puppet-ovn-14.4.0-1.el7.noarch                                                                    20/135
+  Verifying  : ruby-augeas-0.5.0-1.el7.x86_64                                                                    21/135
+  Verifying  : python2-cryptography-2.5-1.el7.x86_64                                                             22/135
+  Verifying  : leatherman-1.3.0-9.el7.x86_64                                                                     23/135
+  Verifying  : ruby-libs-2.0.0.648-36.el7.x86_64                                                                 24/135
+  Verifying  : cpp-hocon-0.1.6-9.el7.x86_64                                                                      25/135
+  Verifying  : python-pycparser-2.14-1.el7.noarch                                                                26/135
+  Verifying  : puppet-rsync-1.1.1-1.a7d4f84git.el7.noarch                                                        27/135
+  Verifying  : perl-File-Path-2.09-2.el7.noarch                                                                  28/135
+  Verifying  : libselinux-ruby-2.5-15.el7.x86_64                                                                 29/135
+  Verifying  : boost159-system-1.59.0-2.el7.1.x86_64                                                             30/135
+  Verifying  : puppet-certmonger-2.4.0-1.a198870git.el7.noarch                                                   31/135
+  Verifying  : perl-Text-ParseWords-3.29-4.el7.noarch                                                            32/135
+  Verifying  : PyYAML-3.10-11.el7.x86_64                                                                         33/135
+  Verifying  : boost159-regex-1.59.0-2.el7.1.x86_64                                                              34/135
+  Verifying  : puppet-gnocchi-14.4.0-1.el7.noarch                                                                35/135
+  Verifying  : puppet-tempest-14.4.0-1.el7.noarch                                                                36/135
+  Verifying  : puppet-archive-3.2.2-0.1.0rc0.56eedafgit.el7.noarch                                               37/135
+  Verifying  : 1:perl-Pod-Escapes-1.04-295.el7.noarch                                                            38/135
+  Verifying  : rubygem-psych-2.0.0-36.el7.x86_64                                                                 39/135
+  Verifying  : puppet-heat-14.4.0-1.el7.noarch                                                                   40/135
+  Verifying  : puppet-oslo-14.4.0-1.el7.noarch                                                                   41/135
+  Verifying  : puppet-ssh-5.0.0-1.fc0d31cgit.el7.noarch                                                          42/135
+  Verifying  : rubygem-json-1.7.7-36.el7.x86_64                                                                  43/135
+  Verifying  : yaml-cpp-0.5.1-6.el7.x86_64                                                                       44/135
+  Verifying  : 1:facter-3.9.3-7.el7.x86_64                                                                       45/135
+  Verifying  : 4:perl-5.16.3-295.el7.x86_64                                                                      46/135
+  Verifying  : rubygem-rgen-0.6.6-2.el7.noarch                                                                   47/135
+  Verifying  : python2-pyOpenSSL-19.0.0-1.el7.noarch                                                             48/135
+  Verifying  : rubygems-2.0.14.1-36.el7.noarch                                                                   49/135
+  Verifying  : python-ply-3.4-11.el7.noarch                                                                      50/135
+  Verifying  : python2-pillow-5.4.1-3.el7.x86_64                                                                 51/135
+  Verifying  : puppet-trove-14.4.0-1.el7.noarch                                                                  52/135
+  Verifying  : puppet-mysql-6.2.0-1.el7.noarch                                                                   53/135
+  Verifying  : python2-asn1crypto-0.23.0-2.el7.noarch                                                            54/135
+  Verifying  : puppet-sahara-14.4.0-1.el7.noarch                                                                 55/135
+  Verifying  : python2-setuptools-40.8.0-1.el7.noarch                                                            56/135
+  Verifying  : ruby-irb-2.0.0.648-36.el7.noarch                                                                  57/135
+  Verifying  : puppet-horizon-14.4.0-1.el7.noarch                                                                58/135
+  Verifying  : puppet-vcsrepo-2.4.0-1.a2ea398git.el7.noarch                                                      59/135
+  Verifying  : perl-Encode-2.51-7.el7.x86_64                                                                     60/135
+  Verifying  : puppet-ceilometer-14.4.0-1.el7.noarch                                                             61/135
+  Verifying  : python2-ipaddress-1.0.18-5.el7.noarch                                                             62/135
+  Verifying  : puppet-panko-14.4.0-1.el7.noarch                                                                  63/135
+  Verifying  : puppet-apache-4.0.0-1.7a33327git.el7.noarch                                                       64/135
+  Verifying  : puppet-firewall-1.15.1-1.50f0196git.el7.noarch                                                    65/135
+  Verifying  : python2-six-1.12.0-1.el7.noarch                                                                   66/135
+  Verifying  : perl-threads-1.87-4.el7.x86_64                                                                    67/135
+  Verifying  : perl-Getopt-Long-2.40-3.el7.noarch                                                                68/135
+  Verifying  : puppet-sysctl-0.0.12-2.a3d160dgit.el7.noarch                                                      69/135
+  Verifying  : puppet-openstacklib-14.4.0-1.el7.noarch                                                           70/135
+  Verifying  : perl-threads-shared-1.43-6.el7.x86_64                                                             71/135
+  Verifying  : perl-Storable-2.45-3.el7.x86_64                                                                   72/135
+  Verifying  : libimagequant-2.8.2-2.el7.x86_64                                                                  73/135
+  Verifying  : boost159-locale-1.59.0-2.el7.1.x86_64                                                             74/135
+  Verifying  : perl-File-Temp-0.23.01-3.el7.noarch                                                               75/135
+  Verifying  : 1:perl-parent-0.225-244.el7.noarch                                                                76/135
+  Verifying  : perl-Pod-Usage-1.63-3.el7.noarch                                                                  77/135
+  Verifying  : boost159-chrono-1.59.0-2.el7.1.x86_64                                                             78/135
+  Verifying  : ruby-shadow-1.4.1-23.el7.x86_64                                                                   79/135
+  Verifying  : puppet-headless-5.5.10-5.el7.noarch                                                               80/135
+  Verifying  : perl-Git-1.8.3.1-22.el7_8.noarch                                                                  81/135
+  Verifying  : libjpeg-turbo-1.2.90-8.el7.x86_64                                                                 82/135
+  Verifying  : puppet-keystone-14.4.0-1.el7.noarch                                                               83/135
+  Verifying  : perl-Carp-1.26-244.el7.noarch                                                                     84/135
+  Verifying  : boost159-thread-1.59.0-2.el7.1.x86_64                                                             85/135
+  Verifying  : puppet-stdlib-5.2.0-1.b0dd4c1git.el7.noarch                                                       86/135
+  Verifying  : rubygem-bigdecimal-1.2.0-36.el7.x86_64                                                            87/135
+  Verifying  : python2-netaddr-0.7.19-5.el7.noarch                                                               88/135
+  Verifying  : python-netifaces-0.10.4-3.el7.x86_64                                                              89/135
+  Verifying  : puppet-inifile-2.5.0-1.6b16db6git.el7.noarch                                                      90/135
+  Verifying  : git-1.8.3.1-22.el7_8.x86_64                                                                       91/135
+  Verifying  : libyaml-0.1.4-11.el7_0.x86_64                                                                     92/135
+  Verifying  : boost159-program-options-1.59.0-2.el7.1.x86_64                                                    93/135
+  Verifying  : 1:ruby-facter-3.9.3-7.el7.x86_64                                                                  94/135
+  Verifying  : perl-Pod-Perldoc-3.20-4.el7.noarch                                                                95/135
+  Verifying  : perl-constant-1.27-2.el7.noarch                                                                   96/135
+  Verifying  : libtiff-4.0.3-32.el7.x86_64                                                                       97/135
+  Verifying  : puppet-glance-14.4.0-1.el7.noarch                                                                 98/135
+  Verifying  : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                                                             99/135
+  Verifying  : perl-Filter-1.49-3.el7.x86_64                                                                    100/135
+  Verifying  : 1:hiera-1.3.4-5.el7.noarch                                                                       101/135
+  Verifying  : puppet-5.5.10-5.el7.noarch                                                                       102/135
+  Verifying  : puppet-memcached-3.4.0-1.66d3a66git.el7.noarch                                                   103/135
+  Verifying  : puppet-neutron-14.4.0-1.el7.noarch                                                               104/135
+  Verifying  : perl-Exporter-5.68-3.el7.noarch                                                                  105/135
+  Verifying  : puppet-xinetd-3.2.0-1.98b4231git.el7.noarch                                                      106/135
+  Verifying  : perl-PathTools-3.40-5.el7.x86_64                                                                 107/135
+  Verifying  : python-enum34-1.0.4-1.el7.noarch                                                                 108/135
+  Verifying  : 1:openstack-packstack-14.0.0-1.el7.noarch                                                        109/135
+  Verifying  : perl-Socket-2.010-5.el7.x86_64                                                                   110/135
+  Verifying  : puppet-openstack_extras-14.4.0-1.el7.noarch                                                      111/135
+  Verifying  : puppet-magnum-14.4.0-1.el7.noarch                                                                112/135
+  Verifying  : puppet-concat-5.3.0-1.912d2ccgit.el7.noarch                                                      113/135
+  Verifying  : 1:perl-Pod-Simple-3.28-4.el7.noarch                                                              114/135
+  Verifying  : puppet-manila-14.4.1-1.el7.noarch                                                                115/135
+  Verifying  : perl-Time-Local-1.2300-2.el7.noarch                                                              116/135
+  Verifying  : python2-cffi-1.11.2-1.el7.x86_64                                                                 117/135
+  Verifying  : libwebp-0.3.0-7.el7.x86_64                                                                       118/135
+  Verifying  : puppet-swift-14.4.0-1.el7.noarch                                                                 119/135
+  Verifying  : openjpeg2-2.3.1-3.el7_7.x86_64                                                                   120/135
+  Verifying  : rubygem-rdoc-4.0.0-36.el7.noarch                                                                 121/135
+  Verifying  : 1:perl-Error-0.17020-2.el7.noarch                                                                122/135
+  Verifying  : boost159-filesystem-1.59.0-2.el7.1.x86_64                                                        123/135
+  Verifying  : puppet-staging-1.0.4-1.b466d93git.el7.noarch                                                     124/135
+  Verifying  : perl-Scalar-List-Utils-1.27-248.el7.x86_64                                                       125/135
+  Verifying  : puppet-ironic-14.4.0-1.el7.noarch                                                                126/135
+  Verifying  : puppet-vswitch-10.4.0-1.el7.noarch                                                               127/135
+  Verifying  : rubygem-io-console-0.4.2-36.el7.x86_64                                                           128/135
+  Verifying  : jbigkit-libs-2.0-11.el7.x86_64                                                                   129/135
+  Verifying  : puppet-rabbitmq-9.0.1-0.2.7613f08git.el7.noarch                                                  130/135
+  Verifying  : lcms2-2.6-3.el7.x86_64                                                                           131/135
+  Verifying  : perl-podlators-2.5.1-3.el7.noarch                                                                132/135
+  Verifying  : boost159-log-1.59.0-2.el7.1.x86_64                                                               133/135
+  Verifying  : python2-idna-2.5-1.el7.noarch                                                                    134/135
+  Verifying  : python2-pbr-5.1.2-2.el7.noarch                                                                   135/135
+
+Installed:
+  openstack-packstack.noarch 1:14.0.0-1.el7
+
+Dependency Installed:
+  PyYAML.x86_64 0:3.10-11.el7                                augeas-libs.x86_64 0:1.4.0-9.el7_8.1
+  boost159-atomic.x86_64 0:1.59.0-2.el7.1                    boost159-chrono.x86_64 0:1.59.0-2.el7.1
+  boost159-date-time.x86_64 0:1.59.0-2.el7.1                 boost159-filesystem.x86_64 0:1.59.0-2.el7.1
+  boost159-locale.x86_64 0:1.59.0-2.el7.1                    boost159-log.x86_64 0:1.59.0-2.el7.1
+  boost159-program-options.x86_64 0:1.59.0-2.el7.1           boost159-regex.x86_64 0:1.59.0-2.el7.1
+  boost159-system.x86_64 0:1.59.0-2.el7.1                    boost159-thread.x86_64 0:1.59.0-2.el7.1
+  cpp-hocon.x86_64 0:0.1.6-9.el7                             facter.x86_64 1:3.9.3-7.el7
+  git.x86_64 0:1.8.3.1-22.el7_8                              hiera.noarch 1:1.3.4-5.el7
+  jbigkit-libs.x86_64 0:2.0-11.el7                           lcms2.x86_64 0:2.6-3.el7
+  leatherman.x86_64 0:1.3.0-9.el7                            libimagequant.x86_64 0:2.8.2-2.el7
+  libjpeg-turbo.x86_64 0:1.2.90-8.el7                        libselinux-ruby.x86_64 0:2.5-15.el7
+  libtiff.x86_64 0:4.0.3-32.el7                              libwebp.x86_64 0:0.3.0-7.el7
+  libyaml.x86_64 0:0.1.4-11.el7_0                            openjpeg2.x86_64 0:2.3.1-3.el7_7
+  openstack-packstack-puppet.noarch 1:14.0.0-1.el7           perl.x86_64 4:5.16.3-295.el7
+  perl-Carp.noarch 0:1.26-244.el7                            perl-Encode.x86_64 0:2.51-7.el7
+  perl-Error.noarch 1:0.17020-2.el7                          perl-Exporter.noarch 0:5.68-3.el7
+  perl-File-Path.noarch 0:2.09-2.el7                         perl-File-Temp.noarch 0:0.23.01-3.el7
+  perl-Filter.x86_64 0:1.49-3.el7                            perl-Getopt-Long.noarch 0:2.40-3.el7
+  perl-Git.noarch 0:1.8.3.1-22.el7_8                         perl-HTTP-Tiny.noarch 0:0.033-3.el7
+  perl-PathTools.x86_64 0:3.40-5.el7                         perl-Pod-Escapes.noarch 1:1.04-295.el7
+  perl-Pod-Perldoc.noarch 0:3.20-4.el7                       perl-Pod-Simple.noarch 1:3.28-4.el7
+  perl-Pod-Usage.noarch 0:1.63-3.el7                         perl-Scalar-List-Utils.x86_64 0:1.27-248.el7
+  perl-Socket.x86_64 0:2.010-5.el7                           perl-Storable.x86_64 0:2.45-3.el7
+  perl-TermReadKey.x86_64 0:2.30-20.el7                      perl-Text-ParseWords.noarch 0:3.29-4.el7
+  perl-Time-HiRes.x86_64 4:1.9725-3.el7                      perl-Time-Local.noarch 0:1.2300-2.el7
+  perl-constant.noarch 0:1.27-2.el7                          perl-libs.x86_64 4:5.16.3-295.el7
+  perl-macros.x86_64 4:5.16.3-295.el7                        perl-parent.noarch 1:0.225-244.el7
+  perl-podlators.noarch 0:2.5.1-3.el7                        perl-threads.x86_64 0:1.87-4.el7
+  perl-threads-shared.x86_64 0:1.43-6.el7                    puppet.noarch 0:5.5.10-5.el7
+  puppet-aodh.noarch 0:14.4.0-1.el7                          puppet-apache.noarch 0:4.0.0-1.7a33327git.el7
+  puppet-archive.noarch 0:3.2.2-0.1.0rc0.56eedafgit.el7      puppet-ceilometer.noarch 0:14.4.0-1.el7
+  puppet-certmonger.noarch 0:2.4.0-1.a198870git.el7          puppet-cinder.noarch 0:14.4.0-1.el7
+  puppet-concat.noarch 0:5.3.0-1.912d2ccgit.el7              puppet-corosync.noarch 0:6.0.2-0.1.0rc0.fe3b8a8git.el7
+  puppet-firewall.noarch 0:1.15.1-1.50f0196git.el7           puppet-glance.noarch 0:14.4.0-1.el7
+  puppet-gnocchi.noarch 0:14.4.0-1.el7                       puppet-headless.noarch 0:5.5.10-5.el7
+  puppet-heat.noarch 0:14.4.0-1.el7                          puppet-horizon.noarch 0:14.4.0-1.el7
+  puppet-inifile.noarch 0:2.5.0-1.6b16db6git.el7             puppet-ironic.noarch 0:14.4.0-1.el7
+  puppet-keystone.noarch 0:14.4.0-1.el7                      puppet-magnum.noarch 0:14.4.0-1.el7
+  puppet-manila.noarch 0:14.4.1-1.el7                        puppet-memcached.noarch 0:3.4.0-1.66d3a66git.el7
+  puppet-mysql.noarch 0:6.2.0-1.el7                          puppet-neutron.noarch 0:14.4.0-1.el7
+  puppet-nova.noarch 0:14.4.0-1.el7                          puppet-nssdb.noarch 0:1.0.1-1.2ed2a2dgit.el7
+  puppet-openstack_extras.noarch 0:14.4.0-1.el7              puppet-openstacklib.noarch 0:14.4.0-1.el7
+  puppet-oslo.noarch 0:14.4.0-1.el7                          puppet-ovn.noarch 0:14.4.0-1.el7
+  puppet-panko.noarch 0:14.4.0-1.el7                         puppet-rabbitmq.noarch 0:9.0.1-0.2.7613f08git.el7
+  puppet-redis.noarch 0:4.0.1-0.1.0rc0.5464b33git.el7        puppet-remote.noarch 0:10.0.0-1.7420908git.el7
+  puppet-rsync.noarch 0:1.1.1-1.a7d4f84git.el7               puppet-sahara.noarch 0:14.4.0-1.el7
+  puppet-ssh.noarch 0:5.0.0-1.fc0d31cgit.el7                 puppet-staging.noarch 0:1.0.4-1.b466d93git.el7
+  puppet-stdlib.noarch 0:5.2.0-1.b0dd4c1git.el7              puppet-swift.noarch 0:14.4.0-1.el7
+  puppet-sysctl.noarch 0:0.0.12-2.a3d160dgit.el7             puppet-tempest.noarch 0:14.4.0-1.el7
+  puppet-trove.noarch 0:14.4.0-1.el7                         puppet-vcsrepo.noarch 0:2.4.0-1.a2ea398git.el7
+  puppet-vswitch.noarch 0:10.4.0-1.el7                       puppet-xinetd.noarch 0:3.2.0-1.98b4231git.el7
+  python-docutils.noarch 0:0.11-0.3.20130715svn7687.el7      python-enum34.noarch 0:1.0.4-1.el7
+  python-netifaces.x86_64 0:0.10.4-3.el7                     python-ply.noarch 0:3.4-11.el7
+  python-pycparser.noarch 0:2.14-1.el7                       python2-asn1crypto.noarch 0:0.23.0-2.el7
+  python2-cffi.x86_64 0:1.11.2-1.el7                         python2-cryptography.x86_64 0:2.5-1.el7
+  python2-idna.noarch 0:2.5-1.el7                            python2-ipaddress.noarch 0:1.0.18-5.el7
+  python2-netaddr.noarch 0:0.7.19-5.el7                      python2-olefile.noarch 0:0.44-1.el7
+  python2-pbr.noarch 0:5.1.2-2.el7                           python2-pillow.x86_64 0:5.4.1-3.el7
+  python2-pyOpenSSL.noarch 0:19.0.0-1.el7                    python2-setuptools.noarch 0:40.8.0-1.el7
+  python2-six.noarch 0:1.12.0-1.el7                          ruby.x86_64 0:2.0.0.648-36.el7
+  ruby-augeas.x86_64 0:0.5.0-1.el7                           ruby-facter.x86_64 1:3.9.3-7.el7
+  ruby-irb.noarch 0:2.0.0.648-36.el7                         ruby-libs.x86_64 0:2.0.0.648-36.el7
+  ruby-shadow.x86_64 0:1.4.1-23.el7                          rubygem-bigdecimal.x86_64 0:1.2.0-36.el7
+  rubygem-io-console.x86_64 0:0.4.2-36.el7                   rubygem-json.x86_64 0:1.7.7-36.el7
+  rubygem-pathspec.noarch 0:0.2.1-3.el7                      rubygem-psych.x86_64 0:2.0.0-36.el7
+  rubygem-rdoc.noarch 0:4.0.0-36.el7                         rubygem-rgen.noarch 0:0.6.6-2.el7
+  rubygems.noarch 0:2.0.14.1-36.el7                          yaml-cpp.x86_64 0:0.5.1-6.el7
+
+Complete!
+[root@packstack ~]# packstack --install-hosts="10.0.0.20" \
+>  --os-heat-install=y --os-heat-cfn-install=y \
+>  --os-neutron-lbaas-install=y --keystone-admin-passwd="openstack" --keystone-demo-passwd="openstack"
+Welcome to the Packstack setup utility
+
+The installation log file is available at: /var/tmp/packstack/20200515-202305-xvuDhB/openstack-setup.log
+Packstack changed given value  to required value /root/.ssh/id_rsa.pub
+
+Installing:
+Clean Up                                             [ DONE ]
+Discovering ip protocol version                      [ DONE ]
+Setting up ssh keys                                  [ DONE ]
+Preparing servers                                    [ DONE ]
+Pre installing Puppet and discovering hosts' details [ DONE ]
+Preparing pre-install entries                        [ DONE ]
+Setting up CACERT                                    [ DONE ]
+Preparing AMQP entries                               [ DONE ]
+Preparing MariaDB entries                            [ DONE ]
+Fixing Keystone LDAP config parameters to be undef if empty[ DONE ]
+Preparing Keystone entries                           [ DONE ]
+Preparing Glance entries                             [ DONE ]
+Checking if the Cinder server has a cinder-volumes vg[ DONE ]
+Preparing Cinder entries                             [ DONE ]
+Preparing Nova API entries                           [ DONE ]
+Creating ssh keys for Nova migration                 [ DONE ]
+Gathering ssh host keys for Nova migration           [ DONE ]
+Preparing Nova Compute entries                       [ DONE ]
+Preparing Nova Scheduler entries                     [ DONE ]
+Preparing Nova VNC Proxy entries                     [ DONE ]
+Preparing OpenStack Network-related Nova entries     [ DONE ]
+Preparing Nova Common entries                        [ DONE ]
+Preparing Neutron LBaaS Agent entries                [ DONE ]
+Preparing Neutron API entries                        [ DONE ]
+Preparing Neutron L3 entries                         [ DONE ]
+Preparing Neutron L2 Agent entries                   [ DONE ]
+Preparing Neutron DHCP Agent entries                 [ DONE ]
+Preparing Neutron Metering Agent entries             [ DONE ]
+Checking if NetworkManager is enabled and running    [ DONE ]
+Preparing OpenStack Client entries                   [ DONE ]
+Preparing Horizon entries                            [ DONE ]
+Preparing Swift builder entries                      [ DONE ]
+Preparing Swift proxy entries                        [ DONE ]
+Preparing Swift storage entries                      [ DONE ]
+Preparing Heat entries                               [ DONE ]
+Preparing Heat CloudFormation API entries            [ DONE ]
+Preparing Gnocchi entries                            [ DONE ]
+Preparing Redis entries                              [ DONE ]
+Preparing Ceilometer entries                         [ DONE ]
+Preparing Aodh entries                               [ DONE ]
+Preparing Puppet manifests                           [ DONE ]
+Copying Puppet modules and manifests                 [ DONE ]
+Applying 10.0.0.20_controller.pp
+10.0.0.20_controller.pp:                             [ DONE ]
+Applying 10.0.0.20_network.pp
+10.0.0.20_network.pp:                                [ DONE ]
+Applying 10.0.0.20_compute.pp
+10.0.0.20_compute.pp:                                [ DONE ]
+Applying Puppet manifests                            [ DONE ]
+Finalizing                                           [ DONE ]
+
+ **** Installation completed successfully ******
+
+Additional information:
+ * Parameter CONFIG_NEUTRON_L2_AGENT: You have choosen OVN neutron backend. Note that this backend does not support LBaaS, VPNaaS or FWaaS services. Geneve will be used as encapsulation method for tenant networks
+ * A new answerfile was created in: /root/packstack-answers-20200515-202307.txt
+ * Time synchronization installation was skipped. Please note that unsynchronized time on server instances might be problem for some OpenStack components.
+ * File /root/keystonerc_admin has been created on OpenStack client host 10.0.0.20. To use the command line tools you need to source the file.
+ * To access the OpenStack Dashboard browse to http://10.0.0.20/dashboard .
+Please, find your login credentials stored in the keystonerc_admin in your home directory.
+ * Because of the kernel update the host 10.0.0.20 requires reboot.
+ * The installation log file is available at: /var/tmp/packstack/20200515-202305-xvuDhB/openstack-setup.log
+ * The generated manifests are available at: /var/tmp/packstack/20200515-202305-xvuDhB/manifests
