@@ -1,0 +1,2411 @@
+C:\Users\UdayKiranReddy\Desktop\Packstack-AIO>vagrant up
+Bringing machine 'packstack' up with 'virtualbox' provider...
+==> packstack: Importing base box 'centos/7'...
+==> packstack: Matching MAC address for NAT networking...
+==> packstack: Checking if box 'centos/7' version '1905.1' is up to date...
+==> packstack: A newer version of the box 'centos/7' for provider 'virtualbox' is
+==> packstack: available! You currently have version '1905.1'. The latest is version
+==> packstack: '2004.01'. Run `vagrant box update` to update.
+==> packstack: Setting the name of the VM: Packstack-AIO_packstack_1589572644173_74755
+==> packstack: Clearing any previously set network interfaces...
+==> packstack: Preparing network interfaces based on configuration...
+    packstack: Adapter 1: nat
+==> packstack: Forwarding ports...
+    packstack: 22 (guest) => 2222 (host) (adapter 1)
+==> packstack: Running 'pre-boot' VM customizations...
+==> packstack: Booting VM...
+==> packstack: Waiting for machine to boot. This may take a few minutes...
+    packstack: SSH address: 127.0.0.1:2222
+    packstack: SSH username: vagrant
+    packstack: SSH auth method: private key
+    packstack:
+    packstack: Vagrant insecure key detected. Vagrant will automatically replace
+    packstack: this with a newly generated keypair for better security.
+    packstack:
+    packstack: Inserting generated public key within guest...
+    packstack: Removing insecure key from the guest if it's present...
+    packstack: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> packstack: Machine booted and ready!
+==> packstack: Checking for guest additions in VM...
+    packstack: No guest additions were detected on the base box for this VM! Guest
+    packstack: additions are required for forwarded ports, shared folders, host only
+    packstack: networking, and more. If SSH fails on this machine, please install
+    packstack: the guest additions and repackage the box to continue.
+    packstack:
+    packstack: This is not an error message; everything may continue to work properly,
+    packstack: in which case you may ignore this message.
+==> packstack: Setting hostname...
+==> packstack: Rsyncing folder: /cygdrive/c/Users/UdayKiranReddy/Desktop/Packstack-AIO/ => /vagrant
+==> packstack: Running provisioner: shell...
+    packstack: Running: inline script
+    packstack: Device 'eth1' successfully disconnected.
+    packstack: Connection successfully activated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/3)
+    packstack: Removed symlink /etc/systemd/system/multi-user.target.wants/NetworkManager.service.
+    packstack: Removed symlink /etc/systemd/system/dbus-org.freedesktop.NetworkManager.service.
+    packstack: Removed symlink /etc/systemd/system/dbus-org.freedesktop.nm-dispatcher.service.
+    packstack: Removed symlink /etc/systemd/system/network-online.target.wants/NetworkManager-wait-online.service.
+    packstack: network.service is not a native service, redirecting to /sbin/chkconfig.
+    packstack: Executing /sbin/chkconfig network on
+    packstack: Job for network.service failed because the control process exited with error code. See "systemctl status network.service" and "journalctl -xe" for details.
+    packstack: No package centos-release-openstack-pike available.
+    packstack: Error: Nothing to do
+    packstack: Resolving Dependencies
+    packstack: --> Running transaction check
+    packstack: ---> Package GeoIP.x86_64 0:1.5.0-13.el7 will be updated
+    packstack: ---> Package GeoIP.x86_64 0:1.5.0-14.el7 will be an update
+    packstack: --> Processing Dependency: geoipupdate for package: GeoIP-1.5.0-14.el7.x86_64
+    packstack: ---> Package NetworkManager.x86_64 1:1.12.0-10.el7_6 will be updated
+    packstack: ---> Package NetworkManager.x86_64 1:1.18.4-3.el7 will be an update
+    packstack: ---> Package NetworkManager-libnm.x86_64 1:1.12.0-10.el7_6 will be updated
+    packstack: ---> Package NetworkManager-libnm.x86_64 1:1.18.4-3.el7 will be an update
+    packstack: ---> Package NetworkManager-team.x86_64 1:1.12.0-10.el7_6 will be updated
+    packstack: ---> Package NetworkManager-team.x86_64 1:1.18.4-3.el7 will be an update
+    packstack: ---> Package NetworkManager-tui.x86_64 1:1.12.0-10.el7_6 will be updated
+    packstack: ---> Package NetworkManager-tui.x86_64 1:1.18.4-3.el7 will be an update
+    packstack: ---> Package acl.x86_64 0:2.2.51-14.el7 will be updated
+    packstack: ---> Package acl.x86_64 0:2.2.51-15.el7 will be an update
+    packstack: ---> Package audit.x86_64 0:2.8.4-4.el7 will be updated
+    packstack: ---> Package audit.x86_64 0:2.8.5-4.el7 will be an update
+    packstack: ---> Package audit-libs.x86_64 0:2.8.4-4.el7 will be updated
+    packstack: ---> Package audit-libs.x86_64 0:2.8.5-4.el7 will be an update
+    packstack: ---> Package avahi-libs.x86_64 0:0.6.31-19.el7 will be updated
+    packstack: ---> Package avahi-libs.x86_64 0:0.6.31-20.el7 will be an update
+    packstack: ---> Package bash.x86_64 0:4.2.46-31.el7 will be updated
+    packstack: ---> Package bash.x86_64 0:4.2.46-34.el7 will be an update
+    packstack: ---> Package bash-completion.noarch 1:2.1-6.el7 will be updated
+    packstack: ---> Package bash-completion.noarch 1:2.1-8.el7 will be an update
+    packstack: ---> Package bind-libs-lite.x86_64 32:9.9.4-73.el7_6 will be updated
+    packstack: ---> Package bind-libs-lite.x86_64 32:9.11.4-16.P2.el7_8.3 will be an update
+    packstack: ---> Package bind-license.noarch 32:9.9.4-73.el7_6 will be updated
+    packstack: ---> Package bind-license.noarch 32:9.11.4-16.P2.el7_8.3 will be an update
+    packstack: ---> Package binutils.x86_64 0:2.27-34.base.el7 will be updated
+    packstack: ---> Package binutils.x86_64 0:2.27-43.base.el7_8.1 will be an update
+    packstack: ---> Package biosdevname.x86_64 0:0.7.3-1.el7 will be updated
+    packstack: ---> Package biosdevname.x86_64 0:0.7.3-2.el7 will be an update
+    packstack: ---> Package ca-certificates.noarch 0:2018.2.22-70.0.el7_5 will be updated
+    packstack: ---> Package ca-certificates.noarch 0:2019.2.32-76.el7_7 will be an update
+    packstack: ---> Package centos-release.x86_64 0:7-6.1810.2.el7.centos will be updated
+    packstack: ---> Package centos-release.x86_64 0:7-8.2003.0.el7.centos will be an update
+    packstack: ---> Package chrony.x86_64 0:3.2-2.el7 will be updated
+    packstack: ---> Package chrony.x86_64 0:3.4-1.el7 will be an update
+    packstack: ---> Package coreutils.x86_64 0:8.22-23.el7 will be updated
+    packstack: ---> Package coreutils.x86_64 0:8.22-24.el7 will be an update
+    packstack: ---> Package cronie.x86_64 0:1.4.11-20.el7_6 will be updated
+    packstack: ---> Package cronie.x86_64 0:1.4.11-23.el7 will be an update
+    packstack: ---> Package cronie-anacron.x86_64 0:1.4.11-20.el7_6 will be updated
+    packstack: ---> Package cronie-anacron.x86_64 0:1.4.11-23.el7 will be an update
+    packstack: ---> Package cryptsetup-libs.x86_64 0:2.0.3-3.el7 will be updated
+    packstack: ---> Package cryptsetup-libs.x86_64 0:2.0.3-6.el7 will be an update
+    packstack: ---> Package cups-libs.x86_64 1:1.6.3-35.el7 will be updated
+    packstack: ---> Package cups-libs.x86_64 1:1.6.3-43.el7 will be an update
+    packstack: ---> Package curl.x86_64 0:7.29.0-51.el7 will be updated
+    packstack: ---> Package curl.x86_64 0:7.29.0-57.el7 will be an update
+    packstack: ---> Package device-mapper.x86_64 7:1.02.149-10.el7_6.7 will be updated
+    packstack: ---> Package device-mapper.x86_64 7:1.02.164-7.el7_8.2 will be an update
+    packstack: ---> Package device-mapper-libs.x86_64 7:1.02.149-10.el7_6.7 will be updated
+    packstack: ---> Package device-mapper-libs.x86_64 7:1.02.164-7.el7_8.2 will be an update
+    packstack: ---> Package dhclient.x86_64 12:4.2.5-68.el7.centos.1 will be updated
+    packstack: ---> Package dhclient.x86_64 12:4.2.5-79.el7.centos will be an update
+    packstack: --> Processing Dependency: libisc-export.so.169()(64bit) for package: 12:dhclient-4.2.5-79.el7.centos.x86_64
+    packstack: --> Processing Dependency: libdns-export.so.1102()(64bit) for package: 12:dhclient-4.2.5-79.el7.centos.x86_64
+    packstack: ---> Package dhcp-common.x86_64 12:4.2.5-68.el7.centos.1 will be updated
+    packstack: ---> Package dhcp-common.x86_64 12:4.2.5-79.el7.centos will be an update
+    packstack: ---> Package dhcp-libs.x86_64 12:4.2.5-68.el7.centos.1 will be updated
+    packstack: ---> Package dhcp-libs.x86_64 12:4.2.5-79.el7.centos will be an update
+    packstack: ---> Package diffutils.x86_64 0:3.3-4.el7 will be updated
+    packstack: ---> Package diffutils.x86_64 0:3.3-5.el7 will be an update
+    packstack: ---> Package dmidecode.x86_64 1:3.1-2.el7 will be updated
+    packstack: ---> Package dmidecode.x86_64 1:3.2-3.el7 will be an update
+    packstack: ---> Package dracut.x86_64 0:033-554.el7 will be updated
+    packstack: ---> Package dracut.x86_64 0:033-568.el7 will be an update
+    packstack: ---> Package e2fsprogs.x86_64 0:1.42.9-13.el7 will be updated
+    packstack: ---> Package e2fsprogs.x86_64 0:1.42.9-17.el7 will be an update
+    packstack: ---> Package e2fsprogs-libs.x86_64 0:1.42.9-13.el7 will be updated
+    packstack: ---> Package e2fsprogs-libs.x86_64 0:1.42.9-17.el7 will be an update
+    packstack: ---> Package elfutils-default-yama-scope.noarch 0:0.172-2.el7 will be updated
+    packstack: ---> Package elfutils-default-yama-scope.noarch 0:0.176-4.el7 will be an update
+    packstack: ---> Package elfutils-libelf.x86_64 0:0.172-2.el7 will be updated
+    packstack: ---> Package elfutils-libelf.x86_64 0:0.176-4.el7 will be an update
+    packstack: ---> Package elfutils-libs.x86_64 0:0.172-2.el7 will be updated
+    packstack: ---> Package elfutils-libs.x86_64 0:0.176-4.el7 will be an update
+    packstack: ---> Package ethtool.x86_64 2:4.8-9.el7 will be updated
+    packstack: ---> Package ethtool.x86_64 2:4.8-10.el7 will be an update
+    packstack: ---> Package expat.x86_64 0:2.1.0-10.el7_3 will be updated
+    packstack: ---> Package expat.x86_64 0:2.1.0-11.el7 will be an update
+    packstack: ---> Package file.x86_64 0:5.11-35.el7 will be updated
+    packstack: ---> Package file.x86_64 0:5.11-36.el7 will be an update
+    packstack: ---> Package file-libs.x86_64 0:5.11-35.el7 will be updated
+    packstack: ---> Package file-libs.x86_64 0:5.11-36.el7 will be an update
+    packstack: ---> Package firewalld.noarch 0:0.5.3-5.el7 will be updated
+    packstack: ---> Package firewalld.noarch 0:0.6.3-8.el7_8.1 will be an update
+    packstack: ---> Package firewalld-filesystem.noarch 0:0.5.3-5.el7 will be updated
+    packstack: ---> Package firewalld-filesystem.noarch 0:0.6.3-8.el7_8.1 will be an update
+    packstack: ---> Package freetype.x86_64 0:2.8-12.el7_6.1 will be updated
+    packstack: ---> Package freetype.x86_64 0:2.8-14.el7 will be an update
+    packstack: ---> Package gettext.x86_64 0:0.19.8.1-2.el7 will be updated
+    packstack: ---> Package gettext.x86_64 0:0.19.8.1-3.el7 will be an update
+    packstack: ---> Package gettext-libs.x86_64 0:0.19.8.1-2.el7 will be updated
+    packstack: ---> Package gettext-libs.x86_64 0:0.19.8.1-3.el7 will be an update
+    packstack: ---> Package glib2.x86_64 0:2.56.1-2.el7 will be updated
+    packstack: ---> Package glib2.x86_64 0:2.56.1-5.el7 will be an update
+    packstack: ---> Package glibc.x86_64 0:2.17-260.el7_6.5 will be updated
+    packstack: ---> Package glibc.x86_64 0:2.17-307.el7.1 will be an update
+    packstack: ---> Package glibc-common.x86_64 0:2.17-260.el7_6.5 will be updated
+    packstack: ---> Package glibc-common.x86_64 0:2.17-307.el7.1 will be an update
+    packstack: ---> Package grub2.x86_64 1:2.02-0.76.el7.centos.1 will be updated
+    packstack: ---> Package grub2.x86_64 1:2.02-0.81.el7.centos will be an update
+    packstack: ---> Package grub2-common.noarch 1:2.02-0.76.el7.centos.1 will be updated
+    packstack: ---> Package grub2-common.noarch 1:2.02-0.81.el7.centos will be an update
+    packstack: ---> Package grub2-pc.x86_64 1:2.02-0.76.el7.centos.1 will be updated
+    packstack: ---> Package grub2-pc.x86_64 1:2.02-0.81.el7.centos will be an update
+    packstack: ---> Package grub2-pc-modules.noarch 1:2.02-0.76.el7.centos.1 will be updated
+    packstack: ---> Package grub2-pc-modules.noarch 1:2.02-0.81.el7.centos will be an update
+    packstack: ---> Package grub2-tools.x86_64 1:2.02-0.76.el7.centos.1 will be updated
+    packstack: ---> Package grub2-tools.x86_64 1:2.02-0.81.el7.centos will be an update
+    packstack: ---> Package grub2-tools-extra.x86_64 1:2.02-0.76.el7.centos.1 will be updated
+    packstack: ---> Package grub2-tools-extra.x86_64 1:2.02-0.81.el7.centos will be an update
+    packstack: ---> Package grub2-tools-minimal.x86_64 1:2.02-0.76.el7.centos.1 will be updated
+    packstack: ---> Package grub2-tools-minimal.x86_64 1:2.02-0.81.el7.centos will be an update
+    packstack: ---> Package grubby.x86_64 0:8.28-25.el7 will be updated
+    packstack: ---> Package grubby.x86_64 0:8.28-26.el7 will be an update
+    packstack: ---> Package gssproxy.x86_64 0:0.7.0-21.el7 will be updated
+    packstack: ---> Package gssproxy.x86_64 0:0.7.0-28.el7 will be an update
+    packstack: ---> Package hostname.x86_64 0:3.13-3.el7 will be updated
+    packstack: ---> Package hostname.x86_64 0:3.13-3.el7_7.1 will be an update
+    packstack: ---> Package hwdata.x86_64 0:0.252-9.1.el7 will be updated
+    packstack: ---> Package hwdata.x86_64 0:0.252-9.5.el7 will be an update
+    packstack: ---> Package initscripts.x86_64 0:9.49.46-1.el7 will be updated
+    packstack: ---> Package initscripts.x86_64 0:9.49.49-1.el7 will be an update
+    packstack: ---> Package iproute.x86_64 0:4.11.0-14.el7_6.2 will be updated
+    packstack: ---> Package iproute.x86_64 0:4.11.0-25.el7_7.2 will be an update
+    packstack: ---> Package iprutils.x86_64 0:2.4.16.1-1.el7 will be updated
+    packstack: ---> Package iprutils.x86_64 0:2.4.17.1-3.el7_7 will be an update
+    packstack: ---> Package ipset.x86_64 0:6.38-3.el7_6 will be updated
+    packstack: ---> Package ipset.x86_64 0:7.1-1.el7 will be an update
+    packstack: ---> Package ipset-libs.x86_64 0:6.38-3.el7_6 will be updated
+    packstack: ---> Package ipset-libs.x86_64 0:7.1-1.el7 will be an update
+    packstack: ---> Package iptables.x86_64 0:1.4.21-28.el7 will be updated
+    packstack: ---> Package iptables.x86_64 0:1.4.21-34.el7 will be an update
+    packstack: ---> Package irqbalance.x86_64 3:1.0.7-11.el7 will be updated
+    packstack: ---> Package irqbalance.x86_64 3:1.0.7-12.el7 will be an update
+    packstack: ---> Package kernel.x86_64 0:3.10.0-1127.8.2.el7 will be installed
+    packstack: ---> Package kernel-tools.x86_64 0:3.10.0-957.12.2.el7 will be updated
+    packstack: ---> Package kernel-tools.x86_64 0:3.10.0-1127.8.2.el7 will be an update
+    packstack: ---> Package kernel-tools-libs.x86_64 0:3.10.0-957.12.2.el7 will be updated
+    packstack: ---> Package kernel-tools-libs.x86_64 0:3.10.0-1127.8.2.el7 will be an update
+    packstack: ---> Package kmod.x86_64 0:20-23.el7 will be updated
+    packstack: ---> Package kmod.x86_64 0:20-28.el7 will be an update
+    packstack: ---> Package kmod-libs.x86_64 0:20-23.el7 will be updated
+    packstack: ---> Package kmod-libs.x86_64 0:20-28.el7 will be an update
+    packstack: ---> Package kpartx.x86_64 0:0.4.9-123.el7 will be updated
+    packstack: ---> Package kpartx.x86_64 0:0.4.9-131.el7 will be an update
+    packstack: ---> Package krb5-libs.x86_64 0:1.15.1-37.el7_6 will be updated
+    packstack: ---> Package krb5-libs.x86_64 0:1.15.1-46.el7 will be an update
+    packstack: ---> Package libacl.x86_64 0:2.2.51-14.el7 will be updated
+    packstack: ---> Package libacl.x86_64 0:2.2.51-15.el7 will be an update
+    packstack: ---> Package libblkid.x86_64 0:2.23.2-59.el7_6.1 will be updated
+    packstack: ---> Package libblkid.x86_64 0:2.23.2-63.el7 will be an update
+    packstack: ---> Package libcap.x86_64 0:2.22-9.el7 will be updated
+    packstack: ---> Package libcap.x86_64 0:2.22-11.el7 will be an update
+    packstack: ---> Package libcom_err.x86_64 0:1.42.9-13.el7 will be updated
+    packstack: ---> Package libcom_err.x86_64 0:1.42.9-17.el7 will be an update
+    packstack: ---> Package libcurl.x86_64 0:7.29.0-51.el7 will be updated
+    packstack: ---> Package libcurl.x86_64 0:7.29.0-57.el7 will be an update
+    packstack: ---> Package libdb.x86_64 0:5.3.21-24.el7 will be updated
+    packstack: ---> Package libdb.x86_64 0:5.3.21-25.el7 will be an update
+    packstack: ---> Package libdb-utils.x86_64 0:5.3.21-24.el7 will be updated
+    packstack: ---> Package libdb-utils.x86_64 0:5.3.21-25.el7 will be an update
+    packstack: ---> Package libdrm.x86_64 0:2.4.91-3.el7 will be updated
+    packstack: ---> Package libdrm.x86_64 0:2.4.97-2.el7 will be an update
+    packstack: ---> Package libffi.x86_64 0:3.0.13-18.el7 will be updated
+    packstack: ---> Package libffi.x86_64 0:3.0.13-19.el7 will be an update
+    packstack: ---> Package libgcc.x86_64 0:4.8.5-36.el7_6.2 will be updated
+    packstack: ---> Package libgcc.x86_64 0:4.8.5-39.el7 will be an update
+    packstack: ---> Package libgomp.x86_64 0:4.8.5-36.el7_6.2 will be updated
+    packstack: ---> Package libgomp.x86_64 0:4.8.5-39.el7 will be an update
+    packstack: ---> Package libicu.x86_64 0:50.1.2-17.el7 will be updated
+    packstack: ---> Package libicu.x86_64 0:50.2-4.el7_7 will be an update
+    packstack: ---> Package libldb.x86_64 0:1.3.4-1.el7 will be updated
+    packstack: ---> Package libldb.x86_64 0:1.5.4-1.el7 will be an update
+    packstack: ---> Package libmount.x86_64 0:2.23.2-59.el7_6.1 will be updated
+    packstack: ---> Package libmount.x86_64 0:2.23.2-63.el7 will be an update
+    packstack: ---> Package libmspack.x86_64 0:0.5-0.6.alpha.el7 will be updated
+    packstack: ---> Package libmspack.x86_64 0:0.5-0.7.alpha.el7 will be an update
+    packstack: ---> Package libndp.x86_64 0:1.2-7.el7 will be updated
+    packstack: ---> Package libndp.x86_64 0:1.2-9.el7 will be an update
+    packstack: ---> Package libseccomp.x86_64 0:2.3.1-3.el7 will be updated
+    packstack: ---> Package libseccomp.x86_64 0:2.3.1-4.el7 will be an update
+    packstack: ---> Package libselinux.x86_64 0:2.5-14.1.el7 will be updated
+    packstack: ---> Package libselinux.x86_64 0:2.5-15.el7 will be an update
+    packstack: ---> Package libselinux-python.x86_64 0:2.5-14.1.el7 will be updated
+    packstack: ---> Package libselinux-python.x86_64 0:2.5-15.el7 will be an update
+    packstack: ---> Package libselinux-utils.x86_64 0:2.5-14.1.el7 will be updated
+    packstack: ---> Package libselinux-utils.x86_64 0:2.5-15.el7 will be an update
+    packstack: ---> Package libsmartcols.x86_64 0:2.23.2-59.el7_6.1 will be updated
+    packstack: ---> Package libsmartcols.x86_64 0:2.23.2-63.el7 will be an update
+    packstack: ---> Package libss.x86_64 0:1.42.9-13.el7 will be updated
+    packstack: ---> Package libss.x86_64 0:1.42.9-17.el7 will be an update
+    packstack: ---> Package libssh2.x86_64 0:1.4.3-12.el7_6.2 will be updated
+    packstack: ---> Package libssh2.x86_64 0:1.8.0-3.el7 will be an update
+    packstack: ---> Package libstdc++.x86_64 0:4.8.5-36.el7_6.2 will be updated
+    packstack: ---> Package libstdc++.x86_64 0:4.8.5-39.el7 will be an update
+    packstack: ---> Package libtalloc.x86_64 0:2.1.13-1.el7 will be updated
+    packstack: ---> Package libtalloc.x86_64 0:2.1.16-1.el7 will be an update
+    packstack: ---> Package libtdb.x86_64 0:1.3.15-1.el7 will be updated
+    packstack: ---> Package libtdb.x86_64 0:1.3.18-1.el7 will be an update
+    packstack: ---> Package libteam.x86_64 0:1.27-5.el7 will be updated
+    packstack: ---> Package libteam.x86_64 0:1.29-1.el7 will be an update
+    packstack: ---> Package libtevent.x86_64 0:0.9.36-1.el7 will be updated
+    packstack: ---> Package libtevent.x86_64 0:0.9.39-1.el7 will be an update
+    packstack: ---> Package libtirpc.x86_64 0:0.2.4-0.15.el7 will be updated
+    packstack: ---> Package libtirpc.x86_64 0:0.2.4-0.16.el7 will be an update
+    packstack: ---> Package libuuid.x86_64 0:2.23.2-59.el7_6.1 will be updated
+    packstack: ---> Package libuuid.x86_64 0:2.23.2-63.el7 will be an update
+    packstack: ---> Package libwbclient.x86_64 0:4.8.3-4.el7 will be updated
+    packstack: ---> Package libwbclient.x86_64 0:4.10.4-11.el7_8 will be an update
+    packstack: ---> Package libxml2.x86_64 0:2.9.1-6.el7_2.3 will be updated
+    packstack: ---> Package libxml2.x86_64 0:2.9.1-6.el7.4 will be an update
+    packstack: ---> Package libxml2-python.x86_64 0:2.9.1-6.el7_2.3 will be updated
+    packstack: ---> Package libxml2-python.x86_64 0:2.9.1-6.el7.4 will be an update
+    packstack: ---> Package linux-firmware.noarch 0:20180911-69.git85c5d90.el7 will be updated
+    packstack: ---> Package linux-firmware.noarch 0:20191203-76.gite8a0f4c.el7 will be an update
+    packstack: ---> Package logrotate.x86_64 0:3.8.6-17.el7 will be updated
+    packstack: ---> Package logrotate.x86_64 0:3.8.6-19.el7 will be an update
+    packstack: ---> Package lshw.x86_64 0:B.02.18-12.el7 will be updated
+    packstack: ---> Package lshw.x86_64 0:B.02.18-14.el7 will be an update
+    packstack: ---> Package lz4.x86_64 0:1.7.5-2.el7 will be updated
+    packstack: ---> Package lz4.x86_64 0:1.7.5-3.el7 will be an update
+    packstack: ---> Package make.x86_64 1:3.82-23.el7 will be updated
+    packstack: ---> Package make.x86_64 1:3.82-24.el7 will be an update
+    packstack: ---> Package mariadb-libs.x86_64 1:5.5.60-1.el7_5 will be updated
+    packstack: ---> Package mariadb-libs.x86_64 1:5.5.65-1.el7 will be an update
+    packstack: ---> Package nfs-utils.x86_64 1:1.3.0-0.61.el7 will be updated
+    packstack: ---> Package nfs-utils.x86_64 1:1.3.0-0.66.el7 will be an update
+    packstack: ---> Package nspr.x86_64 0:4.19.0-1.el7_5 will be updated
+    packstack: ---> Package nspr.x86_64 0:4.21.0-1.el7 will be an update
+    packstack: ---> Package nss.x86_64 0:3.36.0-7.1.el7_6 will be updated
+    packstack: ---> Package nss.x86_64 0:3.44.0-7.el7_7 will be an update
+    packstack: ---> Package nss-pem.x86_64 0:1.0.3-5.el7_6.1 will be updated
+    packstack: ---> Package nss-pem.x86_64 0:1.0.3-7.el7 will be an update
+    packstack: ---> Package nss-softokn.x86_64 0:3.36.0-5.el7_5 will be updated
+    packstack: ---> Package nss-softokn.x86_64 0:3.44.0-8.el7_7 will be an update
+    packstack: ---> Package nss-softokn-freebl.x86_64 0:3.36.0-5.el7_5 will be updated
+    packstack: ---> Package nss-softokn-freebl.x86_64 0:3.44.0-8.el7_7 will be an update
+    packstack: ---> Package nss-sysinit.x86_64 0:3.36.0-7.1.el7_6 will be updated
+    packstack: ---> Package nss-sysinit.x86_64 0:3.44.0-7.el7_7 will be an update
+    packstack: ---> Package nss-tools.x86_64 0:3.36.0-7.1.el7_6 will be updated
+    packstack: ---> Package nss-tools.x86_64 0:3.44.0-7.el7_7 will be an update
+    packstack: ---> Package nss-util.x86_64 0:3.36.0-1.1.el7_6 will be updated
+    packstack: ---> Package nss-util.x86_64 0:3.44.0-4.el7_7 will be an update
+    packstack: ---> Package numactl-libs.x86_64 0:2.0.9-7.el7 will be updated
+    packstack: ---> Package numactl-libs.x86_64 0:2.0.12-5.el7 will be an update
+    packstack: ---> Package open-vm-tools.x86_64 0:10.2.5-3.el7 will be updated
+    packstack: ---> Package open-vm-tools.x86_64 0:10.3.10-2.el7_8.1 will be an update
+    packstack: ---> Package openssh.x86_64 0:7.4p1-16.el7 will be updated
+    packstack: ---> Package openssh.x86_64 0:7.4p1-21.el7 will be an update
+    packstack: ---> Package openssh-clients.x86_64 0:7.4p1-16.el7 will be updated
+    packstack: ---> Package openssh-clients.x86_64 0:7.4p1-21.el7 will be an update
+    packstack: ---> Package openssh-server.x86_64 0:7.4p1-16.el7 will be updated
+    packstack: ---> Package openssh-server.x86_64 0:7.4p1-21.el7 will be an update
+    packstack: ---> Package openssl.x86_64 1:1.0.2k-16.el7_6.1 will be updated
+    packstack: ---> Package openssl.x86_64 1:1.0.2k-19.el7 will be an update
+    packstack: ---> Package openssl-libs.x86_64 1:1.0.2k-16.el7_6.1 will be updated
+    packstack: ---> Package openssl-libs.x86_64 1:1.0.2k-19.el7 will be an update
+    packstack: ---> Package pam.x86_64 0:1.1.8-22.el7 will be updated
+    packstack: ---> Package pam.x86_64 0:1.1.8-23.el7 will be an update
+    packstack: ---> Package parted.x86_64 0:3.1-29.el7 will be updated
+    packstack: ---> Package parted.x86_64 0:3.1-32.el7 will be an update
+    packstack: ---> Package passwd.x86_64 0:0.79-4.el7 will be updated
+    packstack: ---> Package passwd.x86_64 0:0.79-6.el7 will be an update
+    packstack: ---> Package policycoreutils.x86_64 0:2.5-29.el7_6.1 will be updated
+    packstack: ---> Package policycoreutils.x86_64 0:2.5-34.el7 will be an update
+    packstack: ---> Package polkit.x86_64 0:0.112-18.el7_6.1 will be updated
+    packstack: ---> Package polkit.x86_64 0:0.112-26.el7 will be an update
+    packstack: ---> Package postfix.x86_64 2:2.10.1-7.el7 will be updated
+    packstack: ---> Package postfix.x86_64 2:2.10.1-9.el7 will be an update
+    packstack: ---> Package procps-ng.x86_64 0:3.3.10-23.el7 will be updated
+    packstack: ---> Package procps-ng.x86_64 0:3.3.10-27.el7 will be an update
+    packstack: ---> Package python.x86_64 0:2.7.5-77.el7_6 will be updated
+    packstack: ---> Package python.x86_64 0:2.7.5-88.el7 will be an update
+    packstack: ---> Package python-chardet.noarch 0:2.2.1-1.el7_1 will be updated
+    packstack: ---> Package python-chardet.noarch 0:2.2.1-3.el7 will be an update
+    packstack: ---> Package python-firewall.noarch 0:0.5.3-5.el7 will be updated
+    packstack: ---> Package python-firewall.noarch 0:0.6.3-8.el7_8.1 will be an update
+    packstack: ---> Package python-libs.x86_64 0:2.7.5-77.el7_6 will be updated
+    packstack: ---> Package python-libs.x86_64 0:2.7.5-88.el7 will be an update
+    packstack: ---> Package python-linux-procfs.noarch 0:0.4.9-4.el7 will be updated
+    packstack: ---> Package python-linux-procfs.noarch 0:0.4.11-4.el7 will be an update
+    packstack: ---> Package python-perf.x86_64 0:3.10.0-957.12.2.el7 will be updated
+    packstack: ---> Package python-perf.x86_64 0:3.10.0-1127.8.2.el7 will be an update
+    packstack: ---> Package python-urlgrabber.noarch 0:3.10-9.el7 will be updated
+    packstack: ---> Package python-urlgrabber.noarch 0:3.10-10.el7 will be an update
+    packstack: ---> Package qemu-guest-agent.x86_64 10:2.12.0-2.el7 will be updated
+    packstack: ---> Package qemu-guest-agent.x86_64 10:2.12.0-3.el7 will be an update
+    packstack: ---> Package quota.x86_64 1:4.01-17.el7 will be updated
+    packstack: ---> Package quota.x86_64 1:4.01-19.el7 will be an update
+    packstack: ---> Package quota-nls.noarch 1:4.01-17.el7 will be updated
+    packstack: ---> Package quota-nls.noarch 1:4.01-19.el7 will be an update
+    packstack: ---> Package readline.x86_64 0:6.2-10.el7 will be updated
+    packstack: ---> Package readline.x86_64 0:6.2-11.el7 will be an update
+    packstack: ---> Package rpcbind.x86_64 0:0.2.0-47.el7 will be updated
+    packstack: ---> Package rpcbind.x86_64 0:0.2.0-49.el7 will be an update
+    packstack: ---> Package rpm.x86_64 0:4.11.3-35.el7 will be updated
+    packstack: ---> Package rpm.x86_64 0:4.11.3-43.el7 will be an update
+    packstack: ---> Package rpm-build-libs.x86_64 0:4.11.3-35.el7 will be updated
+    packstack: ---> Package rpm-build-libs.x86_64 0:4.11.3-43.el7 will be an update
+    packstack: ---> Package rpm-libs.x86_64 0:4.11.3-35.el7 will be updated
+    packstack: ---> Package rpm-libs.x86_64 0:4.11.3-43.el7 will be an update
+    packstack: ---> Package rpm-python.x86_64 0:4.11.3-35.el7 will be updated
+    packstack: ---> Package rpm-python.x86_64 0:4.11.3-43.el7 will be an update
+    packstack: ---> Package rsync.x86_64 0:3.1.2-6.el7_6.1 will be updated
+    packstack: ---> Package rsync.x86_64 0:3.1.2-10.el7 will be an update
+    packstack: ---> Package rsyslog.x86_64 0:8.24.0-34.el7 will be updated
+    packstack: ---> Package rsyslog.x86_64 0:8.24.0-52.el7 will be an update
+    packstack: ---> Package samba-client-libs.x86_64 0:4.8.3-4.el7 will be updated
+    packstack: ---> Package samba-client-libs.x86_64 0:4.10.4-11.el7_8 will be an update
+    packstack: --> Processing Dependency: libgnutls.so.28(GNUTLS_3_1_0)(64bit) for package: samba-client-libs-4.10.4-11.el7_8.x86_64
+    packstack: --> Processing Dependency: libgnutls.so.28(GNUTLS_1_4)(64bit) for package: samba-client-libs-4.10.4-11.el7_8.x86_64
+    packstack: --> Processing Dependency: libgnutls.so.28()(64bit) for package: samba-client-libs-4.10.4-11.el7_8.x86_64
+    packstack: --> Processing Dependency: libcluster-samba4.so()(64bit) for package: samba-client-libs-4.10.4-11.el7_8.x86_64
+    packstack: ---> Package samba-common.noarch 0:4.8.3-4.el7 will be updated
+    packstack: ---> Package samba-common.noarch 0:4.10.4-11.el7_8 will be an update
+    packstack: ---> Package samba-common-libs.x86_64 0:4.8.3-4.el7 will be updated
+    packstack: ---> Package samba-common-libs.x86_64 0:4.10.4-11.el7_8 will be an update
+    packstack: ---> Package sed.x86_64 0:4.2.2-5.el7 will be updated
+    packstack: ---> Package sed.x86_64 0:4.2.2-6.el7 will be an update
+    packstack: ---> Package selinux-policy.noarch 0:3.13.1-229.el7_6.12 will be updated
+    packstack: ---> Package selinux-policy.noarch 0:3.13.1-266.el7 will be an update
+    packstack: ---> Package selinux-policy-targeted.noarch 0:3.13.1-229.el7_6.12 will be updated
+    packstack: ---> Package selinux-policy-targeted.noarch 0:3.13.1-266.el7 will be an update
+    packstack: ---> Package setup.noarch 0:2.8.71-10.el7 will be updated
+    packstack: ---> Package setup.noarch 0:2.8.71-11.el7 will be an update
+    packstack: ---> Package sg3_utils.x86_64 0:1.37-17.el7 will be updated
+    packstack: ---> Package sg3_utils.x86_64 1:1.37-19.el7 will be an update
+    packstack: ---> Package sg3_utils-libs.x86_64 0:1.37-17.el7 will be updated
+    packstack: ---> Package sg3_utils-libs.x86_64 1:1.37-19.el7 will be an update
+    packstack: ---> Package shadow-utils.x86_64 2:4.1.5.1-25.el7_6.1 will be updated
+    packstack: ---> Package shadow-utils.x86_64 2:4.6-5.el7 will be an update
+    packstack: ---> Package shared-mime-info.x86_64 0:1.8-4.el7 will be updated
+    packstack: ---> Package shared-mime-info.x86_64 0:1.8-5.el7 will be an update
+    packstack: ---> Package sqlite.x86_64 0:3.7.17-8.el7 will be updated
+    packstack: ---> Package sqlite.x86_64 0:3.7.17-8.el7_7.1 will be an update
+    packstack: ---> Package sudo.x86_64 0:1.8.23-3.el7 will be updated
+    packstack: ---> Package sudo.x86_64 0:1.8.23-9.el7 will be an update
+    packstack: ---> Package systemd.x86_64 0:219-62.el7_6.6 will be updated
+    packstack: ---> Package systemd.x86_64 0:219-73.el7_8.6 will be an update
+    packstack: ---> Package systemd-libs.x86_64 0:219-62.el7_6.6 will be updated
+    packstack: ---> Package systemd-libs.x86_64 0:219-73.el7_8.6 will be an update
+    packstack: ---> Package systemd-sysv.x86_64 0:219-62.el7_6.6 will be updated
+    packstack: ---> Package systemd-sysv.x86_64 0:219-73.el7_8.6 will be an update
+    packstack: ---> Package teamd.x86_64 0:1.27-5.el7 will be updated
+    packstack: ---> Package teamd.x86_64 0:1.29-1.el7 will be an update
+    packstack: ---> Package tuned.noarch 0:2.10.0-6.el7_6.3 will be updated
+    packstack: ---> Package tuned.noarch 0:2.11.0-8.el7 will be an update
+    packstack: ---> Package tzdata.noarch 0:2019a-1.el7 will be updated
+    packstack: ---> Package tzdata.noarch 0:2020a-1.el7 will be an update
+    packstack: ---> Package util-linux.x86_64 0:2.23.2-59.el7_6.1 will be updated
+    packstack: ---> Package util-linux.x86_64 0:2.23.2-63.el7 will be an update
+    packstack: ---> Package vim-minimal.x86_64 2:7.4.160-5.el7 will be updated
+    packstack: ---> Package vim-minimal.x86_64 2:7.4.629-6.el7 will be an update
+    packstack: ---> Package xfsprogs.x86_64 0:4.5.0-19.el7_6 will be updated
+    packstack: ---> Package xfsprogs.x86_64 0:4.5.0-20.el7 will be an update
+    packstack: ---> Package yum.noarch 0:3.4.3-161.el7.centos will be updated
+    packstack: ---> Package yum.noarch 0:3.4.3-167.el7.centos will be an update
+    packstack: ---> Package yum-plugin-fastestmirror.noarch 0:1.1.31-50.el7 will be updated
+    packstack: ---> Package yum-plugin-fastestmirror.noarch 0:1.1.31-54.el7_8 will be an update
+    packstack: ---> Package yum-utils.noarch 0:1.1.31-50.el7 will be updated
+    packstack: ---> Package yum-utils.noarch 0:1.1.31-54.el7_8 will be an update
+    packstack: --> Running transaction check
+    packstack: ---> Package bind-export-libs.x86_64 32:9.11.4-16.P2.el7_8.3 will be installed
+    packstack: ---> Package geoipupdate.x86_64 0:2.5.0-1.el7 will be installed
+    packstack: ---> Package gnutls.x86_64 0:3.3.29-9.el7_6 will be installed
+    packstack: --> Processing Dependency: trousers >= 0.3.11.2 for package: gnutls-3.3.29-9.el7_6.x86_64
+    packstack: --> Processing Dependency: libnettle.so.4()(64bit) for package: gnutls-3.3.29-9.el7_6.x86_64
+    packstack: --> Processing Dependency: libhogweed.so.2()(64bit) for package: gnutls-3.3.29-9.el7_6.x86_64
+    packstack: ---> Package samba-libs.x86_64 0:4.10.4-11.el7_8 will be installed
+    packstack: --> Processing Dependency: libpytalloc-util.so.2(PYTALLOC_UTIL_2.1.9)(64bit) for package: samba-libs-4.10.4-11.el7_8.x86_64
+    packstack: --> Processing Dependency: libpytalloc-util.so.2(PYTALLOC_UTIL_2.1.6)(64bit) for package: samba-libs-4.10.4-11.el7_8.x86_64
+    packstack: --> Processing Dependency: libpytalloc-util.so.2(PYTALLOC_UTIL_2.0.6)(64bit) for package: samba-libs-4.10.4-11.el7_8.x86_64
+    packstack: --> Processing Dependency: libpytalloc-util.so.2()(64bit) for package: samba-libs-4.10.4-11.el7_8.x86_64
+    packstack: --> Processing Dependency: libpyldb-util.so.1()(64bit) for package: samba-libs-4.10.4-11.el7_8.x86_64
+    packstack: --> Running transaction check
+    packstack: ---> Package nettle.x86_64 0:2.7.1-8.el7 will be installed
+    packstack: ---> Package pyldb.x86_64 0:1.5.4-1.el7 will be installed
+    packstack: --> Processing Dependency: python-tdb(x86-64) >= 1.3.18 for package: pyldb-1.5.4-1.el7.x86_64
+    packstack: ---> Package pytalloc.x86_64 0:2.1.16-1.el7 will be installed
+    packstack: ---> Package trousers.x86_64 0:0.3.14-2.el7 will be installed
+    packstack: --> Running transaction check
+    packstack: ---> Package python-tdb.x86_64 0:1.3.18-1.el7 will be installed
+    packstack: --> Finished Dependency Resolution
+    packstack:
+    packstack: Dependencies Resolved
+    packstack:
+    packstack: ================================================================================
+    packstack:  Package                     Arch   Version                       Repository
+    packstack:                                                                            Size
+    packstack: ================================================================================
+    packstack: Installing:
+    packstack:  kernel                      x86_64 3.10.0-1127.8.2.el7           updates  50 M
+    packstack: Updating:
+    packstack:  GeoIP                       x86_64 1.5.0-14.el7                  base    1.5 M
+    packstack:  NetworkManager              x86_64 1:1.18.4-3.el7                base    1.9 M
+    packstack:  NetworkManager-libnm        x86_64 1:1.18.4-3.el7                base    1.7 M
+    packstack:  NetworkManager-team         x86_64 1:1.18.4-3.el7                base    164 k
+    packstack:  NetworkManager-tui          x86_64 1:1.18.4-3.el7                base    327 k
+    packstack:  acl                         x86_64 2.2.51-15.el7                 base     81 k
+    packstack:  audit                       x86_64 2.8.5-4.el7                   base    256 k
+    packstack:  audit-libs                  x86_64 2.8.5-4.el7                   base    102 k
+    packstack:  avahi-libs                  x86_64 0.6.31-20.el7                 base     62 k
+    packstack:  bash                        x86_64 4.2.46-34.el7                 base    1.0 M
+    packstack:  bash-completion             noarch 1:2.1-8.el7                   base     87 k
+    packstack:  bind-libs-lite              x86_64 32:9.11.4-16.P2.el7_8.3       updates 1.1 M
+    packstack:  bind-license                noarch 32:9.11.4-16.P2.el7_8.3       updates  89 k
+    packstack:  binutils                    x86_64 2.27-43.base.el7_8.1          updates 5.9 M
+    packstack:  biosdevname                 x86_64 0.7.3-2.el7                   base     38 k
+    packstack:  ca-certificates             noarch 2019.2.32-76.el7_7            base    399 k
+    packstack:  centos-release              x86_64 7-8.2003.0.el7.centos         base     26 k
+    packstack:  chrony                      x86_64 3.4-1.el7                     base    251 k
+    packstack:  coreutils                   x86_64 8.22-24.el7                   base    3.3 M
+    packstack:  cronie                      x86_64 1.4.11-23.el7                 base     92 k
+    packstack:  cronie-anacron              x86_64 1.4.11-23.el7                 base     36 k
+    packstack:  cryptsetup-libs             x86_64 2.0.3-6.el7                   base    339 k
+    packstack:  cups-libs                   x86_64 1:1.6.3-43.el7                base    358 k
+    packstack:  curl                        x86_64 7.29.0-57.el7                 base    270 k
+    packstack:  device-mapper               x86_64 7:1.02.164-7.el7_8.2          updates 295 k
+    packstack:  device-mapper-libs          x86_64 7:1.02.164-7.el7_8.2          updates 324 k
+    packstack:  dhclient                    x86_64 12:4.2.5-79.el7.centos        base    286 k
+    packstack:  dhcp-common                 x86_64 12:4.2.5-79.el7.centos        base    176 k
+    packstack:  dhcp-libs                   x86_64 12:4.2.5-79.el7.centos        base    133 k
+    packstack:  diffutils                   x86_64 3.3-5.el7                     base    322 k
+    packstack:  dmidecode                   x86_64 1:3.2-3.el7                   base     81 k
+    packstack:  dracut                      x86_64 033-568.el7                   base    329 k
+    packstack:  e2fsprogs                   x86_64 1.42.9-17.el7                 base    699 k
+    packstack:  e2fsprogs-libs              x86_64 1.42.9-17.el7                 base    168 k
+    packstack:  elfutils-default-yama-scope noarch 0.176-4.el7                   base     33 k
+    packstack:  elfutils-libelf             x86_64 0.176-4.el7                   base    195 k
+    packstack:  elfutils-libs               x86_64 0.176-4.el7                   base    291 k
+    packstack:  ethtool                     x86_64 2:4.8-10.el7                  base    127 k
+    packstack:  expat                       x86_64 2.1.0-11.el7                  base     81 k
+    packstack:  file                        x86_64 5.11-36.el7                   base     57 k
+    packstack:  file-libs                   x86_64 5.11-36.el7                   base    340 k
+    packstack:  firewalld                   noarch 0.6.3-8.el7_8.1               updates 443 k
+    packstack:  firewalld-filesystem        noarch 0.6.3-8.el7_8.1               updates  51 k
+    packstack:  freetype                    x86_64 2.8-14.el7                    base    380 k
+    packstack:  gettext                     x86_64 0.19.8.1-3.el7                base    1.0 M
+    packstack:  gettext-libs                x86_64 0.19.8.1-3.el7                base    502 k
+    packstack:  glib2                       x86_64 2.56.1-5.el7                  base    2.5 M
+    packstack:  glibc                       x86_64 2.17-307.el7.1                base    3.6 M
+    packstack:  glibc-common                x86_64 2.17-307.el7.1                base     11 M
+    packstack:  grub2                       x86_64 1:2.02-0.81.el7.centos        base     31 k
+    packstack:  grub2-common                noarch 1:2.02-0.81.el7.centos        base    729 k
+    packstack:  grub2-pc                    x86_64 1:2.02-0.81.el7.centos        base     31 k
+    packstack:  grub2-pc-modules            noarch 1:2.02-0.81.el7.centos        base    847 k
+    packstack:  grub2-tools                 x86_64 1:2.02-0.81.el7.centos        base    1.8 M
+    packstack:  grub2-tools-extra           x86_64 1:2.02-0.81.el7.centos        base    996 k
+    packstack:  grub2-tools-minimal         x86_64 1:2.02-0.81.el7.centos        base    173 k
+    packstack:  grubby                      x86_64 8.28-26.el7                   base     71 k
+    packstack:  gssproxy                    x86_64 0.7.0-28.el7                  base    110 k
+    packstack:  hostname                    x86_64 3.13-3.el7_7.1                base     17 k
+    packstack:  hwdata                      x86_64 0.252-9.5.el7                 base    2.4 M
+    packstack:  initscripts                 x86_64 9.49.49-1.el7                 base    440 k
+    packstack:  iproute                     x86_64 4.11.0-25.el7_7.2             base    803 k
+    packstack:  iprutils                    x86_64 2.4.17.1-3.el7_7              updates 243 k
+    packstack:  ipset                       x86_64 7.1-1.el7                     base     39 k
+    packstack:  ipset-libs                  x86_64 7.1-1.el7                     base     64 k
+    packstack:  iptables                    x86_64 1.4.21-34.el7                 base    432 k
+    packstack:  irqbalance                  x86_64 3:1.0.7-12.el7                base     45 k
+    packstack:  kernel-tools                x86_64 3.10.0-1127.8.2.el7           updates 8.0 M
+    packstack:  kernel-tools-libs           x86_64 3.10.0-1127.8.2.el7           updates 8.0 M
+    packstack:  kmod                        x86_64 20-28.el7                     base    123 k
+    packstack:  kmod-libs                   x86_64 20-28.el7                     base     51 k
+    packstack:  kpartx                      x86_64 0.4.9-131.el7                 base     80 k
+    packstack:  krb5-libs                   x86_64 1.15.1-46.el7                 base    809 k
+    packstack:  libacl                      x86_64 2.2.51-15.el7                 base     27 k
+    packstack:  libblkid                    x86_64 2.23.2-63.el7                 base    182 k
+    packstack:  libcap                      x86_64 2.22-11.el7                   base     47 k
+    packstack:  libcom_err                  x86_64 1.42.9-17.el7                 base     42 k
+    packstack:  libcurl                     x86_64 7.29.0-57.el7                 base    223 k
+    packstack:  libdb                       x86_64 5.3.21-25.el7                 base    720 k
+    packstack:  libdb-utils                 x86_64 5.3.21-25.el7                 base    132 k
+    packstack:  libdrm                      x86_64 2.4.97-2.el7                  base    151 k
+    packstack:  libffi                      x86_64 3.0.13-19.el7                 base     30 k
+    packstack:  libgcc                      x86_64 4.8.5-39.el7                  base    102 k
+    packstack:  libgomp                     x86_64 4.8.5-39.el7                  base    158 k
+    packstack:  libicu                      x86_64 50.2-4.el7_7                  updates 6.9 M
+    packstack:  libldb                      x86_64 1.5.4-1.el7                   base    149 k
+    packstack:  libmount                    x86_64 2.23.2-63.el7                 base    184 k
+    packstack:  libmspack                   x86_64 0.5-0.7.alpha.el7             base     64 k
+    packstack:  libndp                      x86_64 1.2-9.el7                     base     32 k
+    packstack:  libseccomp                  x86_64 2.3.1-4.el7                   base     56 k
+    packstack:  libselinux                  x86_64 2.5-15.el7                    base    162 k
+    packstack:  libselinux-python           x86_64 2.5-15.el7                    base    236 k
+    packstack:  libselinux-utils            x86_64 2.5-15.el7                    base    151 k
+    packstack:  libsmartcols                x86_64 2.23.2-63.el7                 base    142 k
+    packstack:  libss                       x86_64 1.42.9-17.el7                 base     46 k
+    packstack:  libssh2                     x86_64 1.8.0-3.el7                   base     88 k
+    packstack:  libstdc++                   x86_64 4.8.5-39.el7                  base    305 k
+    packstack:  libtalloc                   x86_64 2.1.16-1.el7                  base     33 k
+    packstack:  libtdb                      x86_64 1.3.18-1.el7                  base     49 k
+    packstack:  libteam                     x86_64 1.29-1.el7                    base     50 k
+    packstack:  libtevent                   x86_64 0.9.39-1.el7                  base     41 k
+    packstack:  libtirpc                    x86_64 0.2.4-0.16.el7                base     89 k
+    packstack:  libuuid                     x86_64 2.23.2-63.el7                 base     83 k
+    packstack:  libwbclient                 x86_64 4.10.4-11.el7_8               updates 113 k
+    packstack:  libxml2                     x86_64 2.9.1-6.el7.4                 base    668 k
+    packstack:  libxml2-python              x86_64 2.9.1-6.el7.4                 base    247 k
+    packstack:  linux-firmware              noarch 20191203-76.gite8a0f4c.el7    base     81 M
+    packstack:  logrotate                   x86_64 3.8.6-19.el7                  base     70 k
+    packstack:  lshw                        x86_64 B.02.18-14.el7                base    321 k
+    packstack:  lz4                         x86_64 1.7.5-3.el7                   base     99 k
+    packstack:  make                        x86_64 1:3.82-24.el7                 base    421 k
+    packstack:  mariadb-libs                x86_64 1:5.5.65-1.el7                base    759 k
+    packstack:  nfs-utils                   x86_64 1:1.3.0-0.66.el7              base    412 k
+    packstack:  nspr                        x86_64 4.21.0-1.el7                  base    127 k
+    packstack:  nss                         x86_64 3.44.0-7.el7_7                base    854 k
+    packstack:  nss-pem                     x86_64 1.0.3-7.el7                   base     74 k
+    packstack:  nss-softokn                 x86_64 3.44.0-8.el7_7                base    330 k
+    packstack:  nss-softokn-freebl          x86_64 3.44.0-8.el7_7                base    224 k
+    packstack:  nss-sysinit                 x86_64 3.44.0-7.el7_7                base     65 k
+    packstack:  nss-tools                   x86_64 3.44.0-7.el7_7                base    528 k
+    packstack:  nss-util                    x86_64 3.44.0-4.el7_7                base     79 k
+    packstack:  numactl-libs                x86_64 2.0.12-5.el7                  base     30 k
+    packstack:  open-vm-tools               x86_64 10.3.10-2.el7_8.1             updates 674 k
+    packstack:  openssh                     x86_64 7.4p1-21.el7                  base    510 k
+    packstack:  openssh-clients             x86_64 7.4p1-21.el7                  base    655 k
+    packstack:  openssh-server              x86_64 7.4p1-21.el7                  base    459 k
+    packstack:  openssl                     x86_64 1:1.0.2k-19.el7               base    493 k
+    packstack:  openssl-libs                x86_64 1:1.0.2k-19.el7               base    1.2 M
+    packstack:  pam                         x86_64 1.1.8-23.el7                  base    721 k
+    packstack:  parted                      x86_64 3.1-32.el7                    base    609 k
+    packstack:  passwd                      x86_64 0.79-6.el7                    base    106 k
+    packstack:  policycoreutils             x86_64 2.5-34.el7                    base    917 k
+    packstack:  polkit                      x86_64 0.112-26.el7                  base    170 k
+    packstack:  postfix                     x86_64 2:2.10.1-9.el7                base    2.4 M
+    packstack:  procps-ng                   x86_64 3.3.10-27.el7                 base    291 k
+    packstack:  python                      x86_64 2.7.5-88.el7                  base     96 k
+    packstack:  python-chardet              noarch 2.2.1-3.el7                   base    227 k
+    packstack:  python-firewall             noarch 0.6.3-8.el7_8.1               updates 354 k
+    packstack:  python-libs                 x86_64 2.7.5-88.el7                  base    5.6 M
+    packstack:  python-linux-procfs         noarch 0.4.11-4.el7                  base     33 k
+    packstack:  python-perf                 x86_64 3.10.0-1127.8.2.el7           updates 8.0 M
+    packstack:  python-urlgrabber           noarch 3.10-10.el7                   base    108 k
+    packstack:  qemu-guest-agent            x86_64 10:2.12.0-3.el7               base    116 k
+    packstack:  quota                       x86_64 1:4.01-19.el7                 base    179 k
+    packstack:  quota-nls                   noarch 1:4.01-19.el7                 base     90 k
+    packstack:  readline                    x86_64 6.2-11.el7                    base    193 k
+    packstack:  rpcbind                     x86_64 0.2.0-49.el7                  base     60 k
+    packstack:  rpm                         x86_64 4.11.3-43.el7                 base    1.2 M
+    packstack:  rpm-build-libs              x86_64 4.11.3-43.el7                 base    107 k
+    packstack:  rpm-libs                    x86_64 4.11.3-43.el7                 base    278 k
+    packstack:  rpm-python                  x86_64 4.11.3-43.el7                 base     84 k
+    packstack:  rsync                       x86_64 3.1.2-10.el7                  base    404 k
+    packstack:  rsyslog                     x86_64 8.24.0-52.el7                 base    620 k
+    packstack:  samba-client-libs           x86_64 4.10.4-11.el7_8               updates 5.0 M
+    packstack:  samba-common                noarch 4.10.4-11.el7_8               updates 212 k
+    packstack:  samba-common-libs           x86_64 4.10.4-11.el7_8               updates 176 k
+    packstack:  sed                         x86_64 4.2.2-6.el7                   base    231 k
+    packstack:  selinux-policy              noarch 3.13.1-266.el7                base    497 k
+    packstack:  selinux-policy-targeted     noarch 3.13.1-266.el7                base    7.0 M
+    packstack:  setup                       noarch 2.8.71-11.el7                 base    166 k
+    packstack:  sg3_utils                   x86_64 1:1.37-19.el7                 base    646 k
+    packstack:  sg3_utils-libs              x86_64 1:1.37-19.el7                 base     65 k
+    packstack:  shadow-utils                x86_64 2:4.6-5.el7                   base    1.2 M
+    packstack:  shared-mime-info            x86_64 1.8-5.el7                     base    312 k
+    packstack:  sqlite                      x86_64 3.7.17-8.el7_7.1              base    394 k
+    packstack:  sudo                        x86_64 1.8.23-9.el7                  base    842 k
+    packstack:  systemd                     x86_64 219-73.el7_8.6                updates 5.1 M
+    packstack:  systemd-libs                x86_64 219-73.el7_8.6                updates 416 k
+    packstack:  systemd-sysv                x86_64 219-73.el7_8.6                updates  94 k
+    packstack:  teamd                       x86_64 1.29-1.el7                    base    115 k
+    packstack:  tuned                       noarch 2.11.0-8.el7                  base    268 k
+    packstack:  tzdata                      noarch 2020a-1.el7                   updates 495 k
+    packstack:  util-linux                  x86_64 2.23.2-63.el7                 base    2.0 M
+    packstack:  vim-minimal                 x86_64 2:7.4.629-6.el7               base    443 k
+    packstack:  xfsprogs                    x86_64 4.5.0-20.el7                  base    896 k
+    packstack:  yum                         noarch 3.4.3-167.el7.centos          base    1.2 M
+    packstack:  yum-plugin-fastestmirror    noarch 1.1.31-54.el7_8               updates  34 k
+    packstack:  yum-utils                   noarch 1.1.31-54.el7_8               updates 122 k
+    packstack: Installing for dependencies:
+    packstack:  bind-export-libs            x86_64 32:9.11.4-16.P2.el7_8.3       updates 1.1 M
+    packstack:  geoipupdate                 x86_64 2.5.0-1.el7                   base     35 k
+    packstack:  gnutls                      x86_64 3.3.29-9.el7_6                base    680 k
+    packstack:  nettle                      x86_64 2.7.1-8.el7                   base    327 k
+    packstack:  pyldb                       x86_64 1.5.4-1.el7                   base     49 k
+    packstack:  pytalloc                    x86_64 2.1.16-1.el7                  base     18 k
+    packstack:  python-tdb                  x86_64 1.3.18-1.el7                  base     20 k
+    packstack:  samba-libs                  x86_64 4.10.4-11.el7_8               updates 271 k
+    packstack:  trousers                    x86_64 0.3.14-2.el7                  base    289 k
+    packstack:
+    packstack: Transaction Summary
+    packstack: ================================================================================
+    packstack: Install    1 Package  (+9 Dependent packages)
+    packstack: Upgrade  178 Packages
+    packstack: Total download size: 274 M
+    packstack: Downloading packages:
+    packstack: No Presto metadata available for base
+    packstack: No Presto metadata available for updates
+    packstack: warning: /var/cache/yum/x86_64/7/base/packages/NetworkManager-team-1.18.4-3.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
+    packstack: Public key for NetworkManager-team-1.18.4-3.el7.x86_64.rpm is not installed
+    packstack: Public key for bind-export-libs-9.11.4-16.P2.el7_8.3.x86_64.rpm is not installed
+    packstack: --------------------------------------------------------------------------------
+    packstack: Total                                              1.8 MB/s | 274 MB  02:31
+    packstack: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+    packstack: Importing GPG key 0xF4A80EB5:
+    packstack:  Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>"
+    packstack:  Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
+    packstack:  Package    : centos-release-7-6.1810.2.el7.centos.x86_64 (@anaconda)
+    packstack:  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+    packstack: Running transaction check
+    packstack: Running transaction test
+    packstack: Transaction test succeeded
+    packstack: Running transaction
+    packstack:   Updating   : libgcc-4.8.5-39.el7.x86_64                                 1/366
+    packstack:
+    packstack:   Updating   : 1:grub2-common-2.02-0.81.el7.centos.noarch                 2/366
+    packstack:
+    packstack:   Updating   : centos-release-7-8.2003.0.el7.centos.x86_64                3/366
+    packstack:
+    packstack:   Updating   : setup-2.8.71-11.el7.noarch                                 4/366
+    packstack:
+    packstack: warning: /etc/shadow created as /etc/shadow.rpmnew
+    packstack:   Updating   : 1:grub2-pc-modules-2.02-0.81.el7.centos.noarch             5/366
+    packstack:
+    packstack:   Updating   : 32:bind-license-9.11.4-16.P2.el7_8.3.noarch                6/366
+    packstack:
+    packstack:   Updating   : firewalld-filesystem-0.6.3-8.el7_8.1.noarch                7/366
+    packstack:
+    packstack:   Updating   : tzdata-2020a-1.el7.noarch                                  8/366
+    packstack:
+    packstack:   Updating   : bash-4.2.46-34.el7.x86_64                                  9/366
+    packstack:
+    packstack:   Updating   : glibc-common-2.17-307.el7.1.x86_64                        10/366
+    packstack:
+    packstack:   Updating   : nss-softokn-freebl-3.44.0-8.el7_7.x86_64                  11/366
+    packstack:
+    packstack:   Updating   : glibc-2.17-307.el7.1.x86_64                               12/366
+    packstack:
+    packstack: warning: /etc/nsswitch.conf created as /etc/nsswitch.conf.rpmnew
+    packstack:   Updating   : libselinux-2.5-15.el7.x86_64                              13/366
+    packstack:
+    packstack:   Updating   : nspr-4.21.0-1.el7.x86_64                                  14/366
+    packstack:
+    packstack:   Updating   : nss-util-3.44.0-4.el7_7.x86_64                            15/366
+    packstack:
+    packstack:   Updating   : libcom_err-1.42.9-17.el7.x86_64                           16/366
+    packstack:
+    packstack:   Updating   : audit-libs-2.8.5-4.el7.x86_64                             17/366
+    packstack:
+    packstack:   Updating   : libcap-2.22-11.el7.x86_64                                 18/366
+    packstack:
+    packstack:   Updating   : libacl-2.2.51-15.el7.x86_64                               19/366
+    packstack:
+    packstack:   Updating   : libuuid-2.23.2-63.el7.x86_64                              20/366
+    packstack:
+    packstack:   Updating   : sed-4.2.2-6.el7.x86_64                                    21/366
+    packstack:
+    packstack:   Updating   : libdb-5.3.21-25.el7.x86_64                                22/366
+    packstack:
+    packstack:   Updating   : libtalloc-2.1.16-1.el7.x86_64                             23/366
+    packstack:
+    packstack:   Updating   : libstdc++-4.8.5-39.el7.x86_64                             24/366
+    packstack:
+    packstack:   Updating   : libtdb-1.3.18-1.el7.x86_64                                25/366
+    packstack:
+    packstack:   Updating   : libxml2-2.9.1-6.el7.4.x86_64                              26/366
+    packstack:
+    packstack:   Updating   : elfutils-libelf-0.176-4.el7.x86_64                        27/366
+    packstack:
+    packstack:   Updating   : libtevent-0.9.39-1.el7.x86_64                             28/366
+    packstack:
+    packstack:   Updating   : readline-6.2-11.el7.x86_64                                29/366
+    packstack:
+    packstack:   Updating   : sqlite-3.7.17-8.el7_7.1.x86_64                            30/366
+    packstack:
+    packstack:   Updating   : libldb-1.5.4-1.el7.x86_64                                 31/366
+    packstack:
+    packstack:   Updating   : diffutils-3.3-5.el7.x86_64                                32/366
+    packstack:
+    packstack:   Updating   : avahi-libs-0.6.31-20.el7.x86_64                           33/366
+    packstack:
+    packstack:   Updating   : file-libs-5.11-36.el7.x86_64                              34/366
+    packstack:
+    packstack:   Updating   : file-5.11-36.el7.x86_64                                   35/366
+    packstack:
+    packstack:   Updating   : nss-softokn-3.44.0-8.el7_7.x86_64                         36/366
+    packstack:
+    packstack:   Updating   : e2fsprogs-libs-1.42.9-17.el7.x86_64                       37/366
+    packstack:
+    packstack:   Updating   : hostname-3.13-3.el7_7.1.x86_64                            38/366
+    packstack:
+    packstack:   Updating   : libgomp-4.8.5-39.el7.x86_64                               39/366
+    packstack:
+    packstack:   Updating   : expat-2.1.0-11.el7.x86_64                                 40/366
+    packstack:
+    packstack:   Updating   : lz4-1.7.5-3.el7.x86_64                                    41/366
+    packstack:
+    packstack:   Updating   : iptables-1.4.21-34.el7.x86_64                             42/366
+    packstack:
+    packstack:   Updating   : iproute-4.11.0-25.el7_7.2.x86_64                          43/366
+    packstack:
+    packstack:   Updating   : libffi-3.0.13-19.el7.x86_64                               44/366
+    packstack:
+    packstack:   Updating   : libicu-50.2-4.el7_7.x86_64                                45/366
+    packstack:
+    packstack:   Updating   : libdb-utils-5.3.21-25.el7.x86_64                          46/366
+    packstack:
+    packstack:   Updating   : acl-2.2.51-15.el7.x86_64                                  47/366
+    packstack:
+    packstack:   Updating   : 2:vim-minimal-7.4.629-6.el7.x86_64                        48/366
+    packstack:
+    packstack:   Updating   : libss-1.42.9-17.el7.x86_64                                49/366
+    packstack:
+    packstack:   Updating   : libselinux-utils-2.5-15.el7.x86_64                        50/366
+    packstack:
+    packstack:   Updating   : ipset-libs-7.1-1.el7.x86_64                               51/366
+    packstack:
+    packstack:   Updating   : ipset-7.1-1.el7.x86_64                                    52/366
+    packstack:
+    packstack:   Updating   : libseccomp-2.3.1-4.el7.x86_64                             53/366
+    packstack:
+    packstack:   Updating   : libndp-1.2-9.el7.x86_64                                   54/366
+    packstack:
+    packstack:   Updating   : freetype-2.8-14.el7.x86_64                                55/366
+    packstack:
+    packstack:   Updating   : libsmartcols-2.23.2-63.el7.x86_64                         56/366
+    packstack:
+    packstack:   Updating   : libmspack-0.5-0.7.alpha.el7.x86_64                        57/366
+    packstack:
+    packstack:   Updating   : numactl-libs-2.0.12-5.el7.x86_64                          58/366
+    packstack:
+    packstack:   Installing : nettle-2.7.1-8.el7.x86_64                                 59/366
+    packstack:
+    packstack:   Updating   : kernel-tools-libs-3.10.0-1127.8.2.el7.x86_64              60/366
+    packstack:
+    packstack:   Updating   : 2:ethtool-4.8-10.el7.x86_64                               61/366
+    packstack:
+    packstack:   Updating   : kmod-libs-20-28.el7.x86_64                                62/366
+    packstack:
+    packstack:   Updating   : 1:sg3_utils-libs-1.37-19.el7.x86_64                       63/366
+    packstack:
+    packstack:   Updating   : 1:make-3.82-24.el7.x86_64                                 64/366
+    packstack:
+    packstack:   Updating   : libteam-1.29-1.el7.x86_64                                 65/366
+    packstack:
+    packstack:   Updating   : teamd-1.29-1.el7.x86_64                                   66/366
+    packstack:
+    packstack:   Updating   : ca-certificates-2019.2.32-76.el7_7.noarch                 67/366
+    packstack:
+    packstack:   Updating   : krb5-libs-1.15.1-46.el7.x86_64                            68/366
+    packstack:
+    packstack:   Updating   : 1:openssl-libs-1.0.2k-19.el7.x86_64                       69/366
+    packstack:
+    packstack:   Updating   : coreutils-8.22-24.el7.x86_64                              70/366
+    packstack:
+    packstack:   Updating   : pam-1.1.8-23.el7.x86_64                                   71/366
+    packstack:
+    packstack:   Updating   : 2:shadow-utils-4.6-5.el7.x86_64                           72/366
+    packstack:
+    packstack: warning: /etc/login.defs created as /etc/login.defs.rpmnew
+    packstack:   Updating   : libblkid-2.23.2-63.el7.x86_64                             73/366
+    packstack:
+    packstack:   Updating   : python-libs-2.7.5-88.el7.x86_64                           74/366
+    packstack:
+    packstack:   Updating   : python-2.7.5-88.el7.x86_64                                75/366
+    packstack:
+    packstack:   Updating   : libmount-2.23.2-63.el7.x86_64                             76/366
+    packstack:
+    packstack:   Updating   : glib2-2.56.1-5.el7.x86_64                                 77/366
+    packstack:
+    packstack:   Updating   : shared-mime-info-1.8-5.el7.x86_64                         78/366
+    packstack:
+    packstack:   Updating   : 1:cups-libs-1.6.3-43.el7.x86_64                           79/366
+    packstack:
+    packstack:   Updating   : libtirpc-0.2.4-0.16.el7.x86_64                            80/366
+    packstack:
+    packstack:   Updating   : gettext-libs-0.19.8.1-3.el7.x86_64                        81/366
+    packstack:
+    packstack:   Updating   : gettext-0.19.8.1-3.el7.x86_64                             82/366
+    packstack:
+    packstack:   Installing : pytalloc-2.1.16-1.el7.x86_64                              83/366
+    packstack:
+    packstack:   Updating   : python-firewall-0.6.3-8.el7_8.1.noarch                    84/366
+    packstack:
+    packstack:   Updating   : libxml2-python-2.9.1-6.el7.4.x86_64                       85/366
+    packstack:
+    packstack:   Updating   : python-urlgrabber-3.10-10.el7.noarch                      86/366
+    packstack:
+    packstack:   Updating   : python-linux-procfs-0.4.11-4.el7.noarch                   87/366
+    packstack:
+    packstack:   Installing : python-tdb-1.3.18-1.el7.x86_64                            88/366
+    packstack:
+    packstack:   Installing : pyldb-1.5.4-1.el7.x86_64                                  89/366
+    packstack:
+    packstack:   Updating   : python-perf-3.10.0-1127.8.2.el7.x86_64                    90/366
+    packstack:
+    packstack:   Updating   : grubby-8.28-26.el7.x86_64                                 91/366
+    packstack:
+    packstack:   Updating   : binutils-2.27-43.base.el7_8.1.x86_64                      92/366
+    packstack:
+    packstack:   Updating   : logrotate-3.8.6-19.el7.x86_64                             93/366
+    packstack:
+    packstack:   Updating   : nss-pem-1.0.3-7.el7.x86_64                                94/366
+    packstack:
+    packstack:   Updating   : nss-sysinit-3.44.0-7.el7_7.x86_64                         95/366
+    packstack:
+    packstack:   Updating   : nss-3.44.0-7.el7_7.x86_64                                 96/366
+    packstack:
+    packstack:   Updating   : libssh2-1.8.0-3.el7.x86_64                                97/366
+    packstack:
+    packstack:   Updating   : libcurl-7.29.0-57.el7.x86_64                              98/366
+    packstack:
+    packstack:   Updating   : procps-ng-3.3.10-27.el7.x86_64                            99/366
+    packstack:
+    packstack:   Updating   : util-linux-2.23.2-63.el7.x86_64                          100/366
+    packstack:
+    packstack:   Updating   : kpartx-0.4.9-131.el7.x86_64                              101/366
+    packstack:
+    packstack:   Updating   : 7:device-mapper-1.02.164-7.el7_8.2.x86_64                102/366
+    packstack:
+    packstack:   Updating   : dracut-033-568.el7.x86_64                                103/366
+    packstack:
+    packstack:   Updating   : kmod-20-28.el7.x86_64                                    104/366
+    packstack:
+    packstack:   Updating   : 7:device-mapper-libs-1.02.164-7.el7_8.2.x86_64           105/366
+    packstack:
+    packstack:   Updating   : cryptsetup-libs-2.0.3-6.el7.x86_64                       106/366
+    packstack:
+    packstack:   Updating   : systemd-libs-219-73.el7_8.6.x86_64                       107/366
+    packstack:
+    packstack:   Updating   : elfutils-libs-0.176-4.el7.x86_64                         108/366
+    packstack:
+    packstack:   Updating   : systemd-219-73.el7_8.6.x86_64                            109/366
+    packstack:
+    packstack:   Updating   : elfutils-default-yama-scope-0.176-4.el7.noarch           110/366
+    packstack:
+    packstack:   Updating   : systemd-sysv-219-73.el7_8.6.x86_64                       111/366
+    packstack:
+    packstack:   Updating   : 1:grub2-tools-minimal-2.02-0.81.el7.centos.x86_64        112/366
+    packstack:
+    packstack:   Updating   : rpcbind-0.2.0-49.el7.x86_64                              113/366
+    packstack:
+    packstack:   Updating   : initscripts-9.49.49-1.el7.x86_64                         114/366
+    packstack:
+    packstack:   Updating   : polkit-0.112-26.el7.x86_64                               115/366
+    packstack:
+    packstack:   Updating   : samba-common-4.10.4-11.el7_8.noarch                      116/366
+    packstack:
+    packstack:   Updating   : 12:dhcp-libs-4.2.5-79.el7.centos.x86_64                  117/366
+    packstack:
+    packstack:   Updating   : 1:NetworkManager-libnm-1.18.4-3.el7.x86_64               118/366
+    packstack:
+    packstack:   Updating   : 1:NetworkManager-1.18.4-3.el7.x86_64                     119/366
+    packstack:
+    packstack:   Updating   : openssh-7.4p1-21.el7.x86_64                              120/366
+    packstack:
+    packstack:   Updating   : 12:dhcp-common-4.2.5-79.el7.centos.x86_64                121/366
+    packstack:
+    packstack:   Updating   : cronie-anacron-1.4.11-23.el7.x86_64                      122/366
+    packstack:
+    packstack:   Updating   : cronie-1.4.11-23.el7.x86_64                              123/366
+    packstack:
+    packstack:   Updating   : libdrm-2.4.97-2.el7.x86_64                               124/366
+    packstack:
+    packstack:   Updating   : hwdata-0.252-9.5.el7.x86_64                              125/366
+    packstack:
+    packstack:   Installing : trousers-0.3.14-2.el7.x86_64                             126/366
+    packstack:
+    packstack:   Installing : gnutls-3.3.29-9.el7_6.x86_64                             127/366
+    packstack:
+    packstack:   Updating   : libwbclient-4.10.4-11.el7_8.x86_64                       128/366
+    packstack:
+    packstack:   Updating   : samba-client-libs-4.10.4-11.el7_8.x86_64                 129/366
+    packstack:
+    packstack:   Installing : samba-libs-4.10.4-11.el7_8.x86_64                        130/366
+    packstack:
+    packstack:   Updating   : samba-common-libs-4.10.4-11.el7_8.x86_64                 131/366
+    packstack:
+    packstack:   Updating   : gssproxy-0.7.0-28.el7.x86_64                             132/366
+    packstack:
+    packstack:   Installing : geoipupdate-2.5.0-1.el7.x86_64                           133/366
+    packstack:
+    packstack:   Updating   : GeoIP-1.5.0-14.el7.x86_64                                134/366
+    packstack:
+    packstack:   Updating   : curl-7.29.0-57.el7.x86_64                                135/366
+    packstack:
+    packstack:   Updating   : rpm-libs-4.11.3-43.el7.x86_64                            136/366
+    packstack:
+    packstack:   Updating   : rpm-4.11.3-43.el7.x86_64                                 137/366
+    packstack:
+    packstack:   Updating   : policycoreutils-2.5-34.el7.x86_64                        138/366
+    packstack:
+    packstack:   Updating   : 1:grub2-tools-2.02-0.81.el7.centos.x86_64                139/366
+    packstack:
+    packstack:   Updating   : 1:grub2-tools-extra-2.02-0.81.el7.centos.x86_64          140/366
+    packstack:
+    packstack:   Updating   : 1:grub2-pc-2.02-0.81.el7.centos.x86_64                   141/366
+    packstack:
+    packstack:   Updating   : selinux-policy-3.13.1-266.el7.noarch                     142/366
+    packstack:
+    packstack:   Updating   : rpm-build-libs-4.11.3-43.el7.x86_64                      143/366
+    packstack:
+    packstack:   Updating   : rpm-python-4.11.3-43.el7.x86_64                          144/366
+    packstack:
+    packstack:   Updating   : yum-plugin-fastestmirror-1.1.31-54.el7_8.noarch          145/366
+    packstack:
+    packstack:   Updating   : yum-3.4.3-167.el7.centos.noarch                          146/366
+    packstack:
+    packstack:   Installing : 32:bind-export-libs-9.11.4-16.P2.el7_8.3.x86_64          147/366
+    packstack:
+    packstack:   Updating   : 1:mariadb-libs-5.5.65-1.el7.x86_64                       148/366
+    packstack:
+    packstack:   Updating   : linux-firmware-20191203-76.gite8a0f4c.el7.noarch         149/366
+    packstack:
+    packstack:   Updating   : 1:quota-nls-4.01-19.el7.noarch                           150/366
+    packstack:
+    packstack:   Updating   : 1:quota-4.01-19.el7.x86_64                               151/366
+    packstack:
+    packstack:   Updating   : 1:nfs-utils-1.3.0-0.66.el7.x86_64                        152/366
+    packstack:
+    packstack:   Installing : kernel-3.10.0-1127.8.2.el7.x86_64                        153/366
+    packstack:
+    packstack:   Updating   : 2:postfix-2.10.1-9.el7.x86_64                            154/366
+    packstack:
+    packstack:   Updating   : 12:dhclient-4.2.5-79.el7.centos.x86_64                   155/366
+    packstack:
+    packstack:   Updating   : yum-utils-1.1.31-54.el7_8.noarch                         156/366
+    packstack:
+    packstack:   Updating   : selinux-policy-targeted-3.13.1-266.el7.noarch            157/366
+    packstack:
+    packstack:   Updating   : 1:grub2-2.02-0.81.el7.centos.x86_64                      158/366
+    packstack:
+    packstack:   Updating   : 32:bind-libs-lite-9.11.4-16.P2.el7_8.3.x86_64            159/366
+    packstack:
+    packstack:   Updating   : lshw-B.02.18-14.el7.x86_64                               160/366
+    packstack:
+    packstack:   Updating   : open-vm-tools-10.3.10-2.el7_8.1.x86_64                   161/366
+    packstack:
+    packstack:   Updating   : openssh-server-7.4p1-21.el7.x86_64                       162/366
+    packstack:
+    packstack:   Updating   : openssh-clients-7.4p1-21.el7.x86_64                      163/366
+    packstack:
+    packstack:   Updating   : 1:NetworkManager-team-1.18.4-3.el7.x86_64                164/366
+    packstack:
+    packstack:   Updating   : 1:NetworkManager-tui-1.18.4-3.el7.x86_64                 165/366
+    packstack:
+    packstack:   Updating   : tuned-2.11.0-8.el7.noarch                                166/366
+    packstack:
+    packstack:   Updating   : audit-2.8.5-4.el7.x86_64                                 167/366
+    packstack:
+    packstack:   Updating   : 3:irqbalance-1.0.7-12.el7.x86_64                         168/366
+    packstack:
+    packstack:   Updating   : rsync-3.1.2-10.el7.x86_64                                169/366
+    packstack:
+    packstack:   Updating   : chrony-3.4-1.el7.x86_64                                  170/366
+    packstack:
+    packstack:   Updating   : 10:qemu-guest-agent-2.12.0-3.el7.x86_64                  171/366
+    packstack:
+    packstack:   Updating   : firewalld-0.6.3-8.el7_8.1.noarch                         172/366
+    packstack:
+    packstack:   Updating   : rsyslog-8.24.0-52.el7.x86_64                             173/366
+    packstack:
+    packstack:   Updating   : biosdevname-0.7.3-2.el7.x86_64                           174/366
+    packstack:
+    packstack:   Updating   : parted-3.1-32.el7.x86_64                                 175/366
+    packstack:
+    packstack:   Updating   : nss-tools-3.44.0-7.el7_7.x86_64                          176/366
+    packstack:
+    packstack:   Updating   : passwd-0.79-6.el7.x86_64                                 177/366
+    packstack:
+    packstack:   Updating   : python-chardet-2.2.1-3.el7.noarch                        178/366
+    packstack:
+    packstack:   Updating   : libselinux-python-2.5-15.el7.x86_64                      179/366
+    packstack:
+    packstack:   Updating   : e2fsprogs-1.42.9-17.el7.x86_64                           180/366
+    packstack:
+    packstack:   Updating   : xfsprogs-4.5.0-20.el7.x86_64                             181/366
+    packstack:
+    packstack:   Updating   : sudo-1.8.23-9.el7.x86_64                                 182/366
+    packstack:
+    packstack:   Updating   : 1:openssl-1.0.2k-19.el7.x86_64                           183/366
+    packstack:
+    packstack:   Updating   : 1:sg3_utils-1.37-19.el7.x86_64                           184/366
+    packstack:
+    packstack:   Updating   : kernel-tools-3.10.0-1127.8.2.el7.x86_64                  185/366
+    packstack:
+    packstack:   Updating   : 1:dmidecode-3.2-3.el7.x86_64                             186/366
+    packstack:
+    packstack:   Updating   : iprutils-2.4.17.1-3.el7_7.x86_64                         187/366
+    packstack:
+    packstack:   Updating   : 1:bash-completion-2.1-8.el7.noarch                       188/366
+    packstack:
+    packstack:   Cleanup    : 1:nfs-utils-1.3.0-0.61.el7.x86_64                        189/366
+    packstack:
+    packstack:   Cleanup    : open-vm-tools-10.2.5-3.el7.x86_64                        190/366
+    packstack:
+    packstack:   Cleanup    : openssh-server-7.4p1-16.el7.x86_64                       191/366
+    packstack:
+    packstack:   Cleanup    : 1:NetworkManager-tui-1.12.0-10.el7_6.x86_64              192/366
+    packstack:
+    packstack:   Cleanup    : 12:dhclient-4.2.5-68.el7.centos.1.x86_64                 193/366
+    packstack:
+    packstack:   Cleanup    : initscripts-9.49.46-1.el7.x86_64                         194/366
+    packstack:
+    packstack:   Cleanup    : 32:bind-libs-lite-9.9.4-73.el7_6.x86_64                  195/366
+    packstack:
+    packstack:   Cleanup    : openssh-clients-7.4p1-16.el7.x86_64                      196/366
+    packstack:
+    packstack:   Cleanup    : 2:postfix-2.10.1-7.el7.x86_64                            197/366
+    packstack:
+    packstack:   Cleanup    : cronie-anacron-1.4.11-20.el7_6.x86_64                    198/366
+    packstack:
+    packstack:   Cleanup    : cronie-1.4.11-20.el7_6.x86_64                            199/366
+    packstack:
+    packstack:   Cleanup    : 1:openssl-1.0.2k-16.el7_6.1.x86_64                       200/366
+    packstack:
+    packstack:   Cleanup    : nss-tools-3.36.0-7.1.el7_6.x86_64                        201/366
+    packstack:
+    packstack:   Cleanup    : parted-3.1-29.el7.x86_64                                 202/366
+    packstack:
+    packstack:   Cleanup    : tuned-2.10.0-6.el7_6.3.noarch                            203/366
+    packstack:
+    packstack:   Cleanup    : gssproxy-0.7.0-21.el7.x86_64                             204/366
+    packstack:
+    packstack:   Cleanup    : passwd-0.79-4.el7.x86_64                                 205/366
+    packstack:
+    packstack:   Cleanup    : rsyslog-8.24.0-34.el7.x86_64                             206/366
+    packstack:
+    packstack:   Cleanup    : audit-2.8.4-4.el7.x86_64                                 207/366
+    packstack:
+    packstack:   Cleanup    : chrony-3.2-2.el7.x86_64                                  208/366
+    packstack:
+    packstack:   Cleanup    : openssh-7.4p1-16.el7.x86_64                              209/366
+    packstack:
+    packstack:   Cleanup    : 1:quota-4.01-17.el7.x86_64                               210/366
+    packstack:
+    packstack:   Cleanup    : rpcbind-0.2.0-47.el7.x86_64                              211/366
+    packstack:
+    packstack:   Cleanup    : 10:qemu-guest-agent-2.12.0-2.el7.x86_64                  212/366
+    packstack:
+    packstack:   Cleanup    : xfsprogs-4.5.0-19.el7_6.x86_64                           213/366
+    packstack:
+    packstack:   Cleanup    : sudo-1.8.23-3.el7.x86_64                                 214/366
+    packstack:
+    packstack:   Cleanup    : e2fsprogs-1.42.9-13.el7.x86_64                           215/366
+    packstack:
+    packstack:   Cleanup    : firewalld-0.5.3-5.el7.noarch                             216/366
+    packstack:
+    packstack:   Cleanup    : iproute-4.11.0-14.el7_6.2.x86_64                         217/366
+    packstack:
+    packstack:   Cleanup    : sg3_utils-1.37-17.el7.x86_64                             218/366
+    packstack:
+    packstack:   Cleanup    : 1:NetworkManager-team-1.12.0-10.el7_6.x86_64             219/366
+    packstack:
+    packstack:   Cleanup    : 1:NetworkManager-1.12.0-10.el7_6.x86_64                  220/366
+    packstack:
+    packstack:   Cleanup    : 1:NetworkManager-libnm-1.12.0-10.el7_6.x86_64            221/366
+    packstack:
+    packstack:   Cleanup    : polkit-0.112-18.el7_6.1.x86_64                           222/366
+    packstack:
+    packstack:   Cleanup    : 3:irqbalance-1.0.7-11.el7.x86_64                         223/366
+    packstack:
+    packstack:   Cleanup    : logrotate-3.8.6-17.el7.x86_64                            224/366
+    packstack:
+    packstack:   Cleanup    : 1:mariadb-libs-5.5.60-1.el7_5.x86_64                     225/366
+    packstack:
+    packstack:   Cleanup    : lshw-B.02.18-12.el7.x86_64                               226/366
+    packstack:
+    packstack:   Cleanup    : ipset-6.38-3.el7_6.x86_64                                227/366
+    packstack:
+    packstack:   Cleanup    : libicu-50.1.2-17.el7.x86_64                              228/366
+    packstack:
+    packstack:   Cleanup    : samba-common-libs-4.8.3-4.el7.x86_64                     229/366
+    packstack:
+    packstack:   Cleanup    : samba-client-libs-4.8.3-4.el7.x86_64                     230/366
+    packstack:
+    packstack:   Cleanup    : libwbclient-4.8.3-4.el7.x86_64                           231/366
+    packstack:
+    packstack:   Cleanup    : 1:cups-libs-1.6.3-35.el7.x86_64                          232/366
+    packstack:
+    packstack:   Cleanup    : libldb-1.3.4-1.el7.x86_64                                233/366
+    packstack:
+    packstack:   Cleanup    : kernel-tools-3.10.0-957.12.2.el7.x86_64                  234/366
+    packstack:
+    packstack:   Cleanup    : selinux-policy-targeted-3.13.1-229.el7_6.12.noarch       235/366
+    packstack:
+    packstack:   Cleanup    : yum-utils-1.1.31-50.el7.noarch                           236/366
+    packstack:
+    packstack:   Cleanup    : yum-plugin-fastestmirror-1.1.31-50.el7.noarch            237/366
+    packstack:
+    packstack:   Cleanup    : yum-3.4.3-161.el7.centos.noarch                          238/366
+    packstack:
+    packstack:   Cleanup    : rpm-python-4.11.3-35.el7.x86_64                          239/366
+    packstack:
+    packstack:   Cleanup    : rpm-build-libs-4.11.3-35.el7.x86_64                      240/366
+    packstack:
+    packstack:   Cleanup    : libxml2-python-2.9.1-6.el7_2.3.x86_64                    241/366
+    packstack:
+    packstack:   Cleanup    : teamd-1.27-5.el7.x86_64                                  242/366
+    packstack:
+    packstack:   Cleanup    : 2:vim-minimal-7.4.160-5.el7.x86_64                       243/366
+    packstack:
+    packstack:   Cleanup    : libtirpc-0.2.4-0.15.el7.x86_64                           244/366
+    packstack:
+    packstack:   Cleanup    : python-perf-3.10.0-957.12.2.el7.x86_64                   245/366
+    packstack:
+    packstack:   Cleanup    : libselinux-python-2.5-14.1.el7.x86_64                    246/366
+    packstack:
+    packstack:   Cleanup    : rsync-3.1.2-6.el7_6.1.x86_64                             247/366
+    packstack:
+    packstack:   Cleanup    : grubby-8.28-25.el7.x86_64                                248/366
+    packstack:
+    packstack:   Cleanup    : selinux-policy-3.13.1-229.el7_6.12.noarch                249/366
+    packstack:
+    packstack:   Cleanup    : samba-common-4.8.3-4.el7.noarch                          250/366
+    packstack:
+    packstack:   Cleanup    : hwdata-0.252-9.1.el7.x86_64                              251/366
+    packstack:
+    packstack:   Cleanup    : systemd-sysv-219-62.el7_6.6.x86_64                       252/366
+    packstack:
+    packstack:   Cleanup    : 1:grub2-2.02-0.76.el7.centos.1.x86_64                    253/366
+    packstack:
+    packstack:   Cleanup    : 1:grub2-pc-2.02-0.76.el7.centos.1.x86_64                 254/366
+    packstack:
+    packstack:   Cleanup    : 1:grub2-pc-modules-2.02-0.76.el7.centos.1.noarch         255/366
+    packstack:
+    packstack:   Cleanup    : python-urlgrabber-3.10-9.el7.noarch                      256/366
+    packstack:
+    packstack:   Cleanup    : python-firewall-0.5.3-5.el7.noarch                       257/366
+    packstack:
+    packstack:   Cleanup    : python-linux-procfs-0.4.9-4.el7.noarch                   258/366
+    packstack:
+    packstack:   Cleanup    : 12:dhcp-common-4.2.5-68.el7.centos.1.x86_64              259/366
+    packstack:
+    packstack:   Cleanup    : 12:dhcp-libs-4.2.5-68.el7.centos.1.x86_64                260/366
+    packstack:
+    packstack:   Cleanup    : linux-firmware-20180911-69.git85c5d90.el7.noarch         261/366
+    packstack:
+    packstack:   Cleanup    : python-chardet-2.2.1-1.el7_1.noarch                      262/366
+    packstack:
+    packstack:   Cleanup    : 1:bash-completion-2.1-6.el7.noarch                       263/366
+    packstack:
+    packstack:   Cleanup    : policycoreutils-2.5-29.el7_6.1.x86_64                    264/366
+    packstack:
+    packstack:   Cleanup    : 1:grub2-tools-extra-2.02-0.76.el7.centos.1.x86_64        265/366
+    packstack:
+    packstack:   Cleanup    : 1:grub2-tools-2.02-0.76.el7.centos.1.x86_64              266/366
+    packstack:
+    packstack:   Cleanup    : rpm-4.11.3-35.el7.x86_64                                 267/366
+    packstack:
+    packstack:   Cleanup    : rpm-libs-4.11.3-35.el7.x86_64                            268/366
+    packstack:
+    packstack:   Cleanup    : curl-7.29.0-51.el7.x86_64                                269/366
+    packstack:
+    packstack:   Cleanup    : 1:grub2-tools-minimal-2.02-0.76.el7.centos.1.x86_64      270/366
+    packstack:
+    packstack:   Cleanup    : gettext-0.19.8.1-2.el7.x86_64                            271/366
+    packstack:
+    packstack:   Cleanup    : gettext-libs-0.19.8.1-2.el7.x86_64                       272/366
+    packstack:
+    packstack:   Cleanup    : shared-mime-info-1.8-4.el7.x86_64                        273/366
+    packstack:
+    packstack:   Cleanup    : glib2-2.56.1-2.el7.x86_64                                274/366
+    packstack:
+    packstack:   Cleanup    : python-2.7.5-77.el7_6.x86_64                             275/366
+    packstack:
+    packstack:   Cleanup    : python-libs-2.7.5-77.el7_6.x86_64                        276/366
+    packstack:
+    packstack:   Cleanup    : file-5.11-35.el7.x86_64                                  277/366
+    packstack:
+    packstack:   Cleanup    : libstdc++-4.8.5-36.el7_6.2.x86_64                        278/366
+    packstack:
+    packstack:   Cleanup    : libdb-utils-5.3.21-24.el7.x86_64                         279/366
+    packstack:
+    packstack:   Cleanup    : libselinux-utils-2.5-14.1.el7.x86_64                     280/366
+    packstack:
+    packstack:   Cleanup    : libtevent-0.9.36-1.el7.x86_64                            281/366
+    packstack:
+    packstack:   Cleanup    : numactl-libs-2.0.9-7.el7.x86_64                          282/366
+    packstack:
+    packstack:   Cleanup    : e2fsprogs-libs-1.42.9-13.el7.x86_64                      283/366
+    packstack:
+    packstack:   Cleanup    : libss-1.42.9-13.el7.x86_64                               284/366
+    packstack:
+    packstack:   Cleanup    : libgomp-4.8.5-36.el7_6.2.x86_64                          285/366
+    packstack:
+    packstack:   Cleanup    : freetype-2.8-12.el7_6.1.x86_64                           286/366
+    packstack:
+    packstack:   Cleanup    : iptables-1.4.21-28.el7.x86_64                            287/366
+    packstack:
+    packstack:   Cleanup    : 1:make-3.82-23.el7.x86_64                                288/366
+    packstack:
+    packstack:   Cleanup    : libdrm-2.4.91-3.el7.x86_64                               289/366
+    packstack:
+    packstack:   Cleanup    : biosdevname-0.7.3-1.el7.x86_64                           290/366
+    packstack:
+    packstack:   Cleanup    : procps-ng-3.3.10-23.el7.x86_64                           291/366
+    packstack:
+    packstack:   Cleanup    : util-linux-2.23.2-59.el7_6.1.x86_64                      292/366
+    packstack:
+    packstack:   Cleanup    : kpartx-0.4.9-123.el7.x86_64                              293/366
+    packstack:
+    packstack:   Cleanup    : cryptsetup-libs-2.0.3-3.el7.x86_64                       294/366
+    packstack:
+    packstack:   Cleanup    : systemd-libs-219-62.el7_6.6.x86_64                       295/366
+    packstack:
+    packstack:   Cleanup    : kmod-20-23.el7.x86_64                                    296/366
+    packstack:
+    packstack:   Cleanup    : dracut-033-554.el7.x86_64                                297/366
+    packstack:
+    packstack:   Cleanup    : elfutils-libs-0.172-2.el7.x86_64                         298/366
+    packstack:
+    packstack:   Cleanup    : elfutils-default-yama-scope-0.172-2.el7.noarch           299/366
+    packstack:
+    packstack:   Cleanup    : 7:device-mapper-libs-1.02.149-10.el7_6.7.x86_64          300/366
+    packstack:
+    packstack:   Cleanup    : 7:device-mapper-1.02.149-10.el7_6.7.x86_64               301/366
+    packstack:
+    packstack:   Cleanup    : systemd-219-62.el7_6.6.x86_64                            302/366
+    packstack:
+    packstack:   Cleanup    : libcurl-7.29.0-51.el7.x86_64                             303/366
+    packstack:
+    packstack:   Cleanup    : nss-pem-1.0.3-5.el7_6.1.x86_64                           304/366
+    packstack:
+    packstack:   Cleanup    : nss-sysinit-3.36.0-7.1.el7_6.x86_64                      305/366
+    packstack:
+    packstack:   Cleanup    : nss-3.36.0-7.1.el7_6.x86_64                              306/366
+    packstack:
+    packstack:   Cleanup    : pam-1.1.8-22.el7.x86_64                                  307/366
+    packstack:
+    packstack:   Cleanup    : nss-softokn-3.36.0-5.el7_5.x86_64                        308/366
+    packstack:
+    packstack:   Cleanup    : 2:shadow-utils-4.1.5.1-25.el7_6.1.x86_64                 309/366
+    packstack:
+    packstack:   Cleanup    : libmount-2.23.2-59.el7_6.1.x86_64                        310/366
+    packstack:
+    packstack:   Cleanup    : libblkid-2.23.2-59.el7_6.1.x86_64                        311/366
+    packstack:
+    packstack:   Cleanup    : sqlite-3.7.17-8.el7.x86_64                               312/366
+    packstack:
+    packstack:   Cleanup    : libssh2-1.4.3-12.el7_6.2.x86_64                          313/366
+    packstack:
+    packstack:   Cleanup    : kmod-libs-20-23.el7.x86_64                               314/366
+    packstack:
+    packstack:   Cleanup    : binutils-2.27-34.base.el7.x86_64                         315/366
+    packstack:
+    packstack:   Cleanup    : readline-6.2-10.el7.x86_64                               316/366
+    packstack:
+    packstack:   Cleanup    : acl-2.2.51-14.el7.x86_64                                 317/366
+    packstack:
+    packstack:   Cleanup    : diffutils-3.3-4.el7.x86_64                               318/366
+    packstack:
+    packstack:   Cleanup    : iprutils-2.4.16.1-1.el7.x86_64                           319/366
+    packstack:
+    packstack:   Cleanup    : setup-2.8.71-10.el7.noarch                               320/366
+    packstack:
+    packstack:   Cleanup    : centos-release-7-6.1810.2.el7.centos.x86_64              321/366
+    packstack:
+    packstack:   Cleanup    : krb5-libs-1.15.1-37.el7_6.x86_64                         322/366
+    packstack:
+    packstack:   Cleanup    : coreutils-8.22-23.el7.x86_64                             323/366
+    packstack:
+    packstack:   Cleanup    : 1:openssl-libs-1.0.2k-16.el7_6.1.x86_64                  324/366
+    packstack:
+    packstack:   Cleanup    : sed-4.2.2-5.el7.x86_64                                   325/366
+    packstack:
+    packstack:   Cleanup    : ca-certificates-2018.2.22-70.0.el7_5.noarch              326/366
+    packstack:
+    packstack:   Cleanup    : libcom_err-1.42.9-13.el7.x86_64                          327/366
+    packstack:
+    packstack:   Cleanup    : libacl-2.2.51-14.el7.x86_64                              328/366
+    packstack:
+    packstack:   Cleanup    : libcap-2.22-9.el7.x86_64                                 329/366
+    packstack:
+    packstack:   Cleanup    : libuuid-2.23.2-59.el7_6.1.x86_64                         330/366
+    packstack:
+    packstack:   Cleanup    : audit-libs-2.8.4-4.el7.x86_64                            331/366
+    packstack:
+    packstack:   Cleanup    : libdb-5.3.21-24.el7.x86_64                               332/366
+    packstack:
+    packstack:   Cleanup    : elfutils-libelf-0.172-2.el7.x86_64                       333/366
+    packstack:
+    packstack:   Cleanup    : lz4-1.7.5-2.el7.x86_64                                   334/366
+    packstack:
+    packstack:   Cleanup    : libsmartcols-2.23.2-59.el7_6.1.x86_64                    335/366
+    packstack:
+    packstack:   Cleanup    : libtalloc-2.1.13-1.el7.x86_64                            336/366
+    packstack:
+    packstack:   Cleanup    : file-libs-5.11-35.el7.x86_64                             337/366
+    packstack:
+    packstack:   Cleanup    : expat-2.1.0-10.el7_3.x86_64                              338/366
+    packstack:
+    packstack:   Cleanup    : libffi-3.0.13-18.el7.x86_64                              339/366
+    packstack:
+    packstack:   Cleanup    : libxml2-2.9.1-6.el7_2.3.x86_64                           340/366
+    packstack:
+    packstack:   Cleanup    : libteam-1.27-5.el7.x86_64                                341/366
+    packstack:
+    packstack:   Cleanup    : kernel-tools-libs-3.10.0-957.12.2.el7.x86_64             342/366
+    packstack:
+    packstack:   Cleanup    : libtdb-1.3.15-1.el7.x86_64                               343/366
+    packstack:
+    packstack:   Cleanup    : avahi-libs-0.6.31-19.el7.x86_64                          344/366
+    packstack:
+    packstack:   Cleanup    : ipset-libs-6.38-3.el7_6.x86_64                           345/366
+    packstack:
+    packstack:   Cleanup    : libndp-1.2-7.el7.x86_64                                  346/366
+    packstack:
+    packstack:   Cleanup    : sg3_utils-libs-1.37-17.el7.x86_64                        347/366
+    packstack:
+    packstack:   Cleanup    : libseccomp-2.3.1-3.el7.x86_64                            348/366
+    packstack:
+    packstack:   Cleanup    : 2:ethtool-4.8-9.el7.x86_64                               349/366
+    packstack:
+    packstack:   Cleanup    : GeoIP-1.5.0-13.el7.x86_64                                350/366
+    packstack:
+    packstack:   Cleanup    : hostname-3.13-3.el7.x86_64                               351/366
+    packstack:
+    packstack:   Cleanup    : libmspack-0.5-0.6.alpha.el7.x86_64                       352/366
+    packstack:
+    packstack:   Cleanup    : 1:dmidecode-3.1-2.el7.x86_64                             353/366
+    packstack:
+    packstack:   Cleanup    : 1:grub2-common-2.02-0.76.el7.centos.1.noarch             354/366
+    packstack:
+    packstack:   Cleanup    : firewalld-filesystem-0.5.3-5.el7.noarch                  355/366
+    packstack:
+    packstack:   Cleanup    : 1:quota-nls-4.01-17.el7.noarch                           356/366
+    packstack:
+    packstack:   Cleanup    : 32:bind-license-9.9.4-73.el7_6.noarch                    357/366
+    packstack:
+    packstack:   Cleanup    : libselinux-2.5-14.1.el7.x86_64                           358/366
+    packstack:
+    packstack:   Cleanup    : glibc-common-2.17-260.el7_6.5.x86_64                     359/366
+    packstack:
+    packstack:   Cleanup    : bash-4.2.46-31.el7.x86_64                                360/366
+    packstack:
+    packstack:   Cleanup    : nspr-4.19.0-1.el7_5.x86_64                               361/366
+    packstack:
+    packstack:   Cleanup    : nss-util-3.36.0-1.1.el7_6.x86_64                         362/366
+    packstack:
+    packstack:   Cleanup    : nss-softokn-freebl-3.36.0-5.el7_5.x86_64                 363/366
+    packstack:
+    packstack:   Cleanup    : glibc-2.17-260.el7_6.5.x86_64                            364/366
+    packstack:
+    packstack:   Cleanup    : tzdata-2019a-1.el7.noarch                                365/366
+    packstack:
+    packstack:   Cleanup    : libgcc-4.8.5-36.el7_6.2.x86_64                           366/366
+    packstack:
+    packstack:   Verifying  : 1:grub2-tools-2.02-0.81.el7.centos.x86_64                  1/366
+    packstack:
+    packstack:   Verifying  : nss-3.44.0-7.el7_7.x86_64                                  2/366
+    packstack:
+    packstack:   Verifying  : libssh2-1.8.0-3.el7.x86_64                                 3/366
+    packstack:
+    packstack:   Verifying  : systemd-sysv-219-73.el7_8.6.x86_64                         4/366
+    packstack:
+    packstack:   Verifying  : grubby-8.28-26.el7.x86_64                                  5/366
+    packstack:
+    packstack:   Verifying  : pytalloc-2.1.16-1.el7.x86_64                               6/366
+    packstack:
+    packstack:   Verifying  : openssh-server-7.4p1-21.el7.x86_64                         7/366
+    packstack:
+    packstack:   Verifying  : gettext-0.19.8.1-3.el7.x86_64                              8/366
+    packstack:
+    packstack:   Verifying  : 1:grub2-tools-extra-2.02-0.81.el7.centos.x86_64            9/366
+    packstack:
+    packstack:   Verifying  : 3:irqbalance-1.0.7-12.el7.x86_64                          10/366
+    packstack:
+    packstack:   Verifying  : libldb-1.5.4-1.el7.x86_64                                 11/366
+    packstack:
+    packstack:   Verifying  : 1:cups-libs-1.6.3-43.el7.x86_64                           12/366
+    packstack:
+    packstack:   Verifying  : binutils-2.27-43.base.el7_8.1.x86_64                      13/366
+    packstack:
+    packstack:   Verifying  : initscripts-9.49.49-1.el7.x86_64                          14/366
+    packstack:
+    packstack:   Verifying  : 1:bash-completion-2.1-8.el7.noarch                        15/366
+    packstack:
+    packstack:   Verifying  : 1:openssl-1.0.2k-19.el7.x86_64                            16/366
+    packstack:
+    packstack:   Verifying  : 12:dhcp-libs-4.2.5-79.el7.centos.x86_64                   17/366
+    packstack:
+    packstack:   Verifying  : libtevent-0.9.39-1.el7.x86_64                             18/366
+    packstack:
+    packstack:   Verifying  : rsync-3.1.2-10.el7.x86_64                                 19/366
+    packstack:
+    packstack:   Verifying  : nspr-4.21.0-1.el7.x86_64                                  20/366
+    packstack:
+    packstack:   Verifying  : parted-3.1-32.el7.x86_64                                  21/366
+    packstack:
+    packstack:   Verifying  : rpcbind-0.2.0-49.el7.x86_64                               22/366
+    packstack:
+    packstack:   Verifying  : procps-ng-3.3.10-27.el7.x86_64                            23/366
+    packstack:
+    packstack:   Verifying  : systemd-libs-219-73.el7_8.6.x86_64                        24/366
+    packstack:
+    packstack:   Verifying  : e2fsprogs-1.42.9-17.el7.x86_64                            25/366
+    packstack:
+    packstack:   Verifying  : cronie-1.4.11-23.el7.x86_64                               26/366
+    packstack:
+    packstack:   Verifying  : kernel-3.10.0-1127.8.2.el7.x86_64                         27/366
+    packstack:
+    packstack:   Verifying  : ipset-libs-7.1-1.el7.x86_64                               28/366
+    packstack:
+    packstack:   Verifying  : hostname-3.13-3.el7_7.1.x86_64                            29/366
+    packstack:
+    packstack:   Verifying  : rpm-4.11.3-43.el7.x86_64                                  30/366
+    packstack:
+    packstack:   Verifying  : libtalloc-2.1.16-1.el7.x86_64                             31/366
+    packstack:
+    packstack:   Verifying  : 1:quota-4.01-19.el7.x86_64                                32/366
+    packstack:
+    packstack:   Verifying  : python-firewall-0.6.3-8.el7_8.1.noarch                    33/366
+    packstack:
+    packstack:   Verifying  : logrotate-3.8.6-19.el7.x86_64                             34/366
+    packstack:
+    packstack:   Verifying  : 1:grub2-2.02-0.81.el7.centos.x86_64                       35/366
+    packstack:
+    packstack:   Verifying  : 1:NetworkManager-team-1.18.4-3.el7.x86_64                 36/366
+    packstack:
+    packstack:   Verifying  : krb5-libs-1.15.1-46.el7.x86_64                            37/366
+    packstack:
+    packstack:   Verifying  : selinux-policy-3.13.1-266.el7.noarch                      38/366
+    packstack:
+    packstack:   Verifying  : libseccomp-2.3.1-4.el7.x86_64                             39/366
+    packstack:
+    packstack:   Verifying  : libselinux-utils-2.5-15.el7.x86_64                        40/366
+    packstack:
+    packstack:   Verifying  : dracut-033-568.el7.x86_64                                 41/366
+    packstack:
+    packstack:   Verifying  : libndp-1.2-9.el7.x86_64                                   42/366
+    packstack:
+    packstack:   Verifying  : libss-1.42.9-17.el7.x86_64                                43/366
+    packstack:
+    packstack:   Verifying  : libselinux-2.5-15.el7.x86_64                              44/366
+    packstack:
+    packstack:   Verifying  : nss-util-3.44.0-4.el7_7.x86_64                            45/366
+    packstack:
+    packstack:   Verifying  : 1:quota-nls-4.01-19.el7.noarch                            46/366
+    packstack:
+    packstack:   Verifying  : 1:sg3_utils-1.37-19.el7.x86_64                            47/366
+    packstack:
+    packstack:   Verifying  : libacl-2.2.51-15.el7.x86_64                               48/366
+    packstack:
+    packstack:   Verifying  : kpartx-0.4.9-131.el7.x86_64                               49/366
+    packstack:
+    packstack:   Verifying  : centos-release-7-8.2003.0.el7.centos.x86_64               50/366
+    packstack:
+    packstack:   Verifying  : libcap-2.22-11.el7.x86_64                                 51/366
+    packstack:
+    packstack:   Verifying  : freetype-2.8-14.el7.x86_64                                52/366
+    packstack:
+    packstack:   Verifying  : libxml2-python-2.9.1-6.el7.4.x86_64                       53/366
+    packstack:
+    packstack:   Verifying  : 1:openssl-libs-1.0.2k-19.el7.x86_64                       54/366
+    packstack:
+    packstack:   Verifying  : sqlite-3.7.17-8.el7_7.1.x86_64                            55/366
+    packstack:
+    packstack:   Verifying  : chrony-3.4-1.el7.x86_64                                   56/366
+    packstack:
+    packstack:   Verifying  : ca-certificates-2019.2.32-76.el7_7.noarch                 57/366
+    packstack:
+    packstack:   Verifying  : nss-pem-1.0.3-7.el7.x86_64                                58/366
+    packstack:
+    packstack:   Verifying  : 2:shadow-utils-4.6-5.el7.x86_64                           59/366
+    packstack:
+    packstack:   Verifying  : libsmartcols-2.23.2-63.el7.x86_64                         60/366
+    packstack:
+    packstack:   Verifying  : libmspack-0.5-0.7.alpha.el7.x86_64                        61/366
+    packstack:
+    packstack:   Verifying  : 2:postfix-2.10.1-9.el7.x86_64                             62/366
+    packstack:
+    packstack:   Verifying  : setup-2.8.71-11.el7.noarch                                63/366
+    packstack:
+    packstack:   Verifying  : e2fsprogs-libs-1.42.9-17.el7.x86_64                       64/366
+    packstack:
+    packstack:   Verifying  : libtdb-1.3.18-1.el7.x86_64                                65/366
+    packstack:
+    packstack:   Verifying  : python-urlgrabber-3.10-10.el7.noarch                      66/366
+    packstack:
+    packstack:   Verifying  : GeoIP-1.5.0-14.el7.x86_64                                 67/366
+    packstack:
+    packstack:   Verifying  : cryptsetup-libs-2.0.3-6.el7.x86_64                        68/366
+    packstack:
+    packstack:   Verifying  : libwbclient-4.10.4-11.el7_8.x86_64                        69/366
+    packstack:
+    packstack:   Verifying  : python-libs-2.7.5-88.el7.x86_64                           70/366
+    packstack:
+    packstack:   Verifying  : libcurl-7.29.0-57.el7.x86_64                              71/366
+    packstack:
+    packstack:   Verifying  : gnutls-3.3.29-9.el7_6.x86_64                              72/366
+    packstack:
+    packstack:   Verifying  : libxml2-2.9.1-6.el7.4.x86_64                              73/366
+    packstack:
+    packstack:   Verifying  : tzdata-2020a-1.el7.noarch                                 74/366
+    packstack:
+    packstack:   Verifying  : 1:grub2-pc-modules-2.02-0.81.el7.centos.noarch            75/366
+    packstack:
+    packstack:   Verifying  : rpm-python-4.11.3-43.el7.x86_64                           76/366
+    packstack:
+    packstack:   Verifying  : file-5.11-36.el7.x86_64                                   77/366
+    packstack:
+    packstack:   Verifying  : firewalld-filesystem-0.6.3-8.el7_8.1.noarch               78/366
+    packstack:
+    packstack:   Verifying  : tuned-2.11.0-8.el7.noarch                                 79/366
+    packstack:
+    packstack:   Verifying  : 1:dmidecode-3.2-3.el7.x86_64                              80/366
+    packstack:
+    packstack:   Verifying  : kernel-tools-3.10.0-1127.8.2.el7.x86_64                   81/366
+    packstack:
+    packstack:   Verifying  : glibc-common-2.17-307.el7.1.x86_64                        82/366
+    packstack:
+    packstack:   Verifying  : libgomp-4.8.5-39.el7.x86_64                               83/366
+    packstack:
+    packstack:   Verifying  : 1:NetworkManager-tui-1.18.4-3.el7.x86_64                  84/366
+    packstack:
+    packstack:   Verifying  : libblkid-2.23.2-63.el7.x86_64                             85/366
+    packstack:
+    packstack:   Verifying  : ipset-7.1-1.el7.x86_64                                    86/366
+    packstack:
+    packstack:   Verifying  : libdrm-2.4.97-2.el7.x86_64                                87/366
+    packstack:
+    packstack:   Verifying  : 1:nfs-utils-1.3.0-0.66.el7.x86_64                         88/366
+    packstack:
+    packstack:   Verifying  : 1:grub2-common-2.02-0.81.el7.centos.noarch                89/366
+    packstack:
+    packstack:   Verifying  : python-linux-procfs-0.4.11-4.el7.noarch                   90/366
+    packstack:
+    packstack:   Verifying  : 1:NetworkManager-1.18.4-3.el7.x86_64                      91/366
+    packstack:
+    packstack:   Verifying  : yum-utils-1.1.31-54.el7_8.noarch                          92/366
+    packstack:
+    packstack:   Verifying  : sudo-1.8.23-9.el7.x86_64                                  93/366
+    packstack:
+    packstack:   Verifying  : numactl-libs-2.0.12-5.el7.x86_64                          94/366
+    packstack:
+    packstack:   Verifying  : acl-2.2.51-15.el7.x86_64                                  95/366
+    packstack:
+    packstack:   Verifying  : nettle-2.7.1-8.el7.x86_64                                 96/366
+    packstack:
+    packstack:   Verifying  : libmount-2.23.2-63.el7.x86_64                             97/366
+    packstack:
+    packstack:   Verifying  : 32:bind-libs-lite-9.11.4-16.P2.el7_8.3.x86_64             98/366
+    packstack:
+    packstack:   Verifying  : readline-6.2-11.el7.x86_64                                99/366
+    packstack:
+    packstack:   Verifying  : util-linux-2.23.2-63.el7.x86_64                          100/366
+    packstack:
+    packstack:   Verifying  : systemd-219-73.el7_8.6.x86_64                            101/366
+    packstack:
+    packstack:   Verifying  : sed-4.2.2-6.el7.x86_64                                   102/366
+    packstack:
+    packstack:   Verifying  : 2:vim-minimal-7.4.629-6.el7.x86_64                       103/366
+    packstack:
+    packstack:   Verifying  : elfutils-libs-0.176-4.el7.x86_64                         104/366
+    packstack:
+    packstack:   Verifying  : open-vm-tools-10.3.10-2.el7_8.1.x86_64                   105/366
+    packstack:
+    packstack:   Verifying  : gettext-libs-0.19.8.1-3.el7.x86_64                       106/366
+    packstack:
+    packstack:   Verifying  : libstdc++-4.8.5-39.el7.x86_64                            107/366
+    packstack:
+    packstack:   Verifying  : elfutils-default-yama-scope-0.176-4.el7.noarch           108/366
+    packstack:
+    packstack:   Verifying  : iproute-4.11.0-25.el7_7.2.x86_64                         109/366
+    packstack:
+    packstack:   Verifying  : libicu-50.2-4.el7_7.x86_64                               110/366
+    packstack:
+    packstack:   Verifying  : python-tdb-1.3.18-1.el7.x86_64                           111/366
+    packstack:
+    packstack:   Verifying  : nss-sysinit-3.44.0-7.el7_7.x86_64                        112/366
+    packstack:
+    packstack:   Verifying  : openssh-clients-7.4p1-21.el7.x86_64                      113/366
+    packstack:
+    packstack:   Verifying  : kernel-tools-libs-3.10.0-1127.8.2.el7.x86_64             114/366
+    packstack:
+    packstack:   Verifying  : iprutils-2.4.17.1-3.el7_7.x86_64                         115/366
+    packstack:
+    packstack:   Verifying  : 12:dhcp-common-4.2.5-79.el7.centos.x86_64                116/366
+    packstack:
+    packstack:   Verifying  : rpm-libs-4.11.3-43.el7.x86_64                            117/366
+    packstack:
+    packstack:   Verifying  : nss-softokn-3.44.0-8.el7_7.x86_64                        118/366
+    packstack:
+    packstack:   Verifying  : avahi-libs-0.6.31-20.el7.x86_64                          119/366
+    packstack:
+    packstack:   Verifying  : 32:bind-export-libs-9.11.4-16.P2.el7_8.3.x86_64          120/366
+    packstack:
+    packstack:   Verifying  : diffutils-3.3-5.el7.x86_64                               121/366
+    packstack:
+    packstack:   Verifying  : hwdata-0.252-9.5.el7.x86_64                              122/366
+    packstack:
+    packstack:   Verifying  : libdb-utils-5.3.21-25.el7.x86_64                         123/366
+    packstack:
+    packstack:   Verifying  : polkit-0.112-26.el7.x86_64                               124/366
+    packstack:
+    packstack:   Verifying  : python-chardet-2.2.1-3.el7.noarch                        125/366
+    packstack:
+    packstack:   Verifying  : 1:grub2-pc-2.02-0.81.el7.centos.x86_64                   126/366
+    packstack:
+    packstack:   Verifying  : python-perf-3.10.0-1127.8.2.el7.x86_64                   127/366
+    packstack:
+    packstack:   Verifying  : libtirpc-0.2.4-0.16.el7.x86_64                           128/366
+    packstack:
+    packstack:   Verifying  : 2:ethtool-4.8-10.el7.x86_64                              129/366
+    packstack:
+    packstack:   Verifying  : openssh-7.4p1-21.el7.x86_64                              130/366
+    packstack:
+    packstack:   Verifying  : shared-mime-info-1.8-5.el7.x86_64                        131/366
+    packstack:
+    packstack:   Verifying  : linux-firmware-20191203-76.gite8a0f4c.el7.noarch         132/366
+    packstack:
+    packstack:   Verifying  : audit-2.8.5-4.el7.x86_64                                 133/366
+    packstack:
+    packstack:   Verifying  : pyldb-1.5.4-1.el7.x86_64                                 134/366
+    packstack:
+    packstack:   Verifying  : libselinux-python-2.5-15.el7.x86_64                      135/366
+    packstack:
+    packstack:   Verifying  : lshw-B.02.18-14.el7.x86_64                               136/366
+    packstack:
+    packstack:   Verifying  : expat-2.1.0-11.el7.x86_64                                137/366
+    packstack:
+    packstack:   Verifying  : kmod-libs-20-28.el7.x86_64                               138/366
+    packstack:
+    packstack:   Verifying  : xfsprogs-4.5.0-20.el7.x86_64                             139/366
+    packstack:
+    packstack:   Verifying  : 1:sg3_utils-libs-1.37-19.el7.x86_64                      140/366
+    packstack:
+    packstack:   Verifying  : python-2.7.5-88.el7.x86_64                               141/366
+    packstack:
+    packstack:   Verifying  : 10:qemu-guest-agent-2.12.0-3.el7.x86_64                  142/366
+    packstack:
+    packstack:   Verifying  : lz4-1.7.5-3.el7.x86_64                                   143/366
+    packstack:
+    packstack:   Verifying  : 1:grub2-tools-minimal-2.02-0.81.el7.centos.x86_64        144/366
+    packstack:
+    packstack:   Verifying  : trousers-0.3.14-2.el7.x86_64                             145/366
+    packstack:
+    packstack:   Verifying  : samba-client-libs-4.10.4-11.el7_8.x86_64                 146/366
+    packstack:
+    packstack:   Verifying  : geoipupdate-2.5.0-1.el7.x86_64                           147/366
+    packstack:
+    packstack:   Verifying  : nss-tools-3.44.0-7.el7_7.x86_64                          148/366
+    packstack:
+    packstack:   Verifying  : coreutils-8.22-24.el7.x86_64                             149/366
+    packstack:
+    packstack:   Verifying  : pam-1.1.8-23.el7.x86_64                                  150/366
+    packstack:
+    packstack:   Verifying  : glib2-2.56.1-5.el7.x86_64                                151/366
+    packstack:
+    packstack:   Verifying  : yum-3.4.3-167.el7.centos.noarch                          152/366
+    packstack:
+    packstack:   Verifying  : 1:make-3.82-24.el7.x86_64                                153/366
+    packstack:
+    packstack:   Verifying  : libteam-1.29-1.el7.x86_64                                154/366
+    packstack:
+    packstack:   Verifying  : firewalld-0.6.3-8.el7_8.1.noarch                         155/366
+    packstack:
+    packstack:   Verifying  : 1:NetworkManager-libnm-1.18.4-3.el7.x86_64               156/366
+    packstack:
+    packstack:   Verifying  : elfutils-libelf-0.176-4.el7.x86_64                       157/366
+    packstack:
+    packstack:   Verifying  : 7:device-mapper-libs-1.02.164-7.el7_8.2.x86_64           158/366
+    packstack:
+    packstack:   Verifying  : selinux-policy-targeted-3.13.1-266.el7.noarch            159/366
+    packstack:
+    packstack:   Verifying  : bash-4.2.46-34.el7.x86_64                                160/366
+    packstack:
+    packstack:   Verifying  : cronie-anacron-1.4.11-23.el7.x86_64                      161/366
+    packstack:
+    packstack:   Verifying  : nss-softokn-freebl-3.44.0-8.el7_7.x86_64                 162/366
+    packstack:
+    packstack:   Verifying  : samba-common-libs-4.10.4-11.el7_8.x86_64                 163/366
+    packstack:
+    packstack:   Verifying  : rsyslog-8.24.0-52.el7.x86_64                             164/366
+    packstack:
+    packstack:   Verifying  : biosdevname-0.7.3-2.el7.x86_64                           165/366
+    packstack:
+    packstack:   Verifying  : libcom_err-1.42.9-17.el7.x86_64                          166/366
+    packstack:
+    packstack:   Verifying  : gssproxy-0.7.0-28.el7.x86_64                             167/366
+    packstack:
+    packstack:   Verifying  : yum-plugin-fastestmirror-1.1.31-54.el7_8.noarch          168/366
+    packstack:
+    packstack:   Verifying  : passwd-0.79-6.el7.x86_64                                 169/366
+    packstack:
+    packstack:   Verifying  : 7:device-mapper-1.02.164-7.el7_8.2.x86_64                170/366
+    packstack:
+    packstack:   Verifying  : file-libs-5.11-36.el7.x86_64                             171/366
+    packstack:
+    packstack:   Verifying  : audit-libs-2.8.5-4.el7.x86_64                            172/366
+    packstack:
+    packstack:   Verifying  : iptables-1.4.21-34.el7.x86_64                            173/366
+    packstack:
+    packstack:   Verifying  : policycoreutils-2.5-34.el7.x86_64                        174/366
+    packstack:
+    packstack:   Verifying  : libdb-5.3.21-25.el7.x86_64                               175/366
+    packstack:
+    packstack:   Verifying  : kmod-20-28.el7.x86_64                                    176/366
+    packstack:
+    packstack:   Verifying  : samba-common-4.10.4-11.el7_8.noarch                      177/366
+    packstack:
+    packstack:   Verifying  : glibc-2.17-307.el7.1.x86_64                              178/366
+    packstack:
+    packstack:   Verifying  : 1:mariadb-libs-5.5.65-1.el7.x86_64                       179/366
+    packstack:
+    packstack:   Verifying  : 32:bind-license-9.11.4-16.P2.el7_8.3.noarch              180/366
+    packstack:
+    packstack:   Verifying  : 12:dhclient-4.2.5-79.el7.centos.x86_64                   181/366
+    packstack:
+    packstack:   Verifying  : curl-7.29.0-57.el7.x86_64                                182/366
+    packstack:
+    packstack:   Verifying  : rpm-build-libs-4.11.3-43.el7.x86_64                      183/366
+    packstack:
+    packstack:   Verifying  : libgcc-4.8.5-39.el7.x86_64                               184/366
+    packstack:
+    packstack:   Verifying  : samba-libs-4.10.4-11.el7_8.x86_64                        185/366
+    packstack:
+    packstack:   Verifying  : libuuid-2.23.2-63.el7.x86_64                             186/366
+    packstack:
+    packstack:   Verifying  : libffi-3.0.13-19.el7.x86_64                              187/366
+    packstack:
+    packstack:   Verifying  : teamd-1.29-1.el7.x86_64                                  188/366
+    packstack:
+    packstack:   Verifying  : rpm-python-4.11.3-35.el7.x86_64                          189/366
+    packstack:
+    packstack:   Verifying  : iproute-4.11.0-14.el7_6.2.x86_64                         190/366
+    packstack:
+    packstack:   Verifying  : tuned-2.10.0-6.el7_6.3.noarch                            191/366
+    packstack:   Verifying  : libdrm-2.4.91-3.el7.x86_64                               192/366
+    packstack:
+    packstack:   Verifying  : gettext-0.19.8.1-2.el7.x86_64                            193/366
+    packstack:
+    packstack:   Verifying  : file-libs-5.11-35.el7.x86_64                             194/366
+    packstack:
+    packstack:   Verifying  : iptables-1.4.21-28.el7.x86_64                            195/366
+    packstack:
+    packstack:   Verifying  : libtalloc-2.1.13-1.el7.x86_64                            196/366
+    packstack:   Verifying  : 1:make-3.82-23.el7.x86_64                                197/366
+    packstack:
+    packstack:   Verifying  : libffi-3.0.13-18.el7.x86_64                              198/366
+    packstack:   Verifying  : sqlite-3.7.17-8.el7.x86_64                               199/366
+    packstack:
+    packstack:   Verifying  : rpm-libs-4.11.3-35.el7.x86_64                            200/366
+    packstack:
+    packstack:   Verifying  : libmount-2.23.2-59.el7_6.1.x86_64                        201/366
+    packstack:
+    packstack:   Verifying  : 1:bash-completion-2.1-6.el7.noarch                       202/366
+    packstack:
+    packstack:   Verifying  : libldb-1.3.4-1.el7.x86_64                                203/366
+    packstack:
+    packstack:   Verifying  : 2:shadow-utils-4.1.5.1-25.el7_6.1.x86_64                 204/366
+    packstack:
+    packstack:   Verifying  : lshw-B.02.18-12.el7.x86_64                               205/366
+    packstack:
+    packstack:   Verifying  : rpm-build-libs-4.11.3-35.el7.x86_64                      206/366
+    packstack:
+    packstack:   Verifying  : elfutils-libelf-0.172-2.el7.x86_64                       207/366
+    packstack:   Verifying  : ca-certificates-2018.2.22-70.0.el7_5.noarch              208/366
+    packstack:
+    packstack:   Verifying  : yum-3.4.3-161.el7.centos.noarch                          209/366
+    packstack:
+    packstack:   Verifying  : firewalld-filesystem-0.5.3-5.el7.noarch                  210/366
+    packstack:
+    packstack:   Verifying  : libseccomp-2.3.1-3.el7.x86_64                            211/366
+    packstack:
+    packstack:   Verifying  : sudo-1.8.23-3.el7.x86_64                                 212/366
+    packstack:
+    packstack:   Verifying  : glib2-2.56.1-2.el7.x86_64                                213/366
+    packstack:
+    packstack:   Verifying  : systemd-sysv-219-62.el7_6.6.x86_64                       214/366
+    packstack:
+    packstack:   Verifying  : biosdevname-0.7.3-1.el7.x86_64                           215/366
+    packstack:
+    packstack:   Verifying  : libxml2-2.9.1-6.el7_2.3.x86_64                           216/366
+    packstack:
+    packstack:   Verifying  : selinux-policy-3.13.1-229.el7_6.12.noarch                217/366
+    packstack:
+    packstack:   Verifying  : libdb-5.3.21-24.el7.x86_64                               218/366
+    packstack:
+    packstack:   Verifying  : kmod-20-23.el7.x86_64                                    219/366
+    packstack:
+    packstack:   Verifying  : libselinux-utils-2.5-14.1.el7.x86_64                     220/366
+    packstack:
+    packstack:   Verifying  : nspr-4.19.0-1.el7_5.x86_64                               221/366
+    packstack:
+    packstack:   Verifying  : freetype-2.8-12.el7_6.1.x86_64                           222/366
+    packstack:
+    packstack:   Verifying  : 2:ethtool-4.8-9.el7.x86_64                               223/366
+    packstack:
+    packstack:   Verifying  : kpartx-0.4.9-123.el7.x86_64                              224/366
+    packstack:
+    packstack:   Verifying  : sg3_utils-libs-1.37-17.el7.x86_64                        225/366
+    packstack:
+    packstack:   Verifying  : linux-firmware-20180911-69.git85c5d90.el7.noarch         226/366
+    packstack:
+    packstack:   Verifying  : libmspack-0.5-0.6.alpha.el7.x86_64                       227/366
+    packstack:
+    packstack:   Verifying  : rsync-3.1.2-6.el7_6.1.x86_64                             228/366
+    packstack:
+    packstack:   Verifying  : nss-util-3.36.0-1.1.el7_6.x86_64                         229/366
+    packstack:
+    packstack:   Verifying  : 12:dhclient-4.2.5-68.el7.centos.1.x86_64                 230/366
+    packstack:
+    packstack:   Verifying  : 32:bind-libs-lite-9.9.4-73.el7_6.x86_64                  231/366
+    packstack:
+    packstack:   Verifying  : 1:nfs-utils-1.3.0-0.61.el7.x86_64                        232/366
+    packstack:
+    packstack:   Verifying  : systemd-219-62.el7_6.6.x86_64                            233/366
+    packstack:
+    packstack:   Verifying  : e2fsprogs-1.42.9-13.el7.x86_64                           234/366
+    packstack:
+    packstack:   Verifying  : curl-7.29.0-51.el7.x86_64                                235/366
+    packstack:
+    packstack:   Verifying  : python-chardet-2.2.1-1.el7_1.noarch                      236/366
+    packstack:
+    packstack:   Verifying  : 1:openssl-libs-1.0.2k-16.el7_6.1.x86_64                  237/366
+    packstack:
+    packstack:   Verifying  : 2:postfix-2.10.1-7.el7.x86_64                            238/366
+    packstack:
+    packstack:   Verifying  : nss-pem-1.0.3-5.el7_6.1.x86_64                           239/366
+    packstack:
+    packstack:   Verifying  : open-vm-tools-10.2.5-3.el7.x86_64                        240/366
+    packstack:
+    packstack:   Verifying  : acl-2.2.51-14.el7.x86_64                                 241/366
+    packstack:
+    packstack:   Verifying  : teamd-1.27-5.el7.x86_64                                  242/366
+    packstack:
+    packstack:   Verifying  : 1:dmidecode-3.1-2.el7.x86_64                             243/366
+    packstack:
+    packstack:   Verifying  : file-5.11-35.el7.x86_64                                  244/366
+    packstack:
+    packstack:   Verifying  : libss-1.42.9-13.el7.x86_64                               245/366
+    packstack:
+    packstack:   Verifying  : logrotate-3.8.6-17.el7.x86_64                            246/366
+    packstack:
+    packstack:   Verifying  : kernel-tools-libs-3.10.0-957.12.2.el7.x86_64             247/366
+    packstack:
+    packstack:   Verifying  : cronie-anacron-1.4.11-20.el7_6.x86_64                    248/366
+    packstack:
+    packstack:   Verifying  : libselinux-python-2.5-14.1.el7.x86_64                    249/366
+    packstack:
+    packstack:   Verifying  : readline-6.2-10.el7.x86_64                               250/366
+    packstack:
+    packstack:   Verifying  : samba-common-4.8.3-4.el7.noarch                          251/366
+    packstack:
+    packstack:   Verifying  : krb5-libs-1.15.1-37.el7_6.x86_64                         252/366
+    packstack:
+    packstack:   Verifying  : 1:NetworkManager-team-1.12.0-10.el7_6.x86_64             253/366
+    packstack:
+    packstack:   Verifying  : coreutils-8.22-23.el7.x86_64                             254/366
+    packstack:
+    packstack:   Verifying  : nss-3.36.0-7.1.el7_6.x86_64                              255/366
+    packstack:
+    packstack:   Verifying  : 1:grub2-tools-2.02-0.76.el7.centos.1.x86_64              256/366
+    packstack:
+    packstack:   Verifying  : rpcbind-0.2.0-47.el7.x86_64                              257/366
+    packstack:
+    packstack:   Verifying  : elfutils-libs-0.172-2.el7.x86_64                         258/366
+    packstack:
+    packstack:   Verifying  : python-linux-procfs-0.4.9-4.el7.noarch                   259/366
+    packstack:
+    packstack:   Verifying  : yum-utils-1.1.31-50.el7.noarch                           260/366
+    packstack:
+    packstack:   Verifying  : samba-common-libs-4.8.3-4.el7.x86_64                     261/366
+    packstack:
+    packstack:   Verifying  : libcom_err-1.42.9-13.el7.x86_64                          262/366
+    packstack:
+    packstack:   Verifying  : libssh2-1.4.3-12.el7_6.2.x86_64                          263/366
+    packstack:
+    packstack:   Verifying  : 10:qemu-guest-agent-2.12.0-2.el7.x86_64                  264/366
+    packstack:
+    packstack:   Verifying  : libdb-utils-5.3.21-24.el7.x86_64                         265/366
+    packstack:
+    packstack:   Verifying  : dracut-033-554.el7.x86_64                                266/366
+    packstack:
+    packstack:   Verifying  : tzdata-2019a-1.el7.noarch                                267/366
+    packstack:
+    packstack:   Verifying  : python-urlgrabber-3.10-9.el7.noarch                      268/366
+    packstack:
+    packstack:   Verifying  : binutils-2.27-34.base.el7.x86_64                         269/366
+    packstack:
+    packstack:   Verifying  : sg3_utils-1.37-17.el7.x86_64                             270/366
+    packstack:
+    packstack:   Verifying  : libwbclient-4.8.3-4.el7.x86_64                           271/366
+    packstack:
+    packstack:   Verifying  : python-2.7.5-77.el7_6.x86_64                             272/366
+    packstack:
+    packstack:   Verifying  : python-firewall-0.5.3-5.el7.noarch                       273/366
+    packstack:
+    packstack:   Verifying  : libuuid-2.23.2-59.el7_6.1.x86_64                         274/366
+    packstack:
+    packstack:   Verifying  : pam-1.1.8-22.el7.x86_64                                  275/366
+    packstack:
+    packstack:   Verifying  : openssh-clients-7.4p1-16.el7.x86_64                      276/366
+    packstack:
+    packstack:   Verifying  : 1:grub2-tools-extra-2.02-0.76.el7.centos.1.x86_64        277/366
+    packstack:
+    packstack:   Verifying  : libteam-1.27-5.el7.x86_64                                278/366
+    packstack:
+    packstack:   Verifying  : util-linux-2.23.2-59.el7_6.1.x86_64                      279/366
+    packstack:
+    packstack:   Verifying  : audit-libs-2.8.4-4.el7.x86_64                            280/366
+    packstack:
+    packstack:   Verifying  : parted-3.1-29.el7.x86_64                                 281/366
+    packstack:
+    packstack:   Verifying  : libxml2-python-2.9.1-6.el7_2.3.x86_64                    282/366
+    packstack:
+    packstack:   Verifying  : xfsprogs-4.5.0-19.el7_6.x86_64                           283/366
+    packstack:
+    packstack:   Verifying  : 2:vim-minimal-7.4.160-5.el7.x86_64                       284/366
+    packstack:
+    packstack:   Verifying  : GeoIP-1.5.0-13.el7.x86_64                                285/366
+    packstack:
+    packstack:   Verifying  : firewalld-0.5.3-5.el7.noarch                             286/366
+    packstack:
+    packstack:   Verifying  : 12:dhcp-libs-4.2.5-68.el7.centos.1.x86_64                287/366
+    packstack:
+    packstack:   Verifying  : ipset-libs-6.38-3.el7_6.x86_64                           288/366
+    packstack:
+    packstack:   Verifying  : libtevent-0.9.36-1.el7.x86_64                            289/366
+    packstack:
+    packstack:   Verifying  : 7:device-mapper-1.02.149-10.el7_6.7.x86_64               290/366
+    packstack:
+    packstack:   Verifying  : 1:NetworkManager-libnm-1.12.0-10.el7_6.x86_64            291/366
+    packstack:
+    packstack:   Verifying  : openssh-7.4p1-16.el7.x86_64                              292/366
+    packstack:
+    packstack:   Verifying  : rsyslog-8.24.0-34.el7.x86_64                             293/366
+    packstack:
+    packstack:   Verifying  : openssh-server-7.4p1-16.el7.x86_64                       294/366
+    packstack:
+    packstack:   Verifying  : nss-sysinit-3.36.0-7.1.el7_6.x86_64                      295/366
+    packstack:
+    packstack:   Verifying  : 1:openssl-1.0.2k-16.el7_6.1.x86_64                       296/366
+    packstack:
+    packstack:   Verifying  : 12:dhcp-common-4.2.5-68.el7.centos.1.x86_64              297/366
+    packstack:
+    packstack:   Verifying  : samba-client-libs-4.8.3-4.el7.x86_64                     298/366
+    packstack:
+    packstack:   Verifying  : shared-mime-info-1.8-4.el7.x86_64                        299/366
+    packstack:
+    packstack:   Verifying  : centos-release-7-6.1810.2.el7.centos.x86_64              300/366
+    packstack:
+    packstack:   Verifying  : python-libs-2.7.5-77.el7_6.x86_64                        301/366
+    packstack:
+    packstack:   Verifying  : libndp-1.2-7.el7.x86_64                                  302/366
+    packstack:
+    packstack:   Verifying  : 1:mariadb-libs-5.5.60-1.el7_5.x86_64                     303/366
+    packstack:
+    packstack:   Verifying  : kernel-tools-3.10.0-957.12.2.el7.x86_64                  304/366
+    packstack:
+    packstack:   Verifying  : initscripts-9.49.46-1.el7.x86_64                         305/366
+    packstack:
+    packstack:   Verifying  : gettext-libs-0.19.8.1-2.el7.x86_64                       306/366
+    packstack:
+    packstack:   Verifying  : passwd-0.79-4.el7.x86_64                                 307/366
+    packstack:
+    packstack:   Verifying  : avahi-libs-0.6.31-19.el7.x86_64                          308/366
+    packstack:
+    packstack:   Verifying  : rpm-4.11.3-35.el7.x86_64                                 309/366
+    packstack:
+    packstack:   Verifying  : libgomp-4.8.5-36.el7_6.2.x86_64                          310/366
+    packstack:
+    packstack:   Verifying  : glibc-2.17-260.el7_6.5.x86_64                            311/366
+    packstack:
+    packstack:   Verifying  : numactl-libs-2.0.9-7.el7.x86_64                          312/366
+    packstack:
+    packstack:   Verifying  : gssproxy-0.7.0-21.el7.x86_64                             313/366
+    packstack:
+    packstack:   Verifying  : libsmartcols-2.23.2-59.el7_6.1.x86_64                    314/366
+    packstack:
+    packstack:   Verifying  : libcurl-7.29.0-51.el7.x86_64                             315/366
+    packstack:
+    packstack:   Verifying  : hostname-3.13-3.el7.x86_64                               316/366
+    packstack:
+    packstack:   Verifying  : nss-softokn-freebl-3.36.0-5.el7_5.x86_64                 317/366
+    packstack:
+    packstack:   Verifying  : 1:grub2-tools-minimal-2.02-0.76.el7.centos.1.x86_64      318/366
+    packstack:
+    packstack:   Verifying  : expat-2.1.0-10.el7_3.x86_64                              319/366
+    packstack:
+    packstack:   Verifying  : libtirpc-0.2.4-0.15.el7.x86_64                           320/366
+    packstack:
+    packstack:   Verifying  : procps-ng-3.3.10-23.el7.x86_64                           321/366
+    packstack:
+    packstack:   Verifying  : audit-2.8.4-4.el7.x86_64                                 322/366
+    packstack:
+    packstack:   Verifying  : yum-plugin-fastestmirror-1.1.31-50.el7.noarch            323/366
+    packstack:
+    packstack:   Verifying  : libgcc-4.8.5-36.el7_6.2.x86_64                           324/366
+    packstack:
+    packstack:   Verifying  : 1:quota-nls-4.01-17.el7.noarch                           325/366
+    packstack:
+    packstack:   Verifying  : 1:NetworkManager-1.12.0-10.el7_6.x86_64                  326/366
+    packstack:
+    packstack:   Verifying  : libacl-2.2.51-14.el7.x86_64                              327/366
+    packstack:
+    packstack:   Verifying  : sed-4.2.2-5.el7.x86_64                                   328/366
+    packstack:
+    packstack:   Verifying  : ipset-6.38-3.el7_6.x86_64                                329/366
+    packstack:
+    packstack:   Verifying  : grubby-8.28-25.el7.x86_64                                330/366
+    packstack:
+    packstack:   Verifying  : diffutils-3.3-4.el7.x86_64                               331/366
+    packstack:
+    packstack:   Verifying  : libblkid-2.23.2-59.el7_6.1.x86_64                        332/366
+    packstack:
+    packstack:   Verifying  : 3:irqbalance-1.0.7-11.el7.x86_64                         333/366
+    packstack:
+    packstack:   Verifying  : cryptsetup-libs-2.0.3-3.el7.x86_64                       334/366
+    packstack:
+    packstack:   Verifying  : 1:grub2-common-2.02-0.76.el7.centos.1.noarch             335/366
+    packstack:
+    packstack:   Verifying  : 1:NetworkManager-tui-1.12.0-10.el7_6.x86_64              336/366
+    packstack:
+    packstack:   Verifying  : e2fsprogs-libs-1.42.9-13.el7.x86_64                      337/366
+    packstack:
+    packstack:   Verifying  : systemd-libs-219-62.el7_6.6.x86_64                       338/366
+    packstack:
+    packstack:   Verifying  : 1:grub2-pc-2.02-0.76.el7.centos.1.x86_64                 339/366
+    packstack:
+    packstack:   Verifying  : setup-2.8.71-10.el7.noarch                               340/366
+    packstack:
+    packstack:   Verifying  : nss-tools-3.36.0-7.1.el7_6.x86_64                        341/366
+    packstack:
+    packstack:   Verifying  : bash-4.2.46-31.el7.x86_64                                342/366
+    packstack:
+    packstack:   Verifying  : libstdc++-4.8.5-36.el7_6.2.x86_64                        343/366
+    packstack:
+    packstack:   Verifying  : policycoreutils-2.5-29.el7_6.1.x86_64                    344/366
+    packstack:
+    packstack:   Verifying  : hwdata-0.252-9.1.el7.x86_64                              345/366
+    packstack:
+    packstack:   Verifying  : lz4-1.7.5-2.el7.x86_64                                   346/366
+    packstack:
+    packstack:   Verifying  : cronie-1.4.11-20.el7_6.x86_64                            347/366
+    packstack:
+    packstack:   Verifying  : libselinux-2.5-14.1.el7.x86_64                           348/366
+    packstack:
+    packstack:   Verifying  : 1:grub2-2.02-0.76.el7.centos.1.x86_64                    349/366
+    packstack:
+    packstack:   Verifying  : elfutils-default-yama-scope-0.172-2.el7.noarch           350/366
+    packstack:
+    packstack:   Verifying  : 7:device-mapper-libs-1.02.149-10.el7_6.7.x86_64          351/366
+    packstack:
+    packstack:   Verifying  : 1:cups-libs-1.6.3-35.el7.x86_64                          352/366
+    packstack:
+    packstack:   Verifying  : chrony-3.2-2.el7.x86_64                                  353/366
+    packstack:
+    packstack:   Verifying  : selinux-policy-targeted-3.13.1-229.el7_6.12.noarch       354/366
+    packstack:
+    packstack:   Verifying  : 1:quota-4.01-17.el7.x86_64                               355/366
+    packstack:
+    packstack:   Verifying  : python-perf-3.10.0-957.12.2.el7.x86_64                   356/366
+    packstack:
+    packstack:   Verifying  : nss-softokn-3.36.0-5.el7_5.x86_64                        357/366
+    packstack:
+    packstack:   Verifying  : 32:bind-license-9.9.4-73.el7_6.noarch                    358/366
+    packstack:
+    packstack:   Verifying  : iprutils-2.4.16.1-1.el7.x86_64                           359/366
+    packstack:
+    packstack:   Verifying  : kmod-libs-20-23.el7.x86_64                               360/366
+    packstack:
+    packstack:   Verifying  : glibc-common-2.17-260.el7_6.5.x86_64                     361/366
+    packstack:
+    packstack:   Verifying  : polkit-0.112-18.el7_6.1.x86_64                           362/366
+    packstack:
+    packstack:   Verifying  : libicu-50.1.2-17.el7.x86_64                              363/366
+    packstack:
+    packstack:   Verifying  : libtdb-1.3.15-1.el7.x86_64                               364/366
+    packstack:
+    packstack:   Verifying  : libcap-2.22-9.el7.x86_64                                 365/366
+    packstack:
+    packstack:   Verifying  : 1:grub2-pc-modules-2.02-0.76.el7.centos.1.noarch         366/366
+    packstack:
+    packstack:
+    packstack: Installed:
+    packstack:   kernel.x86_64 0:3.10.0-1127.8.2.el7
+    packstack:
+    packstack: Dependency Installed:
+    packstack:   bind-export-libs.x86_64 32:9.11.4-16.P2.el7_8.3
+    packstack:   geoipupdate.x86_64 0:2.5.0-1.el7
+    packstack:   gnutls.x86_64 0:3.3.29-9.el7_6
+    packstack:   nettle.x86_64 0:2.7.1-8.el7
+    packstack:   pyldb.x86_64 0:1.5.4-1.el7
+    packstack:   pytalloc.x86_64 0:2.1.16-1.el7
+    packstack:   python-tdb.x86_64 0:1.3.18-1.el7
+    packstack:   samba-libs.x86_64 0:4.10.4-11.el7_8
+    packstack:   trousers.x86_64 0:0.3.14-2.el7
+    packstack:
+    packstack: Updated:
+    packstack:   GeoIP.x86_64 0:1.5.0-14.el7
+    packstack:   NetworkManager.x86_64 1:1.18.4-3.el7
+    packstack:   NetworkManager-libnm.x86_64 1:1.18.4-3.el7
+    packstack:   NetworkManager-team.x86_64 1:1.18.4-3.el7
+    packstack:   NetworkManager-tui.x86_64 1:1.18.4-3.el7
+    packstack:   acl.x86_64 0:2.2.51-15.el7
+    packstack:   audit.x86_64 0:2.8.5-4.el7
+    packstack:   audit-libs.x86_64 0:2.8.5-4.el7
+    packstack:   avahi-libs.x86_64 0:0.6.31-20.el7
+    packstack:   bash.x86_64 0:4.2.46-34.el7
+    packstack:   bash-completion.noarch 1:2.1-8.el7
+    packstack:   bind-libs-lite.x86_64 32:9.11.4-16.P2.el7_8.3
+    packstack:   bind-license.noarch 32:9.11.4-16.P2.el7_8.3
+    packstack:   binutils.x86_64 0:2.27-43.base.el7_8.1
+    packstack:   biosdevname.x86_64 0:0.7.3-2.el7
+    packstack:   ca-certificates.noarch 0:2019.2.32-76.el7_7
+    packstack:   centos-release.x86_64 0:7-8.2003.0.el7.centos
+    packstack:   chrony.x86_64 0:3.4-1.el7
+    packstack:   coreutils.x86_64 0:8.22-24.el7
+    packstack:   cronie.x86_64 0:1.4.11-23.el7
+    packstack:   cronie-anacron.x86_64 0:1.4.11-23.el7
+    packstack:   cryptsetup-libs.x86_64 0:2.0.3-6.el7
+    packstack:   cups-libs.x86_64 1:1.6.3-43.el7
+    packstack:   curl.x86_64 0:7.29.0-57.el7
+    packstack:   device-mapper.x86_64 7:1.02.164-7.el7_8.2
+    packstack:   device-mapper-libs.x86_64 7:1.02.164-7.el7_8.2
+    packstack:   dhclient.x86_64 12:4.2.5-79.el7.centos
+    packstack:   dhcp-common.x86_64 12:4.2.5-79.el7.centos
+    packstack:   dhcp-libs.x86_64 12:4.2.5-79.el7.centos
+    packstack:   diffutils.x86_64 0:3.3-5.el7
+    packstack:   dmidecode.x86_64 1:3.2-3.el7
+    packstack:   dracut.x86_64 0:033-568.el7
+    packstack:   e2fsprogs.x86_64 0:1.42.9-17.el7
+    packstack:   e2fsprogs-libs.x86_64 0:1.42.9-17.el7
+    packstack:   elfutils-default-yama-scope.noarch 0:0.176-4.el7
+    packstack:   elfutils-libelf.x86_64 0:0.176-4.el7
+    packstack:   elfutils-libs.x86_64 0:0.176-4.el7
+    packstack:   ethtool.x86_64 2:4.8-10.el7
+    packstack:   expat.x86_64 0:2.1.0-11.el7
+    packstack:   file.x86_64 0:5.11-36.el7
+    packstack:   file-libs.x86_64 0:5.11-36.el7
+    packstack:   firewalld.noarch 0:0.6.3-8.el7_8.1
+    packstack:   firewalld-filesystem.noarch 0:0.6.3-8.el7_8.1
+    packstack:   freetype.x86_64 0:2.8-14.el7
+    packstack:   gettext.x86_64 0:0.19.8.1-3.el7
+    packstack:   gettext-libs.x86_64 0:0.19.8.1-3.el7
+    packstack:   glib2.x86_64 0:2.56.1-5.el7
+    packstack:   glibc.x86_64 0:2.17-307.el7.1
+    packstack:   glibc-common.x86_64 0:2.17-307.el7.1
+    packstack:   grub2.x86_64 1:2.02-0.81.el7.centos
+    packstack:   grub2-common.noarch 1:2.02-0.81.el7.centos
+    packstack:   grub2-pc.x86_64 1:2.02-0.81.el7.centos
+    packstack:   grub2-pc-modules.noarch 1:2.02-0.81.el7.centos
+    packstack:   grub2-tools.x86_64 1:2.02-0.81.el7.centos
+    packstack:   grub2-tools-extra.x86_64 1:2.02-0.81.el7.centos
+    packstack:   grub2-tools-minimal.x86_64 1:2.02-0.81.el7.centos
+    packstack:   grubby.x86_64 0:8.28-26.el7
+    packstack:   gssproxy.x86_64 0:0.7.0-28.el7
+    packstack:   hostname.x86_64 0:3.13-3.el7_7.1
+    packstack:   hwdata.x86_64 0:0.252-9.5.el7
+    packstack:   initscripts.x86_64 0:9.49.49-1.el7
+    packstack:   iproute.x86_64 0:4.11.0-25.el7_7.2
+    packstack:   iprutils.x86_64 0:2.4.17.1-3.el7_7
+    packstack:   ipset.x86_64 0:7.1-1.el7
+    packstack:   ipset-libs.x86_64 0:7.1-1.el7
+    packstack:   iptables.x86_64 0:1.4.21-34.el7
+    packstack:   irqbalance.x86_64 3:1.0.7-12.el7
+    packstack:   kernel-tools.x86_64 0:3.10.0-1127.8.2.el7
+    packstack:   kernel-tools-libs.x86_64 0:3.10.0-1127.8.2.el7
+    packstack:   kmod.x86_64 0:20-28.el7
+    packstack:   kmod-libs.x86_64 0:20-28.el7
+    packstack:   kpartx.x86_64 0:0.4.9-131.el7
+    packstack:   krb5-libs.x86_64 0:1.15.1-46.el7
+    packstack:   libacl.x86_64 0:2.2.51-15.el7
+    packstack:   libblkid.x86_64 0:2.23.2-63.el7
+    packstack:   libcap.x86_64 0:2.22-11.el7
+    packstack:   libcom_err.x86_64 0:1.42.9-17.el7
+    packstack:   libcurl.x86_64 0:7.29.0-57.el7
+    packstack:   libdb.x86_64 0:5.3.21-25.el7
+    packstack:   libdb-utils.x86_64 0:5.3.21-25.el7
+    packstack:   libdrm.x86_64 0:2.4.97-2.el7
+    packstack:   libffi.x86_64 0:3.0.13-19.el7
+    packstack:   libgcc.x86_64 0:4.8.5-39.el7
+    packstack:   libgomp.x86_64 0:4.8.5-39.el7
+    packstack:   libicu.x86_64 0:50.2-4.el7_7
+    packstack:   libldb.x86_64 0:1.5.4-1.el7
+    packstack:   libmount.x86_64 0:2.23.2-63.el7
+    packstack:   libmspack.x86_64 0:0.5-0.7.alpha.el7
+    packstack:   libndp.x86_64 0:1.2-9.el7
+    packstack:   libseccomp.x86_64 0:2.3.1-4.el7
+    packstack:   libselinux.x86_64 0:2.5-15.el7
+    packstack:   libselinux-python.x86_64 0:2.5-15.el7
+    packstack:   libselinux-utils.x86_64 0:2.5-15.el7
+    packstack:   libsmartcols.x86_64 0:2.23.2-63.el7
+    packstack:   libss.x86_64 0:1.42.9-17.el7
+    packstack:   libssh2.x86_64 0:1.8.0-3.el7
+    packstack:   libstdc++.x86_64 0:4.8.5-39.el7
+    packstack:   libtalloc.x86_64 0:2.1.16-1.el7
+    packstack:   libtdb.x86_64 0:1.3.18-1.el7
+    packstack:   libteam.x86_64 0:1.29-1.el7
+    packstack:   libtevent.x86_64 0:0.9.39-1.el7
+    packstack:   libtirpc.x86_64 0:0.2.4-0.16.el7
+    packstack:   libuuid.x86_64 0:2.23.2-63.el7
+    packstack:   libwbclient.x86_64 0:4.10.4-11.el7_8
+    packstack:   libxml2.x86_64 0:2.9.1-6.el7.4
+    packstack:   libxml2-python.x86_64 0:2.9.1-6.el7.4
+    packstack:   linux-firmware.noarch 0:20191203-76.gite8a0f4c.el7
+    packstack:   logrotate.x86_64 0:3.8.6-19.el7
+    packstack:   lshw.x86_64 0:B.02.18-14.el7
+    packstack:   lz4.x86_64 0:1.7.5-3.el7
+    packstack:   make.x86_64 1:3.82-24.el7
+    packstack:   mariadb-libs.x86_64 1:5.5.65-1.el7
+    packstack:   nfs-utils.x86_64 1:1.3.0-0.66.el7
+    packstack:   nspr.x86_64 0:4.21.0-1.el7
+    packstack:   nss.x86_64 0:3.44.0-7.el7_7
+    packstack:   nss-pem.x86_64 0:1.0.3-7.el7
+    packstack:   nss-softokn.x86_64 0:3.44.0-8.el7_7
+    packstack:   nss-softokn-freebl.x86_64 0:3.44.0-8.el7_7
+    packstack:   nss-sysinit.x86_64 0:3.44.0-7.el7_7
+    packstack:   nss-tools.x86_64 0:3.44.0-7.el7_7
+    packstack:   nss-util.x86_64 0:3.44.0-4.el7_7
+    packstack:   numactl-libs.x86_64 0:2.0.12-5.el7
+    packstack:   open-vm-tools.x86_64 0:10.3.10-2.el7_8.1
+    packstack:   openssh.x86_64 0:7.4p1-21.el7
+    packstack:   openssh-clients.x86_64 0:7.4p1-21.el7
+    packstack:   openssh-server.x86_64 0:7.4p1-21.el7
+    packstack:   openssl.x86_64 1:1.0.2k-19.el7
+    packstack:   openssl-libs.x86_64 1:1.0.2k-19.el7
+    packstack:   pam.x86_64 0:1.1.8-23.el7
+    packstack:   parted.x86_64 0:3.1-32.el7
+    packstack:   passwd.x86_64 0:0.79-6.el7
+    packstack:   policycoreutils.x86_64 0:2.5-34.el7
+    packstack:   polkit.x86_64 0:0.112-26.el7
+    packstack:   postfix.x86_64 2:2.10.1-9.el7
+    packstack:   procps-ng.x86_64 0:3.3.10-27.el7
+    packstack:   python.x86_64 0:2.7.5-88.el7
+    packstack:   python-chardet.noarch 0:2.2.1-3.el7
+    packstack:   python-firewall.noarch 0:0.6.3-8.el7_8.1
+    packstack:   python-libs.x86_64 0:2.7.5-88.el7
+    packstack:   python-linux-procfs.noarch 0:0.4.11-4.el7
+    packstack:   python-perf.x86_64 0:3.10.0-1127.8.2.el7
+    packstack:   python-u
+    packstack: rlgrabber.noarch 0:3.10-10.el7
+    packstack:   qemu-guest-agent.x86_64 10:2.12.0-3.el7
+    packstack:   quota.x86_64 1:4.01-19.el7
+    packstack:   quota-nls.noarch 1:4.01-19.el7
+    packstack:   readline.x86_64 0:6.2-11.el7
+    packstack:   rpcbind.x86_64 0:0.2.0-49.el7
+    packstack:   rpm.x86_64 0:4.11.3-43.el7
+    packstack:   rpm-build-libs.x86_64 0:4.11.3-43.el7
+    packstack:   rpm-libs.x86_64 0:4.11.3-43.el7
+    packstack:   rpm-python.x86_64 0:4.11.3-43.el7
+    packstack:   rsync.x86_64 0:3.1.2-10.el7
+    packstack:   rsyslog.x86_64 0:8.24.0-52.el7
+    packstack:   samba-client-libs.x86_64 0:4.10.4-11.el7_8
+    packstack:   samba-common.noarch 0:4.10.4-11.el7_8
+    packstack:   samba-common-libs.x86_64 0:4.10.4-11.el7_8
+    packstack:   sed.x86_64 0:4.2.2-6.el7
+    packstack:   selinux-policy.noarch 0:3.13.1-266.el7
+    packstack:   selinux-policy-targeted.noarch 0:3.13.1-266.el7
+    packstack:   setup.noarch 0:2.8.71-11.el7
+    packstack:   sg3_utils.x86_64 1:1.37-19.el7
+    packstack:   sg3_utils-libs.x86_64 1:1.37-19.el7
+    packstack:   shadow-utils.x86_64 2:4.6-5.el7
+    packstack:   shared-mime-info.x86_64 0:1.8-5.el7
+    packstack:   sqlite.x86_64 0:3.7.17-8.el7_7.1
+    packstack:   sudo.x86_64 0:1.8.23-9.el7
+    packstack:   systemd.x86_64 0:219-73.el7_8.6
+    packstack:   systemd-libs.x86_64 0:219-73.el7_8.6
+    packstack:   systemd-sysv.x86_64 0:219-73.el7_8.6
+    packstack:   teamd.x86_64 0:1.29-1.el7
+    packstack:   tuned.noarch 0:2.11.0-8.el7
+    packstack:   tzdata.noarch 0:2020a-1.el7
+    packstack:   util-linux.x86_64 0:2.23.2-63.el7
+    packstack:   vim-minimal.x86_64 2:7.4.629-6.el7
+    packstack:   xfsprogs.x86_64 0:4.5.0-20.el7
+    packstack:   yum.noarch 0:3.4.3-167.el7.centos
+    packstack:   yum-plugin-fastestmirror.noarch 0:1.1.31-54.el7_8
+    packstack:   yum-utils.noarch 0:1.1.31-54.el7_8
+    packstack: Complete!
+    packstack: No package openstack-packstack available.
+    packstack: Error: Nothing to do
+    packstack: Resolving Dependencies
+    packstack: --> Running transaction check
+    packstack: ---> Package lvm2.x86_64 7:2.02.186-7.el7_8.2 will be installed
+    packstack: --> Processing Dependency: lvm2-libs = 7:2.02.186-7.el7_8.2 for package: 7:lvm2-2.02.186-7.el7_8.2.x86_64
+    packstack: --> Processing Dependency: device-mapper-persistent-data >= 0.7.0-0.1.rc6 for package: 7:lvm2-2.02.186-7.el7_8.2.x86_64
+    packstack: --> Processing Dependency: liblvm2app.so.2.2(Base)(64bit) for package: 7:lvm2-2.02.186-7.el7_8.2.x86_64
+    packstack: --> Processing Dependency: libdevmapper-event.so.1.02(Base)(64bit) for package: 7:lvm2-2.02.186-7.el7_8.2.x86_64
+    packstack: --> Processing Dependency: libaio.so.1(LIBAIO_0.4)(64bit) for package: 7:lvm2-2.02.186-7.el7_8.2.x86_64
+    packstack: --> Processing Dependency: libaio.so.1(LIBAIO_0.1)(64bit) for package: 7:lvm2-2.02.186-7.el7_8.2.x86_64
+    packstack: --> Processing Dependency: liblvm2app.so.2.2()(64bit) for package: 7:lvm2-2.02.186-7.el7_8.2.x86_64
+    packstack: --> Processing Dependency: libdevmapper-event.so.1.02()(64bit) for package: 7:lvm2-2.02.186-7.el7_8.2.x86_64
+    packstack: --> Processing Dependency: libaio.so.1()(64bit) for package: 7:lvm2-2.02.186-7.el7_8.2.x86_64
+    packstack: --> Running transaction check
+    packstack: ---> Package device-mapper-event-libs.x86_64 7:1.02.164-7.el7_8.2 will be installed
+    packstack: ---> Package device-mapper-persistent-data.x86_64 0:0.8.5-2.el7 will be installed
+    packstack: ---> Package libaio.x86_64 0:0.3.109-13.el7 will be installed
+    packstack: ---> Package lvm2-libs.x86_64 7:2.02.186-7.el7_8.2 will be installed
+    packstack: --> Processing Dependency: device-mapper-event = 7:1.02.164-7.el7_8.2 for package: 7:lvm2-libs-2.02.186-7.el7_8.2.x86_64
+    packstack: --> Running transaction check
+    packstack: ---> Package device-mapper-event.x86_64 7:1.02.164-7.el7_8.2 will be installed
+    packstack: --> Finished Dependency Resolution
+    packstack:
+    packstack: Dependencies Resolved
+    packstack:
+    packstack: ================================================================================
+    packstack:  Package                        Arch    Version                  Repository
+    packstack:                                                                            Size
+    packstack: ================================================================================
+    packstack: Installing:
+    packstack:  lvm2                           x86_64  7:2.02.186-7.el7_8.2     updates  1.3 M
+    packstack: Installing for dependencies:
+    packstack:  device-mapper-event            x86_64  7:1.02.164-7.el7_8.2     updates  191 k
+    packstack:  device-mapper-event-libs       x86_64  7:1.02.164-7.el7_8.2     updates  190 k
+    packstack:  device-mapper-persistent-data  x86_64  0.8.5-2.el7              base     422 k
+    packstack:  libaio                         x86_64  0.3.109-13.el7           base      24 k
+    packstack:  lvm2-libs                      x86_64  7:2.02.186-7.el7_8.2     updates  1.1 M
+    packstack:
+    packstack: Transaction Summary
+    packstack: ================================================================================
+    packstack: Install  1 Package (+5 Dependent packages)
+    packstack: Total download size: 3.2 M
+    packstack: Installed size: 8.1 M
+    packstack: Downloading packages:
+    packstack: --------------------------------------------------------------------------------
+    packstack: Total                                              1.2 MB/s | 3.2 MB  00:02
+    packstack: Running transaction check
+    packstack: Running transaction test
+    packstack: Transaction test succeeded
+    packstack: Running transaction
+    packstack:   Installing : 7:device-mapper-event-libs-1.02.164-7.el7_8.2.x86_64         1/6
+    packstack:
+    packstack:   Installing : libaio-0.3.109-13.el7.x86_64                                 2/6
+    packstack:
+    packstack:   Installing : device-mapper-persistent-data-0.8.5-2.el7.x86_64             3/6
+    packstack:
+    packstack:   Installing : 7:device-mapper-event-1.02.164-7.el7_8.2.x86_64              4/6
+    packstack:
+    packstack:   Installing : 7:lvm2-libs-2.02.186-7.el7_8.2.x86_64                        5/6
+    packstack:
+    packstack:   Installing : 7:lvm2-2.02.186-7.el7_8.2.x86_64                             6/6
+    packstack:
+    packstack:   Verifying  : device-mapper-persistent-data-0.8.5-2.el7.x86_64             1/6
+    packstack:
+    packstack:   Verifying  : 7:device-mapper-event-1.02.164-7.el7_8.2.x86_64              2/6
+    packstack:
+    packstack:   Verifying  : 7:lvm2-libs-2.02.186-7.el7_8.2.x86_64                        3/6
+    packstack:
+    packstack:   Verifying  : 7:lvm2-2.02.186-7.el7_8.2.x86_64                             4/6
+    packstack:
+    packstack:   Verifying  : libaio-0.3.109-13.el7.x86_64                                 5/6
+    packstack:
+    packstack:   Verifying  : 7:device-mapper-event-libs-1.02.164-7.el7_8.2.x86_64         6/6
+    packstack:
+    packstack:
+    packstack: Installed:
+    packstack:   lvm2.x86_64 7:2.02.186-7.el7_8.2
+    packstack:
+    packstack: Dependency Installed:
+    packstack:   device-mapper-event.x86_64 7:1.02.164-7.el7_8.2
+    packstack:   device-mapper-event-libs.x86_64 7:1.02.164-7.el7_8.2
+    packstack:   device-mapper-persistent-data.x86_64 0:0.8.5-2.el7
+    packstack:   libaio.x86_64 0:0.3.109-13.el7
+    packstack:   lvm2-libs.x86_64 7:2.02.186-7.el7_8.2
+    packstack: Complete!
+    packstack: /vagrant/packstack_setup.sh: line 44: packstack: command not found
+The SSH command responded with a non-zero exit status. Vagrant
+assumes that this means the command failed. The output for this command
+should be in the log above. Please read the output to determine what
+went wrong.
