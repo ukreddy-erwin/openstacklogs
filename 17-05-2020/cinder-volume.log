@@ -1,0 +1,335 @@
+2020-05-16 17:53:19.237 8175 WARNING oslo_reports.guru_meditation_report [-] Guru meditation now registers SIGUSR1 and SIGUSR2 by default for backward compatibility. SIGUSR1 will no longer be registered in a future release, so please use SIGUSR2 to generate reports.
+2020-05-16 17:53:19.585 8175 INFO root [-] Generating grammar tables from /usr/lib/python2.7/lib2to3/Grammar.txt
+2020-05-16 17:53:19.762 8175 INFO root [-] Generating grammar tables from /usr/lib/python2.7/lib2to3/PatternGrammar.txt
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume [req-ba8bf72c-a222-417d-a4f2-5b498999a42e - - - - -] Volume service block1@lvm failed to start.: DBNonExistentTable: (sqlite3.OperationalError) no such table: services [SQL: u'SELECT services.created_at AS services_created_at, services.deleted_at AS services_deleted_at, services.deleted AS services_deleted, services.id AS services_id, services.cluster_name AS services_cluster_name, services.host AS services_host, services.binary AS services_binary, services.updated_at AS services_updated_at, services.topic AS services_topic, services.report_count AS services_report_count, services.disabled AS services_disabled, services.availability_zone AS services_availability_zone, services.disabled_reason AS services_disabled_reason, services.modified_at AS services_modified_at, services.rpc_current_version AS services_rpc_current_version, services.object_current_version AS services_object_current_version, services.replication_status AS services_replication_status, services.active_backend_id AS services_active_backend_id, services.frozen AS services_frozen \nFROM services \nWHERE services.deleted = 0 AND services.binary = ?'] [parameters: ('cinder-scheduler',)]
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume Traceback (most recent call last):
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/cmd/volume.py", line 98, in main
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume     cluster=cluster)
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/service.py", line 395, in create
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume     cluster=cluster)
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/service.py", line 148, in __init__
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume     *args, **kwargs)
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/volume/manager.py", line 215, in __init__
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume     *args, **kwargs)
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/manager.py", line 177, in __init__
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume     self.scheduler_rpcapi = scheduler_rpcapi.SchedulerAPI()
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/rpc.py", line 207, in __init__
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume     obj_version_cap = self.determine_obj_version_cap()
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/rpc.py", line 260, in determine_obj_version_cap
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume     cinder.context.get_admin_context(), cls.BINARY)
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/objects/service.py", line 192, in get_minimum_obj_version
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume     binary)
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/objects/service.py", line 162, in _get_minimum_version
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume     services = ServiceList.get_all_by_binary(context, binary)
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/objects/service.py", line 226, in get_all_by_binary
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume     disabled=disabled)
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/db/api.py", line 129, in service_get_all
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume     return IMPL.service_get_all(context, backend_match_level, **filters)
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/db/sqlalchemy/api.py", line 177, in wrapper
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume     return f(*args, **kwargs)
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/db/sqlalchemy/api.py", line 537, in service_get_all
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume     return [] if not query else query.all()
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 2703, in all
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume     return list(self)
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 2855, in __iter__
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume     return self._execute_and_instances(context)
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 2878, in _execute_and_instances
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume     result = conn.execute(querycontext.statement, self._params)
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 945, in execute
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume     return meth(self, multiparams, params)
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume     return connection._execute_clauseelement(self, multiparams, params)
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume     compiled_sql, distilled_params
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume     context)
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1398, in _handle_dbapi_exception
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume     util.raise_from_cause(newraise, exc_info)
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume     reraise(type(exception), exception, tb=exc_tb, cause=cause)
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume     context)
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 470, in do_execute
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume     cursor.execute(statement, parameters)
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume DBNonExistentTable: (sqlite3.OperationalError) no such table: services [SQL: u'SELECT services.created_at AS services_created_at, services.deleted_at AS services_deleted_at, services.deleted AS services_deleted, services.id AS services_id, services.cluster_name AS services_cluster_name, services.host AS services_host, services.binary AS services_binary, services.updated_at AS services_updated_at, services.topic AS services_topic, services.report_count AS services_report_count, services.disabled AS services_disabled, services.availability_zone AS services_availability_zone, services.disabled_reason AS services_disabled_reason, services.modified_at AS services_modified_at, services.rpc_current_version AS services_rpc_current_version, services.object_current_version AS services_object_current_version, services.replication_status AS services_replication_status, services.active_backend_id AS services_active_backend_id, services.frozen AS services_frozen \nFROM services \nWHERE services.deleted = 0 AND services.binary = ?'] [parameters: ('cinder-scheduler',)]
+2020-05-16 17:53:20.795 8175 ERROR cinder.cmd.volume 
+2020-05-16 17:53:20.801 8175 ERROR cinder.cmd.volume [req-ba8bf72c-a222-417d-a4f2-5b498999a42e - - - - -] No volume service(s) started successfully, terminating.: DBNonExistentTable: (sqlite3.OperationalError) no such table: services [SQL: u'SELECT services.created_at AS services_created_at, services.deleted_at AS services_deleted_at, services.deleted AS services_deleted, services.id AS services_id, services.cluster_name AS services_cluster_name, services.host AS services_host, services.binary AS services_binary, services.updated_at AS services_updated_at, services.topic AS services_topic, services.report_count AS services_report_count, services.disabled AS services_disabled, services.availability_zone AS services_availability_zone, services.disabled_reason AS services_disabled_reason, services.modified_at AS services_modified_at, services.rpc_current_version AS services_rpc_current_version, services.object_current_version AS services_object_current_version, services.replication_status AS services_replication_status, services.active_backend_id AS services_active_backend_id, services.frozen AS services_frozen \nFROM services \nWHERE services.deleted = 0 AND services.binary = ?'] [parameters: ('cinder-scheduler',)]
+2020-05-16 17:53:23.199 8223 WARNING oslo_reports.guru_meditation_report [-] Guru meditation now registers SIGUSR1 and SIGUSR2 by default for backward compatibility. SIGUSR1 will no longer be registered in a future release, so please use SIGUSR2 to generate reports.
+2020-05-16 17:53:23.290 8223 INFO root [-] Generating grammar tables from /usr/lib/python2.7/lib2to3/Grammar.txt
+2020-05-16 17:53:23.318 8223 INFO root [-] Generating grammar tables from /usr/lib/python2.7/lib2to3/PatternGrammar.txt
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume [req-053eaca3-8ddf-4c67-9539-a4a610ef433f - - - - -] Volume service block1@lvm failed to start.: DBNonExistentTable: (sqlite3.OperationalError) no such table: services [SQL: u'SELECT services.created_at AS services_created_at, services.deleted_at AS services_deleted_at, services.deleted AS services_deleted, services.id AS services_id, services.cluster_name AS services_cluster_name, services.host AS services_host, services.binary AS services_binary, services.updated_at AS services_updated_at, services.topic AS services_topic, services.report_count AS services_report_count, services.disabled AS services_disabled, services.availability_zone AS services_availability_zone, services.disabled_reason AS services_disabled_reason, services.modified_at AS services_modified_at, services.rpc_current_version AS services_rpc_current_version, services.object_current_version AS services_object_current_version, services.replication_status AS services_replication_status, services.active_backend_id AS services_active_backend_id, services.frozen AS services_frozen \nFROM services \nWHERE services.deleted = 0 AND services.binary = ?'] [parameters: ('cinder-scheduler',)]
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume Traceback (most recent call last):
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/cmd/volume.py", line 98, in main
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume     cluster=cluster)
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/service.py", line 395, in create
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume     cluster=cluster)
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/service.py", line 148, in __init__
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume     *args, **kwargs)
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/volume/manager.py", line 215, in __init__
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume     *args, **kwargs)
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/manager.py", line 177, in __init__
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume     self.scheduler_rpcapi = scheduler_rpcapi.SchedulerAPI()
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/rpc.py", line 207, in __init__
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume     obj_version_cap = self.determine_obj_version_cap()
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/rpc.py", line 260, in determine_obj_version_cap
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume     cinder.context.get_admin_context(), cls.BINARY)
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/objects/service.py", line 192, in get_minimum_obj_version
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume     binary)
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/objects/service.py", line 162, in _get_minimum_version
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume     services = ServiceList.get_all_by_binary(context, binary)
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/objects/service.py", line 226, in get_all_by_binary
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume     disabled=disabled)
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/db/api.py", line 129, in service_get_all
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume     return IMPL.service_get_all(context, backend_match_level, **filters)
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/db/sqlalchemy/api.py", line 177, in wrapper
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume     return f(*args, **kwargs)
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/db/sqlalchemy/api.py", line 537, in service_get_all
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume     return [] if not query else query.all()
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 2703, in all
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume     return list(self)
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 2855, in __iter__
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume     return self._execute_and_instances(context)
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 2878, in _execute_and_instances
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume     result = conn.execute(querycontext.statement, self._params)
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 945, in execute
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume     return meth(self, multiparams, params)
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume     return connection._execute_clauseelement(self, multiparams, params)
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume     compiled_sql, distilled_params
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume     context)
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1398, in _handle_dbapi_exception
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume     util.raise_from_cause(newraise, exc_info)
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume     reraise(type(exception), exception, tb=exc_tb, cause=cause)
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume     context)
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 470, in do_execute
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume     cursor.execute(statement, parameters)
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume DBNonExistentTable: (sqlite3.OperationalError) no such table: services [SQL: u'SELECT services.created_at AS services_created_at, services.deleted_at AS services_deleted_at, services.deleted AS services_deleted, services.id AS services_id, services.cluster_name AS services_cluster_name, services.host AS services_host, services.binary AS services_binary, services.updated_at AS services_updated_at, services.topic AS services_topic, services.report_count AS services_report_count, services.disabled AS services_disabled, services.availability_zone AS services_availability_zone, services.disabled_reason AS services_disabled_reason, services.modified_at AS services_modified_at, services.rpc_current_version AS services_rpc_current_version, services.object_current_version AS services_object_current_version, services.replication_status AS services_replication_status, services.active_backend_id AS services_active_backend_id, services.frozen AS services_frozen \nFROM services \nWHERE services.deleted = 0 AND services.binary = ?'] [parameters: ('cinder-scheduler',)]
+2020-05-16 17:53:23.621 8223 ERROR cinder.cmd.volume 
+2020-05-16 17:53:23.627 8223 ERROR cinder.cmd.volume [req-053eaca3-8ddf-4c67-9539-a4a610ef433f - - - - -] No volume service(s) started successfully, terminating.: DBNonExistentTable: (sqlite3.OperationalError) no such table: services [SQL: u'SELECT services.created_at AS services_created_at, services.deleted_at AS services_deleted_at, services.deleted AS services_deleted, services.id AS services_id, services.cluster_name AS services_cluster_name, services.host AS services_host, services.binary AS services_binary, services.updated_at AS services_updated_at, services.topic AS services_topic, services.report_count AS services_report_count, services.disabled AS services_disabled, services.availability_zone AS services_availability_zone, services.disabled_reason AS services_disabled_reason, services.modified_at AS services_modified_at, services.rpc_current_version AS services_rpc_current_version, services.object_current_version AS services_object_current_version, services.replication_status AS services_replication_status, services.active_backend_id AS services_active_backend_id, services.frozen AS services_frozen \nFROM services \nWHERE services.deleted = 0 AND services.binary = ?'] [parameters: ('cinder-scheduler',)]
+2020-05-16 17:53:25.979 8245 WARNING oslo_reports.guru_meditation_report [-] Guru meditation now registers SIGUSR1 and SIGUSR2 by default for backward compatibility. SIGUSR1 will no longer be registered in a future release, so please use SIGUSR2 to generate reports.
+2020-05-16 17:53:26.072 8245 INFO root [-] Generating grammar tables from /usr/lib/python2.7/lib2to3/Grammar.txt
+2020-05-16 17:53:26.100 8245 INFO root [-] Generating grammar tables from /usr/lib/python2.7/lib2to3/PatternGrammar.txt
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume [req-7f381e34-37e4-4062-8f0d-81290154c835 - - - - -] Volume service block1@lvm failed to start.: DBNonExistentTable: (sqlite3.OperationalError) no such table: services [SQL: u'SELECT services.created_at AS services_created_at, services.deleted_at AS services_deleted_at, services.deleted AS services_deleted, services.id AS services_id, services.cluster_name AS services_cluster_name, services.host AS services_host, services.binary AS services_binary, services.updated_at AS services_updated_at, services.topic AS services_topic, services.report_count AS services_report_count, services.disabled AS services_disabled, services.availability_zone AS services_availability_zone, services.disabled_reason AS services_disabled_reason, services.modified_at AS services_modified_at, services.rpc_current_version AS services_rpc_current_version, services.object_current_version AS services_object_current_version, services.replication_status AS services_replication_status, services.active_backend_id AS services_active_backend_id, services.frozen AS services_frozen \nFROM services \nWHERE services.deleted = 0 AND services.binary = ?'] [parameters: ('cinder-scheduler',)]
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume Traceback (most recent call last):
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/cmd/volume.py", line 98, in main
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume     cluster=cluster)
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/service.py", line 395, in create
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume     cluster=cluster)
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/service.py", line 148, in __init__
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume     *args, **kwargs)
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/volume/manager.py", line 215, in __init__
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume     *args, **kwargs)
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/manager.py", line 177, in __init__
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume     self.scheduler_rpcapi = scheduler_rpcapi.SchedulerAPI()
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/rpc.py", line 207, in __init__
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume     obj_version_cap = self.determine_obj_version_cap()
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/rpc.py", line 260, in determine_obj_version_cap
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume     cinder.context.get_admin_context(), cls.BINARY)
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/objects/service.py", line 192, in get_minimum_obj_version
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume     binary)
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/objects/service.py", line 162, in _get_minimum_version
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume     services = ServiceList.get_all_by_binary(context, binary)
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/objects/service.py", line 226, in get_all_by_binary
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume     disabled=disabled)
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/db/api.py", line 129, in service_get_all
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume     return IMPL.service_get_all(context, backend_match_level, **filters)
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/db/sqlalchemy/api.py", line 177, in wrapper
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume     return f(*args, **kwargs)
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/db/sqlalchemy/api.py", line 537, in service_get_all
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume     return [] if not query else query.all()
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 2703, in all
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume     return list(self)
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 2855, in __iter__
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume     return self._execute_and_instances(context)
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 2878, in _execute_and_instances
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume     result = conn.execute(querycontext.statement, self._params)
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 945, in execute
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume     return meth(self, multiparams, params)
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume     return connection._execute_clauseelement(self, multiparams, params)
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume     compiled_sql, distilled_params
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume     context)
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1398, in _handle_dbapi_exception
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume     util.raise_from_cause(newraise, exc_info)
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume     reraise(type(exception), exception, tb=exc_tb, cause=cause)
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume     context)
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 470, in do_execute
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume     cursor.execute(statement, parameters)
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume DBNonExistentTable: (sqlite3.OperationalError) no such table: services [SQL: u'SELECT services.created_at AS services_created_at, services.deleted_at AS services_deleted_at, services.deleted AS services_deleted, services.id AS services_id, services.cluster_name AS services_cluster_name, services.host AS services_host, services.binary AS services_binary, services.updated_at AS services_updated_at, services.topic AS services_topic, services.report_count AS services_report_count, services.disabled AS services_disabled, services.availability_zone AS services_availability_zone, services.disabled_reason AS services_disabled_reason, services.modified_at AS services_modified_at, services.rpc_current_version AS services_rpc_current_version, services.object_current_version AS services_object_current_version, services.replication_status AS services_replication_status, services.active_backend_id AS services_active_backend_id, services.frozen AS services_frozen \nFROM services \nWHERE services.deleted = 0 AND services.binary = ?'] [parameters: ('cinder-scheduler',)]
+2020-05-16 17:53:26.387 8245 ERROR cinder.cmd.volume 
+2020-05-16 17:53:26.393 8245 ERROR cinder.cmd.volume [req-7f381e34-37e4-4062-8f0d-81290154c835 - - - - -] No volume service(s) started successfully, terminating.: DBNonExistentTable: (sqlite3.OperationalError) no such table: services [SQL: u'SELECT services.created_at AS services_created_at, services.deleted_at AS services_deleted_at, services.deleted AS services_deleted, services.id AS services_id, services.cluster_name AS services_cluster_name, services.host AS services_host, services.binary AS services_binary, services.updated_at AS services_updated_at, services.topic AS services_topic, services.report_count AS services_report_count, services.disabled AS services_disabled, services.availability_zone AS services_availability_zone, services.disabled_reason AS services_disabled_reason, services.modified_at AS services_modified_at, services.rpc_current_version AS services_rpc_current_version, services.object_current_version AS services_object_current_version, services.replication_status AS services_replication_status, services.active_backend_id AS services_active_backend_id, services.frozen AS services_frozen \nFROM services \nWHERE services.deleted = 0 AND services.binary = ?'] [parameters: ('cinder-scheduler',)]
+2020-05-16 17:53:28.747 8266 WARNING oslo_reports.guru_meditation_report [-] Guru meditation now registers SIGUSR1 and SIGUSR2 by default for backward compatibility. SIGUSR1 will no longer be registered in a future release, so please use SIGUSR2 to generate reports.
+2020-05-16 17:53:28.835 8266 INFO root [-] Generating grammar tables from /usr/lib/python2.7/lib2to3/Grammar.txt
+2020-05-16 17:53:28.865 8266 INFO root [-] Generating grammar tables from /usr/lib/python2.7/lib2to3/PatternGrammar.txt
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume [req-164e9445-c48f-438b-89ee-cac79589a813 - - - - -] Volume service block1@lvm failed to start.: DBNonExistentTable: (sqlite3.OperationalError) no such table: services [SQL: u'SELECT services.created_at AS services_created_at, services.deleted_at AS services_deleted_at, services.deleted AS services_deleted, services.id AS services_id, services.cluster_name AS services_cluster_name, services.host AS services_host, services.binary AS services_binary, services.updated_at AS services_updated_at, services.topic AS services_topic, services.report_count AS services_report_count, services.disabled AS services_disabled, services.availability_zone AS services_availability_zone, services.disabled_reason AS services_disabled_reason, services.modified_at AS services_modified_at, services.rpc_current_version AS services_rpc_current_version, services.object_current_version AS services_object_current_version, services.replication_status AS services_replication_status, services.active_backend_id AS services_active_backend_id, services.frozen AS services_frozen \nFROM services \nWHERE services.deleted = 0 AND services.binary = ?'] [parameters: ('cinder-scheduler',)]
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume Traceback (most recent call last):
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/cmd/volume.py", line 98, in main
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume     cluster=cluster)
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/service.py", line 395, in create
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume     cluster=cluster)
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/service.py", line 148, in __init__
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume     *args, **kwargs)
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/volume/manager.py", line 215, in __init__
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume     *args, **kwargs)
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/manager.py", line 177, in __init__
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume     self.scheduler_rpcapi = scheduler_rpcapi.SchedulerAPI()
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/rpc.py", line 207, in __init__
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume     obj_version_cap = self.determine_obj_version_cap()
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/rpc.py", line 260, in determine_obj_version_cap
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume     cinder.context.get_admin_context(), cls.BINARY)
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/objects/service.py", line 192, in get_minimum_obj_version
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume     binary)
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/objects/service.py", line 162, in _get_minimum_version
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume     services = ServiceList.get_all_by_binary(context, binary)
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/objects/service.py", line 226, in get_all_by_binary
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume     disabled=disabled)
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/db/api.py", line 129, in service_get_all
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume     return IMPL.service_get_all(context, backend_match_level, **filters)
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/db/sqlalchemy/api.py", line 177, in wrapper
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume     return f(*args, **kwargs)
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/db/sqlalchemy/api.py", line 537, in service_get_all
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume     return [] if not query else query.all()
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 2703, in all
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume     return list(self)
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 2855, in __iter__
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume     return self._execute_and_instances(context)
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 2878, in _execute_and_instances
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume     result = conn.execute(querycontext.statement, self._params)
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 945, in execute
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume     return meth(self, multiparams, params)
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume     return connection._execute_clauseelement(self, multiparams, params)
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume     compiled_sql, distilled_params
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume     context)
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1398, in _handle_dbapi_exception
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume     util.raise_from_cause(newraise, exc_info)
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume     reraise(type(exception), exception, tb=exc_tb, cause=cause)
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume     context)
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 470, in do_execute
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume     cursor.execute(statement, parameters)
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume DBNonExistentTable: (sqlite3.OperationalError) no such table: services [SQL: u'SELECT services.created_at AS services_created_at, services.deleted_at AS services_deleted_at, services.deleted AS services_deleted, services.id AS services_id, services.cluster_name AS services_cluster_name, services.host AS services_host, services.binary AS services_binary, services.updated_at AS services_updated_at, services.topic AS services_topic, services.report_count AS services_report_count, services.disabled AS services_disabled, services.availability_zone AS services_availability_zone, services.disabled_reason AS services_disabled_reason, services.modified_at AS services_modified_at, services.rpc_current_version AS services_rpc_current_version, services.object_current_version AS services_object_current_version, services.replication_status AS services_replication_status, services.active_backend_id AS services_active_backend_id, services.frozen AS services_frozen \nFROM services \nWHERE services.deleted = 0 AND services.binary = ?'] [parameters: ('cinder-scheduler',)]
+2020-05-16 17:53:29.156 8266 ERROR cinder.cmd.volume 
+2020-05-16 17:53:29.161 8266 ERROR cinder.cmd.volume [req-164e9445-c48f-438b-89ee-cac79589a813 - - - - -] No volume service(s) started successfully, terminating.: DBNonExistentTable: (sqlite3.OperationalError) no such table: services [SQL: u'SELECT services.created_at AS services_created_at, services.deleted_at AS services_deleted_at, services.deleted AS services_deleted, services.id AS services_id, services.cluster_name AS services_cluster_name, services.host AS services_host, services.binary AS services_binary, services.updated_at AS services_updated_at, services.topic AS services_topic, services.report_count AS services_report_count, services.disabled AS services_disabled, services.availability_zone AS services_availability_zone, services.disabled_reason AS services_disabled_reason, services.modified_at AS services_modified_at, services.rpc_current_version AS services_rpc_current_version, services.object_current_version AS services_object_current_version, services.replication_status AS services_replication_status, services.active_backend_id AS services_active_backend_id, services.frozen AS services_frozen \nFROM services \nWHERE services.deleted = 0 AND services.binary = ?'] [parameters: ('cinder-scheduler',)]
+2020-05-16 17:53:31.500 8286 WARNING oslo_reports.guru_meditation_report [-] Guru meditation now registers SIGUSR1 and SIGUSR2 by default for backward compatibility. SIGUSR1 will no longer be registered in a future release, so please use SIGUSR2 to generate reports.
+2020-05-16 17:53:31.683 8286 INFO root [-] Generating grammar tables from /usr/lib/python2.7/lib2to3/Grammar.txt
+2020-05-16 17:53:31.747 8286 INFO root [-] Generating grammar tables from /usr/lib/python2.7/lib2to3/PatternGrammar.txt
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume [req-2f7b838e-5ee6-4d3a-9d80-ed5d0a51183a - - - - -] Volume service block1@lvm failed to start.: DBNonExistentTable: (sqlite3.OperationalError) no such table: services [SQL: u'SELECT services.created_at AS services_created_at, services.deleted_at AS services_deleted_at, services.deleted AS services_deleted, services.id AS services_id, services.cluster_name AS services_cluster_name, services.host AS services_host, services.binary AS services_binary, services.updated_at AS services_updated_at, services.topic AS services_topic, services.report_count AS services_report_count, services.disabled AS services_disabled, services.availability_zone AS services_availability_zone, services.disabled_reason AS services_disabled_reason, services.modified_at AS services_modified_at, services.rpc_current_version AS services_rpc_current_version, services.object_current_version AS services_object_current_version, services.replication_status AS services_replication_status, services.active_backend_id AS services_active_backend_id, services.frozen AS services_frozen \nFROM services \nWHERE services.deleted = 0 AND services.binary = ?'] [parameters: ('cinder-scheduler',)]
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume Traceback (most recent call last):
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/cmd/volume.py", line 98, in main
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume     cluster=cluster)
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/service.py", line 395, in create
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume     cluster=cluster)
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/service.py", line 148, in __init__
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume     *args, **kwargs)
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/volume/manager.py", line 215, in __init__
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume     *args, **kwargs)
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/manager.py", line 177, in __init__
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume     self.scheduler_rpcapi = scheduler_rpcapi.SchedulerAPI()
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/rpc.py", line 207, in __init__
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume     obj_version_cap = self.determine_obj_version_cap()
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/rpc.py", line 260, in determine_obj_version_cap
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume     cinder.context.get_admin_context(), cls.BINARY)
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/objects/service.py", line 192, in get_minimum_obj_version
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume     binary)
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/objects/service.py", line 162, in _get_minimum_version
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume     services = ServiceList.get_all_by_binary(context, binary)
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/objects/service.py", line 226, in get_all_by_binary
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume     disabled=disabled)
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/db/api.py", line 129, in service_get_all
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume     return IMPL.service_get_all(context, backend_match_level, **filters)
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/db/sqlalchemy/api.py", line 177, in wrapper
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume     return f(*args, **kwargs)
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/cinder/db/sqlalchemy/api.py", line 537, in service_get_all
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume     return [] if not query else query.all()
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 2703, in all
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume     return list(self)
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 2855, in __iter__
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume     return self._execute_and_instances(context)
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 2878, in _execute_and_instances
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume     result = conn.execute(querycontext.statement, self._params)
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 945, in execute
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume     return meth(self, multiparams, params)
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume     return connection._execute_clauseelement(self, multiparams, params)
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume     compiled_sql, distilled_params
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume     context)
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1398, in _handle_dbapi_exception
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume     util.raise_from_cause(newraise, exc_info)
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume     reraise(type(exception), exception, tb=exc_tb, cause=cause)
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume     context)
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 470, in do_execute
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume     cursor.execute(statement, parameters)
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume DBNonExistentTable: (sqlite3.OperationalError) no such table: services [SQL: u'SELECT services.created_at AS services_created_at, services.deleted_at AS services_deleted_at, services.deleted AS services_deleted, services.id AS services_id, services.cluster_name AS services_cluster_name, services.host AS services_host, services.binary AS services_binary, services.updated_at AS services_updated_at, services.topic AS services_topic, services.report_count AS services_report_count, services.disabled AS services_disabled, services.availability_zone AS services_availability_zone, services.disabled_reason AS services_disabled_reason, services.modified_at AS services_modified_at, services.rpc_current_version AS services_rpc_current_version, services.object_current_version AS services_object_current_version, services.replication_status AS services_replication_status, services.active_backend_id AS services_active_backend_id, services.frozen AS services_frozen \nFROM services \nWHERE services.deleted = 0 AND services.binary = ?'] [parameters: ('cinder-scheduler',)]
+2020-05-16 17:53:32.375 8286 ERROR cinder.cmd.volume 
+2020-05-16 17:53:32.389 8286 ERROR cinder.cmd.volume [req-2f7b838e-5ee6-4d3a-9d80-ed5d0a51183a - - - - -] No volume service(s) started successfully, terminating.: DBNonExistentTable: (sqlite3.OperationalError) no such table: services [SQL: u'SELECT services.created_at AS services_created_at, services.deleted_at AS services_deleted_at, services.deleted AS services_deleted, services.id AS services_id, services.cluster_name AS services_cluster_name, services.host AS services_host, services.binary AS services_binary, services.updated_at AS services_updated_at, services.topic AS services_topic, services.report_count AS services_report_count, services.disabled AS services_disabled, services.availability_zone AS services_availability_zone, services.disabled_reason AS services_disabled_reason, services.modified_at AS services_modified_at, services.rpc_current_version AS services_rpc_current_version, services.object_current_version AS services_object_current_version, services.replication_status AS services_replication_status, services.active_backend_id AS services_active_backend_id, services.frozen AS services_frozen \nFROM services \nWHERE services.deleted = 0 AND services.binary = ?'] [parameters: ('cinder-scheduler',)]
+2020-05-16 17:53:34.727 8329 WARNING oslo_reports.guru_meditation_report [-] Guru meditation now registers SIGUSR1 and SIGUSR2 by default for backward compatibility. SIGUSR1 will no longer be registered in a future release, so please use SIGUSR2 to generate reports.
+2020-05-16 17:53:34.818 8329 INFO root [-] Generating grammar tables from /usr/lib/python2.7/lib2to3/Grammar.txt
+2020-05-16 17:53:34.848 8329 INFO root [-] Generating grammar tables from /usr/lib/python2.7/lib2to3/PatternGrammar.txt
+2020-05-16 17:53:35.174 8329 INFO cinder.rpc [req-b37a0b36-efc0-4cd0-99d0-5e26e95482fb - - - - -] Automatically selected cinder-scheduler objects version 1.27 as minimum service version.
+2020-05-16 17:53:35.182 8329 INFO cinder.rpc [req-b37a0b36-efc0-4cd0-99d0-5e26e95482fb - - - - -] Automatically selected cinder-scheduler RPC version 3.7 as minimum service version.
+2020-05-16 17:53:35.198 8329 INFO cinder.volume.manager [req-b37a0b36-efc0-4cd0-99d0-5e26e95482fb - - - - -] Service not found for updating active_backend_id, assuming default for driver init.
+2020-05-16 17:53:35.209 8329 INFO cinder.volume.manager [req-b37a0b36-efc0-4cd0-99d0-5e26e95482fb - - - - -] Image-volume cache disabled for host block1@lvm.
+2020-05-16 17:53:35.240 8329 INFO oslo_service.service [req-b37a0b36-efc0-4cd0-99d0-5e26e95482fb - - - - -] Starting 1 workers
+2020-05-16 17:53:35.251 8341 INFO cinder.service [-] Starting cinder-volume node (version 11.2.1)
+2020-05-16 17:53:35.278 8341 INFO cinder.volume.manager [req-fff91c72-8ca7-4774-a4b8-41b4ffec562e - - - - -] Including all resources from host block1@lvm in cluster None.
+2020-05-16 17:53:35.312 8341 INFO cinder.volume.manager [req-fff91c72-8ca7-4774-a4b8-41b4ffec562e - - - - -] 0 volumes, 0 consistency groups, 0 generic groups and 0 image volume caches from host block1@lvm have been included in cluster None.
+2020-05-16 17:53:35.313 8341 INFO cinder.volume.manager [req-fff91c72-8ca7-4774-a4b8-41b4ffec562e - - - - -] Starting volume driver LVMVolumeDriver (3.0.0)
+2020-05-16 17:53:35.690 8341 INFO cinder.brick.local_dev.lvm [req-fff91c72-8ca7-4774-a4b8-41b4ffec562e - - - - -] Logical Volume not found when querying LVM info. (vg_name=cinder-volumes, lv_name=cinder-volumes-pool
+2020-05-16 17:53:37.741 8341 INFO cinder.volume.drivers.lvm [req-fff91c72-8ca7-4774-a4b8-41b4ffec562e - - - - -] Enabling LVM thin provisioning by default because a thin pool exists.
+2020-05-16 17:53:39.176 8341 INFO cinder.volume.manager [req-fff91c72-8ca7-4774-a4b8-41b4ffec562e - - - - -] Driver initialization completed successfully.
+2020-05-16 17:53:39.184 8341 INFO cinder.manager [req-fff91c72-8ca7-4774-a4b8-41b4ffec562e - - - - -] Initiating service 2 cleanup
+2020-05-16 17:53:39.190 8341 INFO cinder.manager [req-fff91c72-8ca7-4774-a4b8-41b4ffec562e - - - - -] Service 2 cleanup completed.
+2020-05-16 17:53:39.269 8341 INFO cinder.volume.manager [req-fff91c72-8ca7-4774-a4b8-41b4ffec562e - - - - -] Initializing RPC dependent components of volume driver LVMVolumeDriver (3.0.0)
+2020-05-16 17:53:39.820 8341 INFO cinder.volume.manager [req-fff91c72-8ca7-4774-a4b8-41b4ffec562e - - - - -] Driver post RPC initialization completed successfully.
+2020-05-16 17:54:03.393 8329 INFO oslo_service.service [req-b37a0b36-efc0-4cd0-99d0-5e26e95482fb - - - - -] Caught SIGTERM, stopping children
+2020-05-16 17:54:03.399 8329 INFO oslo_service.service [req-b37a0b36-efc0-4cd0-99d0-5e26e95482fb - - - - -] Waiting on 1 children to exit
+2020-05-16 17:54:03.408 8329 INFO oslo_service.service [req-b37a0b36-efc0-4cd0-99d0-5e26e95482fb - - - - -] Child 8341 killed by signal 15
+2020-05-16 17:54:05.472 8582 WARNING oslo_reports.guru_meditation_report [-] Guru meditation now registers SIGUSR1 and SIGUSR2 by default for backward compatibility. SIGUSR1 will no longer be registered in a future release, so please use SIGUSR2 to generate reports.
+2020-05-16 17:54:05.564 8582 INFO root [-] Generating grammar tables from /usr/lib/python2.7/lib2to3/Grammar.txt
+2020-05-16 17:54:05.593 8582 INFO root [-] Generating grammar tables from /usr/lib/python2.7/lib2to3/PatternGrammar.txt
+2020-05-16 17:54:05.899 8582 INFO cinder.rpc [req-1e07fd4b-8a50-4683-8c57-a9f8bf50d0c3 - - - - -] Automatically selected cinder-scheduler objects version 1.27 as minimum service version.
+2020-05-16 17:54:05.907 8582 INFO cinder.rpc [req-1e07fd4b-8a50-4683-8c57-a9f8bf50d0c3 - - - - -] Automatically selected cinder-scheduler RPC version 3.7 as minimum service version.
+2020-05-16 17:54:05.930 8582 INFO cinder.volume.manager [req-1e07fd4b-8a50-4683-8c57-a9f8bf50d0c3 - - - - -] Image-volume cache disabled for host block1@lvm.
+2020-05-16 17:54:05.952 8582 INFO oslo_service.service [req-1e07fd4b-8a50-4683-8c57-a9f8bf50d0c3 - - - - -] Starting 1 workers
+2020-05-16 17:54:05.964 8595 INFO cinder.service [-] Starting cinder-volume node (version 11.2.1)
+2020-05-16 17:54:05.991 8595 INFO cinder.volume.manager [req-eadbcbaa-2bb7-42ce-b1bf-76027f1b4875 - - - - -] Starting volume driver LVMVolumeDriver (3.0.0)
+2020-05-16 17:54:07.618 8595 INFO cinder.volume.drivers.lvm [req-eadbcbaa-2bb7-42ce-b1bf-76027f1b4875 - - - - -] Enabling LVM thin provisioning by default because a thin pool exists.
+2020-05-16 17:54:08.969 8595 INFO cinder.volume.manager [req-eadbcbaa-2bb7-42ce-b1bf-76027f1b4875 - - - - -] Driver initialization completed successfully.
+2020-05-16 17:54:08.978 8595 INFO cinder.manager [req-eadbcbaa-2bb7-42ce-b1bf-76027f1b4875 - - - - -] Initiating service 2 cleanup
+2020-05-16 17:54:08.985 8595 INFO cinder.manager [req-eadbcbaa-2bb7-42ce-b1bf-76027f1b4875 - - - - -] Service 2 cleanup completed.
+2020-05-16 17:54:09.056 8595 INFO cinder.volume.manager [req-eadbcbaa-2bb7-42ce-b1bf-76027f1b4875 - - - - -] Initializing RPC dependent components of volume driver LVMVolumeDriver (3.0.0)
+2020-05-16 17:54:09.597 8595 INFO cinder.volume.manager [req-eadbcbaa-2bb7-42ce-b1bf-76027f1b4875 - - - - -] Driver post RPC initialization completed successfully.
+2020-05-16 18:15:28.163 8582 INFO oslo_service.service [req-1e07fd4b-8a50-4683-8c57-a9f8bf50d0c3 - - - - -] Caught SIGTERM, stopping children
+2020-05-16 18:15:28.179 8582 INFO oslo_service.service [req-1e07fd4b-8a50-4683-8c57-a9f8bf50d0c3 - - - - -] Waiting on 1 children to exit
+2020-05-16 18:15:28.180 8582 INFO oslo_service.service [req-1e07fd4b-8a50-4683-8c57-a9f8bf50d0c3 - - - - -] Child 8595 killed by signal 15
+2020-05-16 18:16:24.612 698 WARNING oslo_reports.guru_meditation_report [-] Guru meditation now registers SIGUSR1 and SIGUSR2 by default for backward compatibility. SIGUSR1 will no longer be registered in a future release, so please use SIGUSR2 to generate reports.
+2020-05-16 18:16:27.530 698 INFO root [-] Generating grammar tables from /usr/lib/python2.7/lib2to3/Grammar.txt
+2020-05-16 18:16:27.588 698 INFO root [-] Generating grammar tables from /usr/lib/python2.7/lib2to3/PatternGrammar.txt
+2020-05-16 18:16:30.142 698 INFO cinder.rpc [req-8e19110a-0c3f-4dd1-a0db-51aaade62bbd - - - - -] Automatically selected cinder-scheduler objects version 1.27 as minimum service version.
+2020-05-16 18:16:30.153 698 INFO cinder.rpc [req-8e19110a-0c3f-4dd1-a0db-51aaade62bbd - - - - -] Automatically selected cinder-scheduler RPC version 3.7 as minimum service version.
+2020-05-16 18:16:30.380 698 INFO cinder.volume.manager [req-8e19110a-0c3f-4dd1-a0db-51aaade62bbd - - - - -] Image-volume cache disabled for host block1@lvm.
+2020-05-16 18:16:30.476 698 INFO oslo_service.service [req-8e19110a-0c3f-4dd1-a0db-51aaade62bbd - - - - -] Starting 1 workers
+2020-05-16 18:16:30.493 941 INFO cinder.service [-] Starting cinder-volume node (version 11.2.1)
+2020-05-16 18:16:30.607 941 INFO cinder.volume.manager [req-336e2417-71e4-47a3-9d2c-d31ed4600231 - - - - -] Starting volume driver LVMVolumeDriver (3.0.0)
+2020-05-16 18:16:33.152 941 INFO cinder.volume.drivers.lvm [req-336e2417-71e4-47a3-9d2c-d31ed4600231 - - - - -] Enabling LVM thin provisioning by default because a thin pool exists.
+2020-05-16 18:16:35.299 941 INFO cinder.volume.manager [req-336e2417-71e4-47a3-9d2c-d31ed4600231 - - - - -] Driver initialization completed successfully.
+2020-05-16 18:16:35.310 941 INFO cinder.manager [req-336e2417-71e4-47a3-9d2c-d31ed4600231 - - - - -] Initiating service 2 cleanup
+2020-05-16 18:16:35.318 941 INFO cinder.manager [req-336e2417-71e4-47a3-9d2c-d31ed4600231 - - - - -] Service 2 cleanup completed.
+2020-05-16 18:16:35.816 941 INFO cinder.volume.manager [req-336e2417-71e4-47a3-9d2c-d31ed4600231 - - - - -] Initializing RPC dependent components of volume driver LVMVolumeDriver (3.0.0)
+2020-05-16 18:16:36.560 941 INFO cinder.volume.manager [req-336e2417-71e4-47a3-9d2c-d31ed4600231 - - - - -] Driver post RPC initialization completed successfully.
