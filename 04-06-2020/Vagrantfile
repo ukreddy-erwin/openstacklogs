@@ -1,0 +1,38 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "centos/7"
+  
+  config.vm.define "ws2" do |ws2|
+    ws2.vm.hostname = "ws2"
+    ws2.vm.network "private_network", ip: "10.13.211.158"
+    ws2.vm.provision "shell", path: "ws2.sh"
+  end
+  
+  config.vm.define "ws1" do |ws1|
+    ws1.vm.hostname = "ws1"
+    ws1.vm.network "private_network", ip: "10.13.211.169"
+    ws1.vm.provision "shell", path: "ws1.sh"
+  end
+
+  config.vm.define "lb1" do |lb1| 
+    lb1.vm.hostname = "lb1"
+    lb1.vm.network "private_network", ip: "10.13.211.194"
+    lb1.vm.provision "shell", path: "lb1.sh"
+  end
+
+  config.vm.define "lb2" do |lb2| 
+    lb2.vm.hostname = "lb2"
+    lb2.vm.network "private_network", ip: "10.13.211.120"
+    ws2.vm.provision "shell", path: "lb2.sh"
+  end
+
+
+
+end
