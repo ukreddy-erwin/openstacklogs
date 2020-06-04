@@ -30,7 +30,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "lb2" do |lb2| 
     lb2.vm.hostname = "lb2"
     lb2.vm.network "private_network", ip: "10.13.211.120"
-    ws2.vm.provision "shell", path: "lb2.sh"
+    lb2.vm.provision "shell", path: "lb2.sh"
   end
 
 
