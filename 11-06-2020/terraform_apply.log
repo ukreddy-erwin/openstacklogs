@@ -1,0 +1,1004 @@
+C:\Users\UdayKiranReddy\Desktop\terraform\windows>terraform plan
+Refreshing Terraform state in-memory prior to plan...
+The refreshed state will be used to calculate this plan, but will not be
+persisted to local or remote state storage.
+
+azurerm_resource_group.myterraformgroup: Refreshing state... [id=/subscriptions/ae642de8-dea6-4c85-887e-6b6c2ea9a2db/resourceGroups/uday1]
+azurerm_public_ip.myterraformpublicip2: Refreshing state... [id=/subscriptions/ae642de8-dea6-4c85-887e-6b6c2ea9a2db/resourceGroups/uday1/providers/Microsoft.Network/publicIPAddresses/udayvm1NICPublicIP2]
+azurerm_virtual_network.myterraformnetwork: Refreshing state... [id=/subscriptions/ae642de8-dea6-4c85-887e-6b6c2ea9a2db/resourceGroups/uday1/providers/Microsoft.Network/virtualNetworks/uday1]
+azurerm_network_security_group.myterraformnsg: Refreshing state... [id=/subscriptions/ae642de8-dea6-4c85-887e-6b6c2ea9a2db/resourceGroups/uday1/providers/Microsoft.Network/networkSecurityGroups/udayvm1Network_SecurityGroup]
+azurerm_subnet.myterraformsubnet: Refreshing state... [id=/subscriptions/ae642de8-dea6-4c85-887e-6b6c2ea9a2db/resourceGroups/uday1/providers/Microsoft.Network/virtualNetworks/uday1/subnets/intranetwork]
+azurerm_network_interface.myterraformnic2: Refreshing state... [id=/subscriptions/ae642de8-dea6-4c85-887e-6b6c2ea9a2db/resourceGroups/uday1/providers/Microsoft.Network/networkInterfaces/udayvm1_NIC]
+azurerm_network_interface_security_group_association.example2: Refreshing state... [id=/subscriptions/ae642de8-dea6-4c85-887e-6b6c2ea9a2db/resourceGroups/uday1/providers/Microsoft.Network/networkInterfaces/udayvm1_NIC|/subscriptions/ae642de8-dea6-4c85-887e-6b6c2ea9a2db/resourceGroups/uday1/providers/Microsoft.Network/networkSecurityGroups/udayvm1Network_SecurityGroup]
+
+Warning: Interpolation-only expressions are deprecated
+
+  on main.tf line 195, in resource "azurerm_virtual_machine" "myterraformvm2":
+ 195:       content      = "${file("./files/FirstLogonCommands.xml")}"
+
+Terraform 0.11 and earlier required all non-constant expressions to be
+provided via interpolation syntax, but this pattern is now deprecated. To
+silence this warning, remove the "${ sequence from the start and the }"
+sequence from the end of this expression, leaving just the inner expression.
+
+Template interpolation syntax is still used to construct strings from
+expressions when the template includes multiple interpolation sequences or a
+mixture of literal strings and interpolations. This deprecation applies only
+to templates that consist entirely of a single interpolation sequence.
+
+(and 3 more similar warnings elsewhere)
+
+
+Error: Network Interface "udayvm1_NIC" (Resource Group "uday1") was not found!
+
+
+
+C:\Users\UdayKiranReddy\Desktop\terraform\windows>terraform plan
+Refreshing Terraform state in-memory prior to plan...
+The refreshed state will be used to calculate this plan, but will not be
+persisted to local or remote state storage.
+
+
+------------------------------------------------------------------------
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # azurerm_network_interface.myterraformnic2 will be created
+  + resource "azurerm_network_interface" "myterraformnic2" {
+      + applied_dns_servers           = (known after apply)
+      + dns_servers                   = (known after apply)
+      + enable_accelerated_networking = false
+      + enable_ip_forwarding          = false
+      + id                            = (known after apply)
+      + internal_dns_name_label       = (known after apply)
+      + internal_domain_name_suffix   = (known after apply)
+      + location                      = "eastus"
+      + mac_address                   = (known after apply)
+      + name                          = "udayvm1_NIC"
+      + private_ip_address            = (known after apply)
+      + private_ip_addresses          = (known after apply)
+      + resource_group_name           = "uday1"
+      + tags                          = {
+          + "environment" = "Terraform Demo"
+        }
+      + virtual_machine_id            = (known after apply)
+
+      + ip_configuration {
+          + name                          = "udayvm1_NICConfiguration"
+          + primary                       = (known after apply)
+          + private_ip_address            = (known after apply)
+          + private_ip_address_allocation = "dynamic"
+          + private_ip_address_version    = "IPv4"
+          + public_ip_address_id          = (known after apply)
+          + subnet_id                     = (known after apply)
+        }
+    }
+
+  # azurerm_network_interface_security_group_association.example2 will be created
+  + resource "azurerm_network_interface_security_group_association" "example2" {
+      + id                        = (known after apply)
+      + network_interface_id      = (known after apply)
+      + network_security_group_id = (known after apply)
+    }
+
+  # azurerm_network_security_group.myterraformnsg will be created
+  + resource "azurerm_network_security_group" "myterraformnsg" {
+      + id                  = (known after apply)
+      + location            = "eastus"
+      + name                = "udayvm1Network_SecurityGroup"
+      + resource_group_name = "uday1"
+      + security_rule       = [
+          + {
+              + access                                     = "Allow"
+              + description                                = ""
+              + destination_address_prefix                 = "*"
+              + destination_address_prefixes               = []
+              + destination_application_security_group_ids = []
+              + destination_port_range                     = "22"
+              + destination_port_ranges                    = []
+              + direction                                  = "Inbound"
+              + name                                       = "SSH"
+              + priority                                   = 1001
+              + protocol                                   = "Tcp"
+              + source_address_prefix                      = "*"
+              + source_address_prefixes                    = []
+              + source_application_security_group_ids      = []
+              + source_port_range                          = "*"
+              + source_port_ranges                         = []
+            },
+          + {
+              + access                                     = "Allow"
+              + description                                = ""
+              + destination_address_prefix                 = "*"
+              + destination_address_prefixes               = []
+              + destination_application_security_group_ids = []
+              + destination_port_range                     = "3389"
+              + destination_port_ranges                    = []
+              + direction                                  = "Inbound"
+              + name                                       = "RDP"
+              + priority                                   = 1003
+              + protocol                                   = "Tcp"
+              + source_address_prefix                      = "*"
+              + source_address_prefixes                    = []
+              + source_application_security_group_ids      = []
+              + source_port_range                          = "*"
+              + source_port_ranges                         = []
+            },
+          + {
+              + access                                     = "Allow"
+              + description                                = ""
+              + destination_address_prefix                 = "*"
+              + destination_address_prefixes               = []
+              + destination_application_security_group_ids = []
+              + destination_port_range                     = "80"
+              + destination_port_ranges                    = []
+              + direction                                  = "Inbound"
+              + name                                       = "HTTP"
+              + priority                                   = 1002
+              + protocol                                   = "Tcp"
+              + source_address_prefix                      = "*"
+              + source_address_prefixes                    = []
+              + source_application_security_group_ids      = []
+              + source_port_range                          = "*"
+              + source_port_ranges                         = []
+            },
+        ]
+      + tags                = {
+          + "environment" = "Terraform Demo"
+        }
+    }
+
+  # azurerm_public_ip.myterraformpublicip2 will be created
+  + resource "azurerm_public_ip" "myterraformpublicip2" {
+      + allocation_method       = "Dynamic"
+      + fqdn                    = (known after apply)
+      + id                      = (known after apply)
+      + idle_timeout_in_minutes = 4
+      + ip_address              = (known after apply)
+      + ip_version              = "IPv4"
+      + location                = "eastus"
+      + name                    = "udayvm1NICPublicIP2"
+      + resource_group_name     = "uday1"
+      + sku                     = "Basic"
+      + tags                    = {
+          + "environment" = "Terraform Demo"
+        }
+    }
+
+  # azurerm_resource_group.myterraformgroup will be created
+  + resource "azurerm_resource_group" "myterraformgroup" {
+      + id       = (known after apply)
+      + location = "eastus"
+      + name     = "uday1"
+      + tags     = {
+          + "environment" = "Terraform Demo"
+        }
+    }
+
+  # azurerm_storage_account.mystorageaccount will be created
+  + resource "azurerm_storage_account" "mystorageaccount" {
+      + access_tier                      = (known after apply)
+      + account_kind                     = "StorageV2"
+      + account_replication_type         = "LRS"
+      + account_tier                     = "Standard"
+      + enable_https_traffic_only        = true
+      + id                               = (known after apply)
+      + is_hns_enabled                   = false
+      + location                         = "eastus"
+      + name                             = (known after apply)
+      + primary_access_key               = (sensitive value)
+      + primary_blob_connection_string   = (sensitive value)
+      + primary_blob_endpoint            = (known after apply)
+      + primary_blob_host                = (known after apply)
+      + primary_connection_string        = (sensitive value)
+      + primary_dfs_endpoint             = (known after apply)
+      + primary_dfs_host                 = (known after apply)
+      + primary_file_endpoint            = (known after apply)
+      + primary_file_host                = (known after apply)
+      + primary_location                 = (known after apply)
+      + primary_queue_endpoint           = (known after apply)
+      + primary_queue_host               = (known after apply)
+      + primary_table_endpoint           = (known after apply)
+      + primary_table_host               = (known after apply)
+      + primary_web_endpoint             = (known after apply)
+      + primary_web_host                 = (known after apply)
+      + resource_group_name              = "uday1"
+      + secondary_access_key             = (sensitive value)
+      + secondary_blob_connection_string = (sensitive value)
+      + secondary_blob_endpoint          = (known after apply)
+      + secondary_blob_host              = (known after apply)
+      + secondary_connection_string      = (sensitive value)
+      + secondary_dfs_endpoint           = (known after apply)
+      + secondary_dfs_host               = (known after apply)
+      + secondary_file_endpoint          = (known after apply)
+      + secondary_file_host              = (known after apply)
+      + secondary_location               = (known after apply)
+      + secondary_queue_endpoint         = (known after apply)
+      + secondary_queue_host             = (known after apply)
+      + secondary_table_endpoint         = (known after apply)
+      + secondary_table_host             = (known after apply)
+      + secondary_web_endpoint           = (known after apply)
+      + secondary_web_host               = (known after apply)
+      + tags                             = {
+          + "environment" = "Terraform Demo"
+        }
+
+      + blob_properties {
+          + cors_rule {
+              + allowed_headers    = (known after apply)
+              + allowed_methods    = (known after apply)
+              + allowed_origins    = (known after apply)
+              + exposed_headers    = (known after apply)
+              + max_age_in_seconds = (known after apply)
+            }
+
+          + delete_retention_policy {
+              + days = (known after apply)
+            }
+        }
+
+      + identity {
+          + principal_id = (known after apply)
+          + tenant_id    = (known after apply)
+          + type         = (known after apply)
+        }
+
+      + network_rules {
+          + bypass                     = (known after apply)
+          + default_action             = (known after apply)
+          + ip_rules                   = (known after apply)
+          + virtual_network_subnet_ids = (known after apply)
+        }
+
+      + queue_properties {
+          + cors_rule {
+              + allowed_headers    = (known after apply)
+              + allowed_methods    = (known after apply)
+              + allowed_origins    = (known after apply)
+              + exposed_headers    = (known after apply)
+              + max_age_in_seconds = (known after apply)
+            }
+
+          + hour_metrics {
+              + enabled               = (known after apply)
+              + include_apis          = (known after apply)
+              + retention_policy_days = (known after apply)
+              + version               = (known after apply)
+            }
+
+          + logging {
+              + delete                = (known after apply)
+              + read                  = (known after apply)
+              + retention_policy_days = (known after apply)
+              + version               = (known after apply)
+              + write                 = (known after apply)
+            }
+
+          + minute_metrics {
+              + enabled               = (known after apply)
+              + include_apis          = (known after apply)
+              + retention_policy_days = (known after apply)
+              + version               = (known after apply)
+            }
+        }
+    }
+
+  # azurerm_subnet.myterraformsubnet will be created
+  + resource "azurerm_subnet" "myterraformsubnet" {
+      + address_prefix                                 = (known after apply)
+      + address_prefixes                               = [
+          + "10.1.0.0/24",
+        ]
+      + enforce_private_link_endpoint_network_policies = false
+      + enforce_private_link_service_network_policies  = false
+      + id                                             = (known after apply)
+      + name                                           = "intranetwork"
+      + resource_group_name                            = "uday1"
+      + virtual_network_name                           = "uday1"
+    }
+
+  # azurerm_virtual_machine.myterraformvm2 will be created
+  + resource "azurerm_virtual_machine" "myterraformvm2" {
+      + availability_set_id              = (known after apply)
+      + delete_data_disks_on_termination = false
+      + delete_os_disk_on_termination    = false
+      + id                               = (known after apply)
+      + license_type                     = (known after apply)
+      + location                         = "eastus"
+      + name                             = "udayvm1"
+      + network_interface_ids            = (known after apply)
+      + resource_group_name              = "uday1"
+      + vm_size                          = "Standard_DS1_v2"
+
+      + identity {
+          + identity_ids = (known after apply)
+          + principal_id = (known after apply)
+          + type         = (known after apply)
+        }
+
+      + os_profile {
+          + admin_password = (sensitive value)
+          + admin_username = "AzureUser"
+          + computer_name  = "udayvm1"
+          + custom_data    = (known after apply)
+        }
+
+      + os_profile_windows_config {
+          + enable_automatic_upgrades = true
+          + provision_vm_agent        = true
+
+          + additional_unattend_config {
+              + component    = "Microsoft-Windows-Shell-Setup"
+              + content      = (sensitive value)
+              + pass         = "oobeSystem"
+              + setting_name = "AutoLogon"
+            }
+          + additional_unattend_config {
+              + component    = "Microsoft-Windows-Shell-Setup"
+              + content      = (sensitive value)
+              + pass         = "oobeSystem"
+              + setting_name = "FirstLogonCommands"
+            }
+        }
+
+      + storage_data_disk {
+          + caching                   = (known after apply)
+          + create_option             = (known after apply)
+          + disk_size_gb              = (known after apply)
+          + lun                       = (known after apply)
+          + managed_disk_id           = (known after apply)
+          + managed_disk_type         = (known after apply)
+          + name                      = (known after apply)
+          + vhd_uri                   = (known after apply)
+          + write_accelerator_enabled = (known after apply)
+        }
+
+      + storage_image_reference {
+          + offer     = "Windows-10"
+          + publisher = "MicrosoftWindowsDesktop"
+          + sku       = "20h1-pro"
+          + version   = "latest"
+        }
+
+      + storage_os_disk {
+          + caching                   = "ReadWrite"
+          + create_option             = "FromImage"
+          + disk_size_gb              = (known after apply)
+          + managed_disk_id           = (known after apply)
+          + managed_disk_type         = "StandardSSD_LRS"
+          + name                      = "udayvm1OS_DISK"
+          + os_type                   = (known after apply)
+          + write_accelerator_enabled = false
+        }
+    }
+
+  # azurerm_virtual_network.myterraformnetwork will be created
+  + resource "azurerm_virtual_network" "myterraformnetwork" {
+      + address_space       = [
+          + "10.1.0.0/16",
+        ]
+      + guid                = (known after apply)
+      + id                  = (known after apply)
+      + location            = "eastus"
+      + name                = "uday1"
+      + resource_group_name = "uday1"
+      + subnet              = (known after apply)
+      + tags                = {
+          + "environment" = "Terraform Demo"
+        }
+    }
+
+  # random_id.randomId will be created
+  + resource "random_id" "randomId" {
+      + b64         = (known after apply)
+      + b64_std     = (known after apply)
+      + b64_url     = (known after apply)
+      + byte_length = 8
+      + dec         = (known after apply)
+      + hex         = (known after apply)
+      + id          = (known after apply)
+      + keepers     = {
+          + "resource_group" = "uday1"
+        }
+    }
+
+Plan: 10 to add, 0 to change, 0 to destroy.
+
+Warning: Interpolation-only expressions are deprecated
+
+  on main.tf line 195, in resource "azurerm_virtual_machine" "myterraformvm2":
+ 195:       content      = "${file("./files/FirstLogonCommands.xml")}"
+
+Terraform 0.11 and earlier required all non-constant expressions to be
+provided via interpolation syntax, but this pattern is now deprecated. To
+silence this warning, remove the "${ sequence from the start and the }"
+sequence from the end of this expression, leaving just the inner expression.
+
+Template interpolation syntax is still used to construct strings from
+expressions when the template includes multiple interpolation sequences or a
+mixture of literal strings and interpolations. This deprecation applies only
+to templates that consist entirely of a single interpolation sequence.
+
+(and 3 more similar warnings elsewhere)
+
+
+------------------------------------------------------------------------
+
+Note: You didn't specify an "-out" parameter to save this plan, so Terraform
+can't guarantee that exactly these actions will be performed if
+"terraform apply" is subsequently run.
+
+
+C:\Users\UdayKiranReddy\Desktop\terraform\windows>terraform apply
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # azurerm_network_interface.myterraformnic2 will be created
+  + resource "azurerm_network_interface" "myterraformnic2" {
+      + applied_dns_servers           = (known after apply)
+      + dns_servers                   = (known after apply)
+      + enable_accelerated_networking = false
+      + enable_ip_forwarding          = false
+      + id                            = (known after apply)
+      + internal_dns_name_label       = (known after apply)
+      + internal_domain_name_suffix   = (known after apply)
+      + location                      = "eastus"
+      + mac_address                   = (known after apply)
+      + name                          = "udayvm1_NIC"
+      + private_ip_address            = (known after apply)
+      + private_ip_addresses          = (known after apply)
+      + resource_group_name           = "uday1"
+      + tags                          = {
+          + "environment" = "Terraform Demo"
+        }
+      + virtual_machine_id            = (known after apply)
+
+      + ip_configuration {
+          + name                          = "udayvm1_NICConfiguration"
+          + primary                       = (known after apply)
+          + private_ip_address            = (known after apply)
+          + private_ip_address_allocation = "dynamic"
+          + private_ip_address_version    = "IPv4"
+          + public_ip_address_id          = (known after apply)
+          + subnet_id                     = (known after apply)
+        }
+    }
+
+  # azurerm_network_interface_security_group_association.example2 will be created
+  + resource "azurerm_network_interface_security_group_association" "example2" {
+      + id                        = (known after apply)
+      + network_interface_id      = (known after apply)
+      + network_security_group_id = (known after apply)
+    }
+
+  # azurerm_network_security_group.myterraformnsg will be created
+  + resource "azurerm_network_security_group" "myterraformnsg" {
+      + id                  = (known after apply)
+      + location            = "eastus"
+      + name                = "udayvm1Network_SecurityGroup"
+      + resource_group_name = "uday1"
+      + security_rule       = [
+          + {
+              + access                                     = "Allow"
+              + description                                = ""
+              + destination_address_prefix                 = "*"
+              + destination_address_prefixes               = []
+              + destination_application_security_group_ids = []
+              + destination_port_range                     = "22"
+              + destination_port_ranges                    = []
+              + direction                                  = "Inbound"
+              + name                                       = "SSH"
+              + priority                                   = 1001
+              + protocol                                   = "Tcp"
+              + source_address_prefix                      = "*"
+              + source_address_prefixes                    = []
+              + source_application_security_group_ids      = []
+              + source_port_range                          = "*"
+              + source_port_ranges                         = []
+            },
+          + {
+              + access                                     = "Allow"
+              + description                                = ""
+              + destination_address_prefix                 = "*"
+              + destination_address_prefixes               = []
+              + destination_application_security_group_ids = []
+              + destination_port_range                     = "3389"
+              + destination_port_ranges                    = []
+              + direction                                  = "Inbound"
+              + name                                       = "RDP"
+              + priority                                   = 1003
+              + protocol                                   = "Tcp"
+              + source_address_prefix                      = "*"
+              + source_address_prefixes                    = []
+              + source_application_security_group_ids      = []
+              + source_port_range                          = "*"
+              + source_port_ranges                         = []
+            },
+          + {
+              + access                                     = "Allow"
+              + description                                = ""
+              + destination_address_prefix                 = "*"
+              + destination_address_prefixes               = []
+              + destination_application_security_group_ids = []
+              + destination_port_range                     = "80"
+              + destination_port_ranges                    = []
+              + direction                                  = "Inbound"
+              + name                                       = "HTTP"
+              + priority                                   = 1002
+              + protocol                                   = "Tcp"
+              + source_address_prefix                      = "*"
+              + source_address_prefixes                    = []
+              + source_application_security_group_ids      = []
+              + source_port_range                          = "*"
+              + source_port_ranges                         = []
+            },
+        ]
+      + tags                = {
+          + "environment" = "Terraform Demo"
+        }
+    }
+
+  # azurerm_public_ip.myterraformpublicip2 will be created
+  + resource "azurerm_public_ip" "myterraformpublicip2" {
+      + allocation_method       = "Dynamic"
+      + fqdn                    = (known after apply)
+      + id                      = (known after apply)
+      + idle_timeout_in_minutes = 4
+      + ip_address              = (known after apply)
+      + ip_version              = "IPv4"
+      + location                = "eastus"
+      + name                    = "udayvm1NICPublicIP2"
+      + resource_group_name     = "uday1"
+      + sku                     = "Basic"
+      + tags                    = {
+          + "environment" = "Terraform Demo"
+        }
+    }
+
+  # azurerm_resource_group.myterraformgroup will be created
+  + resource "azurerm_resource_group" "myterraformgroup" {
+      + id       = (known after apply)
+      + location = "eastus"
+      + name     = "uday1"
+      + tags     = {
+          + "environment" = "Terraform Demo"
+        }
+    }
+
+  # azurerm_storage_account.mystorageaccount will be created
+  + resource "azurerm_storage_account" "mystorageaccount" {
+      + access_tier                      = (known after apply)
+      + account_kind                     = "StorageV2"
+      + account_replication_type         = "LRS"
+      + account_tier                     = "Standard"
+      + enable_https_traffic_only        = true
+      + id                               = (known after apply)
+      + is_hns_enabled                   = false
+      + location                         = "eastus"
+      + name                             = (known after apply)
+      + primary_access_key               = (sensitive value)
+      + primary_blob_connection_string   = (sensitive value)
+      + primary_blob_endpoint            = (known after apply)
+      + primary_blob_host                = (known after apply)
+      + primary_connection_string        = (sensitive value)
+      + primary_dfs_endpoint             = (known after apply)
+      + primary_dfs_host                 = (known after apply)
+      + primary_file_endpoint            = (known after apply)
+      + primary_file_host                = (known after apply)
+      + primary_location                 = (known after apply)
+      + primary_queue_endpoint           = (known after apply)
+      + primary_queue_host               = (known after apply)
+      + primary_table_endpoint           = (known after apply)
+      + primary_table_host               = (known after apply)
+      + primary_web_endpoint             = (known after apply)
+      + primary_web_host                 = (known after apply)
+      + resource_group_name              = "uday1"
+      + secondary_access_key             = (sensitive value)
+      + secondary_blob_connection_string = (sensitive value)
+      + secondary_blob_endpoint          = (known after apply)
+      + secondary_blob_host              = (known after apply)
+      + secondary_connection_string      = (sensitive value)
+      + secondary_dfs_endpoint           = (known after apply)
+      + secondary_dfs_host               = (known after apply)
+      + secondary_file_endpoint          = (known after apply)
+      + secondary_file_host              = (known after apply)
+      + secondary_location               = (known after apply)
+      + secondary_queue_endpoint         = (known after apply)
+      + secondary_queue_host             = (known after apply)
+      + secondary_table_endpoint         = (known after apply)
+      + secondary_table_host             = (known after apply)
+      + secondary_web_endpoint           = (known after apply)
+      + secondary_web_host               = (known after apply)
+      + tags                             = {
+          + "environment" = "Terraform Demo"
+        }
+
+      + blob_properties {
+          + cors_rule {
+              + allowed_headers    = (known after apply)
+              + allowed_methods    = (known after apply)
+              + allowed_origins    = (known after apply)
+              + exposed_headers    = (known after apply)
+              + max_age_in_seconds = (known after apply)
+            }
+
+          + delete_retention_policy {
+              + days = (known after apply)
+            }
+        }
+
+      + identity {
+          + principal_id = (known after apply)
+          + tenant_id    = (known after apply)
+          + type         = (known after apply)
+        }
+
+      + network_rules {
+          + bypass                     = (known after apply)
+          + default_action             = (known after apply)
+          + ip_rules                   = (known after apply)
+          + virtual_network_subnet_ids = (known after apply)
+        }
+
+      + queue_properties {
+          + cors_rule {
+              + allowed_headers    = (known after apply)
+              + allowed_methods    = (known after apply)
+              + allowed_origins    = (known after apply)
+              + exposed_headers    = (known after apply)
+              + max_age_in_seconds = (known after apply)
+            }
+
+          + hour_metrics {
+              + enabled               = (known after apply)
+              + include_apis          = (known after apply)
+              + retention_policy_days = (known after apply)
+              + version               = (known after apply)
+            }
+
+          + logging {
+              + delete                = (known after apply)
+              + read                  = (known after apply)
+              + retention_policy_days = (known after apply)
+              + version               = (known after apply)
+              + write                 = (known after apply)
+            }
+
+          + minute_metrics {
+              + enabled               = (known after apply)
+              + include_apis          = (known after apply)
+              + retention_policy_days = (known after apply)
+              + version               = (known after apply)
+            }
+        }
+    }
+
+  # azurerm_subnet.myterraformsubnet will be created
+  + resource "azurerm_subnet" "myterraformsubnet" {
+      + address_prefix                                 = (known after apply)
+      + address_prefixes                               = [
+          + "10.1.0.0/24",
+        ]
+      + enforce_private_link_endpoint_network_policies = false
+      + enforce_private_link_service_network_policies  = false
+      + id                                             = (known after apply)
+      + name                                           = "intranetwork"
+      + resource_group_name                            = "uday1"
+      + virtual_network_name                           = "uday1"
+    }
+
+  # azurerm_virtual_machine.myterraformvm2 will be created
+  + resource "azurerm_virtual_machine" "myterraformvm2" {
+      + availability_set_id              = (known after apply)
+      + delete_data_disks_on_termination = false
+      + delete_os_disk_on_termination    = false
+      + id                               = (known after apply)
+      + license_type                     = (known after apply)
+      + location                         = "eastus"
+      + name                             = "udayvm1"
+      + network_interface_ids            = (known after apply)
+      + resource_group_name              = "uday1"
+      + vm_size                          = "Standard_DS1_v2"
+
+      + identity {
+          + identity_ids = (known after apply)
+          + principal_id = (known after apply)
+          + type         = (known after apply)
+        }
+
+      + os_profile {
+          + admin_password = (sensitive value)
+          + admin_username = "AzureUser"
+          + computer_name  = "udayvm1"
+          + custom_data    = (known after apply)
+        }
+
+      + os_profile_windows_config {
+          + enable_automatic_upgrades = true
+          + provision_vm_agent        = true
+
+          + additional_unattend_config {
+              + component    = "Microsoft-Windows-Shell-Setup"
+              + content      = (sensitive value)
+              + pass         = "oobeSystem"
+              + setting_name = "AutoLogon"
+            }
+          + additional_unattend_config {
+              + component    = "Microsoft-Windows-Shell-Setup"
+              + content      = (sensitive value)
+              + pass         = "oobeSystem"
+              + setting_name = "FirstLogonCommands"
+            }
+        }
+
+      + storage_data_disk {
+          + caching                   = (known after apply)
+          + create_option             = (known after apply)
+          + disk_size_gb              = (known after apply)
+          + lun                       = (known after apply)
+          + managed_disk_id           = (known after apply)
+          + managed_disk_type         = (known after apply)
+          + name                      = (known after apply)
+          + vhd_uri                   = (known after apply)
+          + write_accelerator_enabled = (known after apply)
+        }
+
+      + storage_image_reference {
+          + offer     = "Windows-10"
+          + publisher = "MicrosoftWindowsDesktop"
+          + sku       = "20h1-pro"
+          + version   = "latest"
+        }
+
+      + storage_os_disk {
+          + caching                   = "ReadWrite"
+          + create_option             = "FromImage"
+          + disk_size_gb              = (known after apply)
+          + managed_disk_id           = (known after apply)
+          + managed_disk_type         = "StandardSSD_LRS"
+          + name                      = "udayvm1OS_DISK"
+          + os_type                   = (known after apply)
+          + write_accelerator_enabled = false
+        }
+    }
+
+  # azurerm_virtual_network.myterraformnetwork will be created
+  + resource "azurerm_virtual_network" "myterraformnetwork" {
+      + address_space       = [
+          + "10.1.0.0/16",
+        ]
+      + guid                = (known after apply)
+      + id                  = (known after apply)
+      + location            = "eastus"
+      + name                = "uday1"
+      + resource_group_name = "uday1"
+      + subnet              = (known after apply)
+      + tags                = {
+          + "environment" = "Terraform Demo"
+        }
+    }
+
+  # random_id.randomId will be created
+  + resource "random_id" "randomId" {
+      + b64         = (known after apply)
+      + b64_std     = (known after apply)
+      + b64_url     = (known after apply)
+      + byte_length = 8
+      + dec         = (known after apply)
+      + hex         = (known after apply)
+      + id          = (known after apply)
+      + keepers     = {
+          + "resource_group" = "uday1"
+        }
+    }
+
+Plan: 10 to add, 0 to change, 0 to destroy.
+
+
+Warning: Interpolation-only expressions are deprecated
+
+  on main.tf line 195, in resource "azurerm_virtual_machine" "myterraformvm2":
+ 195:       content      = "${file("./files/FirstLogonCommands.xml")}"
+
+Terraform 0.11 and earlier required all non-constant expressions to be
+provided via interpolation syntax, but this pattern is now deprecated. To
+silence this warning, remove the "${ sequence from the start and the }"
+sequence from the end of this expression, leaving just the inner expression.
+
+Template interpolation syntax is still used to construct strings from
+expressions when the template includes multiple interpolation sequences or a
+mixture of literal strings and interpolations. This deprecation applies only
+to templates that consist entirely of a single interpolation sequence.
+
+(and 3 more similar warnings elsewhere)
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+azurerm_resource_group.myterraformgroup: Creating...
+azurerm_resource_group.myterraformgroup: Creation complete after 3s [id=/subscriptions/ae642de8-dea6-4c85-887e-6b6c2ea9a2db/resourceGroups/uday1]
+random_id.randomId: Creating...
+azurerm_virtual_network.myterraformnetwork: Creating...
+azurerm_public_ip.myterraformpublicip2: Creating...
+random_id.randomId: Creation complete after 0s [id=ezZLU2uuOoM]
+azurerm_network_security_group.myterraformnsg: Creating...
+azurerm_storage_account.mystorageaccount: Creating...
+azurerm_public_ip.myterraformpublicip2: Still creating... [10s elapsed]
+azurerm_virtual_network.myterraformnetwork: Still creating... [10s elapsed]
+azurerm_network_security_group.myterraformnsg: Still creating... [10s elapsed]
+azurerm_storage_account.mystorageaccount: Still creating... [10s elapsed]
+azurerm_public_ip.myterraformpublicip2: Creation complete after 12s [id=/subscriptions/ae642de8-dea6-4c85-887e-6b6c2ea9a2db/resourceGroups/uday1/providers/Microsoft.Network/publicIPAddresses/udayvm1NICPublicIP2]
+azurerm_network_security_group.myterraformnsg: Creation complete after 12s [id=/subscriptions/ae642de8-dea6-4c85-887e-6b6c2ea9a2db/resourceGroups/uday1/providers/Microsoft.Network/networkSecurityGroups/udayvm1Network_SecurityGroup]
+azurerm_virtual_network.myterraformnetwork: Still creating... [20s elapsed]
+azurerm_storage_account.mystorageaccount: Still creating... [20s elapsed]
+azurerm_virtual_network.myterraformnetwork: Still creating... [30s elapsed]
+azurerm_storage_account.mystorageaccount: Still creating... [30s elapsed]
+azurerm_storage_account.mystorageaccount: Creation complete after 35s [id=/subscriptions/ae642de8-dea6-4c85-887e-6b6c2ea9a2db/resourceGroups/uday1/providers/Microsoft.Storage/storageAccounts/diag7b364b536bae3a83]
+azurerm_virtual_network.myterraformnetwork: Still creating... [40s elapsed]
+azurerm_virtual_network.myterraformnetwork: Still creating... [50s elapsed]
+azurerm_virtual_network.myterraformnetwork: Creation complete after 50s [id=/subscriptions/ae642de8-dea6-4c85-887e-6b6c2ea9a2db/resourceGroups/uday1/providers/Microsoft.Network/virtualNetworks/uday1]
+azurerm_subnet.myterraformsubnet: Creating...
+azurerm_subnet.myterraformsubnet: Creation complete after 4s [id=/subscriptions/ae642de8-dea6-4c85-887e-6b6c2ea9a2db/resourceGroups/uday1/providers/Microsoft.Network/virtualNetworks/uday1/subnets/intranetwork]
+azurerm_network_interface.myterraformnic2: Creating...
+azurerm_network_interface.myterraformnic2: Creation complete after 8s [id=/subscriptions/ae642de8-dea6-4c85-887e-6b6c2ea9a2db/resourceGroups/uday1/providers/Microsoft.Network/networkInterfaces/udayvm1_NIC]
+azurerm_network_interface_security_group_association.example2: Creating...
+azurerm_virtual_machine.myterraformvm2: Creating...
+azurerm_network_interface_security_group_association.example2: Creation complete after 2s [id=/subscriptions/ae642de8-dea6-4c85-887e-6b6c2ea9a2db/resourceGroups/uday1/providers/Microsoft.Network/networkInterfaces/udayvm1_NIC|/subscriptions/ae642de8-dea6-4c85-887e-6b6c2ea9a2db/resourceGroups/uday1/providers/Microsoft.Network/networkSecurityGroups/udayvm1Network_SecurityGroup]
+azurerm_virtual_machine.myterraformvm2: Still creating... [10s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [20s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [30s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [40s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [50s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [1m0s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [1m10s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [1m20s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [1m30s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [1m40s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [1m50s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [2m0s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [2m10s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [2m20s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [2m30s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [2m40s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [2m50s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [3m0s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [3m10s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [3m20s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [3m30s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [3m40s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [3m50s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [4m0s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [4m10s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [4m20s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [4m30s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [4m40s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [4m50s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [5m0s elapsed]
+azurerm_virtual_machine.myterraformvm2: Provisioning with 'remote-exec'...
+azurerm_virtual_machine.myterraformvm2 (remote-exec): Connecting to remote host via WinRM...
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Host: 10.1.0.4
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Port: 5985
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   User: AzureUser
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Password: true
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   HTTPS: false
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Insecure: false
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   NTLM: false
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   CACert: false
+azurerm_virtual_machine.myterraformvm2: Still creating... [5m10s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [5m20s elapsed]
+azurerm_virtual_machine.myterraformvm2 (remote-exec): Connecting to remote host via WinRM...
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Host: 10.1.0.4
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Port: 5985
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   User: AzureUser
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Password: true
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   HTTPS: false
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Insecure: false
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   NTLM: false
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   CACert: false
+azurerm_virtual_machine.myterraformvm2: Still creating... [5m30s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [5m40s elapsed]
+azurerm_virtual_machine.myterraformvm2 (remote-exec): Connecting to remote host via WinRM...
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Host: 10.1.0.4
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Port: 5985
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   User: AzureUser
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Password: true
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   HTTPS: false
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Insecure: false
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   NTLM: false
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   CACert: false
+azurerm_virtual_machine.myterraformvm2: Still creating... [5m50s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [6m0s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [6m10s elapsed]
+azurerm_virtual_machine.myterraformvm2 (remote-exec): Connecting to remote host via WinRM...
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Host: 10.1.0.4
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Port: 5985
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   User: AzureUser
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Password: true
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   HTTPS: false
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Insecure: false
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   NTLM: false
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   CACert: false
+azurerm_virtual_machine.myterraformvm2: Still creating... [6m20s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [6m30s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [6m40s elapsed]
+azurerm_virtual_machine.myterraformvm2 (remote-exec): Connecting to remote host via WinRM...
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Host: 10.1.0.4
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Port: 5985
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   User: AzureUser
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Password: true
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   HTTPS: false
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Insecure: false
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   NTLM: false
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   CACert: false
+azurerm_virtual_machine.myterraformvm2: Still creating... [6m50s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [7m0s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [7m10s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [7m20s elapsed]
+azurerm_virtual_machine.myterraformvm2 (remote-exec): Connecting to remote host via WinRM...
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Host: 10.1.0.4
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Port: 5985
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   User: AzureUser
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Password: true
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   HTTPS: false
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Insecure: false
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   NTLM: false
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   CACert: false
+azurerm_virtual_machine.myterraformvm2: Still creating... [7m30s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [7m40s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [7m50s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [8m0s elapsed]
+azurerm_virtual_machine.myterraformvm2 (remote-exec): Connecting to remote host via WinRM...
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Host: 10.1.0.4
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Port: 5985
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   User: AzureUser
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Password: true
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   HTTPS: false
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Insecure: false
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   NTLM: false
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   CACert: false
+azurerm_virtual_machine.myterraformvm2: Still creating... [8m10s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [8m20s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [8m30s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [8m40s elapsed]
+azurerm_virtual_machine.myterraformvm2 (remote-exec): Connecting to remote host via WinRM...
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Host: 10.1.0.4
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Port: 5985
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   User: AzureUser
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Password: true
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   HTTPS: false
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Insecure: false
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   NTLM: false
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   CACert: false
+azurerm_virtual_machine.myterraformvm2: Still creating... [8m50s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [9m0s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [9m10s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [9m20s elapsed]
+azurerm_virtual_machine.myterraformvm2 (remote-exec): Connecting to remote host via WinRM...
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Host: 10.1.0.4
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Port: 5985
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   User: AzureUser
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Password: true
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   HTTPS: false
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   Insecure: false
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   NTLM: false
+azurerm_virtual_machine.myterraformvm2 (remote-exec):   CACert: false
+azurerm_virtual_machine.myterraformvm2: Still creating... [9m30s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [9m40s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [9m50s elapsed]
+azurerm_virtual_machine.myterraformvm2: Still creating... [10m0s elapsed]
+
+
+Error: timeout - last error: unknown error Post http://10.1.0.4:5985/wsman: dial tcp 10.1.0.4:5985: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+
